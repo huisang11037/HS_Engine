@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35919.96 d17.13
+VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Editor_Window", "Editor_Window\Editor_Window.vcxproj", "{DCEF22D3-A38D-4F17-8297-D64ECAA8C344}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HSEngine_Window", "HSEngine_Window\HSEngine_Window.vcxproj", "{96EDF135-3A91-4D7D-B006-4021C52A2388}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HSEngine_SOURECE", "HSEngine_SOURECE\HSEngine_SOURECE.vcxitems", "{AF8BC553-B643-44AE-85FE-31E0781AF827}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,11 +25,24 @@ Global
 		{DCEF22D3-A38D-4F17-8297-D64ECAA8C344}.Release|x64.Build.0 = Release|x64
 		{DCEF22D3-A38D-4F17-8297-D64ECAA8C344}.Release|x86.ActiveCfg = Release|Win32
 		{DCEF22D3-A38D-4F17-8297-D64ECAA8C344}.Release|x86.Build.0 = Release|Win32
+		{96EDF135-3A91-4D7D-B006-4021C52A2388}.Debug|x64.ActiveCfg = Debug|x64
+		{96EDF135-3A91-4D7D-B006-4021C52A2388}.Debug|x64.Build.0 = Debug|x64
+		{96EDF135-3A91-4D7D-B006-4021C52A2388}.Debug|x86.ActiveCfg = Debug|Win32
+		{96EDF135-3A91-4D7D-B006-4021C52A2388}.Debug|x86.Build.0 = Debug|Win32
+		{96EDF135-3A91-4D7D-B006-4021C52A2388}.Release|x64.ActiveCfg = Release|x64
+		{96EDF135-3A91-4D7D-B006-4021C52A2388}.Release|x64.Build.0 = Release|x64
+		{96EDF135-3A91-4D7D-B006-4021C52A2388}.Release|x86.ActiveCfg = Release|Win32
+		{96EDF135-3A91-4D7D-B006-4021C52A2388}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B205CBCF-E01A-4989-B45E-B4F2100D6305}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		HSEngine_SOURECE\HSEngine_SOURECE.vcxitems*{96edf135-3a91-4d7d-b006-4021c52a2388}*SharedItemsImports = 4
+		HSEngine_SOURECE\HSEngine_SOURECE.vcxitems*{af8bc553-b643-44ae-85fe-31e0781af827}*SharedItemsImports = 9
+		HSEngine_SOURECE\HSEngine_SOURECE.vcxitems*{dcef22d3-a38d-4f17-8297-d64ecaa8c344}*SharedItemsImports = 4
 	EndGlobalSection
 EndGlobal
