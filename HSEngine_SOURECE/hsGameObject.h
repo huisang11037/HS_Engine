@@ -11,16 +11,15 @@ namespace hs
 
 		void Update();
 		void LateUpdate();
-		void Render(HDC hdc);
+		void Render(HDC hdc) const;
 
 		void SetPosition(float x, float y) { mX = x; mY = y; };
-		float GetPositionX() { return mX; };
-		float GetPositionY() { return mY; };
+		float GetPositionX() const { return mX; };
+		float GetPositionY() const { return mY; };
 
 	private:
 		float mX;
 		float mY;
-		float mSpeed;
 	};
 }
 

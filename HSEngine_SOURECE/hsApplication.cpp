@@ -1,6 +1,5 @@
 #include "hsApplication.h"
-
-
+#include "hsInput.h"
 
 namespace hs {
 	Application::Application()
@@ -17,6 +16,8 @@ namespace hs {
 		mHdc = GetDC(mHwnd);
 
 		mPlayer.SetPosition(0, 0);
+
+		Input::Initialize();
 	}
 	void Application::Run()
 	{
@@ -26,6 +27,7 @@ namespace hs {
 	}
 	void Application::Update()
 	{
+		Input::Update();
 		mPlayer.Update();
 	}
 	void Application::LateUpdate()
