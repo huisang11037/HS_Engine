@@ -1,7 +1,28 @@
 #pragma once
-class Application
-{
+#include "CommonInclude.h"
+#include "hsGameObject.h"
+
+namespace hs {
+	class Application
+	{
 	public:
-		void test();
-};
+		Application();
+		~Application();
+
+
+		void Initialize(HWND hwnd);
+		void Run();
+
+		void Update();
+		void LateUpdate();
+		void Render();
+
+	private:
+		HWND mHwnd;
+		HDC mHdc;
+
+		hs::GameObject mPlayer;
+	};
+}
+
 

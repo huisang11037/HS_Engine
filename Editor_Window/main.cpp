@@ -5,7 +5,7 @@
 #include "Editor_Window.h"
 #include "..\\HSEngine_SOURECE\hsApplication.h"
 
-Application app;
+hs::Application application;
 
 #define MAX_LOADSTRING 100
 
@@ -29,7 +29,6 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,         // 프로그램의 인�
     UNREFERENCED_PARAMETER(lpCmdLine);
 
     // TODO: 여기에 코드를 입력합니다.
-    app.test();
 
     // 전역 문자열을 초기화합니다.
     LoadStringW(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
@@ -46,8 +45,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,         // 프로그램의 인�
 
     MSG msg;
 
-	// GetMessage는 메시지 큐에서 메시지를 가져오는 함수이다. 메시지 큐에 아무것도 없으면 대기한다.
-
+	// PeekMessage는 메시지 큐에서 메시지를 가져오는 함수이다. 메시지 큐가 비어있으면 false를 리턴한다.
     while (true) {
         if (PeekMessage(&msg, nullptr, 0, 0, PM_REMOVE)) {
 			if (msg.message == WM_QUIT) break;
@@ -60,18 +58,9 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,         // 프로그램의 인�
         }
 		else {
 			// 메시지 큐에 메시지가 없을 때 수행할 작업을 여기에 작성한다.
-
+			application.Run();
 		}
     }
-
-    //while (GetMessage(&msg, nullptr, 0, 0))
-    //{
-    //    if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
-    //    {
-    //        TranslateMessage(&msg);
-    //        DispatchMessage(&msg);
-    //    }
-    //}
 
     return (int) msg.wParam;
 }
@@ -120,6 +109,8 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 
    HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
       CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, nullptr, nullptr, hInstance, nullptr);
+
+   application.Initialize(hWnd);
 
    if (!hWnd)
    {
