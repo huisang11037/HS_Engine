@@ -32,11 +32,14 @@ namespace hs {
 		static void Initialize();
 		static void Update();
 
-		static bool GetKeyDown(eKeyCode key) { return mKeys[static_cast<size_t>(key)].state == eKeyState::KEY_DOWN; }
-		static bool GetKeyUp(eKeyCode key) { return mKeys[static_cast<size_t>(key)].state == eKeyState::KEY_UP; }
-		static bool GetKey(eKeyCode key) { return mKeys[static_cast<size_t>(key)].state == eKeyState::KEY_PRESSED; }
+		static bool GetKeyDown(eKeyCode key) { return keys[static_cast<size_t>(key)].state == eKeyState::KEY_DOWN; }
+		static bool GetKeyUp(eKeyCode key) { return keys[static_cast<size_t>(key)].state == eKeyState::KEY_UP; }
+		static bool GetKey(eKeyCode key) { return keys[static_cast<size_t>(key)].state == eKeyState::KEY_PRESSED; }
 
 	private:
-		static std::vector<Key> mKeys;
+		static std::vector<Key> keys;
+
+		static void createKeys();
+		static void updateKeys();
 	};
 }

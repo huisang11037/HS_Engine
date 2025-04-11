@@ -1,5 +1,6 @@
 #include "hsGameObject.h"
 #include "hsInput.h"
+#include "hsTime.h"
 
 namespace hs
 {
@@ -13,17 +14,18 @@ namespace hs
 	}
 	void GameObject::Update()
 	{
+		const int SPEED = 300;
 		if (Input::GetKey(eKeyCode::KEY_A)) {
-			mX -= 0.01f;
+			mX -= SPEED * Time::DeltaTime();
 		}
 		if (Input::GetKey(eKeyCode::KEY_D)) {
-			mX += 0.01f;
+			mX += SPEED * Time::DeltaTime();
 		}
 		if (Input::GetKey(eKeyCode::KEY_W)) {
-			mY -= 0.01f;
+			mY -= SPEED * Time::DeltaTime();
 		}
 		if (Input::GetKey(eKeyCode::KEY_S)) {
-			mY += 0.01f;
+			mY += SPEED * Time::DeltaTime();
 		}
 	}
 	void GameObject::LateUpdate()

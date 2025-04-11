@@ -10,7 +10,7 @@ namespace hs {
 		~Application();
 
 
-		void Initialize(HWND hwnd);
+		void Initialize(HWND hwnd, UINT width, UINT height);
 		void Run();
 
 		void Update();
@@ -20,6 +20,12 @@ namespace hs {
 	private:
 		HWND mHwnd;
 		HDC mHdc;
+
+		HDC mBackHDC;
+		HBITMAP mBackBitmap;
+
+		UINT mWidth;
+		UINT mHeight;
 
 		hs::GameObject mPlayer;
 	};
