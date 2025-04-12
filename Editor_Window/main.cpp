@@ -4,6 +4,7 @@
 #include "framework.h"
 #include "Editor_Window.h"
 #include "..\\HSEngine_SOURECE\hsApplication.h"
+#include "..\\HSEngine_Window\hsLoadScenes.h"
 
 hs::Application application;
 
@@ -122,6 +123,9 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 
    ShowWindow(hWnd, nCmdShow);
    UpdateWindow(hWnd);
+
+   // load scene
+   hs::LoadScenes();
 
    return TRUE;
 }

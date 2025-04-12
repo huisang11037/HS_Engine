@@ -9,7 +9,7 @@ namespace hs {
 		static void Update();
 		static void Render(HDC hdc);
 
-		static double DeltaTime() { return deltaTime; };
+		static double DeltaTime() { return deltaTime; }
 
 	private:
 		static LARGE_INTEGER cpuFrequency;
