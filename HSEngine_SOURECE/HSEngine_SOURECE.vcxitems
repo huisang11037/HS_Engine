@@ -20,6 +20,9 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)hsEntity.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsGameObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsInput.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsMath.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsResource.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsResources.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsScene.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsSceneManager.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsSpriteRenderer.h" />
@@ -32,6 +35,9 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)hsEntity.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsGameObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsInput.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsMath.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsResource.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsResources.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsScene.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsSceneManager.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsSpriteRenderer.cpp" />

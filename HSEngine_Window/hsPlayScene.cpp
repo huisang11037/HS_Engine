@@ -15,18 +15,20 @@ namespace hs
 	void PlayScene::Initialize()
 	{
 		{
-			Player* pl = new Player();
+			Player* bg = new Player();
 			Transform* tr
-				= pl->AddComponent<Transform>();
-			tr->SetPos(800, 450);
+				= bg->AddComponent<Transform>();
+			tr->SetPosition(Vector2(0, 0));
 
 			tr->SetName(L"TR");
 
 			SpriteRenderer* sr
-				= pl->AddComponent<SpriteRenderer>();
+				= bg->AddComponent<SpriteRenderer>();
 			sr->SetName(L"SR");
+			sr->ImageLoad(L"C:\\HSEngine\\Resources\\CloudOcean.png");
 
-			AddGameObject(pl);
+
+			AddGameObject(bg);
 		}
 	}
 	void PlayScene::Update()

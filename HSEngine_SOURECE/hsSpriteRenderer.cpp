@@ -5,6 +5,9 @@
 namespace hs
 {
 	SpriteRenderer::SpriteRenderer()
+		: mImgae(nullptr)
+		, mWidth(0)
+		, mHeight(0)
 	{
 	}
 	SpriteRenderer::~SpriteRenderer()
@@ -22,21 +25,16 @@ namespace hs
 
 	void SpriteRenderer::Render(HDC hdc)
 	{
-		HBRUSH blueBrush
-			= CreateSolidBrush(RGB(255, 0, 255));
-
-		HBRUSH oldBrush = (HBRUSH)SelectObject(hdc, blueBrush);
-
-		HPEN redPen = CreatePen(PS_SOLID, 2, RGB(rand() % 255, rand() % 255, rand() % 255));
-		HPEN oldPen = (HPEN)SelectObject(hdc, redPen);
-		SelectObject(hdc, oldPen);
-
 		Transform* tr = GetOwner()->GetComponent<Transform>();
-		Rectangle(hdc, tr->GetX(), tr->GetY()
-			, 100 + tr->GetX(), 100 + tr->GetY());
+		Vector2 pos = tr->GetPosition();
 
-		SelectObject(hdc, oldBrush);
-		DeleteObject(blueBrush);
-		DeleteObject(redPen);
+		Gdiplus::Graphics graphcis(hdc);
+		graphcis.DrawImage(mImgae, Gdiplus::Rect(pos.x, pos.y, mWidth, mHeight));
+	}
+	void SpriteRenderer::ImageLoad(const std::wstring& path)
+	{
+		mImgae = Gdiplus::Image::FromFile(path.c_str());
+		mWidth = mImgae->GetWidth();
+		mHeight = mImgae->GetHeight();
 	}
 }

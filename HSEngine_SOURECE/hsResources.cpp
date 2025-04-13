@@ -1,0 +1,1 @@
+#include "hsResources.h"
