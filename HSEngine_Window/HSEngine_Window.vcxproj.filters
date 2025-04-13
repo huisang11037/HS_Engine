@@ -10,8 +10,10 @@
     <ClInclude Include="hsLoadScenes.h">
       <Filter>Scenes</Filter>
     </ClInclude>
+    <ClInclude Include="hsPlayer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="hsPlayScene.cpp" />
+    <ClCompile Include="hsPlayer.cpp" />
   </ItemGroup>
 </Project>

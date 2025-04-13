@@ -133,9 +133,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="hsLoadScenes.h" />
+    <ClInclude Include="hsPlayer.h" />
     <ClInclude Include="hsPlayScene.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="hsPlayer.cpp" />
     <ClCompile Include="hsPlayScene.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -1,5 +1,6 @@
 #pragma once
 #include "CommonInclude.h"
+#include "hsComponent.h"
 
 namespace hs
 {
@@ -9,17 +10,37 @@ namespace hs
 		GameObject();
 		~GameObject();
 
-		void Update();
-		void LateUpdate();
-		void Render(HDC hdc) const;
+		virtual void Initialize();
+		virtual void Update();
+		virtual void LateUpdate();
+		virtual void Render(HDC hdc);
 
-		void SetPosition(float x, float y) { mX = x; mY = y; };
-		float GetPositionX() const { return mX; };
-		float GetPositionY() const { return mY; };
+		template <typename T>
+		T* AddComponent()
+		{
+			T* component = new T();
+			component->SetOwner(this);
+			mComponents.push_back(component);
+			return component;
+		}
+
+		template <typename T>
+		T* GetComponent()
+		{
+			T* component = nullptr;
+			for (Component* comp : mComponents)
+			{
+				component = dynamic_cast<T*>(comp);
+				if (component)
+					break;
+			}
+
+			return component;
+		}
+
 
 	private:
-		float mX;
-		float mY;
+		std::vector<Component*> mComponents;
 	};
 }
 

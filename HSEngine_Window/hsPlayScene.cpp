@@ -1,5 +1,8 @@
 #include "hsPlayScene.h"
 #include "hsGameObject.h"
+#include "hsPlayer.h"
+#include "hsTransform.h"
+#include "hsSpriteRenderer.h"
 
 namespace hs
 {
@@ -11,11 +14,19 @@ namespace hs
 	}
 	void PlayScene::Initialize()
 	{
-		for (int i = 0; i < 10; ++i)
 		{
-			GameObject* gameObject = new GameObject();
-			gameObject->SetPosition(rand() % 1280, rand() % 720);
-			AddGameObject(gameObject);
+			Player* pl = new Player();
+			Transform* tr
+				= pl->AddComponent<Transform>();
+			tr->SetPos(800, 450);
+
+			tr->SetName(L"TR");
+
+			SpriteRenderer* sr
+				= pl->AddComponent<SpriteRenderer>();
+			sr->SetName(L"SR");
+
+			AddGameObject(pl);
 		}
 	}
 	void PlayScene::Update()

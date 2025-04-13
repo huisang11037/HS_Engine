@@ -5,41 +5,42 @@
 namespace hs
 {
 	GameObject::GameObject()
-		: mX(0.0f)
-		, mY(0.0f)
 	{
 	}
 	GameObject::~GameObject()
 	{
+		for (Component* comp : mComponents)
+		{
+			delete comp;
+			comp = nullptr;
+		}
+	}
+	void GameObject::Initialize()
+	{
+		for (Component* comp : mComponents)
+		{
+			comp->Initialize();
+		}
 	}
 	void GameObject::Update()
 	{
-		const int SPEED = 300;
-		if (Input::GetKey(eKeyCode::KEY_A)) {
-			mX -= SPEED * Time::DeltaTime();
-		}
-		if (Input::GetKey(eKeyCode::KEY_D)) {
-			mX += SPEED * Time::DeltaTime();
-		}
-		if (Input::GetKey(eKeyCode::KEY_W)) {
-			mY -= SPEED * Time::DeltaTime();
-		}
-		if (Input::GetKey(eKeyCode::KEY_S)) {
-			mY += SPEED * Time::DeltaTime();
+		for (Component* comp : mComponents)
+		{
+			comp->Update();
 		}
 	}
 	void GameObject::LateUpdate()
 	{
+		for (Component* comp : mComponents)
+		{
+			comp->LateUpdate();
+		}
 	}
-	void GameObject::Render(HDC hdc) const
+	void GameObject::Render(HDC hdc)
 	{
-		HBRUSH brush = CreateSolidBrush(RGB(rand() % 256, rand() % 256, rand() % 256));
-		HBRUSH oldBrush = (HBRUSH)SelectObject(hdc, brush);
-		SelectObject(hdc, brush);
-
-		Rectangle(hdc, 0 + mX, 0 + mY, 100 + mX, 100 + mY);
-
-		SelectObject(hdc, oldBrush);
-		DeleteObject(brush);
+		for (Component* comp : mComponents)
+		{
+			comp->Render(hdc);
+		}
 	}
 }
