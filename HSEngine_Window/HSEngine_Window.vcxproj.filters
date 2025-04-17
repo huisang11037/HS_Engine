@@ -11,9 +11,11 @@
       <Filter>Scenes</Filter>
     </ClInclude>
     <ClInclude Include="hsPlayer.h" />
+    <ClInclude Include="hsTitleScene.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="hsPlayScene.cpp" />
     <ClCompile Include="hsPlayer.cpp" />
+    <ClCompile Include="hsTitleScene.cpp" />
   </ItemGroup>
 </Project>

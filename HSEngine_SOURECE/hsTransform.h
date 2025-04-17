@@ -18,7 +18,7 @@ namespace hs
 		void Render(HDC hdc)  override;
 
 		void SetPosition(Vector2 pos) { mPosition.x = pos.x; mPosition.y = pos.y; }
-		Vector2 GetPosition() { return mPosition; }
+		Vector2 GetPosition() const { return mPosition; }
 
 	private:
 		Vector2 mPosition;

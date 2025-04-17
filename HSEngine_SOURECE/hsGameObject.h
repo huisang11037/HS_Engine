@@ -19,6 +19,7 @@ namespace hs
 		T* AddComponent()
 		{
 			T* component = new T();
+			component->Initialize();
 			component->SetOwner(this);
 			mComponents.push_back(component);
 			return component;

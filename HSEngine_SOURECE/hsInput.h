@@ -37,9 +37,9 @@ namespace hs {
 		static bool GetKey(eKeyCode key) { return keys[static_cast<size_t>(key)].state == eKeyState::KEY_PRESSED; }
 
 	private:
-		static std::vector<Key> keys;
-
 		static void createKeys();
 		static void updateKeys();
+
+		static std::vector<Key> keys;
 	};
 }

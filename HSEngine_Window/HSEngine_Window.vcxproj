@@ -135,10 +135,12 @@
     <ClInclude Include="hsLoadScenes.h" />
     <ClInclude Include="hsPlayer.h" />
     <ClInclude Include="hsPlayScene.h" />
+    <ClInclude Include="hsTitleScene.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="hsPlayer.cpp" />
     <ClCompile Include="hsPlayScene.cpp" />
+    <ClCompile Include="hsTitleScene.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

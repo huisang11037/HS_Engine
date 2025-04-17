@@ -20,10 +20,13 @@ namespace hs
 
 		static Scene* LoadScene(const std::wstring& name)
 		{
+			if (mCurrentScene) mCurrentScene->OnExit();
+
 			auto iter = mScenes.find(name);
 			if (iter != mScenes.end())
 			{
 				mCurrentScene = iter->second;
+				mCurrentScene->OnEnter();
 				return mCurrentScene;
 			}
 			return nullptr;

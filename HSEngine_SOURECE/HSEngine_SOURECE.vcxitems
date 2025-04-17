@@ -18,8 +18,10 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)hsApplication.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsComponent.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsEntity.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsEnums.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsGameObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsInput.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsMath.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsResource.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsResources.h" />
@@ -35,6 +37,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)hsEntity.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsGameObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsInput.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsMath.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsResource.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsResources.cpp" />
