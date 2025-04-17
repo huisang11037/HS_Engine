@@ -1,11 +1,13 @@
 #include "hsGameObject.h"
 #include "hsInput.h"
 #include "hsTime.h"
+#include "hsTransform.h"
 
 namespace hs
 {
 	GameObject::GameObject()
 	{
+		initializeTransform();
 	}
 	GameObject::~GameObject()
 	{
@@ -42,5 +44,9 @@ namespace hs
 		{
 			comp->Render(hdc);
 		}
+	}
+	void GameObject::initializeTransform()
+	{
+		AddComponent<Transform>();
 	}
 }

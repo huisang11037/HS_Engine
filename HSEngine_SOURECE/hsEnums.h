@@ -1,6 +1,6 @@
 #pragma once
 
-namespace hs
+namespace hs::enums
 {
 	enum class eLayerType
 	{

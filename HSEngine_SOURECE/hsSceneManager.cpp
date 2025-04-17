@@ -20,4 +20,17 @@ namespace hs
 	{
 		mCurrentScene->Render(hdc);
 	}
+	Scene* SceneManager::LoadScene(const std::wstring& name)
+	{
+		if (mCurrentScene) mCurrentScene->OnExit();
+
+		std::map<std::wstring, Scene*>::iterator iter = mScenes.find(name);
+
+		if (iter == mScenes.end()) return nullptr;
+
+		mCurrentScene = iter->second;
+		mCurrentScene->OnEnter();
+
+		return iter->second;
+	}
 }

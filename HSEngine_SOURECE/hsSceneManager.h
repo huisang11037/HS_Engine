@@ -11,6 +11,7 @@ namespace hs
 		{
 			T* scene = new T();
 			scene->SetName(name);
+			mCurrentScene = scene;
 			scene->Initialize();
 
 			mScenes.insert(std::make_pair(name, scene));
@@ -18,19 +19,8 @@ namespace hs
 			return scene;
 		}
 
-		static Scene* LoadScene(const std::wstring& name)
-		{
-			if (mCurrentScene) mCurrentScene->OnExit();
-
-			auto iter = mScenes.find(name);
-			if (iter != mScenes.end())
-			{
-				mCurrentScene = iter->second;
-				mCurrentScene->OnEnter();
-				return mCurrentScene;
-			}
-			return nullptr;
-		}
+		static Scene* LoadScene(const std::wstring& name);
+		static Scene* GetActiveScene() { return mCurrentScene; }
 
 		static void Initialize();
 		static void Update();

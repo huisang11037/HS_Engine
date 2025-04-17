@@ -6,6 +6,7 @@
 #include "hsInput.h"
 #include "hsTitleScene.h"
 #include "hsSceneManager.h"
+#include "hsObject.h"
 
 namespace hs
 {
@@ -19,34 +20,11 @@ namespace hs
 	void PlayScene::Initialize()
 	{
 		{
-			bg = new Player();
-			Transform* tr
-				= bg->AddComponent<Transform>();
-			tr->SetPosition(Vector2(0, 0));
-
-			tr->SetName(L"TR");
-
-			SpriteRenderer* sr
-				= bg->AddComponent<SpriteRenderer>();
+			bg = object::Instantiate<Player>
+				(enums::eLayerType::BackGround, Vector2(100.0f, 100.0f));
+			SpriteRenderer* sr = bg->AddComponent<SpriteRenderer>();
 			sr->SetName(L"SR");
 			sr->ImageLoad(L"C:\\HSEngine\\Resources\\CloudOcean.png");
-
-
-			AddGameObject(bg, eLayerType::BackGround);
-		}
-		{
-			Player* player = new Player();
-
-			Transform* tr
-				= player->AddComponent<Transform>();
-			tr->SetPosition(Vector2(100, 100));
-
-			tr->SetName(L"TR");
-			SpriteRenderer* sr
-				= player->AddComponent<SpriteRenderer>();
-			sr->SetName(L"SR");
-			sr->ImageLoad(L"C:\\HSEngine\\Resources\\Player1.png");
-			AddGameObject(player, eLayerType::Player);
 		}
 	}
 	void PlayScene::Update()
@@ -73,7 +51,7 @@ namespace hs
 	}
 	void PlayScene::OnExit()
 	{
-		Transform* tr = bg->GetComponent<Transform>();
-		tr->SetPosition(Vector2(0, 0));
+		//Transform* tr = bg->GetComponent<Transform>();
+		//tr->SetPosition(Vector2(0, 0));
 	}
 }

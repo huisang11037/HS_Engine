@@ -39,6 +39,8 @@ namespace hs
 			return component;
 		}
 
+	private:
+		void initializeTransform();
 
 	private:
 		std::vector<Component*> mComponents;
