@@ -7,6 +7,8 @@
 #include "hsTitleScene.h"
 #include "hsSceneManager.h"
 #include "hsObject.h"
+#include "hsTexture.h"
+#include "hsResources.h"
 
 namespace hs
 {
@@ -19,13 +21,16 @@ namespace hs
 	}
 	void PlayScene::Initialize()
 	{
-		{
-			bg = object::Instantiate<Player>
-				(enums::eLayerType::BackGround, Vector2(100.0f, 100.0f));
-			SpriteRenderer* sr = bg->AddComponent<SpriteRenderer>();
-			sr->SetName(L"SR");
-			sr->ImageLoad(L"C:\\HSEngine\\Resources\\CloudOcean.png");
-		}
+		//게임오브젝트 만들기전에 리소스들 전부 Load해두면 좋다.
+		bg = object::Instantiate<Player>
+			(enums::eLayerType::BackGround/*, Vector2(100.0f, 100.0f)*/);
+		SpriteRenderer* sr = bg->AddComponent<SpriteRenderer>();
+
+		graphcis::Texture* bg = Resources::Find<graphcis::Texture>(L"BG");
+		sr->SetTexture(bg);
+
+		// 게임 오브젝트 생성후에 레이어와 게임오브젝트들의 init함수를 호출
+		Scene::Initialize();
 	}
 	void PlayScene::Update()
 	{

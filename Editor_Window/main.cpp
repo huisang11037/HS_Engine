@@ -4,6 +4,7 @@
 #include "framework.h"
 #include "Editor_Window.h"
 #include "..\\HSEngine_SOURECE\hsApplication.h"
+#include "..\\HSEngine_Window\hsLoadResources.h"
 #include "..\\HSEngine_Window\hsLoadScenes.h"
 
 hs::Application application;
@@ -132,6 +133,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    Gdiplus::GdiplusStartup(&gpToken, &gpsi, NULL);
 
    // load scene
+   hs::LoadResources();
    hs::LoadScenes();
 
    return TRUE;

@@ -16,6 +16,8 @@ namespace hs {
 		void LateUpdate();
 		void Render();
 
+		HDC GetHdc() { return mHdc; }
+
 	private:
 		void clearRenderTarget();
 		void adjustWindowRect(HWND hwnd, UINT width, UINT height);

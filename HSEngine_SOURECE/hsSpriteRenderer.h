@@ -1,6 +1,7 @@
 #pragma once
 #include "hsEntity.h"
 #include "hsComponent.h"
+#include "hsTexture.h"
 
 namespace hs
 {
@@ -15,11 +16,11 @@ namespace hs
 		void LateUpdate()  override;
 		void Render(HDC hdc)  override;
 
-		void ImageLoad(const std::wstring& path);
+		void SetTexture(graphcis::Texture* texture) { mTexture = texture; }
+		void SetSize(math::Vector2 size) { mSize = size; }
 
 	private:
-		Gdiplus::Image* mImgae;
-		UINT mWidth;
-		UINT mHeight;
+		graphcis::Texture* mTexture;
+		math::Vector2 mSize;
 	};
 }

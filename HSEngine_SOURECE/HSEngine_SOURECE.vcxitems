@@ -4,6 +4,7 @@
     <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
     <HasSharedItems>true</HasSharedItems>
     <ItemsProjectGuid>{af8bc553-b643-44ae-85fe-31e0781af827}</ItemsProjectGuid>
+    <ItemsProjectName>HSEngine_SOURCE</ItemsProjectName>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
@@ -29,6 +30,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)hsScene.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsSceneManager.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsSpriteRenderer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsTexture.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsTime.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsTransform.h" />
   </ItemGroup>
@@ -45,6 +47,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)hsScene.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsSceneManager.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsSpriteRenderer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsTexture.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsTime.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsTransform.cpp" />
   </ItemGroup>

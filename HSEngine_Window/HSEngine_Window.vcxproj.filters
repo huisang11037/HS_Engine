@@ -12,6 +12,7 @@
     </ClInclude>
     <ClInclude Include="hsPlayer.h" />
     <ClInclude Include="hsTitleScene.h" />
+    <ClInclude Include="hsLoadResources.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="hsPlayScene.cpp" />

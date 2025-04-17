@@ -132,6 +132,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="hsLoadResources.h" />
     <ClInclude Include="hsLoadScenes.h" />
     <ClInclude Include="hsPlayer.h" />
     <ClInclude Include="hsPlayScene.h" />
