@@ -3,7 +3,7 @@
 
 #include "framework.h"
 #include "Editor_Window.h"
-#include "..\\HSEngine_SOURECE\hsApplication.h"
+#include "..\\HSEngine_SOURCE\hsApplication.h"
 #include "..\\HSEngine_Window\hsLoadResources.h"
 #include "..\\HSEngine_Window\hsLoadScenes.h"
 

@@ -1,23 +1,21 @@
 #pragma once
-#include "hsScene.h"
+#include "hsComponent.h"
+
 
 namespace hs
 {
-	class PlayScene : public Scene
+	class Script : public Component
 	{
 	public:
-		PlayScene();
-		~PlayScene();
+		Script();
+		~Script();
 
 		void Initialize() override;
 		void Update() override;
 		void LateUpdate() override;
 		void Render(HDC hdc) override;
 
-		void OnEnter() override;
-		void OnExit() override;
-
 	private:
-		class Player* mPlayer;
+
 	};
 }

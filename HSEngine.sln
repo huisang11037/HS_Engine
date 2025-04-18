@@ -7,7 +7,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Editor_Window", "Editor_Win
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HSEngine_Window", "HSEngine_Window\HSEngine_Window.vcxproj", "{96EDF135-3A91-4D7D-B006-4021C52A2388}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HSEngine_SOURECE", "HSEngine_SOURECE\HSEngine_SOURECE.vcxitems", "{AF8BC553-B643-44AE-85FE-31E0781AF827}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HSEngine_SOURCE", "HSEngine_SOURCE\HSEngine_SOURCE.vcxitems", "{AF8BC553-B643-44AE-85FE-31E0781AF827}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,8 +41,8 @@ Global
 		SolutionGuid = {B205CBCF-E01A-4989-B45E-B4F2100D6305}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		HSEngine_SOURECE\HSEngine_SOURECE.vcxitems*{96edf135-3a91-4d7d-b006-4021c52a2388}*SharedItemsImports = 4
-		HSEngine_SOURECE\HSEngine_SOURECE.vcxitems*{af8bc553-b643-44ae-85fe-31e0781af827}*SharedItemsImports = 9
-		HSEngine_SOURECE\HSEngine_SOURECE.vcxitems*{dcef22d3-a38d-4f17-8297-d64ecaa8c344}*SharedItemsImports = 4
+		HSEngine_SOURCE\HSEngine_SOURCE.vcxitems*{96edf135-3a91-4d7d-b006-4021c52a2388}*SharedItemsImports = 4
+		HSEngine_SOURCE\HSEngine_SOURCE.vcxitems*{af8bc553-b643-44ae-85fe-31e0781af827}*SharedItemsImports = 9
+		HSEngine_SOURCE\HSEngine_SOURCE.vcxitems*{dcef22d3-a38d-4f17-8297-d64ecaa8c344}*SharedItemsImports = 4
 	EndGlobalSection
 EndGlobal

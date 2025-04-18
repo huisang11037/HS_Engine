@@ -2,11 +2,12 @@
 #include "hsGameObject.h"
 #include "hsTransform.h"
 #include "hsTexture.h"
+#include "hsRenderer.h"
 
 namespace hs
 {
 	SpriteRenderer::SpriteRenderer()
-		: Component()
+		: Component(enums::eComponentType::SpriteRenderer)
 		, mTexture(nullptr)
 		, mSize(Vector2::One)
 	{
@@ -34,6 +35,8 @@ namespace hs
 
 		Transform* tr = GetOwner()->GetComponent<Transform>();
 		Vector2 pos = tr->GetPosition();
+
+		pos = renderer::mainCamera->CaluatePosition(pos);
 
 		if (mTexture->GetTextureType()
 			== graphcis::Texture::eTextureType::Bmp)

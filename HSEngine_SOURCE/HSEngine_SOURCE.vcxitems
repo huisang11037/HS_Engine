@@ -17,6 +17,7 @@
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsApplication.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsCamera.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsComponent.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsEntity.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsEnums.h" />
@@ -25,10 +26,12 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)hsLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsMath.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsObject.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsRenderer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsResource.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsResources.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsScene.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsSceneManager.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsScript.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsSpriteRenderer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsTexture.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsTime.h" />
@@ -36,16 +39,19 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)hsApplication.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsCamera.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsComponent.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsEntity.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsGameObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsInput.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsMath.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsRenderer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsResource.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsResources.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsScene.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsSceneManager.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsScript.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsSpriteRenderer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsTexture.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsTime.cpp" />

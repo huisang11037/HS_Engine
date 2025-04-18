@@ -16,7 +16,9 @@ namespace hs {
 		void LateUpdate();
 		void Render();
 
-		HDC GetHdc() { return mHdc; }
+		HDC GetHdc() const { return mHdc; }
+		UINT GetWidth() const { return mWidth; }
+		UINT GetHeight() const { return mHeight; }
 
 	private:
 		void clearRenderTarget();

@@ -1,5 +1,5 @@
 #pragma once
-#include "..\\HSEngine_SOURECE\hsScene.h"
+#include "..\\HSEngine_SOURCE\hsScene.h"
 
 namespace hs
 {

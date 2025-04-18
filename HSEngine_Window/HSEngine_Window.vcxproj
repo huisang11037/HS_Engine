@@ -56,7 +56,7 @@
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup Label="Shared">
-    <Import Project="..\HSEngine_SOURECE\HSEngine_SOURECE.vcxitems" Label="Shared" />
+    <Import Project="..\HSEngine_SOURCE\HSEngine_SOURCE.vcxitems" Label="Shared" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -135,11 +135,13 @@
     <ClInclude Include="hsLoadResources.h" />
     <ClInclude Include="hsLoadScenes.h" />
     <ClInclude Include="hsPlayer.h" />
+    <ClInclude Include="hsPlayerScript.h" />
     <ClInclude Include="hsPlayScene.h" />
     <ClInclude Include="hsTitleScene.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="hsPlayer.cpp" />
+    <ClCompile Include="hsPlayerScript.cpp" />
     <ClCompile Include="hsPlayScene.cpp" />
     <ClCompile Include="hsTitleScene.cpp" />
   </ItemGroup>
