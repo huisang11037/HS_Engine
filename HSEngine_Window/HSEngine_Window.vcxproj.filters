@@ -4,21 +4,43 @@
     <Filter Include="Scenes">
       <UniqueIdentifier>{e26caa5c-30c4-447c-a27b-a5b0ff9118ec}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Contents">
+      <UniqueIdentifier>{06eaa11c-3bae-4635-8cf9-23d4cc5cdc5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts">
+      <UniqueIdentifier>{6b7204d7-4957-48f4-8385-26118081140a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="hsPlayScene.h" />
     <ClInclude Include="hsLoadScenes.h">
       <Filter>Scenes</Filter>
     </ClInclude>
-    <ClInclude Include="hsPlayer.h" />
-    <ClInclude Include="hsTitleScene.h" />
     <ClInclude Include="hsLoadResources.h" />
-    <ClInclude Include="hsPlayerScript.h" />
+    <ClInclude Include="hsPlayScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="hsTitleScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="hsPlayer.h">
+      <Filter>Contents</Filter>
+    </ClInclude>
+    <ClInclude Include="hsPlayerScript.h">
+      <Filter>Scripts</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="hsPlayScene.cpp" />
-    <ClCompile Include="hsPlayer.cpp" />
-    <ClCompile Include="hsTitleScene.cpp" />
-    <ClCompile Include="hsPlayerScript.cpp" />
+    <ClCompile Include="hsPlayScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="hsTitleScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="hsPlayer.cpp">
+      <Filter>Contents</Filter>
+    </ClCompile>
+    <ClCompile Include="hsPlayerScript.cpp">
+      <Filter>Scripts</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
