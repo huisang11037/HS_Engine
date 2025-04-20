@@ -18,6 +18,7 @@ namespace hs::enums
 		BackGround,
 		//Tree 
 		//character
+		Animal,
 		Player,
 		Max = 16,
 	};

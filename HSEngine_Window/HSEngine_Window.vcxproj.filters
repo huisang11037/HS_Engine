@@ -28,6 +28,12 @@
     <ClInclude Include="hsPlayerScript.h">
       <Filter>Scripts</Filter>
     </ClInclude>
+    <ClInclude Include="hsCat.h">
+      <Filter>Contents</Filter>
+    </ClInclude>
+    <ClInclude Include="hsCatScript.h">
+      <Filter>Scripts</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="hsPlayScene.cpp">
@@ -40,6 +46,12 @@
       <Filter>Contents</Filter>
     </ClCompile>
     <ClCompile Include="hsPlayerScript.cpp">
+      <Filter>Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="hsCat.cpp">
+      <Filter>Contents</Filter>
+    </ClCompile>
+    <ClCompile Include="hsCatScript.cpp">
       <Filter>Scripts</Filter>
     </ClCompile>
   </ItemGroup>
