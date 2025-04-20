@@ -12,6 +12,7 @@
 #include "hsPlayerScript.h"
 #include "hsCamera.h"
 #include "hsRenderer.h"
+#include "hsAnimator.h"
 
 namespace hs
 {
@@ -33,16 +34,21 @@ namespace hs
 
 		mPlayer = object::Instantiate<Player>
 			(enums::eLayerType::Player/*, Vector2(100.0f, 100.0f)*/);
-		SpriteRenderer* sr = mPlayer->AddComponent<SpriteRenderer>();
 		mPlayer->AddComponent<PlayerScript>();
-
-		graphcis::Texture* packmanTexture = Resources::Find<graphcis::Texture>(L"PackMan");
-		sr->SetTexture(packmanTexture);
+		graphcis::Texture* packmanTexture = Resources::Find<graphcis::Texture>(L"Cat");
+		Animator* animator = mPlayer->AddComponent<Animator>();
+		animator->CreateAnimation(L"CatFrontMove"
+			, packmanTexture
+			, Vector2(0.0f, 0.0f)
+			, Vector2(32.0f, 32.0f)
+			, Vector2(16.0f, 16.0f)
+			, 4
+			, 0.1f);
+		animator->PlayAnimation(L"CatFrontMove", true);
 
 		GameObject* bg = object::Instantiate<GameObject>
 			(enums::eLayerType::BackGround/*, Vector2(100.0f, 100.0f)*/);
 		SpriteRenderer* bgSr = bg->AddComponent<SpriteRenderer>();
-
 		graphcis::Texture* bgTexture = Resources::Find<graphcis::Texture>(L"Map");
 		bgSr->SetTexture(bgTexture);
 

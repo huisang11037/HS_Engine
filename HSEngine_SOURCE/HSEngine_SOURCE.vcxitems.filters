@@ -55,6 +55,8 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)hsSceneManager.cpp">
       <Filter>Scene</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsAnimation.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsAnimator.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)hsCamera.h">
@@ -120,6 +122,8 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)hsSceneManager.h">
       <Filter>Scene</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsAnimation.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsAnimator.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Component">

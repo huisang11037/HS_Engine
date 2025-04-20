@@ -9,5 +9,6 @@ namespace hs
 	{
 		Resources::Load<graphcis::Texture>(L"Map", L"..\\Resources\\CloudOcean.png");
 		Resources::Load<graphcis::Texture>(L"PackMan", L"..\\Resources\\Player1.png");
+		Resources::Load<graphcis::Texture>(L"Cat", L"..\\Resources\\ChickenAlpha.bmp");
 	}
 }

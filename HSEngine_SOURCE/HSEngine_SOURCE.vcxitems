@@ -16,6 +16,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsAnimation.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsAnimator.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsApplication.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsCamera.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsComponent.h" />
@@ -38,6 +40,8 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)hsTransform.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsAnimation.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsAnimator.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsApplication.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsCamera.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsComponent.cpp" />
