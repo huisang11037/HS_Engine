@@ -51,25 +51,66 @@ namespace hs
 		GameObject* owner = mAnimator->GetOwner();
 		Transform* tr = owner->GetComponent<Transform>();
 		Vector2 position = tr->GetPosition();
+		float rotation = tr->GetRotation();
+		Vector2 scale = tr->GetScale();
 
 		if (renderer::mainCamera)
 		{
 			position = renderer::mainCamera->CaluatePosition(position);
 		}
 
-        // 알파블렌드 설정
-		BLENDFUNCTION blendFunc = {};
-		blendFunc.BlendOp = AC_SRC_OVER;
-		blendFunc.BlendFlags = 0;
-		blendFunc.AlphaFormat = AC_SRC_ALPHA;
-		blendFunc.SourceConstantAlpha = 255; // 0 ~ 255 알파값
-
 		Sprite sprite = mAnimationSheet[mIndex];
-		HDC imgHdc = mTexture->GetHdc();
+		graphcis::Texture::eTextureType type = mTexture->GetTextureType();
+		if (type == graphcis::Texture::eTextureType::Png)
+		{
+			// 투명화할 색상 지정, 쓰고싶으면 밑에 grapics.DrawImage에 마지막 nullptr 대신 넣으면 된다
+			Gdiplus::ImageAttributes imgAttr = {};
+			imgAttr.SetColorKey(Gdiplus::Color(230, 230, 230), Gdiplus::Color(255, 255, 255));
 
-		AlphaBlend(hdc, position.x, position.y, sprite.size.x, sprite.size.y
-			, imgHdc, sprite.leftTop.x, sprite.leftTop.y, sprite.size.x, sprite.size.y
-			, blendFunc);
+			Gdiplus::Graphics graphics(hdc);
+
+			graphics.TranslateTransform(position.x, position.y);
+			graphics.RotateTransform(rotation);
+			graphics.TranslateTransform(-position.x, -position.y);
+
+			graphics.DrawImage(mTexture->GetImage()
+				, Gdiplus::Rect
+				(
+					position.x - (sprite.size.x / 2.0f)
+					, position.y - (sprite.size.y / 2.0f)
+					, sprite.size.x * scale.x
+					, sprite.size.y * scale.y
+				)
+				, sprite.leftTop.x
+				, sprite.leftTop.y
+				, sprite.size.x
+				, sprite.size.y
+				, Gdiplus::UnitPixel
+				, /*&imgAttr*/nullptr);
+		}
+		else if (type == graphcis::Texture::eTextureType::Bmp) 
+		{
+			// 알파블렌드 설정
+			BLENDFUNCTION blendFunc = {};
+			blendFunc.BlendOp = AC_SRC_OVER;
+			blendFunc.BlendFlags = 0;
+			blendFunc.AlphaFormat = AC_SRC_ALPHA;
+			blendFunc.SourceConstantAlpha = 255; // 0 ~ 255 알파값
+
+			HDC imgHdc = mTexture->GetHdc();
+
+			AlphaBlend(hdc
+				, position.x - (sprite.size.x / 2.0f)
+				, position.y - (sprite.size.y / 2.0f)
+				, sprite.size.x * scale.x
+				, sprite.size.y * scale.y
+				, imgHdc
+				, sprite.leftTop.x
+				, sprite.leftTop.y
+				, sprite.size.x
+				, sprite.size.y
+				, blendFunc);
+		}
     }
     void Animation::CreateAnimation(const std::wstring& name
         , graphcis::Texture* spriteSheet

@@ -32,24 +32,45 @@ namespace hs
 
 
 
-		mPlayer = object::Instantiate<Player>
-			(enums::eLayerType::Player/*, Vector2(100.0f, 100.0f)*/);
+		mPlayer = object::Instantiate<Player>(enums::eLayerType::Player);
 		mPlayer->AddComponent<PlayerScript>();
+
+		//graphcis::Texture* packmanTexture = Resources::Find<graphcis::Texture>(L"Effect");
+		//Animator* animator = mPlayer->AddComponent<Animator>();
+		//animator->CreateAnimation(L"CatFrontMove"
+		//	, packmanTexture
+		//	, Vector2(0.0f, 0.0f)
+		//	, Vector2(386.0f, 246.0f)
+		//	, Vector2::Zero
+		//	, 8
+		//	, 0.1f);
+		//animator->PlayAnimation(L"CatFrontMove", true);
+
 		graphcis::Texture* packmanTexture = Resources::Find<graphcis::Texture>(L"Cat");
 		Animator* animator = mPlayer->AddComponent<Animator>();
-		animator->CreateAnimation(L"CatFrontMove"
-			, packmanTexture
-			, Vector2(0.0f, 0.0f)
-			, Vector2(32.0f, 32.0f)
-			, Vector2(16.0f, 16.0f)
-			, 4
-			, 0.1f);
-		animator->PlayAnimation(L"CatFrontMove", true);
+		animator->CreateAnimation(L"DownWalk", packmanTexture, Vector2(0.0f, 0.0f)
+			, Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+		animator->CreateAnimation(L"RightWalk", packmanTexture, Vector2(0.0f, 32.0f)
+			, Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+		animator->CreateAnimation(L"UpWalk", packmanTexture, Vector2(0.0f, 64.0f)
+			, Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+		animator->CreateAnimation(L"LeftWalk", packmanTexture, Vector2(0.0f, 96.0f)
+			, Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+		animator->CreateAnimation(L"SitDown", packmanTexture, Vector2(0.0f, 128.0f)
+			, Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+		animator->CreateAnimation(L"Attack", packmanTexture, Vector2(0.0f, 160.0f)
+			, Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+
+		animator->PlayAnimation(L"SitDown", false);
+
+		mPlayer->GetComponent<Transform>()->SetPosition(Vector2(100.0f, 100.0f));
+		mPlayer->GetComponent<Transform>()->SetScale(Vector2(2.0f, 2.0f));
+		//mPlayer->GetComponent<Transform>()->SetRotation(45.0f);
 
 		GameObject* bg = object::Instantiate<GameObject>
 			(enums::eLayerType::BackGround/*, Vector2(100.0f, 100.0f)*/);
 		SpriteRenderer* bgSr = bg->AddComponent<SpriteRenderer>();
-		graphcis::Texture* bgTexture = Resources::Find<graphcis::Texture>(L"Map");
+		graphcis::Texture* bgTexture = Resources::Find<graphcis::Texture>(L"Bubble");
 		bgSr->SetTexture(bgTexture);
 
 		// 게임 오브젝트 생성후에 레이어와 게임오브젝트들의 init함수를 호출

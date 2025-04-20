@@ -7,6 +7,14 @@ namespace hs
 	class PlayerScript : public Script
 	{
 	public:
+		enum class ePlayerState
+		{
+			SitDown,
+			Move,
+			Sleep,
+			Attack,
+		};
+
 		PlayerScript();
 		~PlayerScript();
 
@@ -15,8 +23,12 @@ namespace hs
 		void LateUpdate() override;
 		void Render(HDC hdc) override;
 
+	private:
+		void sitDown();
+		void move();
 
 	private:
-
+		ePlayerState mState;
+		class Animator* mAnimator;
 	};
 }

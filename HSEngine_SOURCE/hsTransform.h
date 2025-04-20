@@ -18,9 +18,15 @@ namespace hs
 		void Render(HDC hdc)  override;
 
 		void SetPosition(Vector2 pos) { mPosition.x = pos.x; mPosition.y = pos.y; }
+		void SetScale(Vector2 scale) { mScale = scale; }
+		void SetRotation(float rotation) { mRotation = rotation; }
 		Vector2 GetPosition() const { return mPosition; }
+		Vector2 GetScale() const { return mScale; }
+		float GetRotation() const { return mRotation; }
 
 	private:
 		Vector2 mPosition;
+		Vector2 mScale;
+		float mRotation;
 	};
 }
