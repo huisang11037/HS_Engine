@@ -16,6 +16,7 @@ namespace hs {
 		void LateUpdate();
 		void Render();
 
+		HWND GetHwnd() const { return mHwnd; }
 		HDC GetHdc() const { return mHdc; }
 		UINT GetWidth() const { return mWidth; }
 		UINT GetHeight() const { return mHeight; }

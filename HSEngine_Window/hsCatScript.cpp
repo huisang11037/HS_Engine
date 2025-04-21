@@ -18,7 +18,7 @@ namespace hs
 	}
 	void CatScript::Initialize()
 	{
-
+		
 
 	}
 	void CatScript::Update()

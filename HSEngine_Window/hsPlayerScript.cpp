@@ -8,7 +8,7 @@
 namespace hs
 {
 	PlayerScript::PlayerScript()
-		: mState(ePlayerState::SitDown)
+		: mState(ePlayerState::Idle)
 		, mAnimator(nullptr)
 	{
 	}
@@ -26,13 +26,16 @@ namespace hs
 		}
 		switch (mState)
 		{
-		case hs::PlayerScript::ePlayerState::SitDown:
-			sitDown();
+		case hs::PlayerScript::ePlayerState::Idle:
+			idle();
 			break;
-		case hs::PlayerScript::ePlayerState::Move:
+		case hs::PlayerScript::ePlayerState::Walk:
 			move();
 			break;
 		case hs::PlayerScript::ePlayerState::Sleep:
+			break;
+		case hs::PlayerScript::ePlayerState::GiveWater:
+			giveWater();
 			break;
 		case hs::PlayerScript::ePlayerState::Attack:
 			break;
@@ -46,27 +49,14 @@ namespace hs
 	void PlayerScript::Render(HDC hdc)
 	{
 	}
-	void PlayerScript::sitDown()
+	void PlayerScript::idle()
 	{
-		if (Input::GetKey(eKeyCode::KEY_RIGHT))
+		if (Input::GetKey(eKeyCode::LButton))
 		{
-			mAnimator->PlayAnimation(L"RightWalk", true);
-			mState = ePlayerState::Move;
-		}
-		if (Input::GetKey(eKeyCode::KEY_LEFT))
-		{
-			mAnimator->PlayAnimation(L"LeftWalk", true);
-			mState = ePlayerState::Move;
-		}
-		if (Input::GetKey(eKeyCode::KEY_UP))
-		{
-			mAnimator->PlayAnimation(L"UpWalk", true);
-			mState = ePlayerState::Move;
-		}
-		if (Input::GetKey(eKeyCode::KEY_DOWN))
-		{
-			mAnimator->PlayAnimation(L"DownWalk", true);
-			mState = ePlayerState::Move;
+			mState = PlayerScript::ePlayerState::GiveWater;
+			mAnimator->PlayAnimation(L"FrontGiveWater", false);
+
+			Vector2 mousePos = Input::GetMousePosition();
 		}
 	}
 	void PlayerScript::move()
@@ -95,8 +85,16 @@ namespace hs
 		if (Input::GetKeyUp(eKeyCode::KEY_RIGHT) || Input::GetKeyUp(eKeyCode::KEY_LEFT) 
 			|| Input::GetKeyUp(eKeyCode::KEY_UP) || Input::GetKeyUp(eKeyCode::KEY_DOWN))
 		{
-			mState = ePlayerState::SitDown;
+			mState = ePlayerState::Idle;
 			mAnimator->PlayAnimation(L"SitDown", false);
+		}
+	}
+	void PlayerScript::giveWater()
+	{
+		if (mAnimator->IsComplete())
+		{
+			mState = ePlayerState::Idle;
+			mAnimator->PlayAnimation(L"Idle", false);
 		}
 	}
 }

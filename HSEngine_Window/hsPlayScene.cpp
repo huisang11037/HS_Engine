@@ -30,33 +30,22 @@ namespace hs
 		GameObject* camera = object::Instantiate<GameObject>(enums::eLayerType::None, Vector2(650.0f, 380.0f));
 		Camera* cameraComp = camera->AddComponent<Camera>();
 		renderer::mainCamera = cameraComp;
-		//camera->AddComponent<PlayerScript>();
+		// main camera end
 
-
-
+		// Player
 		mPlayer = object::Instantiate<Player>(enums::eLayerType::Player);
 		mPlayer->AddComponent<PlayerScript>();
 
-		graphcis::Texture* packmanTexture = Resources::Find<graphcis::Texture>(L"Cat");
-		Animator* animator = mPlayer->AddComponent<Animator>();
-		animator->CreateAnimation(L"DownWalk", packmanTexture, Vector2(0.0f, 0.0f)
-			, Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
-		animator->CreateAnimation(L"RightWalk", packmanTexture, Vector2(0.0f, 32.0f)
-			, Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
-		animator->CreateAnimation(L"UpWalk", packmanTexture, Vector2(0.0f, 64.0f)
-			, Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
-		animator->CreateAnimation(L"LeftWalk", packmanTexture, Vector2(0.0f, 96.0f)
-			, Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
-		animator->CreateAnimation(L"SitDown", packmanTexture, Vector2(0.0f, 128.0f)
-			, Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
-		animator->CreateAnimation(L"Attack", packmanTexture, Vector2(0.0f, 160.0f)
-			, Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
-
-		animator->PlayAnimation(L"SitDown", false);
+		graphcis::Texture* playerTex = Resources::Find<graphcis::Texture>(L"Player");
+		Animator* playerAnimator = mPlayer->AddComponent<Animator>();
+		playerAnimator->CreateAnimation(L"Idle", playerTex
+			, Vector2(2000.0f, 250.0f), Vector2(250.0f, 250.0f), Vector2::Zero, 1, 0.1f);
+		playerAnimator->CreateAnimation(L"FrontGiveWater", playerTex
+			, Vector2(0.0f, 2000.0f), Vector2(250.0f, 250.0f), Vector2::Zero, 12, 0.1f);
+		playerAnimator->PlayAnimation(L"Idle", false);
 
 		mPlayer->GetComponent<Transform>()->SetPosition(Vector2(100.0f, 100.0f));
-		mPlayer->GetComponent<Transform>()->SetScale(Vector2(2.0f, 2.0f));
-		//mPlayer->GetComponent<Transform>()->SetRotation(45.0f);
+		// Player end
 
 		// Cat
 		Cat* cat = object::Instantiate<Cat>(enums::eLayerType::Animal);
@@ -83,12 +72,6 @@ namespace hs
 		cat->GetComponent<Transform>()->SetPosition(Vector2(200.0f, 200.0f));
 		cat->GetComponent<Transform>()->SetScale(Vector2(2.0f, 2.0f));
 		// Cat end
-
-		GameObject* bg = object::Instantiate<GameObject>
-			(enums::eLayerType::BackGround/*, Vector2(100.0f, 100.0f)*/);
-		SpriteRenderer* bgSr = bg->AddComponent<SpriteRenderer>();
-		graphcis::Texture* bgTexture = Resources::Find<graphcis::Texture>(L"Bubble");
-		bgSr->SetTexture(bgTexture);
 
 		// 게임 오브젝트 생성후에 레이어와 게임오브젝트들의 init함수를 호출
 		Scene::Initialize();

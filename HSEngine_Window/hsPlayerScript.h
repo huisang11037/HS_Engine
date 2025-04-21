@@ -9,9 +9,10 @@ namespace hs
 	public:
 		enum class ePlayerState
 		{
-			SitDown,
-			Move,
+			Idle,
+			Walk,
 			Sleep,
+			GiveWater,
 			Attack,
 		};
 
@@ -24,8 +25,9 @@ namespace hs
 		void Render(HDC hdc) override;
 
 	private:
-		void sitDown();
+		void idle();
 		void move();
+		void giveWater();
 
 	private:
 		ePlayerState mState;

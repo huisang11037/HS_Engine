@@ -1,7 +1,11 @@
 #include "hsInput.h"
+#include "hsApplication.h"
+
+extern hs::Application application;
 
 namespace hs {
 	std::vector<Input::Key> Input::keys = {};
+	math::Vector2 Input::mMousePosition = math::Vector2::One;
 
 	int ASCII[static_cast<size_t>(eKeyCode::END)] =
 	{
@@ -9,8 +13,8 @@ namespace hs {
 		'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L',
 		'Z', 'X', 'C', 'V', 'B', 'N', 'M',
 		VK_LEFT, VK_RIGHT, VK_UP, VK_DOWN,
+		VK_LBUTTON, VK_MBUTTON, VK_RBUTTON,
 	};
-
 	void Input::Initialize()
 	{
 		createKeys();
@@ -19,7 +23,6 @@ namespace hs {
 	{
 		updateKeys();
 	}
-
 	void Input::createKeys()
 	{
 		keys.resize(static_cast<size_t>(eKeyCode::END));
@@ -30,27 +33,72 @@ namespace hs {
 			keys[i].isPressed = false;
 		}
 	}
-
 	void Input::updateKeys()
 	{
-		for (size_t i = 0; i < keys.size(); ++i)
+		std::for_each(keys.begin(), keys.end(),
+			[](Key& key) -> void
+			{
+				updateKey(key);
+			});
+	}
+	void Input::updateKey(Input::Key& key)
+	{
+		if (GetFocus())
 		{
-			// 키가 눌렸을 때
-			if (GetAsyncKeyState(ASCII[i]) & 0x8000)
-			{
-				// 처음 누르는 거라면 DOWN, 이미 눌려있었다면 PRESSED
-				if (keys[i].isPressed == false) keys[i].state = eKeyState::KEY_DOWN;
-				else keys[i].state = eKeyState::KEY_PRESSED;
-				keys[i].isPressed = true;
-			}
-			// 키가 눌리지 않았을 때
+			if (isKeyDown(key.keyCode))
+				updateKeyDown(key);
 			else
-			{
-				// 이전 프레임에 눌러져 있었으면 UP, 아니면 NONE
-				if (keys[i].isPressed == true) keys[i].state = eKeyState::KEY_UP;
-				else keys[i].state = eKeyState::KEY_NONE;
-				keys[i].isPressed = false;
-			}
+				updateKeyUp(key);
+
+			getMousePositionByWindow();
+		}
+		else
+		{
+			clearKeys();
+		}
+	}
+	bool Input::isKeyDown(eKeyCode code)
+	{
+		return GetAsyncKeyState(ASCII[(UINT)code]) & 0x8000;
+	}
+
+	void Input::updateKeyDown(Input::Key& key)
+	{
+		if (key.isPressed == true)
+			key.state = eKeyState::KEY_PRESSED;
+		else
+			key.state = eKeyState::KEY_DOWN;
+
+		key.isPressed = true;
+	}
+	void Input::updateKeyUp(Input::Key& key)
+	{
+		if (key.isPressed == true)
+			key.state = eKeyState::KEY_UP;
+		else
+			key.state = eKeyState::KEY_NONE;
+
+		key.isPressed = false;
+	}
+	void Input::getMousePositionByWindow()
+	{
+		POINT mousePos = { };
+		GetCursorPos(&mousePos);
+		ScreenToClient(application.GetHwnd(), &mousePos);
+
+		mMousePosition.x = mousePos.x;
+		mMousePosition.y = mousePos.y;
+	}
+	void Input::clearKeys()
+	{
+		for (Key& key : keys)
+		{
+			if (key.state == eKeyState::KEY_DOWN || key.state == eKeyState::KEY_PRESSED)
+				key.state = eKeyState::KEY_UP;
+			else if (key.state == eKeyState::KEY_UP)
+				key.state = eKeyState::KEY_NONE;
+
+			key.isPressed = false;
 		}
 	}
 }
