@@ -2,8 +2,6 @@
 #include "hsApplication.h"
 #include "hsResources.h"
 
-
-// 해당 전역변수가 존재함을 알리는 키워드 extern
 extern hs::Application application;
 
 namespace hs::graphcis
@@ -34,7 +32,7 @@ namespace hs::graphcis
 	}
 	Texture::Texture()
 		: Resource(enums::eResourceType::Texture)
-		, mbAlpha(false)
+		, mIsAlpha(false)
 	{
 	}
 
@@ -62,6 +60,11 @@ namespace hs::graphcis
 
 			mWidth = info.bmWidth;
 			mHeight = info.bmHeight;
+
+			if (info.bmBitsPixel == 32)
+				mIsAlpha = true;
+			else if (info.bmBitsPixel == 24)
+				mIsAlpha = false;
 
 			HDC mainDC = application.GetHdc();
 			mHdc = CreateCompatibleDC(mainDC);

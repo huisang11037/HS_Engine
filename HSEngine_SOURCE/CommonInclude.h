@@ -9,8 +9,6 @@
 #include <functional>
 #include <filesystem>
 
-#include "hsMath.h"  
-
 #include <mmsystem.h>  
 #include <dinput.h>  
 #pragma comment(lib, "Msimg32.lib")  
@@ -20,3 +18,4 @@
 #pragma comment(lib, "gdiplus.lib")
 
 #include "hsEnums.h"
+#include "hsMath.h"

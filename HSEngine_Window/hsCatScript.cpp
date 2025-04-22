@@ -14,6 +14,9 @@ namespace hs
 		, mTime(0.0f)
 		, mDirection(CatScript::eDirection::End)
 		, mDeathTime(0.0f)
+		, mPlayer(nullptr)
+		, mRadian(0.0f)
+		, mDest(Vector2::Zero)
 	{
 	}
 	CatScript::~CatScript()
@@ -27,7 +30,7 @@ namespace hs
 	void CatScript::Update()
 	{
 		mDeathTime += Time::DeltaTime();
-		if (mDeathTime > 6.0f)
+		if (mDeathTime > 2.0f)
 		{
 			object::Destory(GetOwner());
 		}
@@ -66,14 +69,22 @@ namespace hs
 	void CatScript::sitDown()
 	{
 		mTime += Time::DeltaTime();
-		if (mTime > 3.0f)
-		{
-			mState = CatScript::eState::Walk;
-			int direction = (rand() % 4);
-			mDirection = (eDirection)direction;
-			PlayWalkAnimationByDirection(mDirection);
-			mTime = 0.0f;
-		}
+
+		Transform* tr = GetOwner()->GetComponent<Transform>();
+		Vector2 pos = tr->GetPosition();
+
+		// 마우스 위치 방향으로 회전후 마우스 위치 이동 ( 벡터의 뺄셈 활용 )
+		Transform* plTr = mPlayer->GetComponent<Transform>();
+		Vector2 dest = mDest - plTr->GetPosition();
+		dest.normalize();
+
+		float rotDegree = Vector2::Dot(dest, Vector2::Right); //cos세타
+		rotDegree = acosf(rotDegree);
+		rotDegree = ConvertDegree(rotDegree);
+
+		pos += dest * (100.0f * Time::DeltaTime());
+
+		tr->SetPosition(pos);
 	}
 
 	void CatScript::move()

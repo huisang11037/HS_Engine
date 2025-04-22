@@ -33,10 +33,10 @@ namespace hs {
 		static void Initialize();
 		static void Update();
 
-		static bool GetKeyDown(eKeyCode key) { return keys[static_cast<size_t>(key)].state == eKeyState::KEY_DOWN; }
-		static bool GetKeyUp(eKeyCode key) { return keys[static_cast<size_t>(key)].state == eKeyState::KEY_UP; }
-		static bool GetKey(eKeyCode key) { return keys[static_cast<size_t>(key)].state == eKeyState::KEY_PRESSED; }
-		static math::Vector2 GetMousePosition() { return mMousePosition; }
+		__forceinline static bool GetKeyDown(eKeyCode key) { return keys[static_cast<size_t>(key)].state == eKeyState::KEY_DOWN; }
+		__forceinline static bool GetKeyUp(eKeyCode key) { return keys[static_cast<size_t>(key)].state == eKeyState::KEY_UP; }
+		__forceinline static bool GetKey(eKeyCode key) { return keys[static_cast<size_t>(key)].state == eKeyState::KEY_PRESSED; }
+		__forceinline static math::Vector2 GetMousePosition() { return mMousePosition; }
 
 	private:
 		static void createKeys();

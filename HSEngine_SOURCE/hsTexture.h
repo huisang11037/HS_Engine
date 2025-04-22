@@ -23,14 +23,15 @@ namespace hs::graphcis
 
 		void SetWidth(UINT width) { mWidth = width; }
 		void SetHeight(UINT height) { mHeight = height; }
-		UINT GetWidth() { return mWidth; }
-		UINT GetHeight() { return mHeight; }
-		HDC GetHdc() { return mHdc; }
-		eTextureType GetTextureType() { return mType; }
+		UINT GetWidth() const { return mWidth; }
+		UINT GetHeight() const  { return mHeight; }
+		HDC GetHdc() const  { return mHdc; }
+		eTextureType GetTextureType() const { return mType; }
 		Gdiplus::Image* GetImage() { return mImage; }
+		bool IsAlpha() const { return mIsAlpha; }
 
 	private:
-		bool mbAlpha;
+		bool mIsAlpha;
 		eTextureType mType;
 		Gdiplus::Image* mImage;
 		HBITMAP mBitmap;

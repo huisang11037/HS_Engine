@@ -90,38 +90,42 @@ namespace hs
 		}
 		else if (type == graphcis::Texture::eTextureType::Bmp) 
 		{
-			// 알파블렌드 설정
-			//BLENDFUNCTION blendFunc = {};
-			//blendFunc.BlendOp = AC_SRC_OVER;
-			//blendFunc.BlendFlags = 0;
-			//blendFunc.AlphaFormat = AC_SRC_ALPHA;
-			//blendFunc.SourceConstantAlpha = 255; // 0 ~ 255 알파값
-
 			HDC imgHdc = mTexture->GetHdc();
 
-			//AlphaBlend(hdc
-			//	, position.x - (sprite.size.x / 2.0f)
-			//	, position.y - (sprite.size.y / 2.0f)
-			//	, sprite.size.x * scale.x
-			//	, sprite.size.y * scale.y
-			//	, imgHdc
-			//	, sprite.leftTop.x
-			//	, sprite.leftTop.y
-			//	, sprite.size.x
-			//	, sprite.size.y
-			//	, blendFunc);
+			if (mTexture->IsAlpha())
+			{
+				BLENDFUNCTION func = {};
+				func.BlendOp = AC_SRC_OVER;
+				func.BlendFlags = 0;
+				func.AlphaFormat = AC_SRC_ALPHA;
+				func.SourceConstantAlpha = 255; // 0(transparent) ~ 255(Opaque)
 
-			TransparentBlt(hdc
-				, position.x - (sprite.size.x / 2.0f)
-				, position.y - (sprite.size.y / 2.0f)
-				, sprite.size.x * scale.x
-				, sprite.size.y * scale.y
-				, imgHdc
-				, sprite.leftTop.x
-				, sprite.leftTop.y
-				, sprite.size.x
-				, sprite.size.y
-				, RGB(255, 0, 255));
+				AlphaBlend(hdc
+					, position.x - (sprite.size.x / 2.0f) + sprite.offset.x
+					, position.y - (sprite.size.y / 2.0f) + sprite.offset.y
+					, sprite.size.x * scale.x
+					, sprite.size.y * scale.y
+					, imgHdc
+					, sprite.leftTop.x
+					, sprite.leftTop.y
+					, sprite.size.x
+					, sprite.size.y
+					, func);
+			}
+			else
+			{
+				TransparentBlt(hdc
+					, position.x - (sprite.size.x / 2.0f) + sprite.offset.x
+					, position.y - (sprite.size.y / 2.0f) + sprite.offset.y
+					, sprite.size.x * scale.x
+					, sprite.size.y * scale.y
+					, imgHdc
+					, sprite.leftTop.x
+					, sprite.leftTop.y
+					, sprite.size.x
+					, sprite.size.y
+					, RGB(255, 0, 255));
+			}
 		}
     }
     void Animation::CreateAnimation(const std::wstring& name

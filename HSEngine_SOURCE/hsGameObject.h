@@ -2,11 +2,18 @@
 #include "CommonInclude.h"
 #include "hsComponent.h"
 
+namespace hs::object
+{
+	void Destory(GameObject* gameObject);
+}
+
 namespace hs
 {
 	class GameObject
 	{
 	public:
+		friend void object::Destory(GameObject* obj);
+
 		enum class eState
 		{
 			Active,
@@ -48,16 +55,18 @@ namespace hs
 			return component;
 		}
 
-		eState GetActive() { return mState; }
+		eState GetState() const { return mState; }
 		void SetActive(bool power)
 		{
 			if (power == true) mState = eState::Active;
 			if (power == false) mState = eState::Paused;
 		}
-		void Death() { mState = eState::Dead; }
+		bool IsActive() const { return mState == eState::Active; }
+		bool IsDead() const { return mState == eState::Dead; }
 
 	private:
 		void initializeTransform();
+		void death() { mState = eState::Dead; }
 
 	private:
 		eState mState;

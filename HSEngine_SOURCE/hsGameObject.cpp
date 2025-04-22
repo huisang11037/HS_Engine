@@ -3,6 +3,15 @@
 #include "hsTime.h"
 #include "hsTransform.h"
 
+namespace hs::object
+{
+	void Destory(GameObject* gameObject)
+	{
+		if (gameObject != nullptr)
+			gameObject->death();
+	}
+}
+
 namespace hs
 {
 	GameObject::GameObject()
