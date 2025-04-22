@@ -25,9 +25,9 @@ namespace hs
 
 		struct Events
 		{
-			Event mStartEvent;
-			Event mCompleteEvent;
-			Event mEndEvent;
+			Event startEvent;
+			Event completeEvent;
+			Event endEvent;
 		};
 
 		Animator();
@@ -48,6 +48,11 @@ namespace hs
 
 		Animation* FindAnimation(const std::wstring& name);
 		void PlayAnimation(const std::wstring& name, bool isLoop = false);
+
+		Events* FindEvents(const std::wstring& name);
+		std::function<void()>& GetStartEvent(const std::wstring& name);
+		std::function<void()>& GetCompleteEvent(const std::wstring& name);
+		std::function<void()>& GetEndEvent(const std::wstring& name);
 
 		bool IsComplete() { return mActiveAnimation->IsComplete(); }
 

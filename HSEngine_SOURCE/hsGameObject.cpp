@@ -14,6 +14,7 @@ namespace hs
 	{
 		for (Component* comp : mComponents)
 		{
+			if (comp == nullptr) continue;
 			delete comp;
 			comp = nullptr;
 		}

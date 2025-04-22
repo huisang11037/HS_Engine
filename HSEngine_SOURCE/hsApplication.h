@@ -15,6 +15,7 @@ namespace hs {
 		void Update();
 		void LateUpdate();
 		void Render();
+		void Release();
 
 		HWND GetHwnd() const { return mHwnd; }
 		HDC GetHdc() const { return mHdc; }
@@ -22,7 +23,7 @@ namespace hs {
 		UINT GetHeight() const { return mHeight; }
 
 	private:
-		void clearRenderTarget();
+		void clearRenderTarget() const;
 		void adjustWindowRect(HWND hwnd, UINT width, UINT height);
 		void createBackBuffer(UINT width, UINT height);
 		void initializeETC();

@@ -2,6 +2,7 @@
 #include "hsInput.h"
 #include "hsTime.h"
 #include "hsSceneManager.h"
+#include "hsResources.h"
 
 namespace hs {
 	Application::Application()
@@ -51,7 +52,12 @@ namespace hs {
 		// 백버퍼를 화면에 그린다
 		BitBlt(mHdc, 0, 0, mWidth, mHeight, mBackHDC, 0, 0, SRCCOPY);
 	}
-	void Application::clearRenderTarget()
+	void Application::Release()
+	{
+		SceneManager::Release();
+		Resources::Release();
+	}
+	void Application::clearRenderTarget() const
 	{
 		// 뒷 배경을 지운다. 원래 크기보다 살짝 크게 해줘야 외곽선이 안보인다.
 		Rectangle(mBackHDC, -1, -1, mWidth + 1, mHeight + 1);

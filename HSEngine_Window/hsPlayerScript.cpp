@@ -4,6 +4,10 @@
 #include "hsTime.h"
 #include "hsGameObject.h"
 #include "hsAnimator.h"
+#include "hsCat.h"
+#include "hsCatScript.h"
+#include "hsObject.h"
+#include "hsResources.h"
 
 namespace hs
 {
@@ -48,6 +52,32 @@ namespace hs
 	}
 	void PlayerScript::Render(HDC hdc)
 	{
+	}
+	void PlayerScript::AttackEffect()
+	{
+		Cat* cat = object::Instantiate<Cat>(enums::eLayerType::Animal);
+		cat->AddComponent<CatScript>();
+
+		graphcis::Texture* catTex = Resources::Find<graphcis::Texture>(L"Cat");
+		Animator* catAnimator = cat->AddComponent<Animator>();
+		catAnimator->CreateAnimation(L"DownWalk", catTex
+			, Vector2(0.0f, 0.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+		catAnimator->CreateAnimation(L"RightWalk", catTex
+			, Vector2(0.0f, 32.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+		catAnimator->CreateAnimation(L"UpWalk", catTex
+			, Vector2(0.0f, 64.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+		catAnimator->CreateAnimation(L"LeftWalk", catTex
+			, Vector2(0.0f, 96.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+		catAnimator->CreateAnimation(L"SitDown", catTex
+			, Vector2(0.0f, 128.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+		catAnimator->CreateAnimation(L"Grooming", catTex
+			, Vector2(0.0f, 160.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+		catAnimator->CreateAnimation(L"LayDown", catTex
+			, Vector2(0.0f, 192.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+
+		catAnimator->PlayAnimation(L"SitDown", false);
+		cat->GetComponent<Transform>()->SetPosition(Vector2(200.0f, 200.0f));
+		cat->GetComponent<Transform>()->SetScale(Vector2(2.0f, 2.0f));
 	}
 	void PlayerScript::idle()
 	{

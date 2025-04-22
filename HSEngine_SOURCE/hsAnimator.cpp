@@ -7,11 +7,20 @@ namespace hs {
 		, mActiveAnimation(nullptr)
 		, mIsLoop(false)
 	{
-		// mAnimations는 std::map이며,
-		// 애니메이션 이름을 키로 사용하고 Animation 객체를 값으로 사용한다.
 	}
 	Animator::~Animator()
 	{
+		for (auto& iter : mAnimations)
+		{
+			delete iter.second;
+			iter.second = nullptr;
+		}
+
+		for (auto& iter : mEvents)
+		{
+			delete iter.second;
+			iter.second = nullptr;
+		}
 	}
 	void Animator::Initialize()
 	{
@@ -21,9 +30,17 @@ namespace hs {
 		if (mActiveAnimation)
 		{
 			mActiveAnimation->Update();
-			if (mActiveAnimation->IsComplete() && mIsLoop)
+
+			Events* events
+				= FindEvents(mActiveAnimation->GetName());
+
+			if (mActiveAnimation->IsComplete() == true)
 			{
-				mActiveAnimation->Reset();
+				if (events)
+					events->completeEvent();
+
+				if (mIsLoop == true)
+					mActiveAnimation->Reset();
 			}
 		}
 	}
@@ -40,25 +57,27 @@ namespace hs {
 	void Animator::CreateAnimation(const std::wstring& name
 		, graphcis::Texture* spriteSheet
 		, Vector2 leftTop
-		, Vector2 tileSize
+		, Vector2 size
 		, Vector2 offset
 		, UINT spriteLength
 		, float duration)
 	{
 		Animation* animation = nullptr;
 		animation = FindAnimation(name);
-		if (animation == nullptr)
-		{
-			animation = new Animation();
-			animation->CreateAnimation(name, spriteSheet, leftTop, tileSize, offset, spriteLength, duration);
-			animation->SetAnimator(this);
-
-			mAnimations.insert(std::make_pair(name, animation));
-		}
-		else
-		{
+		if (animation != nullptr)
 			return;
-		}
+
+		animation = new Animation();
+		animation->SetName(name);
+		animation->CreateAnimation(name, spriteSheet
+			, leftTop, size, offset, spriteLength, duration);
+
+		animation->SetAnimator(this);
+
+		Events* events = new Events();
+		mEvents.insert(std::make_pair(name, events));
+
+		mAnimations.insert(std::make_pair(name, animation));
 	}
 	Animation* Animator::FindAnimation(const std::wstring& name)
 	{
@@ -75,15 +94,57 @@ namespace hs {
 	void Animator::PlayAnimation(const std::wstring& name, bool isLoop)
 	{
 		Animation* animation = FindAnimation(name);
-		if (animation)
-		{
-			mActiveAnimation = animation;
-			mActiveAnimation->Reset();
-			mIsLoop = isLoop;
-		}
-		else
-		{
+		if (animation == nullptr)
 			return;
+
+
+		if (mActiveAnimation)
+		{
+			Events* currentEvents
+				= FindEvents(mActiveAnimation->GetName());
+
+			if (currentEvents)
+				currentEvents->endEvent();
 		}
+
+
+		Events* nextEvents
+			= FindEvents(animation->GetName());
+
+		if (nextEvents)
+			nextEvents->startEvent();
+
+		mActiveAnimation = animation;
+		mActiveAnimation->Reset();
+		mIsLoop = isLoop;
+	}
+	Animator::Events* Animator::FindEvents(const std::wstring& name)
+	{
+		auto iter = mEvents.find(name);
+		if (iter == mEvents.end())
+			return nullptr;
+
+		return iter->second;
+	}
+
+	std::function<void()>& Animator::GetStartEvent(const std::wstring& name)
+	{
+		// TODO: 여기에 return 문을 삽입합니다.
+		Events* events = FindEvents(name);
+		return events->startEvent.mEvent;
+	}
+
+	std::function<void()>& Animator::GetCompleteEvent(const std::wstring& name)
+	{
+		// TODO: 여기에 return 문을 삽입합니다.
+		Events* events = FindEvents(name);
+		return events->completeEvent.mEvent;
+	}
+
+	std::function<void()>& Animator::GetEndEvent(const std::wstring& name)
+	{
+		// TODO: 여기에 return 문을 삽입합니다.
+		Events* events = FindEvents(name);
+		return events->endEvent.mEvent;
 	}
 }

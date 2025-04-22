@@ -11,6 +11,7 @@ namespace hs
 		: mState(CatScript::eState::SitDown)
 		, mAnimator(nullptr)
 		, mTime(0.0f)
+		, mDirection(CatScript::eDirection::End)
 	{
 	}
 	CatScript::~CatScript()
