@@ -23,8 +23,7 @@ namespace hs
 	{
 		for (GameObject* gameObj : mGameObjects)
 		{
-			if (gameObj == nullptr)
-				continue;
+			if (gameObj == nullptr) continue;
 
 			gameObj->Initialize();
 		}
@@ -34,7 +33,10 @@ namespace hs
 	{
 		for (GameObject* gameObj : mGameObjects)
 		{
-			if (gameObj == nullptr)
+			if (gameObj == nullptr) continue;
+			GameObject::eState state = gameObj->GetActive();
+			if (state == GameObject::eState::Paused
+				|| state == GameObject::eState::Dead)
 				continue;
 
 			gameObj->Update();
@@ -44,7 +46,10 @@ namespace hs
 	{
 		for (GameObject* gameObj : mGameObjects)
 		{
-			if (gameObj == nullptr)
+			if (gameObj == nullptr) continue;
+			GameObject::eState state = gameObj->GetActive();
+			if (state == GameObject::eState::Paused
+				|| state == GameObject::eState::Dead)
 				continue;
 
 			gameObj->LateUpdate();
@@ -54,17 +59,39 @@ namespace hs
 	{
 		for (GameObject* gameObj : mGameObjects)
 		{
-			if (gameObj == nullptr)
+			if (gameObj == nullptr) continue;
+			GameObject::eState state = gameObj->GetActive();
+			if (state == GameObject::eState::Paused
+				|| state == GameObject::eState::Dead)
 				continue;
 
 			gameObj->Render(hdc);
 		}
 	}
+	void Layer::Destroy()
+	{
+		for (GameObjectIter iter = mGameObjects.begin()
+			; iter != mGameObjects.end()
+			; )
+		{
+			GameObject::eState active = (*iter)->GetActive();
+			if (active == GameObject::eState::Dead)
+			{
+				GameObject* deathObj = (*iter);
+				iter = mGameObjects.erase(iter);
 
+				delete deathObj;
+				deathObj = nullptr;
+
+				continue;
+			}
+
+			iter++;
+		}
+	}
 	void Layer::AddGameObject(GameObject* gameObject)
 	{
-		if (gameObject == nullptr)
-			return;
+		if (gameObject == nullptr) return;
 
 		mGameObjects.push_back(gameObject);
 	}

@@ -14,12 +14,15 @@ namespace hs::graphcis
 			None,
 		};
 
+		static Texture* Create(const std::wstring& name, UINT width, UINT height);
 
 		Texture();
 		~Texture();
 
 		virtual HRESULT Load(const std::wstring& path) override;
 
+		void SetWidth(UINT width) { mWidth = width; }
+		void SetHeight(UINT height) { mHeight = height; }
 		UINT GetWidth() { return mWidth; }
 		UINT GetHeight() { return mHeight; }
 		HDC GetHdc() { return mHdc; }
@@ -27,6 +30,7 @@ namespace hs::graphcis
 		Gdiplus::Image* GetImage() { return mImage; }
 
 	private:
+		bool mbAlpha;
 		eTextureType mType;
 		Gdiplus::Image* mImage;
 		HBITMAP mBitmap;

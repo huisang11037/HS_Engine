@@ -91,15 +91,27 @@ namespace hs
 		else if (type == graphcis::Texture::eTextureType::Bmp) 
 		{
 			// 알파블렌드 설정
-			BLENDFUNCTION blendFunc = {};
-			blendFunc.BlendOp = AC_SRC_OVER;
-			blendFunc.BlendFlags = 0;
-			blendFunc.AlphaFormat = AC_SRC_ALPHA;
-			blendFunc.SourceConstantAlpha = 255; // 0 ~ 255 알파값
+			//BLENDFUNCTION blendFunc = {};
+			//blendFunc.BlendOp = AC_SRC_OVER;
+			//blendFunc.BlendFlags = 0;
+			//blendFunc.AlphaFormat = AC_SRC_ALPHA;
+			//blendFunc.SourceConstantAlpha = 255; // 0 ~ 255 알파값
 
 			HDC imgHdc = mTexture->GetHdc();
 
-			AlphaBlend(hdc
+			//AlphaBlend(hdc
+			//	, position.x - (sprite.size.x / 2.0f)
+			//	, position.y - (sprite.size.y / 2.0f)
+			//	, sprite.size.x * scale.x
+			//	, sprite.size.y * scale.y
+			//	, imgHdc
+			//	, sprite.leftTop.x
+			//	, sprite.leftTop.y
+			//	, sprite.size.x
+			//	, sprite.size.y
+			//	, blendFunc);
+
+			TransparentBlt(hdc
 				, position.x - (sprite.size.x / 2.0f)
 				, position.y - (sprite.size.y / 2.0f)
 				, sprite.size.x * scale.x
@@ -109,7 +121,7 @@ namespace hs
 				, sprite.leftTop.y
 				, sprite.size.x
 				, sprite.size.y
-				, blendFunc);
+				, RGB(255, 0, 255));
 		}
     }
     void Animation::CreateAnimation(const std::wstring& name

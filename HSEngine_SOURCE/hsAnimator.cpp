@@ -1,4 +1,6 @@
 #include "hsAnimator.h"
+#include "hsResources.h"
+#include "hsTexture.h"
 
 namespace hs {
 	Animator::Animator()
@@ -64,8 +66,7 @@ namespace hs {
 	{
 		Animation* animation = nullptr;
 		animation = FindAnimation(name);
-		if (animation != nullptr)
-			return;
+		if (animation != nullptr) return;
 
 		animation = new Animation();
 		animation->SetName(name);
@@ -79,6 +80,44 @@ namespace hs {
 
 		mAnimations.insert(std::make_pair(name, animation));
 	}
+	void Animator::CreateAnimationByFolder(const std::wstring& name, const std::wstring& path, Vector2 offset, float duration)
+	{
+		Animation* animation = nullptr;
+		animation = FindAnimation(name);
+		if (animation != nullptr)
+			return;
+		int fileCount = 0;
+		std::filesystem::path fs(path);
+		std::vector<graphcis::Texture*> images = {};
+		for (auto& p : std::filesystem::recursive_directory_iterator(fs))
+		{
+			std::wstring fileName = p.path().filename();
+			std::wstring fullName = p.path();
+
+			graphcis::Texture* texture = Resources::Load<graphcis::Texture>(fileName, fullName);
+			images.push_back(texture);
+			fileCount++;
+		}
+
+
+		UINT sheetWidth = images[0]->GetWidth() * fileCount;
+		UINT sheetHeight = images[0]->GetHeight();
+		graphcis::Texture* spriteSheet = graphcis::Texture::Create(name, sheetWidth, sheetHeight);
+
+		UINT imageWidth = images[0]->GetWidth();
+		UINT imageHeight = images[0]->GetHeight();
+		for (size_t i = 0; i < images.size(); i++)
+		{
+			BitBlt(spriteSheet->GetHdc(), i * imageWidth, 0
+				, imageWidth, imageHeight
+				, images[i]->GetHdc(), 0, 0, SRCCOPY);
+		}
+
+		CreateAnimation(name, spriteSheet
+			, Vector2(0.0f, 0.0f), Vector2(imageWidth, imageHeight)
+			, offset, fileCount, duration);
+	}
+
 	Animation* Animator::FindAnimation(const std::wstring& name)
 	{
 		auto iter = mAnimations.find(name);
@@ -121,8 +160,7 @@ namespace hs {
 	Animator::Events* Animator::FindEvents(const std::wstring& name)
 	{
 		auto iter = mEvents.find(name);
-		if (iter == mEvents.end())
-			return nullptr;
+		if (iter == mEvents.end()) return nullptr;
 
 		return iter->second;
 	}

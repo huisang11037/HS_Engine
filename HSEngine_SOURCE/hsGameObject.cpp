@@ -6,6 +6,8 @@
 namespace hs
 {
 	GameObject::GameObject()
+		: mState(eState::Active)
+		, mComponents{}
 	{
 		mComponents.resize((UINT)enums::eComponentType::End);
 		initializeTransform();

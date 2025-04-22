@@ -31,6 +31,8 @@ namespace hs {
 		Update();
 		LateUpdate();
 		Render();
+
+		Destroy();
 	}
 	void Application::Update()
 	{
@@ -51,6 +53,10 @@ namespace hs {
 
 		// 백버퍼를 화면에 그린다
 		BitBlt(mHdc, 0, 0, mWidth, mHeight, mBackHDC, 0, 0, SRCCOPY);
+	}
+	void Application::Destroy()
+	{
+		SceneManager::Destroy();
 	}
 	void Application::Release()
 	{

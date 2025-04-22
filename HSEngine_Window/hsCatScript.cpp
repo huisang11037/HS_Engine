@@ -4,6 +4,7 @@
 #include "hsTime.h"
 #include "hsGameObject.h"
 #include "hsAnimator.h"
+#include "hsObject.h"
 
 namespace hs
 {
@@ -12,6 +13,7 @@ namespace hs
 		, mAnimator(nullptr)
 		, mTime(0.0f)
 		, mDirection(CatScript::eDirection::End)
+		, mDeathTime(0.0f)
 	{
 	}
 	CatScript::~CatScript()
@@ -24,6 +26,11 @@ namespace hs
 	}
 	void CatScript::Update()
 	{
+		mDeathTime += Time::DeltaTime();
+		if (mDeathTime > 6.0f)
+		{
+			object::Destory(GetOwner());
+		}
 		if (mAnimator == nullptr)
 		{
 			mAnimator = GetOwner()->GetComponent<Animator>();

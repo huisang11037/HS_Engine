@@ -20,6 +20,10 @@ namespace hs
 	{
 		mCurrentScene->Render(hdc);
 	}
+	void SceneManager::Destroy()
+	{
+		mCurrentScene->Destroy();
+	}
 	void SceneManager::Release()
 	{
 		for (auto& iter : mScenes)
