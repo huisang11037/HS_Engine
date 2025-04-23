@@ -38,8 +38,6 @@ namespace hs {
 
 		UINT mWidth;
 		UINT mHeight;
-
-		//std::vector<Scene*> mScenes;
 	};
 }
 

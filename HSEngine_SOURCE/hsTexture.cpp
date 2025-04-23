@@ -53,7 +53,7 @@ namespace hs::graphcis
 				, 0, 0, LR_LOADFROMFILE | LR_CREATEDIBSECTION);
 
 			if (mBitmap == nullptr)
-				return S_FALSE;
+				return E_FAIL;
 
 			BITMAP info = {};
 			GetObject(mBitmap, sizeof(BITMAP), &info);
@@ -78,7 +78,7 @@ namespace hs::graphcis
 			mType = eTextureType::Png;
 			mImage = Gdiplus::Image::FromFile(path.c_str());
 			if (mImage == nullptr)
-				return S_FALSE;
+				return E_FAIL;
 
 			mWidth = mImage->GetWidth();
 			mHeight = mImage->GetHeight();

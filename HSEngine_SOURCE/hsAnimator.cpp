@@ -82,7 +82,7 @@ namespace hs {
 	}
 	void Animator::CreateAnimationByFolder(const std::wstring& name, const std::wstring& path, Vector2 offset, float duration)
 	{
-		Animation* animation = nullptr;
+		Animation* animation = nullptr; // 이거 리로시스 로 옮기기
 		animation = FindAnimation(name);
 		if (animation != nullptr)
 			return;
