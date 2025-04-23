@@ -33,6 +33,12 @@ namespace hs::graphcis
 	Texture::Texture()
 		: Resource(enums::eResourceType::Texture)
 		, mIsAlpha(false)
+		, mType(eTextureType::None)
+		, mImage(nullptr)
+		, mBitmap(nullptr)
+		, mHdc(nullptr)
+		, mWidth(0)
+		, mHeight(0)
 	{
 	}
 
@@ -45,7 +51,6 @@ namespace hs::graphcis
 		std::wstring ext
 			= path.substr(path.find_last_of(L".") + 1);
 
-		//bmp ¿œ∂ß
 		if (ext == L"bmp")
 		{
 			mType = eTextureType::Bmp;

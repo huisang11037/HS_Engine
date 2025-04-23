@@ -66,7 +66,7 @@ namespace hs {
 	{
 		Animation* animation = nullptr;
 		animation = FindAnimation(name);
-		if (animation != nullptr) return;
+		if (animation != nullptr) assert(false);
 
 		animation = new Animation();
 		animation->SetName(name);
@@ -82,10 +82,10 @@ namespace hs {
 	}
 	void Animator::CreateAnimationByFolder(const std::wstring& name, const std::wstring& path, Vector2 offset, float duration)
 	{
-		Animation* animation = nullptr; // 이거 리로시스 로 옮기기
+		Animation* animation = nullptr;
 		animation = FindAnimation(name);
-		if (animation != nullptr)
-			return;
+		if (animation != nullptr) assert(false);
+
 		int fileCount = 0;
 		std::filesystem::path fs(path);
 		std::vector<graphcis::Texture*> images = {};
@@ -121,20 +121,14 @@ namespace hs {
 	Animation* Animator::FindAnimation(const std::wstring& name)
 	{
 		auto iter = mAnimations.find(name);
-		if (iter != mAnimations.end())
-		{
-			return iter->second;
-		}
-		else
-		{
-			return nullptr;
-		}
+		if (iter == mAnimations.end()) return nullptr;
+		
+		return iter->second;
 	}
 	void Animator::PlayAnimation(const std::wstring& name, bool isLoop)
 	{
 		Animation* animation = FindAnimation(name);
-		if (animation == nullptr)
-			return;
+		if (animation == nullptr) assert(false);
 
 
 		if (mActiveAnimation)

@@ -68,7 +68,7 @@ namespace hs
 	}
 	void Layer::AddGameObject(GameObject* gameObject)
 	{
-		if (gameObject == nullptr) return;
+		if (gameObject == nullptr) assert(false);
 
 		mGameObjects.push_back(gameObject);
 	}

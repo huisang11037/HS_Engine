@@ -38,7 +38,7 @@ namespace hs
 
 		std::map<std::wstring, Scene*>::iterator iter = mScenes.find(name);
 
-		if (iter == mScenes.end()) return nullptr;
+		if (iter == mScenes.end()) assert(false);
 
 		mCurrentScene = iter->second;
 		mCurrentScene->OnEnter();

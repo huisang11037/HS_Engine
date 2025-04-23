@@ -19,9 +19,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)hsMath.cpp">
       <Filter>Common</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)hsComponent.cpp">
-      <Filter>Component\Component</Filter>
-    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)hsLayer.cpp">
       <Filter>Layer</Filter>
     </ClCompile>
@@ -30,9 +27,6 @@
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)hsTexture.cpp">
       <Filter>Resource\Texture</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)hsResource.cpp">
-      <Filter>Resource</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)hsResources.cpp">
       <Filter>Resource</Filter>
@@ -55,8 +49,18 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)hsSceneManager.cpp">
       <Filter>Scene</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)hsAnimation.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)hsAnimator.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsResource.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsAnimation.cpp">
+      <Filter>Resource\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsAnimator.cpp">
+      <Filter>Component\Animator</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsComponent.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)hsCamera.h">
@@ -86,9 +90,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)hsObject.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)hsComponent.h">
-      <Filter>Component\Component</Filter>
-    </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)hsLayer.h">
       <Filter>Layer</Filter>
     </ClInclude>
@@ -97,9 +98,6 @@
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)hsTexture.h">
       <Filter>Resource\Texture</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)hsResource.h">
-      <Filter>Resource</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)hsResources.h">
       <Filter>Resource</Filter>
@@ -122,8 +120,18 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)hsSceneManager.h">
       <Filter>Scene</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)hsAnimation.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)hsAnimator.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsResource.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsAnimation.h">
+      <Filter>Resource\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsAnimator.h">
+      <Filter>Component\Animator</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsComponent.h">
+      <Filter>Component</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Component">
@@ -134,9 +142,6 @@
     </Filter>
     <Filter Include="Component\Script">
       <UniqueIdentifier>{5f4ca1a0-c6bf-47d6-8966-0f03c106c322}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Component\Component">
-      <UniqueIdentifier>{f75fe995-6298-4ba2-851b-db6687a423c6}</UniqueIdentifier>
     </Filter>
     <Filter Include="Component\SpriteRenderer">
       <UniqueIdentifier>{0945ee55-652b-486d-a0ba-5fdd510a92a2}</UniqueIdentifier>
@@ -170,6 +175,12 @@
     </Filter>
     <Filter Include="Scene">
       <UniqueIdentifier>{aeadbf21-125f-465f-9156-4433386ae49e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Animation">
+      <UniqueIdentifier>{4952a651-0305-490f-8368-0ce12476204a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Animator">
+      <UniqueIdentifier>{272760bc-1e18-4a64-a6db-c833c1f70375}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

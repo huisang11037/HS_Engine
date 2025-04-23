@@ -46,8 +46,6 @@ namespace hs
     }
     void Animation::Render(HDC hdc)
     {
-		if (mTexture == nullptr) return;
-
 		GameObject* owner = mAnimator->GetOwner();
 		Transform* tr = owner->GetComponent<Transform>();
 		Vector2 position = tr->GetPosition();

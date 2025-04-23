@@ -12,7 +12,7 @@ hs::Application application;
 ULONG_PTR gpToken;
 Gdiplus::GdiplusStartupInput gpsi;
 
-#define MAX_LOADSTRING 100
+constexpr int MAX_LOADSTRING = 100;
 
 // 전역 변수:
 HINSTANCE hInst;                                // 현재 인스턴스입니다.
