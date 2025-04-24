@@ -14,7 +14,7 @@ namespace hs::graphcis
 			None,
 		};
 
-		static Texture* Create(const std::wstring& name, UINT width, UINT height);
+		static Texture* Create(const std::wstring& name, eTextureType type, UINT width, UINT height);
 
 		Texture();
 		~Texture();
@@ -23,6 +23,7 @@ namespace hs::graphcis
 
 		void SetWidth(UINT width) { mWidth = width; }
 		void SetHeight(UINT height) { mHeight = height; }
+		void SetTextureType(eTextureType type) { mType = type; }
 		UINT GetWidth() const { return mWidth; }
 		UINT GetHeight() const  { return mHeight; }
 		HDC GetHdc() const  { return mHdc; }

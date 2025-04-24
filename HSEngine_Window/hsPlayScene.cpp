@@ -15,6 +15,7 @@
 #include "hsAnimator.h"
 #include "hsCat.h"
 #include "hsCatScript.h"
+#include "hsBoxCollider2D.h"
 
 namespace hs
 {
@@ -34,51 +35,38 @@ namespace hs
 		// main camera end
 
 		// Player
-		mPlayer = object::Instantiate<Player>(enums::eLayerType::Player);
-		PlayerScript* plScript = mPlayer->AddComponent<PlayerScript>();
+		//mPlayer = object::Instantiate<Player>(enums::eLayerType::Player);
+		//PlayerScript* plScript = mPlayer->AddComponent<PlayerScript>();
+		//BoxCollider2D* collider = mPlayer->AddComponent<BoxCollider2D>();
+		//collider->SetOffset(Vector2(-50.0f, -50.0));
 
-		graphcis::Texture* playerTex = Resources::Find<graphcis::Texture>(L"Player");
-		Animator* playerAnimator = mPlayer->AddComponent<Animator>();
-		playerAnimator->CreateAnimation(L"Idle", playerTex
-			, Vector2(2000.0f, 250.0f), Vector2(250.0f, 250.0f), Vector2::Zero, 1, 0.1f);
-		playerAnimator->CreateAnimation(L"FrontGiveWater", playerTex
-			, Vector2(0.0f, 2000.0f), Vector2(250.0f, 250.0f), Vector2::Zero, 12, 0.1f);
-		playerAnimator->PlayAnimation(L"Idle", false);
+		//graphcis::Texture* playerTex = Resources::Find<graphcis::Texture>(L"Player");
+		//Animator* playerAnimator = mPlayer->AddComponent<Animator>();
+		//playerAnimator->CreateAnimation(L"Idle", playerTex
+		//	, Vector2(2000.0f, 250.0f), Vector2(250.0f, 250.0f), Vector2::Zero, 1, 0.1f);
+		//playerAnimator->CreateAnimation(L"FrontGiveWater", playerTex
+		//	, Vector2(0.0f, 2000.0f), Vector2(250.0f, 250.0f), Vector2::Zero, 12, 0.1f);
+		//playerAnimator->PlayAnimation(L"Idle", false);
 
-		playerAnimator->GetCompleteEvent(L"FrontGiveWater") = std::bind(&PlayerScript::AttackEffect, plScript);
+		//playerAnimator->GetCompleteEvent(L"FrontGiveWater") = std::bind(&PlayerScript::AttackEffect, plScript);
 
-		mPlayer->GetComponent<Transform>()->SetPosition(Vector2(400.0f, 400.0f));
-		// Player end
 
-		// Cat
-		//Cat* cat = object::Instantiate<Cat>(enums::eLayerType::Animal);
-		//cat->AddComponent<CatScript>();
+		//mPlayer->GetComponent<Transform>()->SetPosition(Vector2(300.0f, 250.0f));
+		// Player END
 
-		//graphcis::Texture* catTex = Resources::Find<graphcis::Texture>(L"Cat");
-		//Animator* catAnimator = cat->AddComponent<Animator>();
-		////cameraComp->SetTarget(cat);
-		////catAnimator->CreateAnimation(L"DownWalk", catTex
-		////	, Vector2(0.0f, 0.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
-		////catAnimator->CreateAnimation(L"RightWalk", catTex
-		////	, Vector2(0.0f, 32.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
-		////catAnimator->CreateAnimation(L"UpWalk", catTex
-		////	, Vector2(0.0f, 64.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
-		////catAnimator->CreateAnimation(L"LeftWalk", catTex
-		////	, Vector2(0.0f, 96.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
-		////catAnimator->CreateAnimation(L"SitDown", catTex
-		////	, Vector2(0.0f, 128.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
-		////catAnimator->CreateAnimation(L"Grooming", catTex
-		////	, Vector2(0.0f, 160.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
-		////catAnimator->CreateAnimation(L"LayDown", catTex
-		////	, Vector2(0.0f, 192.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+		///CAT
+		Cat* cat = object::Instantiate<Cat>(enums::eLayerType::Animal);
+		Animator* catAnimator = cat->AddComponent<Animator>();
 
-		////catAnimator->PlayAnimation(L"SitDown", false);
-		//cat->GetComponent<Transform>()->SetPosition(Vector2(200.0f, 200.0f));
-		//cat->GetComponent<Transform>()->SetScale(Vector2(2.0f, 2.0f));
+		BoxCollider2D* boxCatCollider = cat->AddComponent<BoxCollider2D>();
+		boxCatCollider->SetOffset(Vector2(-50.0f, -50.0f));
 
-		//catAnimator->CreateAnimationByFolder(L"MushroomIdle", L"..\\Resources\\Mushroom", Vector2::Zero, 0.1f);
-		//catAnimator->PlayAnimation(L"MushroomIdle", true);
-		// Cat end
+		catAnimator->CreateAnimationByFolder(L"MushroomIdle", L"..\\Resources\\Mushroom", Vector2::Zero, 0.1f);
+		catAnimator->PlayAnimation(L"MushroomIdle", true);
+
+		cat->GetComponent<Transform>()->SetPosition(Vector2(200.0f, 200.0f));
+		cat->GetComponent<Transform>()->SetScale(Vector2(1.0f, 1.0f));
+		// CAT END
 
 		// 게임 오브젝트 생성후에 레이어와 게임오브젝트들의 init함수를 호출
 		Scene::Initialize();

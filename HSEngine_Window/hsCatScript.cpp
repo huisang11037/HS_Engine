@@ -29,11 +29,6 @@ namespace hs
 	}
 	void CatScript::Update()
 	{
-		mDeathTime += Time::DeltaTime();
-		if (mDeathTime > 2.0f)
-		{
-			object::Destory(GetOwner());
-		}
 		if (mAnimator == nullptr)
 		{
 			mAnimator = GetOwner()->GetComponent<Animator>();
@@ -65,97 +60,20 @@ namespace hs
 	void CatScript::Render(HDC hdc)
 	{
 	}
-
 	void CatScript::sitDown()
 	{
-		mTime += Time::DeltaTime();
-
-		Transform* tr = GetOwner()->GetComponent<Transform>();
-		Vector2 pos = tr->GetPosition();
-
-		// 마우스 위치 방향으로 회전후 마우스 위치 이동 ( 벡터의 뺄셈 활용 )
-		Transform* plTr = mPlayer->GetComponent<Transform>();
-		Vector2 dest = mDest - plTr->GetPosition();
-		dest.normalize();
-
-		float rotDegree = Vector2::Dot(dest, Vector2::Right); //cos세타
-		rotDegree = acosf(rotDegree);
-		rotDegree = ConvertDegree(rotDegree);
-
-		pos += dest * (100.0f * Time::DeltaTime());
-
-		tr->SetPosition(pos);
 	}
-
 	void CatScript::move()
 	{
-		mTime += Time::DeltaTime();
-		if (mTime > 2.0f)
-		{
-			int isLayDown = rand() % 2;
-			if (isLayDown)
-			{
-				mState = eState::LayDown;
-				mAnimator->PlayAnimation(L"LayDown", false);
-			}
-			else
-			{
-				mState = eState::SitDown;
-				mAnimator->PlayAnimation(L"SitDown", false);
-			}
-		}
-
-		Transform* tr = GetOwner()->GetComponent<Transform>();
-		translate(tr);
 	}
-
 	void CatScript::layDown()
 	{
 
 	}
-
 	void CatScript::PlayWalkAnimationByDirection(eDirection dir)
 	{
-		switch (dir)
-		{
-		case hs::CatScript::eDirection::Left:
-			mAnimator->PlayAnimation(L"LeftWalk", true);
-			break;
-		case hs::CatScript::eDirection::Right:
-			mAnimator->PlayAnimation(L"RightWalk", true);
-			break;
-		case hs::CatScript::eDirection::Down:
-			mAnimator->PlayAnimation(L"DownWalk", true);
-			break;
-		case hs::CatScript::eDirection::Up:
-			mAnimator->PlayAnimation(L"UpWalk", true);
-			break;
-		default:
-			assert(false);
-			break;
-		}
 	}
 	void CatScript::translate(Transform* tr)
 	{
-		Vector2 pos = tr->GetPosition();
-		switch (mDirection)
-		{
-		case hs::CatScript::eDirection::Left:
-			pos.x -= 100.0f * Time::DeltaTime();
-			break;
-		case hs::CatScript::eDirection::Right:
-			pos.x += 100.0f * Time::DeltaTime();
-			break;
-		case hs::CatScript::eDirection::Down:
-			pos.y += 100.0f * Time::DeltaTime();
-			break;
-		case hs::CatScript::eDirection::Up:
-			pos.y -= 100.0f * Time::DeltaTime();
-			break;
-		default:
-			assert(false);
-			break;
-		}
-		tr->SetPosition(pos);
 	}
 }

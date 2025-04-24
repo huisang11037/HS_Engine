@@ -61,6 +61,13 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)hsComponent.cpp">
       <Filter>Component</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsCollider.cpp">
+      <Filter>Component\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsCircleCollider2D.cpp">
+      <Filter>Component\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsBoxCollider2D.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)hsCamera.h">
@@ -132,6 +139,13 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)hsComponent.h">
       <Filter>Component</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsCollider.h">
+      <Filter>Component\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsCircleCollider2D.h">
+      <Filter>Component\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsBoxCollider2D.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Component">
@@ -181,6 +195,9 @@
     </Filter>
     <Filter Include="Component\Animator">
       <UniqueIdentifier>{272760bc-1e18-4a64-a6db-c833c1f70375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Collider">
+      <UniqueIdentifier>{4c524971-e409-4896-a401-39a965878bd0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

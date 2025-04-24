@@ -22,10 +22,11 @@ namespace hs
 		static T* Load(const std::wstring& key, const std::wstring& path)
 		{
 			T* resource = Resources::Find<T>(key);
-			if (resource != nullptr) assert(false);
+			assert(resource == nullptr);
 
 			resource = new T();
-			if (FAILED(resource->Load(path))) assert(false);
+			HRESULT hr = resource->Load(path);
+			assert(SUCCEEDED(hr));
 
 			resource->SetName(key);
 			resource->SetPath(path);

@@ -66,7 +66,7 @@ namespace hs {
 	{
 		Animation* animation = nullptr;
 		animation = FindAnimation(name);
-		if (animation != nullptr) assert(false);
+		assert(animation == nullptr);
 
 		animation = new Animation();
 		animation->SetName(name);
@@ -84,7 +84,7 @@ namespace hs {
 	{
 		Animation* animation = nullptr;
 		animation = FindAnimation(name);
-		if (animation != nullptr) assert(false);
+		assert(animation == nullptr);
 
 		int fileCount = 0;
 		std::filesystem::path fs(path);
@@ -102,7 +102,7 @@ namespace hs {
 
 		UINT sheetWidth = images[0]->GetWidth() * fileCount;
 		UINT sheetHeight = images[0]->GetHeight();
-		graphcis::Texture* spriteSheet = graphcis::Texture::Create(name, sheetWidth, sheetHeight);
+		graphcis::Texture* spriteSheet = graphcis::Texture::Create(name, images[0]->GetTextureType(), sheetWidth, sheetHeight);
 
 		UINT imageWidth = images[0]->GetWidth();
 		UINT imageHeight = images[0]->GetHeight();
@@ -128,7 +128,7 @@ namespace hs {
 	void Animator::PlayAnimation(const std::wstring& name, bool bLoop)
 	{
 		Animation* animation = FindAnimation(name);
-		if (animation == nullptr) assert(false);
+		assert(animation != nullptr);
 
 
 		if (mActiveAnimation)

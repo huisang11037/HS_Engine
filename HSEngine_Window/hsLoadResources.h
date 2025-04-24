@@ -13,6 +13,5 @@ namespace hs
 	{
 		Resources::Load<graphcis::Texture>(L"Cat", L"..\\Resources\\ChickenAlpha.bmp");
 		Resources::Load<graphcis::Texture>(L"Player", L"..\\Resources\\Player.bmp");
-		//Resources::Load<graphcis::Texture>(L"Player1234", L"..\\Resources\\Player1234.bmp");
 	}
 }

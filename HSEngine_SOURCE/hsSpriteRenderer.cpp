@@ -31,7 +31,7 @@ namespace hs
 
 	void SpriteRenderer::Render(HDC hdc)
 	{
-		if (mTexture == nullptr) assert(false);
+		assert(mTexture != nullptr);
 
 		Transform* tr = GetOwner()->GetComponent<Transform>();
 		Vector2 position = tr->GetPosition();

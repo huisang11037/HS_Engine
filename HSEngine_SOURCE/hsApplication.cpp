@@ -65,8 +65,14 @@ namespace hs {
 	}
 	void Application::clearRenderTarget() const
 	{
+		HBRUSH grayBrush = (HBRUSH)CreateSolidBrush(RGB(128, 128, 128));
+		HBRUSH oldBrush = (HBRUSH)SelectObject(mBackHDC, grayBrush);
+
 		// 뒷 배경을 지운다. 원래 크기보다 살짝 크게 해줘야 외곽선이 안보인다.
 		Rectangle(mBackHDC, -1, -1, mWidth + 1, mHeight + 1);
+
+		(HBRUSH)SelectObject(mBackHDC, oldBrush);
+		DeleteObject(grayBrush);
 	}
 	void Application::adjustWindowRect(HWND hwnd, UINT width, UINT height)
 	{

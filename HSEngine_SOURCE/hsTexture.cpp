@@ -6,21 +6,27 @@ extern hs::Application application;
 
 namespace hs::graphcis
 {
-	Texture* Texture::Create(const std::wstring& name, UINT width, UINT height)
+	Texture* Texture::Create(const std::wstring& name, eTextureType type, UINT width, UINT height)
 	{
 		Texture* image = Resources::Find<Texture>(name);
-		if (image) assert(false);
+		assert(!image);
 
 		image = new Texture();
 		image->SetName(name);
 		image->SetWidth(width);
 		image->SetHeight(height);
+		image->SetTextureType(type);
 
 		HDC hdc = application.GetHdc();
 		HWND hwnd = application.GetHwnd();
 
 		image->mBitmap = CreateCompatibleBitmap(hdc, width, height);
 		image->mHdc = CreateCompatibleDC(hdc);
+
+		HBRUSH transparentBrush = (HBRUSH)GetStockObject(NULL_BRUSH);
+		HBRUSH oldBrush = (HBRUSH)SelectObject(hdc, transparentBrush);
+		Rectangle(image->mHdc, -1, -1, image->GetWidth() + 1, image->GetHeight() + 1);
+		SelectObject(hdc, oldBrush);
 
 		HBITMAP oldBitmap = (HBITMAP)SelectObject(image->mHdc, image->mBitmap);
 		DeleteObject(oldBitmap);

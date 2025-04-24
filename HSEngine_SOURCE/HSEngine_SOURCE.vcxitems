@@ -19,7 +19,10 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)hsAnimation.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsAnimator.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsApplication.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsBoxCollider2D.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsCamera.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsCircleCollider2D.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsCollider.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsComponent.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsEntity.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsEnums.h" />
@@ -43,7 +46,10 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)hsAnimation.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsAnimator.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsApplication.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsBoxCollider2D.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsCamera.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsCircleCollider2D.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsCollider.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsComponent.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsEntity.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsGameObject.cpp" />

@@ -58,7 +58,9 @@ namespace hs
 		}
 
 		Sprite sprite = mAnimationSheet[mIndex];
-		graphcis::Texture::eTextureType type = mTexture->GetTextureType();
+		graphcis::Texture::eTextureType type = mTexture->GetTextureType(); //아니 이씨발련 왜 None임???? 추후 고칠 것!!!!!!
+		assert(type != graphcis::Texture::eTextureType::None);
+
 		if (type == graphcis::Texture::eTextureType::Png)
 		{
 			// 투명화할 색상 지정, 쓰고싶으면 밑에 grapics.DrawImage에 마지막 nullptr 대신 넣으면 된다
@@ -125,6 +127,7 @@ namespace hs
 					, RGB(255, 0, 255));
 			}
 		}
+		Rectangle(hdc, position.x, position.y, position.x + 10, position.y + 10);
     }
     void Animation::CreateAnimation(const std::wstring& name
         , graphcis::Texture* spriteSheet
