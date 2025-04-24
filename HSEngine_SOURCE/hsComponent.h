@@ -3,6 +3,8 @@
 
 namespace hs
 {
+	using namespace enums;
+
 	class GameObject; // 전방 선언을 통해 순환 참조를 방지
 	/**
 	* @brief 컴포넌트는 게임 오브젝트에 부착되어 기능을 추가합니다.

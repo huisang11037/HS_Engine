@@ -6,7 +6,7 @@ namespace hs
 	class Collider : public Component
 	{
 	public:
-		Collider();
+		Collider(eColliderType type);
 		~Collider();
 
 		virtual void Initialize();
@@ -23,6 +23,7 @@ namespace hs
 		Vector2 GetOffset() const { return mOffset; }
 		Vector2 GetSize() const { return mSize; }
 		UINT32 GetID() const { return mID; }
+		eColliderType GetColliderType() const { return mType; }
 
 	private:
 		static UINT CollisionID;
@@ -30,5 +31,7 @@ namespace hs
 		UINT32 mID;
 		Vector2 mOffset;
 		Vector2 mSize;
+
+		eColliderType mType;
 	};
 }

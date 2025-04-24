@@ -17,7 +17,9 @@ namespace hs
 
 		UINT64 id;
 	};
-
+	/**
+	* @brief 모든 콜라이더를 관리하는 정적 클래스입니다.
+	*/
 	class CollisionManager
 	{
 	public:
@@ -30,6 +32,10 @@ namespace hs
 		static void LayerCollision(class Scene* scene, eLayerType left, eLayerType right);
 		static void ColliderCollision(Collider* left, Collider* right);
 		static bool IsIntersect(Collider* left, Collider* right);
+
+	private:
+		static bool isCircleRectCollision(enums::eColliderType leftType, 
+			Vector2* leftPos, Vector2* leftSize, Vector2* rightPos, Vector2* rightSize);
 
 	private:
 		static std::bitset<(UINT)eLayerType::Max> mCollisionLayerMatrix[(UINT)eLayerType::Max];

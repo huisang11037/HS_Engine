@@ -15,6 +15,7 @@
 #include "hsAnimator.h"
 #include "hsCat.h"
 #include "hsCatScript.h"
+#include "hsCircleCollider2D.h"
 #include "hsBoxCollider2D.h"
 #include "hsCollisionManager.h"
 
@@ -41,6 +42,7 @@ namespace hs
 		mPlayer = object::Instantiate<Player>(enums::eLayerType::Player);
 		PlayerScript* plScript = mPlayer->AddComponent<PlayerScript>();
 		BoxCollider2D* collider = mPlayer->AddComponent<BoxCollider2D>();
+		//CircleCollider2D* collider = mPlayer->AddComponent<CircleCollider2D>();
 		collider->SetOffset(Vector2(-50.0f, -50.0));
 
 		graphcis::Texture* playerTex = Resources::Find<graphcis::Texture>(L"Player");
@@ -61,7 +63,8 @@ namespace hs
 		Cat* cat = object::Instantiate<Cat>(enums::eLayerType::Animal);
 		Animator* catAnimator = cat->AddComponent<Animator>();
 
-		BoxCollider2D* boxCatCollider = cat->AddComponent<BoxCollider2D>();
+		//BoxCollider2D* boxCatCollider = cat->AddComponent<BoxCollider2D>();
+		CircleCollider2D* boxCatCollider = cat->AddComponent<CircleCollider2D>();
 		boxCatCollider->SetOffset(Vector2(-50.0f, -50.0f));
 
 		catAnimator->CreateAnimationByFolder(L"MushroomIdle", L"..\\Resources\\Mushroom", Vector2::Zero, 0.1f);

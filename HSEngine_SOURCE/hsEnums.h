@@ -40,5 +40,13 @@ namespace hs::enums
 		Prefab,
 		End,
 	};
-
+	/**
+	* @brief 충돌체의 종류를 정의합니다. 새 충돌체를 만들 때 수정해야 합니다.
+	*/
+	enum class eColliderType
+	{
+		Circle2D,
+		Rect2D,
+		End,
+	};
 }

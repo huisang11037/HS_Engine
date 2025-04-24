@@ -128,12 +128,82 @@ namespace hs
 		Vector2 leftSize = left->GetSize() * 100.0f;
 		Vector2 rightSize = right->GetSize() * 100.0f;
 
-		if (fabs(leftPos.x - rightPos.x) < fabs(leftSize.x / 2.0f + rightSize.x / 2.0f)
-			&& fabs(leftPos.y - rightPos.y) < fabs(leftSize.y / 2.0f + rightSize.y / 2.0f))
+		enums::eColliderType leftType = left->GetColliderType();
+		enums::eColliderType rightType = right->GetColliderType();
+
+		if (leftType == enums::eColliderType::Rect2D
+			&& rightType == enums::eColliderType::Rect2D)
+		{
+			if (fabs(leftPos.x - rightPos.x) < fabs(leftSize.x / 2.0f + rightSize.x / 2.0f)
+				&& fabs(leftPos.y - rightPos.y) < fabs(leftSize.y / 2.0f + rightSize.y / 2.0f))
+			{
+				return true;
+			}
+		}
+
+
+		if (leftType == enums::eColliderType::Circle2D
+			&& rightType == enums::eColliderType::Circle2D)
+		{
+			Vector2 leftCirclePos = leftPos + (leftSize / 2.0f);
+			Vector2 rightCirclePos = rightPos + (rightSize / 2.0f);
+			float distance = (leftCirclePos - rightCirclePos).length();
+			if (distance <= (leftSize.x / 2.0f + rightSize.x / 2.0f))
+			{
+				return true;
+			}
+		}
+
+		if ((leftType == enums::eColliderType::Circle2D && rightType == enums::eColliderType::Rect2D)
+			|| (leftType == enums::eColliderType::Rect2D && rightType == enums::eColliderType::Circle2D))
+		{
+			return isCircleRectCollision(leftType, &leftPos, &leftSize, &rightPos, &rightSize);
+		}
+
+		return false;
+	}
+	bool CollisionManager::isCircleRectCollision(enums::eColliderType leftType
+		, Vector2* leftPos, Vector2* leftSize, Vector2* rightPos, Vector2* rightSize)
+	{
+		Vector2 *circlePos, *rectPos;
+		Vector2 *circleSize, *rectSize;
+
+		if (leftType == enums::eColliderType::Circle2D)
+		{
+			circlePos = leftPos;
+			circleSize = leftSize;
+			rectPos = rightPos;
+			rectSize = rightSize;
+		}
+		else
+		{
+			circlePos = rightPos;
+			circleSize = rightSize;
+			rectPos = leftPos;
+			rectSize = leftSize;
+		}
+
+		float radius = circleSize->x * 0.5f;
+
+		float rectHalfW = rectSize->x * 0.5f;
+		float rectHalfH = rectSize->y * 0.5f;
+
+		float dx = std::abs(circlePos->x - rectPos->x);
+		float dy = std::abs(circlePos->y - rectPos->y);
+
+		if (dx > (rectHalfW + radius)) return false;
+		if (dy > (rectHalfH + radius)) return false;
+
+		if (dx <= rectHalfW) return true;
+		if (dy <= rectHalfH) return true;
+
+		float cornerDistSq = (dx - rectHalfW) * (dx - rectHalfW) +
+			(dy - rectHalfH) * (dy - rectHalfH);
+
+		if (cornerDistSq <= radius * radius)
 		{
 			return true;
 		}
-
 		return false;
 	}
 }

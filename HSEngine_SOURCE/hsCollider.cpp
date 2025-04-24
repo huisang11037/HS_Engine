@@ -6,8 +6,9 @@ namespace hs
 {
 	UINT Collider::CollisionID = 1;
 
-	Collider::Collider()
+	Collider::Collider(eColliderType type)
 		: Component(enums::eComponentType::Colider)
+		, mType(type)
 		, mID(CollisionID++)
 		, mSize(Vector2::One)
 	{
@@ -34,14 +35,12 @@ namespace hs
 		if (script == nullptr) return;
 		script->OnCollisionEnter(other);
 	}
-
 	void Collider::OnCollisionStay(Collider* other)
 	{
 		Script* script = GetOwner()->GetComponent<Script>();
 		if (script == nullptr) return;
 		script->OnCollisionStay(other);
 	}
-
 	void Collider::OnCollisionExit(Collider* other)
 	{
 		Script* script = GetOwner()->GetComponent<Script>();
