@@ -1,0 +1,50 @@
+\doxysection{hs\+Application.\+h}
+\hypertarget{hs_application_8h_source}{}\label{hs_application_8h_source}\index{HSEngine\_SOURCE/hsApplication.h@{HSEngine\_SOURCE/hsApplication.h}}
+\mbox{\hyperlink{hs_application_8h}{이 파일의 문서화 페이지로 가기}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_common_include_8h}{CommonInclude.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hs_game_object_8h}{hsGameObject.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00005}00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacehs}{hs}}\ \{}
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00011}\mbox{\hyperlink{classhs_1_1_application}{00011}}\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classhs_1_1_application_a79ec42b6f09a0d4724b75fd493ea0be3}{Application}}}
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00012}00012\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00013}00013\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00014}00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classhs_1_1_application_a79ec42b6f09a0d4724b75fd493ea0be3}{Application}}();}
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00015}00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classhs_1_1_application_a1a2a839cb965fc435be956a1cc778323}{\string~Application}}();}
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhs_1_1_application_aaa40053c552d93588fecf494586b73da}{Initialize}}(HWND\ hwnd,\ UINT\ width,\ UINT\ height);}
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhs_1_1_application_a9324178dc4b30a186234c496f60c9166}{Run}}();}
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhs_1_1_application_a97b5ac72fb598a81bccad2d045a3ce1d}{Update}}();}
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhs_1_1_application_a90a63d3a3b58b9bf701ac4b91321a8ba}{LateUpdate}}();}
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhs_1_1_application_a10acdcff0c204e15e99427c9402b0f2a}{Render}}();}
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhs_1_1_application_a124f40ad2666bc7df0f252d3713c9b8e}{Destroy}}();}
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhs_1_1_application_a93e7596634c21b14c8737cb783599f20}{Release}}();}
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00026}\mbox{\hyperlink{classhs_1_1_application_a26da00013706be0efe167e79fb5ac317}{00026}}\ \ \ \ \ \ \ \ \ HWND\ \mbox{\hyperlink{classhs_1_1_application_a26da00013706be0efe167e79fb5ac317}{GetHwnd}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ mHwnd;\ \}}
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00027}\mbox{\hyperlink{classhs_1_1_application_a39d50aec7018d8ab908e86e8a4397072}{00027}}\ \ \ \ \ \ \ \ \ HDC\ \mbox{\hyperlink{classhs_1_1_application_a39d50aec7018d8ab908e86e8a4397072}{GetHdc}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ mHdc;\ \}}
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00028}\mbox{\hyperlink{classhs_1_1_application_a203da39af0dc46c0a8a844b19f671953}{00028}}\ \ \ \ \ \ \ \ \ UINT\ \mbox{\hyperlink{classhs_1_1_application_a203da39af0dc46c0a8a844b19f671953}{GetWidth}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ mWidth;\ \}}
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00029}\mbox{\hyperlink{classhs_1_1_application_a8f99463e335adf2babeedc450dcb4247}{00029}}\ \ \ \ \ \ \ \ \ UINT\ \mbox{\hyperlink{classhs_1_1_application_a8f99463e335adf2babeedc450dcb4247}{GetHeight}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ mHeight;\ \}}
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00031}00031\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ clearRenderTarget()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ adjustWindowRect(HWND\ hwnd,\ UINT\ width,\ UINT\ height);}
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ createBackBuffer(UINT\ width,\ UINT\ height);}
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ initializeETC();}
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00037}00037\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00038}00038\ \ \ \ \ \ \ \ \ HWND\ mHwnd;}
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00039}00039\ \ \ \ \ \ \ \ \ HDC\ mHdc;}
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00041}00041\ \ \ \ \ \ \ \ \ HDC\ mBackHDC;}
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00042}00042\ \ \ \ \ \ \ \ \ HBITMAP\ mBackBitmap;}
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00044}00044\ \ \ \ \ \ \ \ \ UINT\ mWidth;}
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00045}00045\ \ \ \ \ \ \ \ \ UINT\ mHeight;}
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00046}00046\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00047}00047\ \}}
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{hs_application_8h_source_l00049}00049\ }
+
+\end{DoxyCode}

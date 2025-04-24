@@ -1,0 +1,511 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>HS Engine: hs::Transform 클래스 참조</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">HS Engine<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">own game engine</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="검색" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('classhs_1_1_transform.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 멤버 함수</a> &#124;
+<a href="classhs_1_1_transform-members.html">모든 멤버 목록</a>  </div>
+  <div class="headertitle"><div class="title">hs::Transform 클래스 참조</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>위치를 정의하는 컴포넌트입니다.  
+ <a href="#details">더 자세히 ...</a></p>
+
+<p><code>#include &lt;<a class="el" href="hs_transform_8h_source.html">hsTransform.h</a>&gt;</code></p>
+<div class="dynheader">
+hs::Transform에 대한 상속 다이어그램 : </div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classhs_1_1_transform.png" usemap="#hs::Transform_map" alt=""/>
+  <map id="hs::Transform_map" name="hs::Transform_map">
+<area href="classhs_1_1_component.html" title="컴포넌트는 게임 오브젝트에 부착되어 기능을 추가합니다." alt="hs::Component" shape="rect" coords="0,56,94,80"/>
+<area href="classhs_1_1_entity.html" title="모든 이름이 필요한 것들에 대한 기본 클래스입니다." alt="hs::Entity" shape="rect" coords="0,0,94,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 멤버 함수</h2></td></tr>
+<tr class="memitem:aa00bb3b636eb3634aa961d3b1c10ed04" id="r_aa00bb3b636eb3634aa961d3b1c10ed04"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa00bb3b636eb3634aa961d3b1c10ed04">Transform</a> ()</td></tr>
+<tr class="separator:aa00bb3b636eb3634aa961d3b1c10ed04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99068ad5c9917e9bbf09adeb36aef8e8" id="r_a99068ad5c9917e9bbf09adeb36aef8e8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99068ad5c9917e9bbf09adeb36aef8e8">~Transform</a> ()</td></tr>
+<tr class="separator:a99068ad5c9917e9bbf09adeb36aef8e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4caea01bb0d6556037c830c24a138222" id="r_a4caea01bb0d6556037c830c24a138222"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4caea01bb0d6556037c830c24a138222">Initialize</a> () override</td></tr>
+<tr class="separator:a4caea01bb0d6556037c830c24a138222"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4277c639606e1def828a89f8229bfced" id="r_a4277c639606e1def828a89f8229bfced"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4277c639606e1def828a89f8229bfced">Update</a> () override</td></tr>
+<tr class="separator:a4277c639606e1def828a89f8229bfced"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0311a734a1ad3e3af7a1d3e3d2b9727b" id="r_a0311a734a1ad3e3af7a1d3e3d2b9727b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0311a734a1ad3e3af7a1d3e3d2b9727b">LateUpdate</a> () override</td></tr>
+<tr class="separator:a0311a734a1ad3e3af7a1d3e3d2b9727b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4d50564e6e6dac70b7a442124070d57" id="r_ac4d50564e6e6dac70b7a442124070d57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4d50564e6e6dac70b7a442124070d57">Render</a> (HDC hdc) override</td></tr>
+<tr class="separator:ac4d50564e6e6dac70b7a442124070d57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b6134ad8e9eadf308446ea7cde41d2b" id="r_a1b6134ad8e9eadf308446ea7cde41d2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b6134ad8e9eadf308446ea7cde41d2b">SetPosition</a> (<a class="el" href="strucths_1_1math_1_1_vector2.html">Vector2</a> pos)</td></tr>
+<tr class="separator:a1b6134ad8e9eadf308446ea7cde41d2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeceede576476e3b407258d0598b94def" id="r_aeceede576476e3b407258d0598b94def"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeceede576476e3b407258d0598b94def">SetScale</a> (<a class="el" href="strucths_1_1math_1_1_vector2.html">Vector2</a> scale)</td></tr>
+<tr class="separator:aeceede576476e3b407258d0598b94def"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28539599190b6350aa390fcc9d9c1b42" id="r_a28539599190b6350aa390fcc9d9c1b42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28539599190b6350aa390fcc9d9c1b42">SetRotation</a> (float rotation)</td></tr>
+<tr class="separator:a28539599190b6350aa390fcc9d9c1b42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a128d56c00abc67b6b1dcf69b9ae33bbc" id="r_a128d56c00abc67b6b1dcf69b9ae33bbc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="strucths_1_1math_1_1_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a128d56c00abc67b6b1dcf69b9ae33bbc">GetPosition</a> () const</td></tr>
+<tr class="separator:a128d56c00abc67b6b1dcf69b9ae33bbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9018783faf192630508bc32a3c6a742e" id="r_a9018783faf192630508bc32a3c6a742e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="strucths_1_1math_1_1_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9018783faf192630508bc32a3c6a742e">GetScale</a> () const</td></tr>
+<tr class="separator:a9018783faf192630508bc32a3c6a742e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87433cb8f08ecae0043113bae76fa97a" id="r_a87433cb8f08ecae0043113bae76fa97a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87433cb8f08ecae0043113bae76fa97a">GetRotation</a> () const</td></tr>
+<tr class="separator:a87433cb8f08ecae0043113bae76fa97a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classhs_1_1_component"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classhs_1_1_component')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="classhs_1_1_component.html">hs::Component</a>(으)로부터 상속된 Public 멤버 함수</td></tr>
+<tr class="memitem:a8950a1cb229cebd9b7e1afd8ee4e0ef8 inherit pub_methods_classhs_1_1_component" id="r_a8950a1cb229cebd9b7e1afd8ee4e0ef8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhs_1_1_component.html#a8950a1cb229cebd9b7e1afd8ee4e0ef8">Component</a> (<a class="el" href="namespacehs_1_1enums.html#adbc1f9eacd808ec4b80283b6b010b48a">enums::eComponentType</a> type)</td></tr>
+<tr class="separator:a8950a1cb229cebd9b7e1afd8ee4e0ef8 inherit pub_methods_classhs_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7eaeef8121ef796bcf6319cc035f0885 inherit pub_methods_classhs_1_1_component" id="r_a7eaeef8121ef796bcf6319cc035f0885"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhs_1_1_component.html#a7eaeef8121ef796bcf6319cc035f0885">~Component</a> ()</td></tr>
+<tr class="separator:a7eaeef8121ef796bcf6319cc035f0885 inherit pub_methods_classhs_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae56200efea9461695c401871cdb0183a inherit pub_methods_classhs_1_1_component" id="r_ae56200efea9461695c401871cdb0183a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhs_1_1_component.html#ae56200efea9461695c401871cdb0183a">SetOwner</a> (<a class="el" href="classhs_1_1_game_object.html">GameObject</a> *owner)</td></tr>
+<tr class="separator:ae56200efea9461695c401871cdb0183a inherit pub_methods_classhs_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae76ddacdaaa23c4663322dccbb064d6e inherit pub_methods_classhs_1_1_component" id="r_ae76ddacdaaa23c4663322dccbb064d6e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhs_1_1_game_object.html">GameObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhs_1_1_component.html#ae76ddacdaaa23c4663322dccbb064d6e">GetOwner</a> ()</td></tr>
+<tr class="separator:ae76ddacdaaa23c4663322dccbb064d6e inherit pub_methods_classhs_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9877301ae21c20aa291415c36f7eb78 inherit pub_methods_classhs_1_1_component" id="r_ac9877301ae21c20aa291415c36f7eb78"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacehs_1_1enums.html#adbc1f9eacd808ec4b80283b6b010b48a">enums::eComponentType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhs_1_1_component.html#ac9877301ae21c20aa291415c36f7eb78">GetType</a> () const</td></tr>
+<tr class="separator:ac9877301ae21c20aa291415c36f7eb78 inherit pub_methods_classhs_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classhs_1_1_entity"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classhs_1_1_entity')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="classhs_1_1_entity.html">hs::Entity</a>(으)로부터 상속된 Public 멤버 함수</td></tr>
+<tr class="memitem:af3cef436d0ffd259d99e505a987428f4 inherit pub_methods_classhs_1_1_entity" id="r_af3cef436d0ffd259d99e505a987428f4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhs_1_1_entity.html#af3cef436d0ffd259d99e505a987428f4">Entity</a> ()</td></tr>
+<tr class="separator:af3cef436d0ffd259d99e505a987428f4 inherit pub_methods_classhs_1_1_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad30b89f98b0edf4f969370b949b42adf inherit pub_methods_classhs_1_1_entity" id="r_ad30b89f98b0edf4f969370b949b42adf"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhs_1_1_entity.html#ad30b89f98b0edf4f969370b949b42adf">~Entity</a> ()</td></tr>
+<tr class="separator:ad30b89f98b0edf4f969370b949b42adf inherit pub_methods_classhs_1_1_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a477f58255303b66fb51c0f36f9caf534 inherit pub_methods_classhs_1_1_entity" id="r_a477f58255303b66fb51c0f36f9caf534"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhs_1_1_entity.html#a477f58255303b66fb51c0f36f9caf534">SetName</a> (const std::wstring &amp;name)</td></tr>
+<tr class="separator:a477f58255303b66fb51c0f36f9caf534 inherit pub_methods_classhs_1_1_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50626d2175dc190d0a16ebdcb6962b0d inherit pub_methods_classhs_1_1_entity" id="r_a50626d2175dc190d0a16ebdcb6962b0d"><td class="memItemLeft" align="right" valign="top">const std::wstring &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhs_1_1_entity.html#a50626d2175dc190d0a16ebdcb6962b0d">GetName</a> () const</td></tr>
+<tr class="separator:a50626d2175dc190d0a16ebdcb6962b0d inherit pub_methods_classhs_1_1_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock"><p>위치를 정의하는 컴포넌트입니다. </p>
+
+<p class="definition"><a class="el" href="hs_transform_8h_source.html">hsTransform.h</a> 파일의 <a class="el" href="hs_transform_8h_source.html#l00012">12</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="aa00bb3b636eb3634aa961d3b1c10ed04" name="aa00bb3b636eb3634aa961d3b1c10ed04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa00bb3b636eb3634aa961d3b1c10ed04">&#9670;&#160;</a></span>Transform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">hs::Transform::Transform </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hs_transform_8cpp_source.html">hsTransform.cpp</a> 파일의 <a class="el" href="hs_transform_8cpp_source.html#l00005">5</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a99068ad5c9917e9bbf09adeb36aef8e8" name="a99068ad5c9917e9bbf09adeb36aef8e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99068ad5c9917e9bbf09adeb36aef8e8">&#9670;&#160;</a></span>~Transform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">hs::Transform::~Transform </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hs_transform_8cpp_source.html">hsTransform.cpp</a> 파일의 <a class="el" href="hs_transform_8cpp_source.html#l00012">12</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="a128d56c00abc67b6b1dcf69b9ae33bbc" name="a128d56c00abc67b6b1dcf69b9ae33bbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a128d56c00abc67b6b1dcf69b9ae33bbc">&#9670;&#160;</a></span>GetPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="strucths_1_1math_1_1_vector2.html">Vector2</a> hs::Transform::GetPosition </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hs_transform_8h_source.html">hsTransform.h</a> 파일의 <a class="el" href="hs_transform_8h_source.html#l00026">26</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a87433cb8f08ecae0043113bae76fa97a" name="a87433cb8f08ecae0043113bae76fa97a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87433cb8f08ecae0043113bae76fa97a">&#9670;&#160;</a></span>GetRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float hs::Transform::GetRotation </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hs_transform_8h_source.html">hsTransform.h</a> 파일의 <a class="el" href="hs_transform_8h_source.html#l00028">28</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a9018783faf192630508bc32a3c6a742e" name="a9018783faf192630508bc32a3c6a742e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9018783faf192630508bc32a3c6a742e">&#9670;&#160;</a></span>GetScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="strucths_1_1math_1_1_vector2.html">Vector2</a> hs::Transform::GetScale </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hs_transform_8h_source.html">hsTransform.h</a> 파일의 <a class="el" href="hs_transform_8h_source.html#l00027">27</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a4caea01bb0d6556037c830c24a138222" name="a4caea01bb0d6556037c830c24a138222"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4caea01bb0d6556037c830c24a138222">&#9670;&#160;</a></span>Initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void hs::Transform::Initialize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classhs_1_1_component.html#a445ae3dc09f2ef2bdbf21ce02294faa5">hs::Component</a>(으)로부터 재구현되었습니다.</p>
+
+<p class="definition"><a class="el" href="hs_transform_8cpp_source.html">hsTransform.cpp</a> 파일의 <a class="el" href="hs_transform_8cpp_source.html#l00015">15</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a0311a734a1ad3e3af7a1d3e3d2b9727b" name="a0311a734a1ad3e3af7a1d3e3d2b9727b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0311a734a1ad3e3af7a1d3e3d2b9727b">&#9670;&#160;</a></span>LateUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void hs::Transform::LateUpdate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classhs_1_1_component.html#a0dd22f37a1f4e03f7b825b075c78142f">hs::Component</a>(으)로부터 재구현되었습니다.</p>
+
+<p class="definition"><a class="el" href="hs_transform_8cpp_source.html">hsTransform.cpp</a> 파일의 <a class="el" href="hs_transform_8cpp_source.html#l00021">21</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ac4d50564e6e6dac70b7a442124070d57" name="ac4d50564e6e6dac70b7a442124070d57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4d50564e6e6dac70b7a442124070d57">&#9670;&#160;</a></span>Render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void hs::Transform::Render </td>
+          <td>(</td>
+          <td class="paramtype">HDC</td>          <td class="paramname"><span class="paramname"><em>hdc</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classhs_1_1_component.html#a9d3e32dd591a979638794bfc2d79119a">hs::Component</a>(으)로부터 재구현되었습니다.</p>
+
+<p class="definition"><a class="el" href="hs_transform_8cpp_source.html">hsTransform.cpp</a> 파일의 <a class="el" href="hs_transform_8cpp_source.html#l00024">24</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a1b6134ad8e9eadf308446ea7cde41d2b" name="a1b6134ad8e9eadf308446ea7cde41d2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b6134ad8e9eadf308446ea7cde41d2b">&#9670;&#160;</a></span>SetPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void hs::Transform::SetPosition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="strucths_1_1math_1_1_vector2.html">Vector2</a></td>          <td class="paramname"><span class="paramname"><em>pos</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hs_transform_8h_source.html">hsTransform.h</a> 파일의 <a class="el" href="hs_transform_8h_source.html#l00023">23</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a28539599190b6350aa390fcc9d9c1b42" name="a28539599190b6350aa390fcc9d9c1b42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28539599190b6350aa390fcc9d9c1b42">&#9670;&#160;</a></span>SetRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void hs::Transform::SetRotation </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>rotation</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hs_transform_8h_source.html">hsTransform.h</a> 파일의 <a class="el" href="hs_transform_8h_source.html#l00025">25</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="aeceede576476e3b407258d0598b94def" name="aeceede576476e3b407258d0598b94def"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeceede576476e3b407258d0598b94def">&#9670;&#160;</a></span>SetScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void hs::Transform::SetScale </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="strucths_1_1math_1_1_vector2.html">Vector2</a></td>          <td class="paramname"><span class="paramname"><em>scale</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hs_transform_8h_source.html">hsTransform.h</a> 파일의 <a class="el" href="hs_transform_8h_source.html#l00024">24</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a4277c639606e1def828a89f8229bfced" name="a4277c639606e1def828a89f8229bfced"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4277c639606e1def828a89f8229bfced">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void hs::Transform::Update </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classhs_1_1_component.html#a5bdd392ab636da076462956268e67e29">hs::Component</a>(으)로부터 재구현되었습니다.</p>
+
+<p class="definition"><a class="el" href="hs_transform_8cpp_source.html">hsTransform.cpp</a> 파일의 <a class="el" href="hs_transform_8cpp_source.html#l00018">18</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<hr/>이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.:<ul>
+<li>HSEngine_SOURCE/<a class="el" href="hs_transform_8h_source.html">hsTransform.h</a></li>
+<li>HSEngine_SOURCE/<a class="el" href="hs_transform_8cpp_source.html">hsTransform.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacehs.html">hs</a></li><li class="navelem"><a class="el" href="classhs_1_1_transform.html">Transform</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

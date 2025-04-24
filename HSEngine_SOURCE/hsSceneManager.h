@@ -3,6 +3,10 @@
 
 namespace hs
 {
+	/**
+	* @brief 씬들을 관리하는 클래스입니다.
+	* @details 씬을 생성하고, 로드하고, 업데이트하는 기능을 제공합니다.
+	*/
 	class SceneManager
 	{
 	public:

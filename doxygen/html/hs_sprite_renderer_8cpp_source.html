@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>HS Engine: HSEngine_SOURCE/hsSpriteRenderer.cpp 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">HS Engine<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">own game engine</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="검색" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('hs_sprite_renderer_8cpp_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">hsSpriteRenderer.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="hs_sprite_renderer_8cpp.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="hs_sprite_renderer_8h.html">hsSpriteRenderer.h</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="hs_game_object_8h.html">hsGameObject.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="hs_transform_8h.html">hsTransform.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="hs_texture_8h.html">hsTexture.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="hs_renderer_8h.html">hsRenderer.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacehs.html">hs</a></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
+<div class="foldopen" id="foldopen00009" data-start="{" data-end="}">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classhs_1_1_sprite_renderer.html#a59054351d2570c4f416eb3cfebd2cba1">    9</a></span>    <a class="code hl_function" href="classhs_1_1_sprite_renderer.html#a59054351d2570c4f416eb3cfebd2cba1">SpriteRenderer::SpriteRenderer</a>()</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        : <a class="code hl_function" href="classhs_1_1_component.html#a8950a1cb229cebd9b7e1afd8ee4e0ef8">Component</a>(<a class="code hl_namespace" href="namespacehs_1_1enums.html">enums</a>::eComponentType::<a class="code hl_function" href="classhs_1_1_sprite_renderer.html#a59054351d2570c4f416eb3cfebd2cba1">SpriteRenderer</a>)</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        , mTexture(nullptr)</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        , mSize(<a class="code hl_struct" href="strucths_1_1math_1_1_vector2.html">Vector2</a>::One)</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    }</div>
+</div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="}">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classhs_1_1_sprite_renderer.html#aece49f3d4b5bb4eefb4a04e2b8849adb">   15</a></span>    <a class="code hl_function" href="classhs_1_1_sprite_renderer.html#aece49f3d4b5bb4eefb4a04e2b8849adb">SpriteRenderer::~SpriteRenderer</a>()</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    }</div>
+</div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="}">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classhs_1_1_sprite_renderer.html#a469405317911cc7f68885db24df25a46">   18</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classhs_1_1_sprite_renderer.html#a469405317911cc7f68885db24df25a46">SpriteRenderer::Initialize</a>()</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    }</div>
+</div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classhs_1_1_sprite_renderer.html#a3e0be1ce4ec28adb5c6aac99dc00d4fc">   23</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classhs_1_1_sprite_renderer.html#a3e0be1ce4ec28adb5c6aac99dc00d4fc">SpriteRenderer::Update</a>()</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    }</div>
+</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classhs_1_1_sprite_renderer.html#abd827580a623b1597342acfc98d2e448">   28</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classhs_1_1_sprite_renderer.html#abd827580a623b1597342acfc98d2e448">SpriteRenderer::LateUpdate</a>()</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    }</div>
+</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classhs_1_1_sprite_renderer.html#a8c504c41374734a74a4933872f4dd954">   32</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classhs_1_1_sprite_renderer.html#a8c504c41374734a74a4933872f4dd954">SpriteRenderer::Render</a>(HDC hdc)</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordflow">if</span> (mTexture == <span class="keyword">nullptr</span>) assert(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <a class="code hl_class" href="classhs_1_1_transform.html">Transform</a>* tr = <a class="code hl_function" href="classhs_1_1_component.html#ae76ddacdaaa23c4663322dccbb064d6e">GetOwner</a>()-&gt;<a class="code hl_function" href="classhs_1_1_game_object.html#a2196f983d980e181f3f1b5662c2bc3f6">GetComponent</a>&lt;<a class="code hl_class" href="classhs_1_1_transform.html">Transform</a>&gt;();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <a class="code hl_struct" href="strucths_1_1math_1_1_vector2.html">Vector2</a> position = tr-&gt;<a class="code hl_function" href="classhs_1_1_transform.html#a128d56c00abc67b6b1dcf69b9ae33bbc">GetPosition</a>();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordtype">float</span> rotation = tr-&gt;<a class="code hl_function" href="classhs_1_1_transform.html#a87433cb8f08ecae0043113bae76fa97a">GetRotation</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <a class="code hl_struct" href="strucths_1_1math_1_1_vector2.html">Vector2</a> scale = tr-&gt;<a class="code hl_function" href="classhs_1_1_transform.html#a9018783faf192630508bc32a3c6a742e">GetScale</a>();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        position = <a class="code hl_variable" href="namespacehs_1_1renderer.html#a22f910d5303281ad04cac8b23ff8d4f8">renderer::mainCamera</a>-&gt;CaluatePosition(position);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordflow">if</span> (mTexture-&gt;GetTextureType() == <a class="code hl_enumvalue" href="classhs_1_1graphcis_1_1_texture.html#abf322a23c42993256458747fc909afa4a021d8346462df53d4272607b0f41a8d8">graphcis::Texture::eTextureType::Bmp</a>)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <span class="keywordflow">if</span> (mTexture-&gt;IsAlpha())</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                BLENDFUNCTION func = {};</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                func.BlendOp = AC_SRC_OVER;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                func.BlendFlags = 0;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                func.AlphaFormat = AC_SRC_ALPHA;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                func.SourceConstantAlpha = 255; <span class="comment">// 0(transparent) ~ 255(Opaque)</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                AlphaBlend(hdc</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                    , position.x</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                    , position.y</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                    , mTexture-&gt;GetWidth() * mSize.x * scale.<a class="code hl_variable" href="strucths_1_1math_1_1_vector2.html#a6a95767534b09a029877f0fd2c7c31b8">x</a></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                    , mTexture-&gt;GetHeight() * mSize.y * scale.<a class="code hl_variable" href="strucths_1_1math_1_1_vector2.html#acf2eb00750b03f4d8f6903a14703aa80">y</a></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                    , mTexture-&gt;GetHdc()</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                    , 0, 0</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                    , mTexture-&gt;GetWidth()</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                    , mTexture-&gt;GetHeight()</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                    , func);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            }</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                <span class="comment">//https://blog.naver.com/power2845/50147965306</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                TransparentBlt(hdc</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                    , position.x, position.y</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                    , mTexture-&gt;GetWidth() * mSize.x * scale.<a class="code hl_variable" href="strucths_1_1math_1_1_vector2.html#a6a95767534b09a029877f0fd2c7c31b8">x</a></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                    , mTexture-&gt;GetHeight() * mSize.y * scale.<a class="code hl_variable" href="strucths_1_1math_1_1_vector2.html#acf2eb00750b03f4d8f6903a14703aa80">y</a></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                    , mTexture-&gt;GetHdc()</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                    , 0, 0</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                    , mTexture-&gt;GetWidth()</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                    , mTexture-&gt;GetHeight()</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                    , RGB(255, 0, 255));</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            }</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mTexture-&gt;GetTextureType() == <a class="code hl_enumvalue" href="classhs_1_1graphcis_1_1_texture.html#abf322a23c42993256458747fc909afa4af8fd4f1b5b05c6b1cc6a661141fd4f54">graphcis::Texture::eTextureType::Png</a>)</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            <span class="comment">// 투명화할 색상 지정, 쓰고싶으면 밑에 grapics.DrawImage에 마지막 nullptr 대신 넣으면 된다</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            Gdiplus::ImageAttributes imgAttr = {};</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            imgAttr.SetColorKey(Gdiplus::Color(230, 230, 230), Gdiplus::Color(255, 255, 255));</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            Gdiplus::Graphics graphics(hdc);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            graphics.TranslateTransform(position.x, position.y);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            graphics.RotateTransform(rotation);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            graphics.TranslateTransform(-position.x, -position.y);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            graphics.DrawImage(mTexture-&gt;GetImage()</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                , Gdiplus::Rect</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                (</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                    position.x, position.y</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                    , mTexture-&gt;GetWidth() * mSize.x * scale.<a class="code hl_variable" href="strucths_1_1math_1_1_vector2.html#a6a95767534b09a029877f0fd2c7c31b8">x</a></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                    , mTexture-&gt;GetHeight() * mSize.y * scale.<a class="code hl_variable" href="strucths_1_1math_1_1_vector2.html#acf2eb00750b03f4d8f6903a14703aa80">y</a></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                )</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                , 0, 0</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                , mTexture-&gt;GetWidth(), mTexture-&gt;GetHeight()</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                , Gdiplus::UnitPixel</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                , <span class="comment">/*&amp;imgAttr*/</span><span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        }</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    }</div>
+</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>}</div>
+<div class="ttc" id="aclasshs_1_1_component_html_a8950a1cb229cebd9b7e1afd8ee4e0ef8"><div class="ttname"><a href="classhs_1_1_component.html#a8950a1cb229cebd9b7e1afd8ee4e0ef8">hs::Component::Component</a></div><div class="ttdeci">Component(enums::eComponentType type)</div><div class="ttdef"><b>Definition</b> <a href="hs_component_8cpp_source.html#l00006">hsComponent.cpp:6</a></div></div>
+<div class="ttc" id="aclasshs_1_1_component_html_ae76ddacdaaa23c4663322dccbb064d6e"><div class="ttname"><a href="classhs_1_1_component.html#ae76ddacdaaa23c4663322dccbb064d6e">hs::Component::GetOwner</a></div><div class="ttdeci">GameObject * GetOwner()</div><div class="ttdef"><b>Definition</b> <a href="hs_component_8h_source.html#l00023">hsComponent.h:23</a></div></div>
+<div class="ttc" id="aclasshs_1_1_game_object_html_a2196f983d980e181f3f1b5662c2bc3f6"><div class="ttname"><a href="classhs_1_1_game_object.html#a2196f983d980e181f3f1b5662c2bc3f6">hs::GameObject::GetComponent</a></div><div class="ttdeci">T * GetComponent()</div><div class="ttdef"><b>Definition</b> <a href="hs_game_object_8h_source.html#l00048">hsGameObject.h:48</a></div></div>
+<div class="ttc" id="aclasshs_1_1_sprite_renderer_html_a3e0be1ce4ec28adb5c6aac99dc00d4fc"><div class="ttname"><a href="classhs_1_1_sprite_renderer.html#a3e0be1ce4ec28adb5c6aac99dc00d4fc">hs::SpriteRenderer::Update</a></div><div class="ttdeci">void Update() override</div><div class="ttdef"><b>Definition</b> <a href="#l00023">hsSpriteRenderer.cpp:23</a></div></div>
+<div class="ttc" id="aclasshs_1_1_sprite_renderer_html_a469405317911cc7f68885db24df25a46"><div class="ttname"><a href="classhs_1_1_sprite_renderer.html#a469405317911cc7f68885db24df25a46">hs::SpriteRenderer::Initialize</a></div><div class="ttdeci">void Initialize() override</div><div class="ttdef"><b>Definition</b> <a href="#l00018">hsSpriteRenderer.cpp:18</a></div></div>
+<div class="ttc" id="aclasshs_1_1_sprite_renderer_html_a59054351d2570c4f416eb3cfebd2cba1"><div class="ttname"><a href="classhs_1_1_sprite_renderer.html#a59054351d2570c4f416eb3cfebd2cba1">hs::SpriteRenderer::SpriteRenderer</a></div><div class="ttdeci">SpriteRenderer()</div><div class="ttdef"><b>Definition</b> <a href="#l00009">hsSpriteRenderer.cpp:9</a></div></div>
+<div class="ttc" id="aclasshs_1_1_sprite_renderer_html_a8c504c41374734a74a4933872f4dd954"><div class="ttname"><a href="classhs_1_1_sprite_renderer.html#a8c504c41374734a74a4933872f4dd954">hs::SpriteRenderer::Render</a></div><div class="ttdeci">void Render(HDC hdc) override</div><div class="ttdef"><b>Definition</b> <a href="#l00032">hsSpriteRenderer.cpp:32</a></div></div>
+<div class="ttc" id="aclasshs_1_1_sprite_renderer_html_abd827580a623b1597342acfc98d2e448"><div class="ttname"><a href="classhs_1_1_sprite_renderer.html#abd827580a623b1597342acfc98d2e448">hs::SpriteRenderer::LateUpdate</a></div><div class="ttdeci">void LateUpdate() override</div><div class="ttdef"><b>Definition</b> <a href="#l00028">hsSpriteRenderer.cpp:28</a></div></div>
+<div class="ttc" id="aclasshs_1_1_sprite_renderer_html_aece49f3d4b5bb4eefb4a04e2b8849adb"><div class="ttname"><a href="classhs_1_1_sprite_renderer.html#aece49f3d4b5bb4eefb4a04e2b8849adb">hs::SpriteRenderer::~SpriteRenderer</a></div><div class="ttdeci">~SpriteRenderer()</div><div class="ttdef"><b>Definition</b> <a href="#l00015">hsSpriteRenderer.cpp:15</a></div></div>
+<div class="ttc" id="aclasshs_1_1_transform_html"><div class="ttname"><a href="classhs_1_1_transform.html">hs::Transform</a></div><div class="ttdoc">위치를 정의하는 컴포넌트입니다.</div><div class="ttdef"><b>Definition</b> <a href="hs_transform_8h_source.html#l00012">hsTransform.h:13</a></div></div>
+<div class="ttc" id="aclasshs_1_1_transform_html_a128d56c00abc67b6b1dcf69b9ae33bbc"><div class="ttname"><a href="classhs_1_1_transform.html#a128d56c00abc67b6b1dcf69b9ae33bbc">hs::Transform::GetPosition</a></div><div class="ttdeci">Vector2 GetPosition() const</div><div class="ttdef"><b>Definition</b> <a href="hs_transform_8h_source.html#l00026">hsTransform.h:26</a></div></div>
+<div class="ttc" id="aclasshs_1_1_transform_html_a87433cb8f08ecae0043113bae76fa97a"><div class="ttname"><a href="classhs_1_1_transform.html#a87433cb8f08ecae0043113bae76fa97a">hs::Transform::GetRotation</a></div><div class="ttdeci">float GetRotation() const</div><div class="ttdef"><b>Definition</b> <a href="hs_transform_8h_source.html#l00028">hsTransform.h:28</a></div></div>
+<div class="ttc" id="aclasshs_1_1_transform_html_a9018783faf192630508bc32a3c6a742e"><div class="ttname"><a href="classhs_1_1_transform.html#a9018783faf192630508bc32a3c6a742e">hs::Transform::GetScale</a></div><div class="ttdeci">Vector2 GetScale() const</div><div class="ttdef"><b>Definition</b> <a href="hs_transform_8h_source.html#l00027">hsTransform.h:27</a></div></div>
+<div class="ttc" id="aclasshs_1_1graphcis_1_1_texture_html_abf322a23c42993256458747fc909afa4a021d8346462df53d4272607b0f41a8d8"><div class="ttname"><a href="classhs_1_1graphcis_1_1_texture.html#abf322a23c42993256458747fc909afa4a021d8346462df53d4272607b0f41a8d8">hs::graphcis::Texture::eTextureType::Bmp</a></div><div class="ttdeci">@ Bmp</div><div class="ttdef"><b>Definition</b> <a href="hs_texture_8h_source.html#l00015">hsTexture.h:15</a></div></div>
+<div class="ttc" id="aclasshs_1_1graphcis_1_1_texture_html_abf322a23c42993256458747fc909afa4af8fd4f1b5b05c6b1cc6a661141fd4f54"><div class="ttname"><a href="classhs_1_1graphcis_1_1_texture.html#abf322a23c42993256458747fc909afa4af8fd4f1b5b05c6b1cc6a661141fd4f54">hs::graphcis::Texture::eTextureType::Png</a></div><div class="ttdeci">@ Png</div><div class="ttdef"><b>Definition</b> <a href="hs_texture_8h_source.html#l00016">hsTexture.h:16</a></div></div>
+<div class="ttc" id="ahs_game_object_8h_html"><div class="ttname"><a href="hs_game_object_8h.html">hsGameObject.h</a></div></div>
+<div class="ttc" id="ahs_renderer_8h_html"><div class="ttname"><a href="hs_renderer_8h.html">hsRenderer.h</a></div></div>
+<div class="ttc" id="ahs_sprite_renderer_8h_html"><div class="ttname"><a href="hs_sprite_renderer_8h.html">hsSpriteRenderer.h</a></div></div>
+<div class="ttc" id="ahs_texture_8h_html"><div class="ttname"><a href="hs_texture_8h.html">hsTexture.h</a></div></div>
+<div class="ttc" id="ahs_transform_8h_html"><div class="ttname"><a href="hs_transform_8h.html">hsTransform.h</a></div></div>
+<div class="ttc" id="anamespacehs_1_1enums_html"><div class="ttname"><a href="namespacehs_1_1enums.html">hs::enums</a></div><div class="ttdef"><b>Definition</b> <a href="hs_enums_8h_source.html#l00003">hsEnums.h:4</a></div></div>
+<div class="ttc" id="anamespacehs_1_1renderer_html_a22f910d5303281ad04cac8b23ff8d4f8"><div class="ttname"><a href="namespacehs_1_1renderer.html#a22f910d5303281ad04cac8b23ff8d4f8">hs::renderer::mainCamera</a></div><div class="ttdeci">Camera * mainCamera</div><div class="ttdef"><b>Definition</b> <a href="hs_renderer_8cpp_source.html#l00005">hsRenderer.cpp:5</a></div></div>
+<div class="ttc" id="anamespacehs_html"><div class="ttname"><a href="namespacehs.html">hs</a></div><div class="ttdef"><b>Definition</b> <a href="hs_animation_8cpp_source.html#l00009">hsAnimation.cpp:10</a></div></div>
+<div class="ttc" id="astrucths_1_1math_1_1_vector2_html"><div class="ttname"><a href="strucths_1_1math_1_1_vector2.html">hs::math::Vector2</a></div><div class="ttdef"><b>Definition</b> <a href="hs_math_8h_source.html#l00013">hsMath.h:14</a></div></div>
+<div class="ttc" id="astrucths_1_1math_1_1_vector2_html_a6a95767534b09a029877f0fd2c7c31b8"><div class="ttname"><a href="strucths_1_1math_1_1_vector2.html#a6a95767534b09a029877f0fd2c7c31b8">hs::math::Vector2::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition</b> <a href="hs_math_8h_source.html#l00040">hsMath.h:40</a></div></div>
+<div class="ttc" id="astrucths_1_1math_1_1_vector2_html_acf2eb00750b03f4d8f6903a14703aa80"><div class="ttname"><a href="strucths_1_1math_1_1_vector2.html#acf2eb00750b03f4d8f6903a14703aa80">hs::math::Vector2::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition</b> <a href="hs_math_8h_source.html#l00041">hsMath.h:41</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_62e85da242e0c4920bf70b45bd50516f.html">HSEngine_SOURCE</a></li><li class="navelem"><a class="el" href="hs_sprite_renderer_8cpp.html">hsSpriteRenderer.cpp</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

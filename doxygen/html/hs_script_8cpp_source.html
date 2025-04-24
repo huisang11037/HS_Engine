@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>HS Engine: HSEngine_SOURCE/hsScript.cpp 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">HS Engine<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">own game engine</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="검색" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('hs_script_8cpp_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">hsScript.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="hs_script_8cpp.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="hs_script_8h.html">hsScript.h</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacehs.html">hs</a></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
+<div class="foldopen" id="foldopen00005" data-start="{" data-end="}">
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classhs_1_1_script.html#aa41141a3d0af9d4cbc8883a00f510664">    5</a></span>    <a class="code hl_function" href="classhs_1_1_script.html#aa41141a3d0af9d4cbc8883a00f510664">Script::Script</a>()</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>        : <a class="code hl_function" href="classhs_1_1_component.html#a8950a1cb229cebd9b7e1afd8ee4e0ef8">Component</a>(<a class="code hl_namespace" href="namespacehs_1_1enums.html">enums</a>::eComponentType::<a class="code hl_function" href="classhs_1_1_script.html#aa41141a3d0af9d4cbc8883a00f510664">Script</a>)</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    }</div>
+</div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="}">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classhs_1_1_script.html#abda496f8485ff23028788bd5f94ea9c7">   10</a></span>    <a class="code hl_function" href="classhs_1_1_script.html#abda496f8485ff23028788bd5f94ea9c7">Script::~Script</a>()</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    }</div>
+</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="}">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classhs_1_1_script.html#a73910f383a23eb2bb38b4f3225647598">   15</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classhs_1_1_script.html#a73910f383a23eb2bb38b4f3225647598">Script::Initialize</a>()</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    }</div>
+</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="}">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classhs_1_1_script.html#a7bfcead745dabcde68ffe71476bfa872">   19</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classhs_1_1_script.html#a7bfcead745dabcde68ffe71476bfa872">Script::Update</a>()</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    }</div>
+</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classhs_1_1_script.html#a45a0faffa45da92123c76d7532257cb1">   23</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classhs_1_1_script.html#a45a0faffa45da92123c76d7532257cb1">Script::LateUpdate</a>()</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    }</div>
+</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="}">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classhs_1_1_script.html#a3b58acf41f146827d3189bb42fe2b5b3">   27</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classhs_1_1_script.html#a3b58acf41f146827d3189bb42fe2b5b3">Script::Render</a>(HDC hdc)</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    }</div>
+</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>}</div>
+<div class="ttc" id="aclasshs_1_1_component_html_a8950a1cb229cebd9b7e1afd8ee4e0ef8"><div class="ttname"><a href="classhs_1_1_component.html#a8950a1cb229cebd9b7e1afd8ee4e0ef8">hs::Component::Component</a></div><div class="ttdeci">Component(enums::eComponentType type)</div><div class="ttdef"><b>Definition</b> <a href="hs_component_8cpp_source.html#l00006">hsComponent.cpp:6</a></div></div>
+<div class="ttc" id="aclasshs_1_1_script_html_a3b58acf41f146827d3189bb42fe2b5b3"><div class="ttname"><a href="classhs_1_1_script.html#a3b58acf41f146827d3189bb42fe2b5b3">hs::Script::Render</a></div><div class="ttdeci">void Render(HDC hdc) override</div><div class="ttdef"><b>Definition</b> <a href="#l00027">hsScript.cpp:27</a></div></div>
+<div class="ttc" id="aclasshs_1_1_script_html_a45a0faffa45da92123c76d7532257cb1"><div class="ttname"><a href="classhs_1_1_script.html#a45a0faffa45da92123c76d7532257cb1">hs::Script::LateUpdate</a></div><div class="ttdeci">void LateUpdate() override</div><div class="ttdef"><b>Definition</b> <a href="#l00023">hsScript.cpp:23</a></div></div>
+<div class="ttc" id="aclasshs_1_1_script_html_a73910f383a23eb2bb38b4f3225647598"><div class="ttname"><a href="classhs_1_1_script.html#a73910f383a23eb2bb38b4f3225647598">hs::Script::Initialize</a></div><div class="ttdeci">void Initialize() override</div><div class="ttdef"><b>Definition</b> <a href="#l00015">hsScript.cpp:15</a></div></div>
+<div class="ttc" id="aclasshs_1_1_script_html_a7bfcead745dabcde68ffe71476bfa872"><div class="ttname"><a href="classhs_1_1_script.html#a7bfcead745dabcde68ffe71476bfa872">hs::Script::Update</a></div><div class="ttdeci">void Update() override</div><div class="ttdef"><b>Definition</b> <a href="#l00019">hsScript.cpp:19</a></div></div>
+<div class="ttc" id="aclasshs_1_1_script_html_aa41141a3d0af9d4cbc8883a00f510664"><div class="ttname"><a href="classhs_1_1_script.html#aa41141a3d0af9d4cbc8883a00f510664">hs::Script::Script</a></div><div class="ttdeci">Script()</div><div class="ttdef"><b>Definition</b> <a href="#l00005">hsScript.cpp:5</a></div></div>
+<div class="ttc" id="aclasshs_1_1_script_html_abda496f8485ff23028788bd5f94ea9c7"><div class="ttname"><a href="classhs_1_1_script.html#abda496f8485ff23028788bd5f94ea9c7">hs::Script::~Script</a></div><div class="ttdeci">~Script()</div><div class="ttdef"><b>Definition</b> <a href="#l00010">hsScript.cpp:10</a></div></div>
+<div class="ttc" id="ahs_script_8h_html"><div class="ttname"><a href="hs_script_8h.html">hsScript.h</a></div></div>
+<div class="ttc" id="anamespacehs_1_1enums_html"><div class="ttname"><a href="namespacehs_1_1enums.html">hs::enums</a></div><div class="ttdef"><b>Definition</b> <a href="hs_enums_8h_source.html#l00003">hsEnums.h:4</a></div></div>
+<div class="ttc" id="anamespacehs_html"><div class="ttname"><a href="namespacehs.html">hs</a></div><div class="ttdef"><b>Definition</b> <a href="hs_animation_8cpp_source.html#l00009">hsAnimation.cpp:10</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_62e85da242e0c4920bf70b45bd50516f.html">HSEngine_SOURCE</a></li><li class="navelem"><a class="el" href="hs_script_8cpp.html">hsScript.cpp</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

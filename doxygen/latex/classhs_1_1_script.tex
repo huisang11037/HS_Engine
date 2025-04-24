@@ -1,0 +1,151 @@
+\doxysection{hs\+::Script 클래스 참조}
+\hypertarget{classhs_1_1_script}{}\label{classhs_1_1_script}\index{hs::Script@{hs::Script}}
+
+
+모든 스크립트의 기본 클래스입니다.  
+
+
+
+
+{\ttfamily \#include $<$hs\+Script.\+h$>$}
+
+hs\+::Script에 대한 상속 다이어그램 \+: \begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classhs_1_1_script}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhs_1_1_script_aa41141a3d0af9d4cbc8883a00f510664}{Script}} ()
+\item 
+\mbox{\hyperlink{classhs_1_1_script_abda496f8485ff23028788bd5f94ea9c7}{\texorpdfstring{$\sim$}{\string~}\+Script}} ()
+\item 
+void \mbox{\hyperlink{classhs_1_1_script_a73910f383a23eb2bb38b4f3225647598}{Initialize}} () override
+\item 
+void \mbox{\hyperlink{classhs_1_1_script_a7bfcead745dabcde68ffe71476bfa872}{Update}} () override
+\item 
+void \mbox{\hyperlink{classhs_1_1_script_a45a0faffa45da92123c76d7532257cb1}{Late\+Update}} () override
+\item 
+void \mbox{\hyperlink{classhs_1_1_script_a3b58acf41f146827d3189bb42fe2b5b3}{Render}} (HDC hdc) override
+\end{DoxyCompactItemize}
+\doxysubsection*{\mbox{\hyperlink{classhs_1_1_component}{hs\+::\+Component}}(으)로부터 상속된 Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhs_1_1_component_a8950a1cb229cebd9b7e1afd8ee4e0ef8}{Component}} (\mbox{\hyperlink{namespacehs_1_1enums_adbc1f9eacd808ec4b80283b6b010b48a}{enums\+::e\+Component\+Type}} type)
+\item 
+\mbox{\hyperlink{classhs_1_1_component_a7eaeef8121ef796bcf6319cc035f0885}{\texorpdfstring{$\sim$}{\string~}\+Component}} ()
+\item 
+void \mbox{\hyperlink{classhs_1_1_component_ae56200efea9461695c401871cdb0183a}{Set\+Owner}} (\mbox{\hyperlink{classhs_1_1_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}owner)
+\item 
+\mbox{\hyperlink{classhs_1_1_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classhs_1_1_component_ae76ddacdaaa23c4663322dccbb064d6e}{Get\+Owner}} ()
+\item 
+\mbox{\hyperlink{namespacehs_1_1enums_adbc1f9eacd808ec4b80283b6b010b48a}{enums\+::e\+Component\+Type}} \mbox{\hyperlink{classhs_1_1_component_ac9877301ae21c20aa291415c36f7eb78}{Get\+Type}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{\mbox{\hyperlink{classhs_1_1_entity}{hs\+::\+Entity}}(으)로부터 상속된 Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhs_1_1_entity_af3cef436d0ffd259d99e505a987428f4}{Entity}} ()
+\item 
+virtual \mbox{\hyperlink{classhs_1_1_entity_ad30b89f98b0edf4f969370b949b42adf}{\texorpdfstring{$\sim$}{\string~}\+Entity}} ()
+\item 
+void \mbox{\hyperlink{classhs_1_1_entity_a477f58255303b66fb51c0f36f9caf534}{Set\+Name}} (const std\+::wstring \&name)
+\item 
+const std\+::wstring \& \mbox{\hyperlink{classhs_1_1_entity_a50626d2175dc190d0a16ebdcb6962b0d}{Get\+Name}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+모든 스크립트의 기본 클래스입니다. 
+
+\mbox{\hyperlink{hs_script_8h_source}{hs\+Script.\+h}} 파일의 \mbox{\hyperlink{hs_script_8h_source_l00010}{10}} 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\Hypertarget{classhs_1_1_script_aa41141a3d0af9d4cbc8883a00f510664}\index{hs::Script@{hs::Script}!Script@{Script}}
+\index{Script@{Script}!hs::Script@{hs::Script}}
+\doxysubsubsection{\texorpdfstring{Script()}{Script()}}
+{\footnotesize\ttfamily \label{classhs_1_1_script_aa41141a3d0af9d4cbc8883a00f510664} 
+hs\+::\+Script\+::\+Script (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{hs_script_8cpp_source}{hs\+Script.\+cpp}} 파일의 \mbox{\hyperlink{hs_script_8cpp_source_l00005}{5}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1_script_abda496f8485ff23028788bd5f94ea9c7}\index{hs::Script@{hs::Script}!````~Script@{\texorpdfstring{$\sim$}{\string~}Script}}
+\index{````~Script@{\texorpdfstring{$\sim$}{\string~}Script}!hs::Script@{hs::Script}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Script()}{\string~Script()}}
+{\footnotesize\ttfamily \label{classhs_1_1_script_abda496f8485ff23028788bd5f94ea9c7} 
+hs\+::\+Script\+::\texorpdfstring{$\sim$}{\string~}\+Script (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{hs_script_8cpp_source}{hs\+Script.\+cpp}} 파일의 \mbox{\hyperlink{hs_script_8cpp_source_l00010}{10}} 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\Hypertarget{classhs_1_1_script_a73910f383a23eb2bb38b4f3225647598}\index{hs::Script@{hs::Script}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!hs::Script@{hs::Script}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily \label{classhs_1_1_script_a73910f383a23eb2bb38b4f3225647598} 
+void hs\+::\+Script\+::\+Initialize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{classhs_1_1_component_a445ae3dc09f2ef2bdbf21ce02294faa5}{hs\+::\+Component}}(으)로부터 재구현되었습니다.
+
+
+
+\mbox{\hyperlink{hs_script_8cpp_source}{hs\+Script.\+cpp}} 파일의 \mbox{\hyperlink{hs_script_8cpp_source_l00015}{15}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1_script_a45a0faffa45da92123c76d7532257cb1}\index{hs::Script@{hs::Script}!LateUpdate@{LateUpdate}}
+\index{LateUpdate@{LateUpdate}!hs::Script@{hs::Script}}
+\doxysubsubsection{\texorpdfstring{LateUpdate()}{LateUpdate()}}
+{\footnotesize\ttfamily \label{classhs_1_1_script_a45a0faffa45da92123c76d7532257cb1} 
+void hs\+::\+Script\+::\+Late\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{classhs_1_1_component_a0dd22f37a1f4e03f7b825b075c78142f}{hs\+::\+Component}}(으)로부터 재구현되었습니다.
+
+
+
+\mbox{\hyperlink{hs_script_8cpp_source}{hs\+Script.\+cpp}} 파일의 \mbox{\hyperlink{hs_script_8cpp_source_l00023}{23}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1_script_a3b58acf41f146827d3189bb42fe2b5b3}\index{hs::Script@{hs::Script}!Render@{Render}}
+\index{Render@{Render}!hs::Script@{hs::Script}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily \label{classhs_1_1_script_a3b58acf41f146827d3189bb42fe2b5b3} 
+void hs\+::\+Script\+::\+Render (\begin{DoxyParamCaption}\item[{HDC}]{hdc}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{classhs_1_1_component_a9d3e32dd591a979638794bfc2d79119a}{hs\+::\+Component}}(으)로부터 재구현되었습니다.
+
+
+
+\mbox{\hyperlink{hs_script_8cpp_source}{hs\+Script.\+cpp}} 파일의 \mbox{\hyperlink{hs_script_8cpp_source_l00027}{27}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1_script_a7bfcead745dabcde68ffe71476bfa872}\index{hs::Script@{hs::Script}!Update@{Update}}
+\index{Update@{Update}!hs::Script@{hs::Script}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{classhs_1_1_script_a7bfcead745dabcde68ffe71476bfa872} 
+void hs\+::\+Script\+::\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{classhs_1_1_component_a5bdd392ab636da076462956268e67e29}{hs\+::\+Component}}(으)로부터 재구현되었습니다.
+
+
+
+\mbox{\hyperlink{hs_script_8cpp_source}{hs\+Script.\+cpp}} 파일의 \mbox{\hyperlink{hs_script_8cpp_source_l00019}{19}} 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+HSEngine\+\_\+\+SOURCE/\mbox{\hyperlink{hs_script_8h}{hs\+Script.\+h}}\item 
+HSEngine\+\_\+\+SOURCE/\mbox{\hyperlink{hs_script_8cpp}{hs\+Script.\+cpp}}\end{DoxyCompactItemize}

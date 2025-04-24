@@ -20,6 +20,9 @@ namespace hs {
 		END
 	};
 
+	/**
+	* @brief 입력 관련 기능을 정의합니다.
+	*/
 	class Input
 	{
 	public:

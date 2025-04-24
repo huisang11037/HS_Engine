@@ -1,0 +1,304 @@
+\doxysection{hs\+::Animator 클래스 참조}
+\hypertarget{classhs_1_1_animator}{}\label{classhs_1_1_animator}\index{hs::Animator@{hs::Animator}}
+
+
+애니메이션을 관리하는 컴포넌트입니다.  
+
+
+
+
+{\ttfamily \#include $<$hs\+Animator.\+h$>$}
+
+hs\+::Animator에 대한 상속 다이어그램 \+: \begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classhs_1_1_animator}
+\end{center}
+\end{figure}
+\doxysubsubsection*{클래스}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{strucths_1_1_animator_1_1_event}{Event}}
+\begin{DoxyCompactList}\small\item\em 애니메이션 이벤트를 관리하는 구조체입니다. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{strucths_1_1_animator_1_1_events}{Events}}
+\begin{DoxyCompactList}\small\item\em 애니메이션 이벤트의 시점을 정의하는 구조체입니다. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhs_1_1_animator_a408f6d5c5bea09964e1ba8244eeb9d92}{Animator}} ()
+\item 
+\mbox{\hyperlink{classhs_1_1_animator_a5ad90f427ef358c417e8fc5435428fbe}{\texorpdfstring{$\sim$}{\string~}\+Animator}} ()
+\item 
+void \mbox{\hyperlink{classhs_1_1_animator_a5011c887de8550763f80e2f8f9f7d678}{Initialize}} () override
+\item 
+void \mbox{\hyperlink{classhs_1_1_animator_a4f011f2e8618875e976f397d0be004b6}{Update}} () override
+\item 
+void \mbox{\hyperlink{classhs_1_1_animator_a22021320da0f864ae0281b72acadbbbb}{Late\+Update}} () override
+\item 
+void \mbox{\hyperlink{classhs_1_1_animator_a350dee80bde2bbddd895bf13eb0377f1}{Render}} (HDC hdc) override
+\item 
+void \mbox{\hyperlink{classhs_1_1_animator_a06acb6ab1de14e7a9dee1e8de87bfe90}{Create\+Animation}} (const std\+::wstring \&name, \mbox{\hyperlink{classhs_1_1graphcis_1_1_texture}{graphcis\+::\+Texture}} \texorpdfstring{$\ast$}{*}sprite\+Sheet, \mbox{\hyperlink{strucths_1_1math_1_1_vector2}{Vector2}} left\+Top, \mbox{\hyperlink{strucths_1_1math_1_1_vector2}{Vector2}} tile\+Size, \mbox{\hyperlink{strucths_1_1math_1_1_vector2}{Vector2}} offset, UINT sprite\+Length, float duration)
+\begin{DoxyCompactList}\small\item\em 애니메이션을 생성하는 함수입니다. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classhs_1_1_animator_ab40014f8cad3f8d712cca4ace6ea52b6}{Create\+Animation\+By\+Folder}} (const std\+::wstring \&name, const std\+::wstring \&path, \mbox{\hyperlink{strucths_1_1math_1_1_vector2}{Vector2}} offset, float duration)
+\begin{DoxyCompactList}\small\item\em 애니메이션을 폴더 기반으로 생성하는 함수입니다. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classhs_1_1_animation}{Animation}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classhs_1_1_animator_ae665cd6bf7447c8353d869b16ee71a3f}{Find\+Animation}} (const std\+::wstring \&name)
+\item 
+void \mbox{\hyperlink{classhs_1_1_animator_a9293e95aab4954a35abb432f350add41}{Play\+Animation}} (const std\+::wstring \&name, bool is\+Loop=false)
+\item 
+\mbox{\hyperlink{strucths_1_1_animator_1_1_events}{Events}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classhs_1_1_animator_a0d23521c35821cb5fe59b41a4a04ee7d}{Find\+Events}} (const std\+::wstring \&name)
+\item 
+std\+::function$<$ void()$>$ \& \mbox{\hyperlink{classhs_1_1_animator_a86506b43516b21d1bbeaf412010cc51f}{Get\+Start\+Event}} (const std\+::wstring \&name)
+\item 
+std\+::function$<$ void()$>$ \& \mbox{\hyperlink{classhs_1_1_animator_adde54c76f6fea4bf127e8e546ce6ecb9}{Get\+Complete\+Event}} (const std\+::wstring \&name)
+\item 
+std\+::function$<$ void()$>$ \& \mbox{\hyperlink{classhs_1_1_animator_abbb60219a3c592434694a6550f4142de}{Get\+End\+Event}} (const std\+::wstring \&name)
+\item 
+bool \mbox{\hyperlink{classhs_1_1_animator_aa2bc70e758eb0ef4ef5083678cf6e3e7}{Is\+Complete}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{\mbox{\hyperlink{classhs_1_1_component}{hs\+::\+Component}}(으)로부터 상속된 Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhs_1_1_component_a8950a1cb229cebd9b7e1afd8ee4e0ef8}{Component}} (\mbox{\hyperlink{namespacehs_1_1enums_adbc1f9eacd808ec4b80283b6b010b48a}{enums\+::e\+Component\+Type}} type)
+\item 
+\mbox{\hyperlink{classhs_1_1_component_a7eaeef8121ef796bcf6319cc035f0885}{\texorpdfstring{$\sim$}{\string~}\+Component}} ()
+\item 
+void \mbox{\hyperlink{classhs_1_1_component_ae56200efea9461695c401871cdb0183a}{Set\+Owner}} (\mbox{\hyperlink{classhs_1_1_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}owner)
+\item 
+\mbox{\hyperlink{classhs_1_1_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classhs_1_1_component_ae76ddacdaaa23c4663322dccbb064d6e}{Get\+Owner}} ()
+\item 
+\mbox{\hyperlink{namespacehs_1_1enums_adbc1f9eacd808ec4b80283b6b010b48a}{enums\+::e\+Component\+Type}} \mbox{\hyperlink{classhs_1_1_component_ac9877301ae21c20aa291415c36f7eb78}{Get\+Type}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{\mbox{\hyperlink{classhs_1_1_entity}{hs\+::\+Entity}}(으)로부터 상속된 Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhs_1_1_entity_af3cef436d0ffd259d99e505a987428f4}{Entity}} ()
+\item 
+virtual \mbox{\hyperlink{classhs_1_1_entity_ad30b89f98b0edf4f969370b949b42adf}{\texorpdfstring{$\sim$}{\string~}\+Entity}} ()
+\item 
+void \mbox{\hyperlink{classhs_1_1_entity_a477f58255303b66fb51c0f36f9caf534}{Set\+Name}} (const std\+::wstring \&name)
+\item 
+const std\+::wstring \& \mbox{\hyperlink{classhs_1_1_entity_a50626d2175dc190d0a16ebdcb6962b0d}{Get\+Name}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+애니메이션을 관리하는 컴포넌트입니다. 
+
+애니메이션 생성, 재생, 이벤트를 관리합니다. 
+
+\mbox{\hyperlink{hs_animator_8h_source}{hs\+Animator.\+h}} 파일의 \mbox{\hyperlink{hs_animator_8h_source_l00011}{11}} 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\Hypertarget{classhs_1_1_animator_a408f6d5c5bea09964e1ba8244eeb9d92}\index{hs::Animator@{hs::Animator}!Animator@{Animator}}
+\index{Animator@{Animator}!hs::Animator@{hs::Animator}}
+\doxysubsubsection{\texorpdfstring{Animator()}{Animator()}}
+{\footnotesize\ttfamily \label{classhs_1_1_animator_a408f6d5c5bea09964e1ba8244eeb9d92} 
+hs\+::\+Animator\+::\+Animator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{hs_animator_8cpp_source}{hs\+Animator.\+cpp}} 파일의 \mbox{\hyperlink{hs_animator_8cpp_source_l00006}{6}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1_animator_a5ad90f427ef358c417e8fc5435428fbe}\index{hs::Animator@{hs::Animator}!````~Animator@{\texorpdfstring{$\sim$}{\string~}Animator}}
+\index{````~Animator@{\texorpdfstring{$\sim$}{\string~}Animator}!hs::Animator@{hs::Animator}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Animator()}{\string~Animator()}}
+{\footnotesize\ttfamily \label{classhs_1_1_animator_a5ad90f427ef358c417e8fc5435428fbe} 
+hs\+::\+Animator\+::\texorpdfstring{$\sim$}{\string~}\+Animator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{hs_animator_8cpp_source}{hs\+Animator.\+cpp}} 파일의 \mbox{\hyperlink{hs_animator_8cpp_source_l00013}{13}} 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\Hypertarget{classhs_1_1_animator_a06acb6ab1de14e7a9dee1e8de87bfe90}\index{hs::Animator@{hs::Animator}!CreateAnimation@{CreateAnimation}}
+\index{CreateAnimation@{CreateAnimation}!hs::Animator@{hs::Animator}}
+\doxysubsubsection{\texorpdfstring{CreateAnimation()}{CreateAnimation()}}
+{\footnotesize\ttfamily \label{classhs_1_1_animator_a06acb6ab1de14e7a9dee1e8de87bfe90} 
+void hs\+::\+Animator\+::\+Create\+Animation (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{name}{, }\item[{\mbox{\hyperlink{classhs_1_1graphcis_1_1_texture}{graphcis\+::\+Texture}} \texorpdfstring{$\ast$}{*}}]{sprite\+Sheet}{, }\item[{\mbox{\hyperlink{strucths_1_1math_1_1_vector2}{Vector2}}}]{left\+Top}{, }\item[{\mbox{\hyperlink{strucths_1_1math_1_1_vector2}{Vector2}}}]{tile\+Size}{, }\item[{\mbox{\hyperlink{strucths_1_1math_1_1_vector2}{Vector2}}}]{offset}{, }\item[{UINT}]{sprite\+Length}{, }\item[{float}]{duration}{}\end{DoxyParamCaption})}
+
+
+
+애니메이션을 생성하는 함수입니다. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em name} & 애니메이션의 이름입니다. \\
+\hline
+{\em sprite\+Sheet} & 애니메이션에 사용할 스프라이트 시트입니다. \\
+\hline
+{\em left\+Top} & 이미지의 왼쪽 위 좌표입니다. \\
+\hline
+{\em tile\+Size} & 이미지의 크기입니다. \\
+\hline
+{\em offset} & 이미지의 오프셋입니다. \\
+\hline
+{\em sprite\+Length} & 애니메이션 스프라이트를 해당 인자만큼 잘라서 사용합니다. \\
+\hline
+{\em duration} & 애니메이션의 지속 시간입니다. \\
+\hline
+\end{DoxyParams}
+
+
+\mbox{\hyperlink{hs_animator_8cpp_source}{hs\+Animator.\+cpp}} 파일의 \mbox{\hyperlink{hs_animator_8cpp_source_l00059}{59}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1_animator_ab40014f8cad3f8d712cca4ace6ea52b6}\index{hs::Animator@{hs::Animator}!CreateAnimationByFolder@{CreateAnimationByFolder}}
+\index{CreateAnimationByFolder@{CreateAnimationByFolder}!hs::Animator@{hs::Animator}}
+\doxysubsubsection{\texorpdfstring{CreateAnimationByFolder()}{CreateAnimationByFolder()}}
+{\footnotesize\ttfamily \label{classhs_1_1_animator_ab40014f8cad3f8d712cca4ace6ea52b6} 
+void hs\+::\+Animator\+::\+Create\+Animation\+By\+Folder (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{name}{, }\item[{const std\+::wstring \&}]{path}{, }\item[{\mbox{\hyperlink{strucths_1_1math_1_1_vector2}{Vector2}}}]{offset}{, }\item[{float}]{duration}{}\end{DoxyParamCaption})}
+
+
+
+애니메이션을 폴더 기반으로 생성하는 함수입니다. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em name} & 애니메이션의 이름입니다. \\
+\hline
+{\em path} & 애니메이션의 폴더 경로입니다. \\
+\hline
+{\em offset} & 이미지의 오프셋입니다. \\
+\hline
+{\em duration} & 애니메이션의 지속 시간입니다. \\
+\hline
+\end{DoxyParams}
+
+
+\mbox{\hyperlink{hs_animator_8cpp_source}{hs\+Animator.\+cpp}} 파일의 \mbox{\hyperlink{hs_animator_8cpp_source_l00083}{83}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1_animator_ae665cd6bf7447c8353d869b16ee71a3f}\index{hs::Animator@{hs::Animator}!FindAnimation@{FindAnimation}}
+\index{FindAnimation@{FindAnimation}!hs::Animator@{hs::Animator}}
+\doxysubsubsection{\texorpdfstring{FindAnimation()}{FindAnimation()}}
+{\footnotesize\ttfamily \label{classhs_1_1_animator_ae665cd6bf7447c8353d869b16ee71a3f} 
+\mbox{\hyperlink{classhs_1_1_animation}{Animation}} \texorpdfstring{$\ast$}{*} hs\+::\+Animator\+::\+Find\+Animation (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{name}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{hs_animator_8cpp_source}{hs\+Animator.\+cpp}} 파일의 \mbox{\hyperlink{hs_animator_8cpp_source_l00121}{121}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1_animator_a0d23521c35821cb5fe59b41a4a04ee7d}\index{hs::Animator@{hs::Animator}!FindEvents@{FindEvents}}
+\index{FindEvents@{FindEvents}!hs::Animator@{hs::Animator}}
+\doxysubsubsection{\texorpdfstring{FindEvents()}{FindEvents()}}
+{\footnotesize\ttfamily \label{classhs_1_1_animator_a0d23521c35821cb5fe59b41a4a04ee7d} 
+\mbox{\hyperlink{strucths_1_1_animator_1_1_events}{Animator\+::\+Events}} \texorpdfstring{$\ast$}{*} hs\+::\+Animator\+::\+Find\+Events (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{name}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{hs_animator_8cpp_source}{hs\+Animator.\+cpp}} 파일의 \mbox{\hyperlink{hs_animator_8cpp_source_l00154}{154}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1_animator_adde54c76f6fea4bf127e8e546ce6ecb9}\index{hs::Animator@{hs::Animator}!GetCompleteEvent@{GetCompleteEvent}}
+\index{GetCompleteEvent@{GetCompleteEvent}!hs::Animator@{hs::Animator}}
+\doxysubsubsection{\texorpdfstring{GetCompleteEvent()}{GetCompleteEvent()}}
+{\footnotesize\ttfamily \label{classhs_1_1_animator_adde54c76f6fea4bf127e8e546ce6ecb9} 
+std\+::function$<$ void()$>$ \& hs\+::\+Animator\+::\+Get\+Complete\+Event (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{name}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{hs_animator_8cpp_source}{hs\+Animator.\+cpp}} 파일의 \mbox{\hyperlink{hs_animator_8cpp_source_l00169}{169}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1_animator_abbb60219a3c592434694a6550f4142de}\index{hs::Animator@{hs::Animator}!GetEndEvent@{GetEndEvent}}
+\index{GetEndEvent@{GetEndEvent}!hs::Animator@{hs::Animator}}
+\doxysubsubsection{\texorpdfstring{GetEndEvent()}{GetEndEvent()}}
+{\footnotesize\ttfamily \label{classhs_1_1_animator_abbb60219a3c592434694a6550f4142de} 
+std\+::function$<$ void()$>$ \& hs\+::\+Animator\+::\+Get\+End\+Event (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{name}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{hs_animator_8cpp_source}{hs\+Animator.\+cpp}} 파일의 \mbox{\hyperlink{hs_animator_8cpp_source_l00176}{176}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1_animator_a86506b43516b21d1bbeaf412010cc51f}\index{hs::Animator@{hs::Animator}!GetStartEvent@{GetStartEvent}}
+\index{GetStartEvent@{GetStartEvent}!hs::Animator@{hs::Animator}}
+\doxysubsubsection{\texorpdfstring{GetStartEvent()}{GetStartEvent()}}
+{\footnotesize\ttfamily \label{classhs_1_1_animator_a86506b43516b21d1bbeaf412010cc51f} 
+std\+::function$<$ void()$>$ \& hs\+::\+Animator\+::\+Get\+Start\+Event (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{name}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{hs_animator_8cpp_source}{hs\+Animator.\+cpp}} 파일의 \mbox{\hyperlink{hs_animator_8cpp_source_l00162}{162}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1_animator_a5011c887de8550763f80e2f8f9f7d678}\index{hs::Animator@{hs::Animator}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!hs::Animator@{hs::Animator}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily \label{classhs_1_1_animator_a5011c887de8550763f80e2f8f9f7d678} 
+void hs\+::\+Animator\+::\+Initialize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{classhs_1_1_component_a445ae3dc09f2ef2bdbf21ce02294faa5}{hs\+::\+Component}}(으)로부터 재구현되었습니다.
+
+
+
+\mbox{\hyperlink{hs_animator_8cpp_source}{hs\+Animator.\+cpp}} 파일의 \mbox{\hyperlink{hs_animator_8cpp_source_l00027}{27}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1_animator_aa2bc70e758eb0ef4ef5083678cf6e3e7}\index{hs::Animator@{hs::Animator}!IsComplete@{IsComplete}}
+\index{IsComplete@{IsComplete}!hs::Animator@{hs::Animator}}
+\doxysubsubsection{\texorpdfstring{IsComplete()}{IsComplete()}}
+{\footnotesize\ttfamily \label{classhs_1_1_animator_aa2bc70e758eb0ef4ef5083678cf6e3e7} 
+bool hs\+::\+Animator\+::\+Is\+Complete (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{hs_animator_8h_source}{hs\+Animator.\+h}} 파일의 \mbox{\hyperlink{hs_animator_8h_source_l00087}{87}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1_animator_a22021320da0f864ae0281b72acadbbbb}\index{hs::Animator@{hs::Animator}!LateUpdate@{LateUpdate}}
+\index{LateUpdate@{LateUpdate}!hs::Animator@{hs::Animator}}
+\doxysubsubsection{\texorpdfstring{LateUpdate()}{LateUpdate()}}
+{\footnotesize\ttfamily \label{classhs_1_1_animator_a22021320da0f864ae0281b72acadbbbb} 
+void hs\+::\+Animator\+::\+Late\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{classhs_1_1_component_a0dd22f37a1f4e03f7b825b075c78142f}{hs\+::\+Component}}(으)로부터 재구현되었습니다.
+
+
+
+\mbox{\hyperlink{hs_animator_8cpp_source}{hs\+Animator.\+cpp}} 파일의 \mbox{\hyperlink{hs_animator_8cpp_source_l00049}{49}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1_animator_a9293e95aab4954a35abb432f350add41}\index{hs::Animator@{hs::Animator}!PlayAnimation@{PlayAnimation}}
+\index{PlayAnimation@{PlayAnimation}!hs::Animator@{hs::Animator}}
+\doxysubsubsection{\texorpdfstring{PlayAnimation()}{PlayAnimation()}}
+{\footnotesize\ttfamily \label{classhs_1_1_animator_a9293e95aab4954a35abb432f350add41} 
+void hs\+::\+Animator\+::\+Play\+Animation (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{name}{, }\item[{bool}]{is\+Loop}{ = {\ttfamily false}}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{hs_animator_8cpp_source}{hs\+Animator.\+cpp}} 파일의 \mbox{\hyperlink{hs_animator_8cpp_source_l00128}{128}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1_animator_a350dee80bde2bbddd895bf13eb0377f1}\index{hs::Animator@{hs::Animator}!Render@{Render}}
+\index{Render@{Render}!hs::Animator@{hs::Animator}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily \label{classhs_1_1_animator_a350dee80bde2bbddd895bf13eb0377f1} 
+void hs\+::\+Animator\+::\+Render (\begin{DoxyParamCaption}\item[{HDC}]{hdc}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{classhs_1_1_component_a9d3e32dd591a979638794bfc2d79119a}{hs\+::\+Component}}(으)로부터 재구현되었습니다.
+
+
+
+\mbox{\hyperlink{hs_animator_8cpp_source}{hs\+Animator.\+cpp}} 파일의 \mbox{\hyperlink{hs_animator_8cpp_source_l00052}{52}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1_animator_a4f011f2e8618875e976f397d0be004b6}\index{hs::Animator@{hs::Animator}!Update@{Update}}
+\index{Update@{Update}!hs::Animator@{hs::Animator}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{classhs_1_1_animator_a4f011f2e8618875e976f397d0be004b6} 
+void hs\+::\+Animator\+::\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{classhs_1_1_component_a5bdd392ab636da076462956268e67e29}{hs\+::\+Component}}(으)로부터 재구현되었습니다.
+
+
+
+\mbox{\hyperlink{hs_animator_8cpp_source}{hs\+Animator.\+cpp}} 파일의 \mbox{\hyperlink{hs_animator_8cpp_source_l00030}{30}} 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+HSEngine\+\_\+\+SOURCE/\mbox{\hyperlink{hs_animator_8h}{hs\+Animator.\+h}}\item 
+HSEngine\+\_\+\+SOURCE/\mbox{\hyperlink{hs_animator_8cpp}{hs\+Animator.\+cpp}}\end{DoxyCompactItemize}

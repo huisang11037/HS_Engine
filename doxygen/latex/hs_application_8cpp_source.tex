@@ -1,0 +1,107 @@
+\doxysection{hs\+Application.\+cpp}
+\hypertarget{hs_application_8cpp_source}{}\label{hs_application_8cpp_source}\index{HSEngine\_SOURCE/hsApplication.cpp@{HSEngine\_SOURCE/hsApplication.cpp}}
+\mbox{\hyperlink{hs_application_8cpp}{이 파일의 문서화 페이지로 가기}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hs_application_8h}{hsApplication.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hs_input_8h}{hsInput.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hs_time_8h}{hsTime.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hs_scene_manager_8h}{hsSceneManager.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hs_resources_8h}{hsResources.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00007}00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacehs}{hs}}\ \{}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00008}\mbox{\hyperlink{classhs_1_1_application_a79ec42b6f09a0d4724b75fd493ea0be3}{00008}}\ \ \ \ \ \mbox{\hyperlink{classhs_1_1_application_a79ec42b6f09a0d4724b75fd493ea0be3}{Application::Application}}()}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00009}00009\ \ \ \ \ \ \ \ \ :\ mHwnd(nullptr)}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00010}00010\ \ \ \ \ \ \ \ \ ,\ mHdc(nullptr)}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00011}00011\ \ \ \ \ \ \ \ \ ,\ mWidth(0)}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00012}00012\ \ \ \ \ \ \ \ \ ,\ mHeight(0)}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00013}00013\ \ \ \ \ \ \ \ \ ,\ mBackHDC(nullptr)}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00014}00014\ \ \ \ \ \ \ \ \ ,\ mBackBitmap(nullptr)}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00015}00015\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00016}00016\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00017}\mbox{\hyperlink{classhs_1_1_application_a1a2a839cb965fc435be956a1cc778323}{00017}}\ \ \ \ \ \mbox{\hyperlink{classhs_1_1_application_a1a2a839cb965fc435be956a1cc778323}{Application::\string~Application}}()}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00018}00018\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00019}00019\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00020}\mbox{\hyperlink{classhs_1_1_application_aaa40053c552d93588fecf494586b73da}{00020}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhs_1_1_application_aaa40053c552d93588fecf494586b73da}{Application::Initialize}}(HWND\ hwnd,\ UINT\ width,\ UINT\ height)}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00021}00021\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00022}00022\ \ \ \ \ \ \ \ \ adjustWindowRect(hwnd,\ width,\ height);}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00023}00023\ \ \ \ \ \ \ \ \ createBackBuffer(width,\ height);}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classhs_1_1_scene_manager_a989b8b04c9d4b760a44e38a0bc84b9ad}{SceneManager::Initialize}}();}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ initializeETC();}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00028}00028\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00029}\mbox{\hyperlink{classhs_1_1_application_a9324178dc4b30a186234c496f60c9166}{00029}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhs_1_1_application_a9324178dc4b30a186234c496f60c9166}{Application::Run}}()}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00030}00030\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classhs_1_1_application_a97b5ac72fb598a81bccad2d045a3ce1d}{Update}}();}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classhs_1_1_application_a90a63d3a3b58b9bf701ac4b91321a8ba}{LateUpdate}}();}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classhs_1_1_application_a10acdcff0c204e15e99427c9402b0f2a}{Render}}();}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classhs_1_1_application_a124f40ad2666bc7df0f252d3713c9b8e}{Destroy}}();}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00036}00036\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00037}\mbox{\hyperlink{classhs_1_1_application_a97b5ac72fb598a81bccad2d045a3ce1d}{00037}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhs_1_1_application_a97b5ac72fb598a81bccad2d045a3ce1d}{Application::Update}}()}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00038}00038\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classhs_1_1_input_a1c68bd204fd38448571f1a522c4cd725}{Input::Update}}();}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classhs_1_1_time_a72c9cba041ae848b6c13086bd8d35f65}{Time::Update}}();}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classhs_1_1_scene_manager_ac2bd1a8af30daaf4dd51b3407659c80a}{SceneManager::Update}}();}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00042}00042\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00043}\mbox{\hyperlink{classhs_1_1_application_a90a63d3a3b58b9bf701ac4b91321a8ba}{00043}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhs_1_1_application_a90a63d3a3b58b9bf701ac4b91321a8ba}{Application::LateUpdate}}()}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00044}00044\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classhs_1_1_scene_manager_a3fab889888f8126159f5b059e5859b6c}{SceneManager::LateUpdate}}();}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00046}00046\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00047}\mbox{\hyperlink{classhs_1_1_application_a10acdcff0c204e15e99427c9402b0f2a}{00047}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhs_1_1_application_a10acdcff0c204e15e99427c9402b0f2a}{Application::Render}}()}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00048}00048\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00049}00049\ \ \ \ \ \ \ \ \ clearRenderTarget();}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00051}00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classhs_1_1_time_aa51e29444ef6acd102f011f031faf8da}{Time::Render}}(mBackHDC);}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00052}00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classhs_1_1_scene_manager_aafe5f27dda8dc32576da8f0b26bc652a}{SceneManager::Render}}(mBackHDC);}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 백버퍼를\ 화면에\ 그린다}}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00055}00055\ \ \ \ \ \ \ \ \ BitBlt(mHdc,\ 0,\ 0,\ mWidth,\ mHeight,\ mBackHDC,\ 0,\ 0,\ SRCCOPY);}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00056}00056\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00057}\mbox{\hyperlink{classhs_1_1_application_a124f40ad2666bc7df0f252d3713c9b8e}{00057}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhs_1_1_application_a124f40ad2666bc7df0f252d3713c9b8e}{Application::Destroy}}()}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00058}00058\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classhs_1_1_scene_manager_afc96c5aab0ccf58e38c1e321b4a90ef3}{SceneManager::Destroy}}();}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00060}00060\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00061}\mbox{\hyperlink{classhs_1_1_application_a93e7596634c21b14c8737cb783599f20}{00061}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhs_1_1_application_a93e7596634c21b14c8737cb783599f20}{Application::Release}}()}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00062}00062\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classhs_1_1_scene_manager_a33492ed7c97529a898e80ac429076476}{SceneManager::Release}}();}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classhs_1_1_resources_adf5b60b7c99dadaf3bf36969fd2c4594}{Resources::Release}}();}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00065}00065\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00066}00066\ \ \ \ \ \textcolor{keywordtype}{void}\ Application::clearRenderTarget()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00067}00067\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 뒷\ 배경을\ 지운다.\ 원래\ 크기보다\ 살짝\ 크게\ 해줘야\ 외곽선이\ 안보인다.}}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ Rectangle(mBackHDC,\ -\/1,\ -\/1,\ mWidth\ +\ 1,\ mHeight\ +\ 1);}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00070}00070\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00071}00071\ \ \ \ \ \textcolor{keywordtype}{void}\ Application::adjustWindowRect(HWND\ hwnd,\ UINT\ width,\ UINT\ height)}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00072}00072\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00073}00073\ \ \ \ \ \ \ \ \ mHwnd\ =\ hwnd;}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00074}00074\ \ \ \ \ \ \ \ \ mHdc\ =\ GetDC(mHwnd);}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00076}00076\ \ \ \ \ \ \ \ \ RECT\ rect\ =\ \{\ 0,\ 0,\ width,\ height\ \};}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00077}00077\ \ \ \ \ \ \ \ \ AdjustWindowRect(\&rect,\ WS\_OVERLAPPEDWINDOW,\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00079}00079\ \ \ \ \ \ \ \ \ mWidth\ =\ rect.right\ -\/\ rect.left;}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00080}00080\ \ \ \ \ \ \ \ \ mHeight\ =\ rect.bottom\ -\/\ rect.top;}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00082}00082\ \ \ \ \ \ \ \ \ SetWindowPos(mHwnd,\ \textcolor{keyword}{nullptr},\ 0,\ 0,\ mWidth,\ mHeight,\ 0);}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00083}00083\ \ \ \ \ \ \ \ \ ShowWindow(mHwnd,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00084}00084\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00085}00085\ \ \ \ \ \textcolor{keywordtype}{void}\ Application::createBackBuffer(UINT\ width,\ UINT\ height)}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00086}00086\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 윈도우\ 해상도에\ 맞는\ 백버퍼\ \ \ 생성}}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ mBackBitmap\ =\ CreateCompatibleBitmap(mHdc,\ width,\ height);}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 백버퍼에\ 대한\ DC\ 생성}}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00091}00091\ \ \ \ \ \ \ \ \ mBackHDC\ =\ CreateCompatibleDC(mHdc);}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00093}00093\ \ \ \ \ \ \ \ \ HBITMAP\ oldBitmap\ =\ (HBITMAP)SelectObject(mBackHDC,\ mBackBitmap);}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ DeleteObject(oldBitmap);}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00095}00095\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00096}00096\ \ \ \ \ \textcolor{keywordtype}{void}\ Application::initializeETC()}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00097}00097\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00098}00098\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classhs_1_1_input_ad8c7a3f2e7950c69a02ed5deeea60a58}{Input::Initialize}}();}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00099}00099\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classhs_1_1_time_a27eee9219d9239b457fe3902860379cb}{Time::Initialize}}();}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00100}00100\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_application_8cpp_source_l00101}00101\ \}}
+
+\end{DoxyCode}

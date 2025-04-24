@@ -2,6 +2,9 @@
 #include "CommonInclude.h"
 
 namespace hs {
+	/**
+	* @brief 시간 관련 기능을 정의합니다.
+	*/
 	class Time
 	{
 	public:

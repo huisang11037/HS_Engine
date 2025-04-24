@@ -1,0 +1,69 @@
+\doxysection{HSEngine\+\_\+\+SOURCE/hs\+Input.h 파일 참조}
+\hypertarget{hs_input_8h}{}\label{hs_input_8h}\index{HSEngine\_SOURCE/hsInput.h@{HSEngine\_SOURCE/hsInput.h}}
+{\ttfamily \#include "{}Common\+Include.\+h"{}}\newline
+\doxysubsubsection*{클래스}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classhs_1_1_input}{hs\+::\+Input}}
+\begin{DoxyCompactList}\small\item\em 입력 관련 기능을 정의합니다. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{strucths_1_1_input_1_1_key}{hs\+::\+Input\+::\+Key}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{네임스페이스}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacehs}{hs}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{열거형 타입}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespacehs_a77194b10205fa6474b55082093b53cf0}{hs\+::e\+Key\+State}} \{ \mbox{\hyperlink{namespacehs_a77194b10205fa6474b55082093b53cf0a233a2efe8473ee0a18d23472ea860f44}{hs\+::\+KEY\+\_\+\+NONE}}
+, \mbox{\hyperlink{namespacehs_a77194b10205fa6474b55082093b53cf0ae27439eebd778013c33fbb14dd19fd04}{hs\+::\+KEY\+\_\+\+DOWN}}
+, \mbox{\hyperlink{namespacehs_a77194b10205fa6474b55082093b53cf0a7ef8949a37c02f94d7975401b455b7f0}{hs\+::\+KEY\+\_\+\+PRESSED}}
+, \mbox{\hyperlink{namespacehs_a77194b10205fa6474b55082093b53cf0ac248b44c41333613a8ad29b656f8950e}{hs\+::\+KEY\+\_\+\+UP}}
+ \}
+\item 
+enum class \mbox{\hyperlink{namespacehs_a5afbe529ca19a9d47ba9524e89357119}{hs\+::e\+Key\+Code}} \{ \newline
+\mbox{\hyperlink{namespacehs_a5afbe529ca19a9d47ba9524e89357119a8133433c20f714c5a0fd3d878fae6f8c}{hs\+::\+KEY\+\_\+Q}}
+, \mbox{\hyperlink{namespacehs_a5afbe529ca19a9d47ba9524e89357119aae848ca92fa46bd4bf34b825f757a527}{hs\+::\+KEY\+\_\+W}}
+, \mbox{\hyperlink{namespacehs_a5afbe529ca19a9d47ba9524e89357119aa526cf087f5ab1a7827d014e3bd10725}{hs\+::\+KEY\+\_\+E}}
+, \mbox{\hyperlink{namespacehs_a5afbe529ca19a9d47ba9524e89357119a01371b7a167b1216dea813305ed91b2d}{hs\+::\+KEY\+\_\+R}}
+, \newline
+\mbox{\hyperlink{namespacehs_a5afbe529ca19a9d47ba9524e89357119a5906c66cc4ebc14298b7412d1c643c66}{hs\+::\+KEY\+\_\+T}}
+, \mbox{\hyperlink{namespacehs_a5afbe529ca19a9d47ba9524e89357119a045fb70fafbcaf257eff3209601153ff}{hs\+::\+KEY\+\_\+Y}}
+, \mbox{\hyperlink{namespacehs_a5afbe529ca19a9d47ba9524e89357119a5e16613aa5304abcfa26ba1698510cbb}{hs\+::\+KEY\+\_\+U}}
+, \mbox{\hyperlink{namespacehs_a5afbe529ca19a9d47ba9524e89357119ad37b53647f287184f8dc54fb01a9e209}{hs\+::\+KEY\+\_\+I}}
+, \newline
+\mbox{\hyperlink{namespacehs_a5afbe529ca19a9d47ba9524e89357119aca5eda3cb7ef69f041e555aa4f0fe876}{hs\+::\+KEY\+\_\+O}}
+, \mbox{\hyperlink{namespacehs_a5afbe529ca19a9d47ba9524e89357119a912b7b4b72393278cbe174fef3b40745}{hs\+::\+KEY\+\_\+P}}
+, \mbox{\hyperlink{namespacehs_a5afbe529ca19a9d47ba9524e89357119a5df3f2093c573770f204c77c0dd75a31}{hs\+::\+KEY\+\_\+A}}
+, \mbox{\hyperlink{namespacehs_a5afbe529ca19a9d47ba9524e89357119ab0c514a9a11ed6a9b20285c1bf615cd6}{hs\+::\+KEY\+\_\+S}}
+, \newline
+\mbox{\hyperlink{namespacehs_a5afbe529ca19a9d47ba9524e89357119affb9d8d5d9b1e0c548cb91307952398c}{hs\+::\+KEY\+\_\+D}}
+, \mbox{\hyperlink{namespacehs_a5afbe529ca19a9d47ba9524e89357119af18702c2cfdc53d0f23aef91ff685693}{hs\+::\+KEY\+\_\+F}}
+, \mbox{\hyperlink{namespacehs_a5afbe529ca19a9d47ba9524e89357119a31b0d3badb0ecf74610af9069b83c30d}{hs\+::\+KEY\+\_\+G}}
+, \mbox{\hyperlink{namespacehs_a5afbe529ca19a9d47ba9524e89357119a71704324bc9bf0e734aa5056feb20edb}{hs\+::\+KEY\+\_\+H}}
+, \newline
+\mbox{\hyperlink{namespacehs_a5afbe529ca19a9d47ba9524e89357119a89b46dbd5707c5009f5c5d5bdd989c37}{hs\+::\+KEY\+\_\+J}}
+, \mbox{\hyperlink{namespacehs_a5afbe529ca19a9d47ba9524e89357119a7a5c55ed490b51b0b92a22b7228adb0c}{hs\+::\+KEY\+\_\+K}}
+, \mbox{\hyperlink{namespacehs_a5afbe529ca19a9d47ba9524e89357119af22f455c52a93c78475964ecfb381c36}{hs\+::\+KEY\+\_\+L}}
+, \mbox{\hyperlink{namespacehs_a5afbe529ca19a9d47ba9524e89357119a40a30d27cd7724dbd18532078cb6d22a}{hs\+::\+KEY\+\_\+Z}}
+, \newline
+\mbox{\hyperlink{namespacehs_a5afbe529ca19a9d47ba9524e89357119adf3153982c2e083bc603f505d69e7956}{hs\+::\+KEY\+\_\+X}}
+, \mbox{\hyperlink{namespacehs_a5afbe529ca19a9d47ba9524e89357119a9aa5b26f3b76b219ab08fe0259df2483}{hs\+::\+KEY\+\_\+C}}
+, \mbox{\hyperlink{namespacehs_a5afbe529ca19a9d47ba9524e89357119a52f17fd10c9aa000f4df7075d3ef3f45}{hs\+::\+KEY\+\_\+V}}
+, \mbox{\hyperlink{namespacehs_a5afbe529ca19a9d47ba9524e89357119a27e8a917c5d5e4c440c4dbc160e96f45}{hs\+::\+KEY\+\_\+B}}
+, \newline
+\mbox{\hyperlink{namespacehs_a5afbe529ca19a9d47ba9524e89357119a885f51d482d335f77ba1421700f48368}{hs\+::\+KEY\+\_\+N}}
+, \mbox{\hyperlink{namespacehs_a5afbe529ca19a9d47ba9524e89357119ac332c432b41a7b3e844025b9e5c590f1}{hs\+::\+KEY\+\_\+M}}
+, \mbox{\hyperlink{namespacehs_a5afbe529ca19a9d47ba9524e89357119a199730aec8ce398d74880833785a8b79}{hs\+::\+KEY\+\_\+\+LEFT}}
+, \mbox{\hyperlink{namespacehs_a5afbe529ca19a9d47ba9524e89357119a8e25f52bf32130ac4a96fb5447a35e40}{hs\+::\+KEY\+\_\+\+RIGHT}}
+, \newline
+\mbox{\hyperlink{namespacehs_a5afbe529ca19a9d47ba9524e89357119ac248b44c41333613a8ad29b656f8950e}{hs\+::\+KEY\+\_\+\+UP}}
+, \mbox{\hyperlink{namespacehs_a5afbe529ca19a9d47ba9524e89357119ae27439eebd778013c33fbb14dd19fd04}{hs\+::\+KEY\+\_\+\+DOWN}}
+, \mbox{\hyperlink{namespacehs_a5afbe529ca19a9d47ba9524e89357119af8d7b8d6eeabd9468ed42e3f04a912a2}{hs\+::\+LButton}}
+, \mbox{\hyperlink{namespacehs_a5afbe529ca19a9d47ba9524e89357119a96f20306c02231ff2faeb463bf002010}{hs\+::\+MButton}}
+, \newline
+\mbox{\hyperlink{namespacehs_a5afbe529ca19a9d47ba9524e89357119a6d4e0c82b9a585e331ed1effccd3e52a}{hs\+::\+RButton}}
+, \mbox{\hyperlink{namespacehs_a5afbe529ca19a9d47ba9524e89357119ab1a326c06d88bf042f73d70f50197905}{hs\+::\+END}}
+ \}
+\end{DoxyCompactItemize}

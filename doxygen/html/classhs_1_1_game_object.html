@@ -1,0 +1,570 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>HS Engine: hs::GameObject 클래스 참조</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">HS Engine<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">own game engine</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="검색" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('classhs_1_1_game_object.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 타입</a> &#124;
+<a href="#pub-methods">Public 멤버 함수</a> &#124;
+<a href="#friends">Friends</a> &#124;
+<a href="classhs_1_1_game_object-members.html">모든 멤버 목록</a>  </div>
+  <div class="headertitle"><div class="title">hs::GameObject 클래스 참조</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>게임 오브젝트는 씬에 존재하는 모든 오브젝트를 정의합니다.  
+ <a href="#details">더 자세히 ...</a></p>
+
+<p><code>#include &lt;<a class="el" href="hs_game_object_8h_source.html">hsGameObject.h</a>&gt;</code></p>
+<div class="dynheader">
+hs::GameObject에 대한 상속 다이어그램 : </div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classhs_1_1_game_object.png" usemap="#hs::GameObject_map" alt=""/>
+  <map id="hs::GameObject_map" name="hs::GameObject_map">
+<area href="classhs_1_1_cat.html" alt="hs::Cat" shape="rect" coords="0,56,100,80"/>
+<area href="classhs_1_1_player.html" alt="hs::Player" shape="rect" coords="110,56,210,80"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 타입</h2></td></tr>
+<tr class="memitem:aee636306259058436342242ff90806d1" id="r_aee636306259058436342242ff90806d1"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee636306259058436342242ff90806d1">eState</a> { <a class="el" href="#aee636306259058436342242ff90806d1a4d3d769b812b6faa6b76e1a8abaece2d">Active</a>
+, <a class="el" href="#aee636306259058436342242ff90806d1ae99180abf47a8b3a856e0bcb2656990a">Paused</a>
+, <a class="el" href="#aee636306259058436342242ff90806d1a183b62c7f067711f9c5a54913c054617">Dead</a>
+, <a class="el" href="#aee636306259058436342242ff90806d1a87557f11575c0ad78e4e28abedc13b6e">End</a>
+ }</td></tr>
+<tr class="separator:aee636306259058436342242ff90806d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 멤버 함수</h2></td></tr>
+<tr class="memitem:a692bb3508e8a5d2e1461bffd8370e502" id="r_a692bb3508e8a5d2e1461bffd8370e502"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a692bb3508e8a5d2e1461bffd8370e502">GameObject</a> ()</td></tr>
+<tr class="separator:a692bb3508e8a5d2e1461bffd8370e502"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d7abf783db58326d3a11f6bb9e0d3d0" id="r_a5d7abf783db58326d3a11f6bb9e0d3d0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d7abf783db58326d3a11f6bb9e0d3d0">~GameObject</a> ()</td></tr>
+<tr class="separator:a5d7abf783db58326d3a11f6bb9e0d3d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ba11912bf71edd4e3a6d3ab7b1f9a12" id="r_a8ba11912bf71edd4e3a6d3ab7b1f9a12"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ba11912bf71edd4e3a6d3ab7b1f9a12">Initialize</a> ()</td></tr>
+<tr class="separator:a8ba11912bf71edd4e3a6d3ab7b1f9a12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f02645a9823e51547b616c9f0dcab06" id="r_a0f02645a9823e51547b616c9f0dcab06"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f02645a9823e51547b616c9f0dcab06">Update</a> ()</td></tr>
+<tr class="separator:a0f02645a9823e51547b616c9f0dcab06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0204a9411dcfa86997cf51de178ff0d" id="r_ae0204a9411dcfa86997cf51de178ff0d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae0204a9411dcfa86997cf51de178ff0d">LateUpdate</a> ()</td></tr>
+<tr class="separator:ae0204a9411dcfa86997cf51de178ff0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9970405296e8ae46d7ff4505ee6c627c" id="r_a9970405296e8ae46d7ff4505ee6c627c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9970405296e8ae46d7ff4505ee6c627c">Render</a> (HDC hdc)</td></tr>
+<tr class="separator:a9970405296e8ae46d7ff4505ee6c627c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac198dad144214ea9e0f7e48685303965" id="r_ac198dad144214ea9e0f7e48685303965"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:ac198dad144214ea9e0f7e48685303965"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ac198dad144214ea9e0f7e48685303965">AddComponent</a> ()</td></tr>
+<tr class="separator:ac198dad144214ea9e0f7e48685303965"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2196f983d980e181f3f1b5662c2bc3f6" id="r_a2196f983d980e181f3f1b5662c2bc3f6"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a2196f983d980e181f3f1b5662c2bc3f6"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a2196f983d980e181f3f1b5662c2bc3f6">GetComponent</a> ()</td></tr>
+<tr class="separator:a2196f983d980e181f3f1b5662c2bc3f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70efe58db217087adb9cb4bd1d7b61a9" id="r_a70efe58db217087adb9cb4bd1d7b61a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aee636306259058436342242ff90806d1">eState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70efe58db217087adb9cb4bd1d7b61a9">GetState</a> () const</td></tr>
+<tr class="separator:a70efe58db217087adb9cb4bd1d7b61a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11a55094e5fcf143e800736cd5770851" id="r_a11a55094e5fcf143e800736cd5770851"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11a55094e5fcf143e800736cd5770851">SetActive</a> (bool power)</td></tr>
+<tr class="separator:a11a55094e5fcf143e800736cd5770851"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40e1c313fe3b5e88a1eb536263dc826f" id="r_a40e1c313fe3b5e88a1eb536263dc826f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40e1c313fe3b5e88a1eb536263dc826f">IsActive</a> () const</td></tr>
+<tr class="separator:a40e1c313fe3b5e88a1eb536263dc826f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a875e55ac6383eb452c05386c698b8599" id="r_a875e55ac6383eb452c05386c698b8599"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a875e55ac6383eb452c05386c698b8599">IsDead</a> () const</td></tr>
+<tr class="separator:a875e55ac6383eb452c05386c698b8599"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:ac1d5340fbf61717ef213b7780ff2b1d7" id="r_ac1d5340fbf61717ef213b7780ff2b1d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac1d5340fbf61717ef213b7780ff2b1d7">object::Destory</a> (<a class="el" href="classhs_1_1_game_object.html">GameObject</a> *obj)</td></tr>
+<tr class="separator:ac1d5340fbf61717ef213b7780ff2b1d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock"><p>게임 오브젝트는 씬에 존재하는 모든 오브젝트를 정의합니다. </p>
+
+<p class="definition"><a class="el" href="hs_game_object_8h_source.html">hsGameObject.h</a> 파일의 <a class="el" href="hs_game_object_8h_source.html#l00015">15</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 열거형 문서화</h2>
+<a id="aee636306259058436342242ff90806d1" name="aee636306259058436342242ff90806d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee636306259058436342242ff90806d1">&#9670;&#160;</a></span>eState</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#aee636306259058436342242ff90806d1">hs::GameObject::eState</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">열거형 멤버</th></tr><tr><td class="fieldname"><a id="aee636306259058436342242ff90806d1a4d3d769b812b6faa6b76e1a8abaece2d" name="aee636306259058436342242ff90806d1a4d3d769b812b6faa6b76e1a8abaece2d"></a>Active&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aee636306259058436342242ff90806d1ae99180abf47a8b3a856e0bcb2656990a" name="aee636306259058436342242ff90806d1ae99180abf47a8b3a856e0bcb2656990a"></a>Paused&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aee636306259058436342242ff90806d1a183b62c7f067711f9c5a54913c054617" name="aee636306259058436342242ff90806d1a183b62c7f067711f9c5a54913c054617"></a>Dead&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aee636306259058436342242ff90806d1a87557f11575c0ad78e4e28abedc13b6e" name="aee636306259058436342242ff90806d1a87557f11575c0ad78e4e28abedc13b6e"></a>End&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"><a class="el" href="hs_game_object_8h_source.html">hsGameObject.h</a> 파일의 <a class="el" href="hs_game_object_8h_source.html#l00020">20</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="a692bb3508e8a5d2e1461bffd8370e502" name="a692bb3508e8a5d2e1461bffd8370e502"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a692bb3508e8a5d2e1461bffd8370e502">&#9670;&#160;</a></span>GameObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">hs::GameObject::GameObject </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hs_game_object_8cpp_source.html">hsGameObject.cpp</a> 파일의 <a class="el" href="hs_game_object_8cpp_source.html#l00017">17</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a5d7abf783db58326d3a11f6bb9e0d3d0" name="a5d7abf783db58326d3a11f6bb9e0d3d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d7abf783db58326d3a11f6bb9e0d3d0">&#9670;&#160;</a></span>~GameObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">hs::GameObject::~GameObject </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hs_game_object_8cpp_source.html">hsGameObject.cpp</a> 파일의 <a class="el" href="hs_game_object_8cpp_source.html#l00024">24</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="ac198dad144214ea9e0f7e48685303965" name="ac198dad144214ea9e0f7e48685303965"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac198dad144214ea9e0f7e48685303965">&#9670;&#160;</a></span>AddComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T * hs::GameObject::AddComponent </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hs_game_object_8h_source.html">hsGameObject.h</a> 파일의 <a class="el" href="hs_game_object_8h_source.html#l00037">37</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a2196f983d980e181f3f1b5662c2bc3f6" name="a2196f983d980e181f3f1b5662c2bc3f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2196f983d980e181f3f1b5662c2bc3f6">&#9670;&#160;</a></span>GetComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T * hs::GameObject::GetComponent </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hs_game_object_8h_source.html">hsGameObject.h</a> 파일의 <a class="el" href="hs_game_object_8h_source.html#l00048">48</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a70efe58db217087adb9cb4bd1d7b61a9" name="a70efe58db217087adb9cb4bd1d7b61a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70efe58db217087adb9cb4bd1d7b61a9">&#9670;&#160;</a></span>GetState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aee636306259058436342242ff90806d1">eState</a> hs::GameObject::GetState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hs_game_object_8h_source.html">hsGameObject.h</a> 파일의 <a class="el" href="hs_game_object_8h_source.html#l00061">61</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a8ba11912bf71edd4e3a6d3ab7b1f9a12" name="a8ba11912bf71edd4e3a6d3ab7b1f9a12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ba11912bf71edd4e3a6d3ab7b1f9a12">&#9670;&#160;</a></span>Initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void hs::GameObject::Initialize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classhs_1_1_cat.html#a71c6bf668a54b6e96fe4bc8e7d3a26ca">hs::Cat</a>, <a class="el" href="classhs_1_1_player.html#a398ca47ff2bfd06f11e608015350710d">hs::Player</a>에서 재구현되었습니다.</p>
+
+<p class="definition"><a class="el" href="hs_game_object_8cpp_source.html">hsGameObject.cpp</a> 파일의 <a class="el" href="hs_game_object_8cpp_source.html#l00033">33</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a40e1c313fe3b5e88a1eb536263dc826f" name="a40e1c313fe3b5e88a1eb536263dc826f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40e1c313fe3b5e88a1eb536263dc826f">&#9670;&#160;</a></span>IsActive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool hs::GameObject::IsActive </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hs_game_object_8h_source.html">hsGameObject.h</a> 파일의 <a class="el" href="hs_game_object_8h_source.html#l00067">67</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a875e55ac6383eb452c05386c698b8599" name="a875e55ac6383eb452c05386c698b8599"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a875e55ac6383eb452c05386c698b8599">&#9670;&#160;</a></span>IsDead()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool hs::GameObject::IsDead </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hs_game_object_8h_source.html">hsGameObject.h</a> 파일의 <a class="el" href="hs_game_object_8h_source.html#l00068">68</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ae0204a9411dcfa86997cf51de178ff0d" name="ae0204a9411dcfa86997cf51de178ff0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0204a9411dcfa86997cf51de178ff0d">&#9670;&#160;</a></span>LateUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void hs::GameObject::LateUpdate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classhs_1_1_cat.html#aa1de092cff2fe2c05feb87fe0009e92d">hs::Cat</a>, <a class="el" href="classhs_1_1_player.html#a5ce58da3139e17c2b1ad02a17025f1d8">hs::Player</a>에서 재구현되었습니다.</p>
+
+<p class="definition"><a class="el" href="hs_game_object_8cpp_source.html">hsGameObject.cpp</a> 파일의 <a class="el" href="hs_game_object_8cpp_source.html#l00049">49</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a9970405296e8ae46d7ff4505ee6c627c" name="a9970405296e8ae46d7ff4505ee6c627c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9970405296e8ae46d7ff4505ee6c627c">&#9670;&#160;</a></span>Render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void hs::GameObject::Render </td>
+          <td>(</td>
+          <td class="paramtype">HDC</td>          <td class="paramname"><span class="paramname"><em>hdc</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classhs_1_1_cat.html#adaaaef02cbe6ac752d77742a765b8492">hs::Cat</a>, <a class="el" href="classhs_1_1_player.html#ad9266943b653c905897e8cef5bde257f">hs::Player</a>에서 재구현되었습니다.</p>
+
+<p class="definition"><a class="el" href="hs_game_object_8cpp_source.html">hsGameObject.cpp</a> 파일의 <a class="el" href="hs_game_object_8cpp_source.html#l00057">57</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a11a55094e5fcf143e800736cd5770851" name="a11a55094e5fcf143e800736cd5770851"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11a55094e5fcf143e800736cd5770851">&#9670;&#160;</a></span>SetActive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void hs::GameObject::SetActive </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>power</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hs_game_object_8h_source.html">hsGameObject.h</a> 파일의 <a class="el" href="hs_game_object_8h_source.html#l00062">62</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a0f02645a9823e51547b616c9f0dcab06" name="a0f02645a9823e51547b616c9f0dcab06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f02645a9823e51547b616c9f0dcab06">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void hs::GameObject::Update </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classhs_1_1_cat.html#ad27c3665e43da6fb25b027d733d57d64">hs::Cat</a>, <a class="el" href="classhs_1_1_player.html#ac93a963e98271ea56d079c92ccdd4f1d">hs::Player</a>에서 재구현되었습니다.</p>
+
+<p class="definition"><a class="el" href="hs_game_object_8cpp_source.html">hsGameObject.cpp</a> 파일의 <a class="el" href="hs_game_object_8cpp_source.html#l00041">41</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Friend, 그리고 관련된 함수 문서화</h2>
+<a id="ac1d5340fbf61717ef213b7780ff2b1d7" name="ac1d5340fbf61717ef213b7780ff2b1d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1d5340fbf61717ef213b7780ff2b1d7">&#9670;&#160;</a></span>object::Destory</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="namespacehs_1_1object.html#a08beac466a4776be5febf67992be2ae8">object::Destory</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classhs_1_1_game_object.html">GameObject</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.:<ul>
+<li>HSEngine_SOURCE/<a class="el" href="hs_game_object_8h_source.html">hsGameObject.h</a></li>
+<li>HSEngine_SOURCE/<a class="el" href="hs_game_object_8cpp_source.html">hsGameObject.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacehs.html">hs</a></li><li class="navelem"><a class="el" href="classhs_1_1_game_object.html">GameObject</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

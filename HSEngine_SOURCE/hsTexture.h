@@ -4,6 +4,9 @@
 
 namespace hs::graphcis
 {
+	/**
+	* @brief 텍스처인 리소스입니다.
+	*/
 	class Texture : public Resource
 	{
 	public:

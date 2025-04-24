@@ -1,0 +1,74 @@
+\doxysection{hs\+Animator.\+h}
+\hypertarget{hs_animator_8h_source}{}\label{hs_animator_8h_source}\index{HSEngine\_SOURCE/hsAnimator.h@{HSEngine\_SOURCE/hsAnimator.h}}
+\mbox{\hyperlink{hs_animator_8h}{이 파일의 문서화 페이지로 가기}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hs_component_8h}{hsComponent.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hs_animation_8h}{hsAnimation.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00005}00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacehs}{hs}}}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00011}\mbox{\hyperlink{classhs_1_1_animator}{00011}}\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classhs_1_1_animator_a408f6d5c5bea09964e1ba8244eeb9d92}{Animator}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classhs_1_1_component_a8950a1cb229cebd9b7e1afd8ee4e0ef8}{Component}}}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00012}00012\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00013}00013\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00018}\mbox{\hyperlink{strucths_1_1_animator_1_1_event}{00018}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{strucths_1_1_animator_1_1_event}{Event}}}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00019}00019\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00020}\mbox{\hyperlink{strucths_1_1_animator_1_1_event_a6cf2e12bd08b2c740fa5f0654e731f40}{00020}}\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{strucths_1_1_animator_1_1_event_a6cf2e12bd08b2c740fa5f0654e731f40}{operator=}}(std::function<\textcolor{keywordtype}{void}()>\ func)}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{strucths_1_1_animator_1_1_event_a1a7dc62fdbb7ee2a46252121c0337332}{mEvent}}\ =\ std::move(func);}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00025}\mbox{\hyperlink{strucths_1_1_animator_1_1_event_a6ca2296e8c1a5e3e1122c18a3f458389}{00025}}\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{strucths_1_1_animator_1_1_event_a6ca2296e8c1a5e3e1122c18a3f458389}{operator()}}()}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{strucths_1_1_animator_1_1_event_a1a7dc62fdbb7ee2a46252121c0337332}{mEvent}})}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{strucths_1_1_animator_1_1_event_a1a7dc62fdbb7ee2a46252121c0337332}{mEvent}}();}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00031}\mbox{\hyperlink{strucths_1_1_animator_1_1_event_a1a7dc62fdbb7ee2a46252121c0337332}{00031}}\ \ \ \ \ \ \ \ \ \ \ \ \ std::function<void()>\ \mbox{\hyperlink{strucths_1_1_animator_1_1_event_a1a7dc62fdbb7ee2a46252121c0337332}{mEvent}};}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00032}00032\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00036}\mbox{\hyperlink{strucths_1_1_animator_1_1_events}{00036}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{strucths_1_1_animator_1_1_events}{Events}}}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00037}00037\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00038}\mbox{\hyperlink{strucths_1_1_animator_1_1_events_ae990748a10be5bbcc10b7f15c93551dd}{00038}}\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{strucths_1_1_animator_1_1_event}{Event}}\ \mbox{\hyperlink{strucths_1_1_animator_1_1_events_ae990748a10be5bbcc10b7f15c93551dd}{startEvent}};}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00039}\mbox{\hyperlink{strucths_1_1_animator_1_1_events_aa711f49eba62bd04bce10e63a134fe70}{00039}}\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{strucths_1_1_animator_1_1_event}{Event}}\ \mbox{\hyperlink{strucths_1_1_animator_1_1_events_aa711f49eba62bd04bce10e63a134fe70}{completeEvent}};}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00040}\mbox{\hyperlink{strucths_1_1_animator_1_1_events_a13d986e2232394f26a92cbec906da42c}{00040}}\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{strucths_1_1_animator_1_1_event}{Event}}\ \mbox{\hyperlink{strucths_1_1_animator_1_1_events_a13d986e2232394f26a92cbec906da42c}{endEvent}};}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00041}00041\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00043}00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classhs_1_1_animator_a408f6d5c5bea09964e1ba8244eeb9d92}{Animator}}();}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00044}00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classhs_1_1_animator_a5ad90f427ef358c417e8fc5435428fbe}{\string~Animator}}();}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhs_1_1_animator_a5011c887de8550763f80e2f8f9f7d678}{Initialize}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhs_1_1_animator_a4f011f2e8618875e976f397d0be004b6}{Update}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhs_1_1_animator_a22021320da0f864ae0281b72acadbbbb}{LateUpdate}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhs_1_1_animator_a350dee80bde2bbddd895bf13eb0377f1}{Render}}(HDC\ hdc)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhs_1_1_animator_a06acb6ab1de14e7a9dee1e8de87bfe90}{CreateAnimation}}(\textcolor{keyword}{const}\ std::wstring\&\ name}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{classhs_1_1graphcis_1_1_texture}{graphcis::Texture}}*\ spriteSheet}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{strucths_1_1math_1_1_vector2}{Vector2}}\ leftTop}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{strucths_1_1math_1_1_vector2}{Vector2}}\ tileSize}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{strucths_1_1math_1_1_vector2}{Vector2}}\ offset}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ ,\ UINT\ spriteLength}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ ,\ \textcolor{keywordtype}{float}\ duration);}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhs_1_1_animator_ab40014f8cad3f8d712cca4ace6ea52b6}{CreateAnimationByFolder}}(\textcolor{keyword}{const}\ std::wstring\&\ name}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ ,\ \textcolor{keyword}{const}\ std::wstring\&\ path}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{strucths_1_1math_1_1_vector2}{Vector2}}\ offset,\ \textcolor{keywordtype}{float}\ duration);}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00079}00079\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classhs_1_1_animation}{Animation}}*\ \mbox{\hyperlink{classhs_1_1_animator_ae665cd6bf7447c8353d869b16ee71a3f}{FindAnimation}}(\textcolor{keyword}{const}\ std::wstring\&\ name);}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00080}00080\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhs_1_1_animator_a9293e95aab4954a35abb432f350add41}{PlayAnimation}}(\textcolor{keyword}{const}\ std::wstring\&\ name,\ \textcolor{keywordtype}{bool}\ isLoop\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00082}00082\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{strucths_1_1_animator_1_1_events}{Events}}*\ \mbox{\hyperlink{classhs_1_1_animator_a0d23521c35821cb5fe59b41a4a04ee7d}{FindEvents}}(\textcolor{keyword}{const}\ std::wstring\&\ name);}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00083}00083\ \ \ \ \ \ \ \ \ std::function<void()>\&\ \mbox{\hyperlink{classhs_1_1_animator_a86506b43516b21d1bbeaf412010cc51f}{GetStartEvent}}(\textcolor{keyword}{const}\ std::wstring\&\ name);}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00084}00084\ \ \ \ \ \ \ \ \ std::function<void()>\&\ \mbox{\hyperlink{classhs_1_1_animator_adde54c76f6fea4bf127e8e546ce6ecb9}{GetCompleteEvent}}(\textcolor{keyword}{const}\ std::wstring\&\ name);}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00085}00085\ \ \ \ \ \ \ \ \ std::function<void()>\&\ \mbox{\hyperlink{classhs_1_1_animator_abbb60219a3c592434694a6550f4142de}{GetEndEvent}}(\textcolor{keyword}{const}\ std::wstring\&\ name);}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00087}\mbox{\hyperlink{classhs_1_1_animator_aa2bc70e758eb0ef4ef5083678cf6e3e7}{00087}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classhs_1_1_animator_aa2bc70e758eb0ef4ef5083678cf6e3e7}{IsComplete}}()\ \{\ \textcolor{keywordflow}{return}\ mActiveAnimation-\/>IsComplete();\ \}}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00089}00089\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00090}00090\ \ \ \ \ \ \ \ \ std::map<std::wstring,\ Animation*>\ mAnimations;}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00091}00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classhs_1_1_animation}{Animation}}*\ mActiveAnimation;}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00092}00092\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ mIsLoop;}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00094}00094\ \ \ \ \ \ \ \ \ std::map<std::wstring,\ Events*>\ mEvents;}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00095}00095\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{hs_animator_8h_source_l00096}00096\ \}}
+
+\end{DoxyCode}

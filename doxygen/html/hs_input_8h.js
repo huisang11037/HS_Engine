@@ -1,0 +1,47 @@
+var hs_input_8h =
+[
+    [ "hs::Input", "classhs_1_1_input.html", "classhs_1_1_input" ],
+    [ "hs::Input::Key", "strucths_1_1_input_1_1_key.html", "strucths_1_1_input_1_1_key" ],
+    [ "hs::eKeyCode", "namespacehs.html#a5afbe529ca19a9d47ba9524e89357119", [
+      [ "hs::eKeyCode::KEY_Q", "namespacehs.html#a5afbe529ca19a9d47ba9524e89357119a8133433c20f714c5a0fd3d878fae6f8c", null ],
+      [ "hs::eKeyCode::KEY_W", "namespacehs.html#a5afbe529ca19a9d47ba9524e89357119aae848ca92fa46bd4bf34b825f757a527", null ],
+      [ "hs::eKeyCode::KEY_E", "namespacehs.html#a5afbe529ca19a9d47ba9524e89357119aa526cf087f5ab1a7827d014e3bd10725", null ],
+      [ "hs::eKeyCode::KEY_R", "namespacehs.html#a5afbe529ca19a9d47ba9524e89357119a01371b7a167b1216dea813305ed91b2d", null ],
+      [ "hs::eKeyCode::KEY_T", "namespacehs.html#a5afbe529ca19a9d47ba9524e89357119a5906c66cc4ebc14298b7412d1c643c66", null ],
+      [ "hs::eKeyCode::KEY_Y", "namespacehs.html#a5afbe529ca19a9d47ba9524e89357119a045fb70fafbcaf257eff3209601153ff", null ],
+      [ "hs::eKeyCode::KEY_U", "namespacehs.html#a5afbe529ca19a9d47ba9524e89357119a5e16613aa5304abcfa26ba1698510cbb", null ],
+      [ "hs::eKeyCode::KEY_I", "namespacehs.html#a5afbe529ca19a9d47ba9524e89357119ad37b53647f287184f8dc54fb01a9e209", null ],
+      [ "hs::eKeyCode::KEY_O", "namespacehs.html#a5afbe529ca19a9d47ba9524e89357119aca5eda3cb7ef69f041e555aa4f0fe876", null ],
+      [ "hs::eKeyCode::KEY_P", "namespacehs.html#a5afbe529ca19a9d47ba9524e89357119a912b7b4b72393278cbe174fef3b40745", null ],
+      [ "hs::eKeyCode::KEY_A", "namespacehs.html#a5afbe529ca19a9d47ba9524e89357119a5df3f2093c573770f204c77c0dd75a31", null ],
+      [ "hs::eKeyCode::KEY_S", "namespacehs.html#a5afbe529ca19a9d47ba9524e89357119ab0c514a9a11ed6a9b20285c1bf615cd6", null ],
+      [ "hs::eKeyCode::KEY_D", "namespacehs.html#a5afbe529ca19a9d47ba9524e89357119affb9d8d5d9b1e0c548cb91307952398c", null ],
+      [ "hs::eKeyCode::KEY_F", "namespacehs.html#a5afbe529ca19a9d47ba9524e89357119af18702c2cfdc53d0f23aef91ff685693", null ],
+      [ "hs::eKeyCode::KEY_G", "namespacehs.html#a5afbe529ca19a9d47ba9524e89357119a31b0d3badb0ecf74610af9069b83c30d", null ],
+      [ "hs::eKeyCode::KEY_H", "namespacehs.html#a5afbe529ca19a9d47ba9524e89357119a71704324bc9bf0e734aa5056feb20edb", null ],
+      [ "hs::eKeyCode::KEY_J", "namespacehs.html#a5afbe529ca19a9d47ba9524e89357119a89b46dbd5707c5009f5c5d5bdd989c37", null ],
+      [ "hs::eKeyCode::KEY_K", "namespacehs.html#a5afbe529ca19a9d47ba9524e89357119a7a5c55ed490b51b0b92a22b7228adb0c", null ],
+      [ "hs::eKeyCode::KEY_L", "namespacehs.html#a5afbe529ca19a9d47ba9524e89357119af22f455c52a93c78475964ecfb381c36", null ],
+      [ "hs::eKeyCode::KEY_Z", "namespacehs.html#a5afbe529ca19a9d47ba9524e89357119a40a30d27cd7724dbd18532078cb6d22a", null ],
+      [ "hs::eKeyCode::KEY_X", "namespacehs.html#a5afbe529ca19a9d47ba9524e89357119adf3153982c2e083bc603f505d69e7956", null ],
+      [ "hs::eKeyCode::KEY_C", "namespacehs.html#a5afbe529ca19a9d47ba9524e89357119a9aa5b26f3b76b219ab08fe0259df2483", null ],
+      [ "hs::eKeyCode::KEY_V", "namespacehs.html#a5afbe529ca19a9d47ba9524e89357119a52f17fd10c9aa000f4df7075d3ef3f45", null ],
+      [ "hs::eKeyCode::KEY_B", "namespacehs.html#a5afbe529ca19a9d47ba9524e89357119a27e8a917c5d5e4c440c4dbc160e96f45", null ],
+      [ "hs::eKeyCode::KEY_N", "namespacehs.html#a5afbe529ca19a9d47ba9524e89357119a885f51d482d335f77ba1421700f48368", null ],
+      [ "hs::eKeyCode::KEY_M", "namespacehs.html#a5afbe529ca19a9d47ba9524e89357119ac332c432b41a7b3e844025b9e5c590f1", null ],
+      [ "hs::eKeyCode::KEY_LEFT", "namespacehs.html#a5afbe529ca19a9d47ba9524e89357119a199730aec8ce398d74880833785a8b79", null ],
+      [ "hs::eKeyCode::KEY_RIGHT", "namespacehs.html#a5afbe529ca19a9d47ba9524e89357119a8e25f52bf32130ac4a96fb5447a35e40", null ],
+      [ "hs::eKeyCode::KEY_UP", "namespacehs.html#a5afbe529ca19a9d47ba9524e89357119ac248b44c41333613a8ad29b656f8950e", null ],
+      [ "hs::eKeyCode::KEY_DOWN", "namespacehs.html#a5afbe529ca19a9d47ba9524e89357119ae27439eebd778013c33fbb14dd19fd04", null ],
+      [ "hs::eKeyCode::LButton", "namespacehs.html#a5afbe529ca19a9d47ba9524e89357119af8d7b8d6eeabd9468ed42e3f04a912a2", null ],
+      [ "hs::eKeyCode::MButton", "namespacehs.html#a5afbe529ca19a9d47ba9524e89357119a96f20306c02231ff2faeb463bf002010", null ],
+      [ "hs::eKeyCode::RButton", "namespacehs.html#a5afbe529ca19a9d47ba9524e89357119a6d4e0c82b9a585e331ed1effccd3e52a", null ],
+      [ "hs::eKeyCode::END", "namespacehs.html#a5afbe529ca19a9d47ba9524e89357119ab1a326c06d88bf042f73d70f50197905", null ]
+    ] ],
+    [ "hs::eKeyState", "namespacehs.html#a77194b10205fa6474b55082093b53cf0", [
+      [ "hs::eKeyState::KEY_NONE", "namespacehs.html#a77194b10205fa6474b55082093b53cf0a233a2efe8473ee0a18d23472ea860f44", null ],
+      [ "hs::eKeyState::KEY_DOWN", "namespacehs.html#a77194b10205fa6474b55082093b53cf0ae27439eebd778013c33fbb14dd19fd04", null ],
+      [ "hs::eKeyState::KEY_PRESSED", "namespacehs.html#a77194b10205fa6474b55082093b53cf0a7ef8949a37c02f94d7975401b455b7f0", null ],
+      [ "hs::eKeyState::KEY_UP", "namespacehs.html#a77194b10205fa6474b55082093b53cf0ac248b44c41333613a8ad29b656f8950e", null ]
+    ] ]
+];

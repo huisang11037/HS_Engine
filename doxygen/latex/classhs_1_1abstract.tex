@@ -1,0 +1,97 @@
+\doxysection{hs\+::abstract 클래스 참조}
+\hypertarget{classhs_1_1abstract}{}\label{classhs_1_1abstract}\index{hs::abstract@{hs::abstract}}
+
+
+추상 클래스로서 모든 리소스의 기본 클래스입니다.  
+
+
+
+
+{\ttfamily \#include $<$hs\+Resource.\+h$>$}
+
+hs\+::abstract에 대한 상속 다이어그램 \+: \begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classhs_1_1abstract}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhs_1_1abstract_a4c4373eae8c118d0f3a652f93804efb7}{Resource}} (\mbox{\hyperlink{namespacehs_1_1enums_a986f65f66f5b5b28bb29914bf90283fb}{enums\+::e\+Resource\+Type}} type)
+\item 
+virtual \mbox{\hyperlink{classhs_1_1abstract_a1290ee6ac236b21f6de0fdcad4e92f8e}{\texorpdfstring{$\sim$}{\string~}\+Resource}} ()
+\item 
+virtual HRESULT \mbox{\hyperlink{classhs_1_1abstract_ad1040db48e932500fe1c3c4016489550}{Load}} (const std\+::wstring \&path)=0
+\item 
+const std\+::wstring \& \mbox{\hyperlink{classhs_1_1abstract_a26ee7871609cbf4347c4050c8fca0c25}{Get\+Path}} ()
+\item 
+void \mbox{\hyperlink{classhs_1_1abstract_a6a549ec6445c626f9e1804978da1765c}{Set\+Path}} (const std\+::wstring \&path)
+\end{DoxyCompactItemize}
+\doxysubsection*{\mbox{\hyperlink{classhs_1_1_entity}{hs\+::\+Entity}}(으)로부터 상속된 Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhs_1_1_entity_af3cef436d0ffd259d99e505a987428f4}{Entity}} ()
+\item 
+virtual \mbox{\hyperlink{classhs_1_1_entity_ad30b89f98b0edf4f969370b949b42adf}{\texorpdfstring{$\sim$}{\string~}\+Entity}} ()
+\item 
+void \mbox{\hyperlink{classhs_1_1_entity_a477f58255303b66fb51c0f36f9caf534}{Set\+Name}} (const std\+::wstring \&name)
+\item 
+const std\+::wstring \& \mbox{\hyperlink{classhs_1_1_entity_a50626d2175dc190d0a16ebdcb6962b0d}{Get\+Name}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+추상 클래스로서 모든 리소스의 기본 클래스입니다. 
+
+\mbox{\hyperlink{hs_resource_8h_source}{hs\+Resource.\+h}} 파일의 \mbox{\hyperlink{hs_resource_8h_source_l00009}{9}} 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\Hypertarget{classhs_1_1abstract_a1290ee6ac236b21f6de0fdcad4e92f8e}\index{hs::abstract@{hs::abstract}!````~Resource@{\texorpdfstring{$\sim$}{\string~}Resource}}
+\index{````~Resource@{\texorpdfstring{$\sim$}{\string~}Resource}!hs::abstract@{hs::abstract}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Resource()}{\string~Resource()}}
+{\footnotesize\ttfamily \label{classhs_1_1abstract_a1290ee6ac236b21f6de0fdcad4e92f8e} 
+virtual hs\+::abstract\+::\texorpdfstring{$\sim$}{\string~}\+Resource (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\Hypertarget{classhs_1_1abstract_a26ee7871609cbf4347c4050c8fca0c25}\index{hs::abstract@{hs::abstract}!GetPath@{GetPath}}
+\index{GetPath@{GetPath}!hs::abstract@{hs::abstract}}
+\doxysubsubsection{\texorpdfstring{GetPath()}{GetPath()}}
+{\footnotesize\ttfamily \label{classhs_1_1abstract_a26ee7871609cbf4347c4050c8fca0c25} 
+const std\+::wstring \& hs\+::abstract\+::\+Get\+Path (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{hs_resource_8h_source}{hs\+Resource.\+h}} 파일의 \mbox{\hyperlink{hs_resource_8h_source_l00017}{17}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1abstract_ad1040db48e932500fe1c3c4016489550}\index{hs::abstract@{hs::abstract}!Load@{Load}}
+\index{Load@{Load}!hs::abstract@{hs::abstract}}
+\doxysubsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily \label{classhs_1_1abstract_ad1040db48e932500fe1c3c4016489550} 
+virtual HRESULT hs\+::abstract\+::\+Load (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{path}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\Hypertarget{classhs_1_1abstract_a4c4373eae8c118d0f3a652f93804efb7}\index{hs::abstract@{hs::abstract}!Resource@{Resource}}
+\index{Resource@{Resource}!hs::abstract@{hs::abstract}}
+\doxysubsubsection{\texorpdfstring{Resource()}{Resource()}}
+{\footnotesize\ttfamily \label{classhs_1_1abstract_a4c4373eae8c118d0f3a652f93804efb7} 
+hs\+::abstract\+::\+Resource (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacehs_1_1enums_a986f65f66f5b5b28bb29914bf90283fb}{enums\+::e\+Resource\+Type}}}]{type}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classhs_1_1abstract_a6a549ec6445c626f9e1804978da1765c}\index{hs::abstract@{hs::abstract}!SetPath@{SetPath}}
+\index{SetPath@{SetPath}!hs::abstract@{hs::abstract}}
+\doxysubsubsection{\texorpdfstring{SetPath()}{SetPath()}}
+{\footnotesize\ttfamily \label{classhs_1_1abstract_a6a549ec6445c626f9e1804978da1765c} 
+void hs\+::abstract\+::\+Set\+Path (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{path}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{hs_resource_8h_source}{hs\+Resource.\+h}} 파일의 \mbox{\hyperlink{hs_resource_8h_source_l00018}{18}} 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+HSEngine\+\_\+\+SOURCE/\mbox{\hyperlink{hs_resource_8h}{hs\+Resource.\+h}}\end{DoxyCompactItemize}

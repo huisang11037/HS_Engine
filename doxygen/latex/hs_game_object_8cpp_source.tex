@@ -1,0 +1,75 @@
+\doxysection{hs\+Game\+Object.\+cpp}
+\hypertarget{hs_game_object_8cpp_source}{}\label{hs_game_object_8cpp_source}\index{HSEngine\_SOURCE/hsGameObject.cpp@{HSEngine\_SOURCE/hsGameObject.cpp}}
+\mbox{\hyperlink{hs_game_object_8cpp}{이 파일의 문서화 페이지로 가기}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hs_game_object_8h}{hsGameObject.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hs_input_8h}{hsInput.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hs_time_8h}{hsTime.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hs_transform_8h}{hsTransform.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00006}\mbox{\hyperlink{namespacehs_1_1object}{00006}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacehs_1_1object}{hs::object}}}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00008}\mbox{\hyperlink{namespacehs_1_1object_a08beac466a4776be5febf67992be2ae8}{00008}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespacehs_1_1object_a08beac466a4776be5febf67992be2ae8}{Destory}}(\mbox{\hyperlink{classhs_1_1_game_object}{GameObject}}*\ gameObject)}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00009}00009\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00010}00010\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (gameObject\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00011}00011\ \ \ \ \ \ \ \ \ \ \ \ \ gameObject-\/>death();}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00012}00012\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00013}00013\ \}}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00015}00015\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacehs}{hs}}}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00016}00016\ \{}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00017}\mbox{\hyperlink{classhs_1_1_game_object_a692bb3508e8a5d2e1461bffd8370e502}{00017}}\ \ \ \ \ \mbox{\hyperlink{classhs_1_1_game_object_a692bb3508e8a5d2e1461bffd8370e502}{GameObject::GameObject}}()}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00018}00018\ \ \ \ \ \ \ \ \ :\ mState(\mbox{\hyperlink{classhs_1_1_game_object_aee636306259058436342242ff90806d1}{eState}}::\mbox{\hyperlink{classhs_1_1_game_object_aee636306259058436342242ff90806d1a4d3d769b812b6faa6b76e1a8abaece2d}{Active}})}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00019}00019\ \ \ \ \ \ \ \ \ ,\ mComponents\{\}}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00020}00020\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00021}00021\ \ \ \ \ \ \ \ \ mComponents.resize((UINT)\mbox{\hyperlink{namespacehs_1_1enums_adbc1f9eacd808ec4b80283b6b010b48aa87557f11575c0ad78e4e28abedc13b6e}{enums::eComponentType::End}});}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00022}00022\ \ \ \ \ \ \ \ \ initializeTransform();}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00023}00023\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00024}\mbox{\hyperlink{classhs_1_1_game_object_a5d7abf783db58326d3a11f6bb9e0d3d0}{00024}}\ \ \ \ \ \mbox{\hyperlink{classhs_1_1_game_object_a5d7abf783db58326d3a11f6bb9e0d3d0}{GameObject::\string~GameObject}}()}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00025}00025\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{classhs_1_1_component}{Component}}*\ comp\ :\ mComponents)}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (comp\ ==\ \textcolor{keyword}{nullptr})\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ comp;}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ comp\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00032}00032\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00033}\mbox{\hyperlink{classhs_1_1_game_object_a8ba11912bf71edd4e3a6d3ab7b1f9a12}{00033}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhs_1_1_game_object_a8ba11912bf71edd4e3a6d3ab7b1f9a12}{GameObject::Initialize}}()}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00034}00034\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{classhs_1_1_component}{Component}}*\ comp\ :\ mComponents)}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (comp\ ==\ \textcolor{keyword}{nullptr})\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ comp-\/>Initialize();}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00040}00040\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00041}\mbox{\hyperlink{classhs_1_1_game_object_a0f02645a9823e51547b616c9f0dcab06}{00041}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhs_1_1_game_object_a0f02645a9823e51547b616c9f0dcab06}{GameObject::Update}}()}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00042}00042\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{classhs_1_1_component}{Component}}*\ comp\ :\ mComponents)}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (comp\ ==\ \textcolor{keyword}{nullptr})\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ comp-\/>Update();}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00048}00048\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00049}\mbox{\hyperlink{classhs_1_1_game_object_ae0204a9411dcfa86997cf51de178ff0d}{00049}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhs_1_1_game_object_ae0204a9411dcfa86997cf51de178ff0d}{GameObject::LateUpdate}}()}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00050}00050\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{classhs_1_1_component}{Component}}*\ comp\ :\ mComponents)}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00052}00052\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (comp\ ==\ \textcolor{keyword}{nullptr})\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ comp-\/>LateUpdate();}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00056}00056\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00057}\mbox{\hyperlink{classhs_1_1_game_object_a9970405296e8ae46d7ff4505ee6c627c}{00057}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhs_1_1_game_object_a9970405296e8ae46d7ff4505ee6c627c}{GameObject::Render}}(HDC\ hdc)}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00058}00058\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{classhs_1_1_component}{Component}}*\ comp\ :\ mComponents)}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (comp\ ==\ \textcolor{keyword}{nullptr})\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ comp-\/>Render(hdc);}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00064}00064\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00065}00065\ \ \ \ \ \textcolor{keywordtype}{void}\ GameObject::initializeTransform()}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00066}00066\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classhs_1_1_game_object_ac198dad144214ea9e0f7e48685303965}{AddComponent<Transform>}}();}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00068}00068\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_game_object_8cpp_source_l00069}00069\ \}}
+
+\end{DoxyCode}

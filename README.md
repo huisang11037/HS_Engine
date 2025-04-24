@@ -1,6 +1,6 @@
-Windows API ë° DirectX 11 í•™ìŠµ ìš©ë„ì˜ ìžì²´ ê²Œìž„ ì—”ì§„ ì œìž‘ í”„ë¡œì íŠ¸ìž…ë‹ˆë‹¤.
+Windows API ¹× DirectX 11 ÇÐ½À ¿ëµµÀÇ ÀÚÃ¼ °ÔÀÓ ¿£Áø Á¦ÀÛ ÇÁ·ÎÁ§Æ®ÀÔ´Ï´Ù.
 
-ë‹¤ìŒ ê°•ì˜ë¥¼ ì°¸ê³ í•˜ì—¬ ì œìž‘ ì§„í–‰ ì¤‘ìž…ë‹ˆë‹¤.
+´ÙÀ½ °­ÀÇ¸¦ Âü°íÇÏ¿© Á¦ÀÛ ÁøÇà ÁßÀÔ´Ï´Ù.
 
 
 https://youtube.com/playlist?list=PLWKwcHKTXy5RSkINElI7wZOwn9z4RcJff&si=Di2BeHcspZ1OirOR

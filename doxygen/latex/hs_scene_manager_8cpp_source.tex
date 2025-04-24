@@ -1,0 +1,54 @@
+\doxysection{hs\+Scene\+Manager.\+cpp}
+\hypertarget{hs_scene_manager_8cpp_source}{}\label{hs_scene_manager_8cpp_source}\index{HSEngine\_SOURCE/hsSceneManager.cpp@{HSEngine\_SOURCE/hsSceneManager.cpp}}
+\mbox{\hyperlink{hs_scene_manager_8cpp}{이 파일의 문서화 페이지로 가기}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hs_scene_manager_8h}{hsSceneManager.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacehs}{hs}}}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00004}00004\ \{}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00005}00005\ \ \ \ \ std::map<std::wstring,\ Scene*>\ SceneManager::mScenes\ =\ \{\};}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00006}00006\ \ \ \ \ \mbox{\hyperlink{classhs_1_1_scene}{Scene}}*\ SceneManager::mCurrentScene\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00008}\mbox{\hyperlink{classhs_1_1_scene_manager_a989b8b04c9d4b760a44e38a0bc84b9ad}{00008}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhs_1_1_scene_manager_a989b8b04c9d4b760a44e38a0bc84b9ad}{SceneManager::Initialize}}()}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00009}00009\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00010}00010\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00011}\mbox{\hyperlink{classhs_1_1_scene_manager_ac2bd1a8af30daaf4dd51b3407659c80a}{00011}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhs_1_1_scene_manager_ac2bd1a8af30daaf4dd51b3407659c80a}{SceneManager::Update}}()}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00012}00012\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00013}00013\ \ \ \ \ \ \ \ \ mCurrentScene-\/>\mbox{\hyperlink{classhs_1_1_scene_ad47a88aec21c541c4d28a0ed9f64b9ba}{Update}}();}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00014}00014\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00015}\mbox{\hyperlink{classhs_1_1_scene_manager_a3fab889888f8126159f5b059e5859b6c}{00015}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhs_1_1_scene_manager_a3fab889888f8126159f5b059e5859b6c}{SceneManager::LateUpdate}}()}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00016}00016\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00017}00017\ \ \ \ \ \ \ \ \ mCurrentScene-\/>LateUpdate();}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00018}00018\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00019}\mbox{\hyperlink{classhs_1_1_scene_manager_aafe5f27dda8dc32576da8f0b26bc652a}{00019}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhs_1_1_scene_manager_aafe5f27dda8dc32576da8f0b26bc652a}{SceneManager::Render}}(HDC\ hdc)}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00020}00020\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00021}00021\ \ \ \ \ \ \ \ \ mCurrentScene-\/>Render(hdc);}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00022}00022\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00023}\mbox{\hyperlink{classhs_1_1_scene_manager_afc96c5aab0ccf58e38c1e321b4a90ef3}{00023}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhs_1_1_scene_manager_afc96c5aab0ccf58e38c1e321b4a90ef3}{SceneManager::Destroy}}()}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00024}00024\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ mCurrentScene-\/>Destroy();}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00026}00026\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00027}\mbox{\hyperlink{classhs_1_1_scene_manager_a33492ed7c97529a898e80ac429076476}{00027}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhs_1_1_scene_manager_a33492ed7c97529a898e80ac429076476}{SceneManager::Release}}()}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00028}00028\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ iter\ :\ mScenes)}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ iter.second;}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ iter.second\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00034}00034\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00035}\mbox{\hyperlink{classhs_1_1_scene_manager_ac64fcdc8caf7eb6c482ce489e74f33f8}{00035}}\ \ \ \ \ \mbox{\hyperlink{classhs_1_1_scene}{Scene}}*\ \mbox{\hyperlink{classhs_1_1_scene_manager_ac64fcdc8caf7eb6c482ce489e74f33f8}{SceneManager::LoadScene}}(\textcolor{keyword}{const}\ std::wstring\&\ name)}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00036}00036\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mCurrentScene)\ mCurrentScene-\/>\mbox{\hyperlink{classhs_1_1_scene_a600937a66bf5916b29537faa15fbc080}{OnExit}}();}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ std::map<std::wstring,\ Scene*>::iterator\ iter\ =\ mScenes.find(name);}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (iter\ ==\ mScenes.end())\ assert(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ mCurrentScene\ =\ iter-\/>second;}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ mCurrentScene-\/>OnEnter();}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ iter-\/>second;}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00047}00047\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_scene_manager_8cpp_source_l00048}00048\ \}}
+
+\end{DoxyCode}

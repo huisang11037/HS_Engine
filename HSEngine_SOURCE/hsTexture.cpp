@@ -9,8 +9,7 @@ namespace hs::graphcis
 	Texture* Texture::Create(const std::wstring& name, UINT width, UINT height)
 	{
 		Texture* image = Resources::Find<Texture>(name);
-		if (image)
-			return image;
+		if (image) assert(false);
 
 		image = new Texture();
 		image->SetName(name);

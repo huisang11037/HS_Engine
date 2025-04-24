@@ -1,0 +1,148 @@
+\doxysection{hs\+::Layer 클래스 참조}
+\hypertarget{classhs_1_1_layer}{}\label{classhs_1_1_layer}\index{hs::Layer@{hs::Layer}}
+
+
+레이어는 씬에 종속되어 게임 오브젝트를 관리합니다.  
+
+
+
+
+{\ttfamily \#include $<$hs\+Layer.\+h$>$}
+
+hs\+::Layer에 대한 상속 다이어그램 \+: \begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classhs_1_1_layer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhs_1_1_layer_ae71863368371f99a82dfaa6472024d8a}{Layer}} ()
+\item 
+\mbox{\hyperlink{classhs_1_1_layer_ac27bfc6e66acf7e48a00856164a8a491}{\texorpdfstring{$\sim$}{\string~}\+Layer}} ()
+\item 
+virtual void \mbox{\hyperlink{classhs_1_1_layer_a3340ebd057a47b3beb6e3d069061dbf4}{Initialize}} ()
+\item 
+virtual void \mbox{\hyperlink{classhs_1_1_layer_a96bffd1f52581a9d15097f6323a70d66}{Update}} ()
+\item 
+virtual void \mbox{\hyperlink{classhs_1_1_layer_af255ce1184010a1ee215f2bdfa2da356}{Late\+Update}} ()
+\item 
+virtual void \mbox{\hyperlink{classhs_1_1_layer_afcc205ffd4fea8afa0ddf45ccf9dc16b}{Render}} (HDC hdc)
+\item 
+virtual void \mbox{\hyperlink{classhs_1_1_layer_af5816a591159587fe0170a7a99af896a}{Destroy}} ()
+\item 
+void \mbox{\hyperlink{classhs_1_1_layer_a368335b28139f7c6eff590bba3b90dff}{Add\+Game\+Object}} (\mbox{\hyperlink{classhs_1_1_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}game\+Object)
+\end{DoxyCompactItemize}
+\doxysubsection*{\mbox{\hyperlink{classhs_1_1_entity}{hs\+::\+Entity}}(으)로부터 상속된 Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhs_1_1_entity_af3cef436d0ffd259d99e505a987428f4}{Entity}} ()
+\item 
+virtual \mbox{\hyperlink{classhs_1_1_entity_ad30b89f98b0edf4f969370b949b42adf}{\texorpdfstring{$\sim$}{\string~}\+Entity}} ()
+\item 
+void \mbox{\hyperlink{classhs_1_1_entity_a477f58255303b66fb51c0f36f9caf534}{Set\+Name}} (const std\+::wstring \&name)
+\item 
+const std\+::wstring \& \mbox{\hyperlink{classhs_1_1_entity_a50626d2175dc190d0a16ebdcb6962b0d}{Get\+Name}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+레이어는 씬에 종속되어 게임 오브젝트를 관리합니다. 
+
+하위 레이어일수록 상위 레이어에 의해 가려집니다. 
+
+\mbox{\hyperlink{hs_layer_8h_source}{hs\+Layer.\+h}} 파일의 \mbox{\hyperlink{hs_layer_8h_source_l00012}{12}} 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\Hypertarget{classhs_1_1_layer_ae71863368371f99a82dfaa6472024d8a}\index{hs::Layer@{hs::Layer}!Layer@{Layer}}
+\index{Layer@{Layer}!hs::Layer@{hs::Layer}}
+\doxysubsubsection{\texorpdfstring{Layer()}{Layer()}}
+{\footnotesize\ttfamily \label{classhs_1_1_layer_ae71863368371f99a82dfaa6472024d8a} 
+hs\+::\+Layer\+::\+Layer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{hs_layer_8cpp_source}{hs\+Layer.\+cpp}} 파일의 \mbox{\hyperlink{hs_layer_8cpp_source_l00006}{6}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1_layer_ac27bfc6e66acf7e48a00856164a8a491}\index{hs::Layer@{hs::Layer}!````~Layer@{\texorpdfstring{$\sim$}{\string~}Layer}}
+\index{````~Layer@{\texorpdfstring{$\sim$}{\string~}Layer}!hs::Layer@{hs::Layer}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Layer()}{\string~Layer()}}
+{\footnotesize\ttfamily \label{classhs_1_1_layer_ac27bfc6e66acf7e48a00856164a8a491} 
+hs\+::\+Layer\+::\texorpdfstring{$\sim$}{\string~}\+Layer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{hs_layer_8cpp_source}{hs\+Layer.\+cpp}} 파일의 \mbox{\hyperlink{hs_layer_8cpp_source_l00011}{11}} 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\Hypertarget{classhs_1_1_layer_a368335b28139f7c6eff590bba3b90dff}\index{hs::Layer@{hs::Layer}!AddGameObject@{AddGameObject}}
+\index{AddGameObject@{AddGameObject}!hs::Layer@{hs::Layer}}
+\doxysubsubsection{\texorpdfstring{AddGameObject()}{AddGameObject()}}
+{\footnotesize\ttfamily \label{classhs_1_1_layer_a368335b28139f7c6eff590bba3b90dff} 
+void hs\+::\+Layer\+::\+Add\+Game\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhs_1_1_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}}]{game\+Object}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{hs_layer_8cpp_source}{hs\+Layer.\+cpp}} 파일의 \mbox{\hyperlink{hs_layer_8cpp_source_l00069}{69}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1_layer_af5816a591159587fe0170a7a99af896a}\index{hs::Layer@{hs::Layer}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!hs::Layer@{hs::Layer}}
+\doxysubsubsection{\texorpdfstring{Destroy()}{Destroy()}}
+{\footnotesize\ttfamily \label{classhs_1_1_layer_af5816a591159587fe0170a7a99af896a} 
+void hs\+::\+Layer\+::\+Destroy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{hs_layer_8cpp_source}{hs\+Layer.\+cpp}} 파일의 \mbox{\hyperlink{hs_layer_8cpp_source_l00062}{62}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1_layer_a3340ebd057a47b3beb6e3d069061dbf4}\index{hs::Layer@{hs::Layer}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!hs::Layer@{hs::Layer}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily \label{classhs_1_1_layer_a3340ebd057a47b3beb6e3d069061dbf4} 
+void hs\+::\+Layer\+::\+Initialize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{hs_layer_8cpp_source}{hs\+Layer.\+cpp}} 파일의 \mbox{\hyperlink{hs_layer_8cpp_source_l00022}{22}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1_layer_af255ce1184010a1ee215f2bdfa2da356}\index{hs::Layer@{hs::Layer}!LateUpdate@{LateUpdate}}
+\index{LateUpdate@{LateUpdate}!hs::Layer@{hs::Layer}}
+\doxysubsubsection{\texorpdfstring{LateUpdate()}{LateUpdate()}}
+{\footnotesize\ttfamily \label{classhs_1_1_layer_af255ce1184010a1ee215f2bdfa2da356} 
+void hs\+::\+Layer\+::\+Late\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{hs_layer_8cpp_source}{hs\+Layer.\+cpp}} 파일의 \mbox{\hyperlink{hs_layer_8cpp_source_l00042}{42}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1_layer_afcc205ffd4fea8afa0ddf45ccf9dc16b}\index{hs::Layer@{hs::Layer}!Render@{Render}}
+\index{Render@{Render}!hs::Layer@{hs::Layer}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily \label{classhs_1_1_layer_afcc205ffd4fea8afa0ddf45ccf9dc16b} 
+void hs\+::\+Layer\+::\+Render (\begin{DoxyParamCaption}\item[{HDC}]{hdc}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{hs_layer_8cpp_source}{hs\+Layer.\+cpp}} 파일의 \mbox{\hyperlink{hs_layer_8cpp_source_l00052}{52}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1_layer_a96bffd1f52581a9d15097f6323a70d66}\index{hs::Layer@{hs::Layer}!Update@{Update}}
+\index{Update@{Update}!hs::Layer@{hs::Layer}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{classhs_1_1_layer_a96bffd1f52581a9d15097f6323a70d66} 
+void hs\+::\+Layer\+::\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{hs_layer_8cpp_source}{hs\+Layer.\+cpp}} 파일의 \mbox{\hyperlink{hs_layer_8cpp_source_l00032}{32}} 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+HSEngine\+\_\+\+SOURCE/\mbox{\hyperlink{hs_layer_8h}{hs\+Layer.\+h}}\item 
+HSEngine\+\_\+\+SOURCE/\mbox{\hyperlink{hs_layer_8cpp}{hs\+Layer.\+cpp}}\end{DoxyCompactItemize}

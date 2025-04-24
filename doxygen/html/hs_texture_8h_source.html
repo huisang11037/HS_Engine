@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>HS Engine: HSEngine_SOURCE/hsTexture.h 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">HS Engine<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">own game engine</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="검색" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('hs_texture_8h_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">hsTexture.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="hs_texture_8h.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="hs_resource_8h.html">hsResource.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacehs_1_1graphcis.html">hs::graphcis</a></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classhs_1_1graphcis_1_1_texture.html">   10</a></span>    <span class="keyword">class </span><a class="code hl_function" href="classhs_1_1graphcis_1_1_texture.html#ab264dadbaac4e6fc287a6e3dbe5a33dd">Texture</a> : <span class="keyword">public</span> <a class="code hl_function" href="classhs_1_1_resource.html#a4f536d5c063d0b69ab32505af1f8b431">Resource</a></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classhs_1_1graphcis_1_1_texture.html#abf322a23c42993256458747fc909afa4">   13</a></span>        <span class="keyword">enum class</span> <a class="code hl_enumeration" href="classhs_1_1graphcis_1_1_texture.html#abf322a23c42993256458747fc909afa4">eTextureType</a></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classhs_1_1graphcis_1_1_texture.html#abf322a23c42993256458747fc909afa4a021d8346462df53d4272607b0f41a8d8">   15</a></span>            <a class="code hl_enumvalue" href="classhs_1_1graphcis_1_1_texture.html#abf322a23c42993256458747fc909afa4a021d8346462df53d4272607b0f41a8d8">Bmp</a>,</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classhs_1_1graphcis_1_1_texture.html#abf322a23c42993256458747fc909afa4af8fd4f1b5b05c6b1cc6a661141fd4f54">   16</a></span>            <a class="code hl_enumvalue" href="classhs_1_1graphcis_1_1_texture.html#abf322a23c42993256458747fc909afa4af8fd4f1b5b05c6b1cc6a661141fd4f54">Png</a>,</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classhs_1_1graphcis_1_1_texture.html#abf322a23c42993256458747fc909afa4a6adf97f83acf6453d4a6a4b1070f3754">   17</a></span>            <a class="code hl_enumvalue" href="classhs_1_1graphcis_1_1_texture.html#abf322a23c42993256458747fc909afa4a6adf97f83acf6453d4a6a4b1070f3754">None</a>,</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        };</div>
+</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keyword">static</span> <a class="code hl_class" href="classhs_1_1graphcis_1_1_texture.html">Texture</a>* <a class="code hl_function" href="classhs_1_1graphcis_1_1_texture.html#a35c867304195703bde04a44e9dba39cc">Create</a>(<span class="keyword">const</span> std::wstring&amp; name, UINT width, UINT height);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <a class="code hl_function" href="classhs_1_1graphcis_1_1_texture.html#ab264dadbaac4e6fc287a6e3dbe5a33dd">Texture</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <a class="code hl_function" href="classhs_1_1graphcis_1_1_texture.html#a7aa0dc0191da6a41c5a20c4865754eb3">~Texture</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keyword">virtual</span> HRESULT <a class="code hl_function" href="classhs_1_1graphcis_1_1_texture.html#a7c438f35e058f9791dabd66ed6fa5d4d">Load</a>(<span class="keyword">const</span> std::wstring&amp; path) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classhs_1_1graphcis_1_1_texture.html#ab57ee588edf16fbc00cca1a268837535">   27</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classhs_1_1graphcis_1_1_texture.html#ab57ee588edf16fbc00cca1a268837535">SetWidth</a>(UINT width) { mWidth = width; }</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classhs_1_1graphcis_1_1_texture.html#a03d9f6b41b6ee32d61ade8d0609e2699">   28</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classhs_1_1graphcis_1_1_texture.html#a03d9f6b41b6ee32d61ade8d0609e2699">SetHeight</a>(UINT height) { mHeight = height; }</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classhs_1_1graphcis_1_1_texture.html#ad416a52e290688b2ca8931ca82dccc6d">   29</a></span>        UINT <a class="code hl_function" href="classhs_1_1graphcis_1_1_texture.html#ad416a52e290688b2ca8931ca82dccc6d">GetWidth</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mWidth; }</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classhs_1_1graphcis_1_1_texture.html#a70b1f0def9a15b51a57e347a8a9aa0dd">   30</a></span>        UINT <a class="code hl_function" href="classhs_1_1graphcis_1_1_texture.html#a70b1f0def9a15b51a57e347a8a9aa0dd">GetHeight</a>()<span class="keyword"> const  </span>{ <span class="keywordflow">return</span> mHeight; }</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classhs_1_1graphcis_1_1_texture.html#a521915a44b2babf8cba743f572d84f06">   31</a></span>        HDC <a class="code hl_function" href="classhs_1_1graphcis_1_1_texture.html#a521915a44b2babf8cba743f572d84f06">GetHdc</a>()<span class="keyword"> const  </span>{ <span class="keywordflow">return</span> mHdc; }</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classhs_1_1graphcis_1_1_texture.html#af0aaaacd816e41aa82786e7a63416c50">   32</a></span>        <a class="code hl_enumeration" href="classhs_1_1graphcis_1_1_texture.html#abf322a23c42993256458747fc909afa4">eTextureType</a> <a class="code hl_function" href="classhs_1_1graphcis_1_1_texture.html#af0aaaacd816e41aa82786e7a63416c50">GetTextureType</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mType; }</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classhs_1_1graphcis_1_1_texture.html#ac01fe13d4379641c296d61c89b419344">   33</a></span>        Gdiplus::Image* <a class="code hl_function" href="classhs_1_1graphcis_1_1_texture.html#ac01fe13d4379641c296d61c89b419344">GetImage</a>() { <span class="keywordflow">return</span> mImage; }</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classhs_1_1graphcis_1_1_texture.html#a7c1e3b223f6a798c589c4e552c6b0883">   34</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="classhs_1_1graphcis_1_1_texture.html#a7c1e3b223f6a798c589c4e552c6b0883">IsAlpha</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mIsAlpha; }</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordtype">bool</span> mIsAlpha;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <a class="code hl_enumeration" href="classhs_1_1graphcis_1_1_texture.html#abf322a23c42993256458747fc909afa4">eTextureType</a> mType;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        Gdiplus::Image* mImage;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        HBITMAP mBitmap;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        HDC mHdc;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        UINT mWidth;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        UINT mHeight;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    };</div>
+</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>}</div>
+<div class="ttc" id="aclasshs_1_1_resource_html_a4f536d5c063d0b69ab32505af1f8b431"><div class="ttname"><a href="classhs_1_1_resource.html#a4f536d5c063d0b69ab32505af1f8b431">hs::Resource::Resource</a></div><div class="ttdeci">Resource(enums::eResourceType type)</div><div class="ttdef"><b>Definition</b> <a href="hs_resource_8cpp_source.html#l00005">hsResource.cpp:5</a></div></div>
+<div class="ttc" id="aclasshs_1_1graphcis_1_1_texture_html"><div class="ttname"><a href="classhs_1_1graphcis_1_1_texture.html">hs::graphcis::Texture</a></div><div class="ttdoc">텍스처인 리소스입니다.</div><div class="ttdef"><b>Definition</b> <a href="#l00010">hsTexture.h:11</a></div></div>
+<div class="ttc" id="aclasshs_1_1graphcis_1_1_texture_html_a03d9f6b41b6ee32d61ade8d0609e2699"><div class="ttname"><a href="classhs_1_1graphcis_1_1_texture.html#a03d9f6b41b6ee32d61ade8d0609e2699">hs::graphcis::Texture::SetHeight</a></div><div class="ttdeci">void SetHeight(UINT height)</div><div class="ttdef"><b>Definition</b> <a href="#l00028">hsTexture.h:28</a></div></div>
+<div class="ttc" id="aclasshs_1_1graphcis_1_1_texture_html_a35c867304195703bde04a44e9dba39cc"><div class="ttname"><a href="classhs_1_1graphcis_1_1_texture.html#a35c867304195703bde04a44e9dba39cc">hs::graphcis::Texture::Create</a></div><div class="ttdeci">static Texture * Create(const std::wstring &amp;name, UINT width, UINT height)</div><div class="ttdef"><b>Definition</b> <a href="hs_texture_8cpp_source.html#l00009">hsTexture.cpp:9</a></div></div>
+<div class="ttc" id="aclasshs_1_1graphcis_1_1_texture_html_a521915a44b2babf8cba743f572d84f06"><div class="ttname"><a href="classhs_1_1graphcis_1_1_texture.html#a521915a44b2babf8cba743f572d84f06">hs::graphcis::Texture::GetHdc</a></div><div class="ttdeci">HDC GetHdc() const</div><div class="ttdef"><b>Definition</b> <a href="#l00031">hsTexture.h:31</a></div></div>
+<div class="ttc" id="aclasshs_1_1graphcis_1_1_texture_html_a70b1f0def9a15b51a57e347a8a9aa0dd"><div class="ttname"><a href="classhs_1_1graphcis_1_1_texture.html#a70b1f0def9a15b51a57e347a8a9aa0dd">hs::graphcis::Texture::GetHeight</a></div><div class="ttdeci">UINT GetHeight() const</div><div class="ttdef"><b>Definition</b> <a href="#l00030">hsTexture.h:30</a></div></div>
+<div class="ttc" id="aclasshs_1_1graphcis_1_1_texture_html_a7aa0dc0191da6a41c5a20c4865754eb3"><div class="ttname"><a href="classhs_1_1graphcis_1_1_texture.html#a7aa0dc0191da6a41c5a20c4865754eb3">hs::graphcis::Texture::~Texture</a></div><div class="ttdeci">~Texture()</div><div class="ttdef"><b>Definition</b> <a href="hs_texture_8cpp_source.html#l00044">hsTexture.cpp:44</a></div></div>
+<div class="ttc" id="aclasshs_1_1graphcis_1_1_texture_html_a7c1e3b223f6a798c589c4e552c6b0883"><div class="ttname"><a href="classhs_1_1graphcis_1_1_texture.html#a7c1e3b223f6a798c589c4e552c6b0883">hs::graphcis::Texture::IsAlpha</a></div><div class="ttdeci">bool IsAlpha() const</div><div class="ttdef"><b>Definition</b> <a href="#l00034">hsTexture.h:34</a></div></div>
+<div class="ttc" id="aclasshs_1_1graphcis_1_1_texture_html_a7c438f35e058f9791dabd66ed6fa5d4d"><div class="ttname"><a href="classhs_1_1graphcis_1_1_texture.html#a7c438f35e058f9791dabd66ed6fa5d4d">hs::graphcis::Texture::Load</a></div><div class="ttdeci">virtual HRESULT Load(const std::wstring &amp;path) override</div><div class="ttdef"><b>Definition</b> <a href="hs_texture_8cpp_source.html#l00047">hsTexture.cpp:47</a></div></div>
+<div class="ttc" id="aclasshs_1_1graphcis_1_1_texture_html_ab264dadbaac4e6fc287a6e3dbe5a33dd"><div class="ttname"><a href="classhs_1_1graphcis_1_1_texture.html#ab264dadbaac4e6fc287a6e3dbe5a33dd">hs::graphcis::Texture::Texture</a></div><div class="ttdeci">Texture()</div><div class="ttdef"><b>Definition</b> <a href="hs_texture_8cpp_source.html#l00032">hsTexture.cpp:32</a></div></div>
+<div class="ttc" id="aclasshs_1_1graphcis_1_1_texture_html_ab57ee588edf16fbc00cca1a268837535"><div class="ttname"><a href="classhs_1_1graphcis_1_1_texture.html#ab57ee588edf16fbc00cca1a268837535">hs::graphcis::Texture::SetWidth</a></div><div class="ttdeci">void SetWidth(UINT width)</div><div class="ttdef"><b>Definition</b> <a href="#l00027">hsTexture.h:27</a></div></div>
+<div class="ttc" id="aclasshs_1_1graphcis_1_1_texture_html_abf322a23c42993256458747fc909afa4"><div class="ttname"><a href="classhs_1_1graphcis_1_1_texture.html#abf322a23c42993256458747fc909afa4">hs::graphcis::Texture::eTextureType</a></div><div class="ttdeci">eTextureType</div><div class="ttdef"><b>Definition</b> <a href="#l00013">hsTexture.h:14</a></div></div>
+<div class="ttc" id="aclasshs_1_1graphcis_1_1_texture_html_abf322a23c42993256458747fc909afa4a021d8346462df53d4272607b0f41a8d8"><div class="ttname"><a href="classhs_1_1graphcis_1_1_texture.html#abf322a23c42993256458747fc909afa4a021d8346462df53d4272607b0f41a8d8">hs::graphcis::Texture::eTextureType::Bmp</a></div><div class="ttdeci">@ Bmp</div><div class="ttdef"><b>Definition</b> <a href="#l00015">hsTexture.h:15</a></div></div>
+<div class="ttc" id="aclasshs_1_1graphcis_1_1_texture_html_abf322a23c42993256458747fc909afa4a6adf97f83acf6453d4a6a4b1070f3754"><div class="ttname"><a href="classhs_1_1graphcis_1_1_texture.html#abf322a23c42993256458747fc909afa4a6adf97f83acf6453d4a6a4b1070f3754">hs::graphcis::Texture::eTextureType::None</a></div><div class="ttdeci">@ None</div><div class="ttdef"><b>Definition</b> <a href="#l00017">hsTexture.h:17</a></div></div>
+<div class="ttc" id="aclasshs_1_1graphcis_1_1_texture_html_abf322a23c42993256458747fc909afa4af8fd4f1b5b05c6b1cc6a661141fd4f54"><div class="ttname"><a href="classhs_1_1graphcis_1_1_texture.html#abf322a23c42993256458747fc909afa4af8fd4f1b5b05c6b1cc6a661141fd4f54">hs::graphcis::Texture::eTextureType::Png</a></div><div class="ttdeci">@ Png</div><div class="ttdef"><b>Definition</b> <a href="#l00016">hsTexture.h:16</a></div></div>
+<div class="ttc" id="aclasshs_1_1graphcis_1_1_texture_html_ac01fe13d4379641c296d61c89b419344"><div class="ttname"><a href="classhs_1_1graphcis_1_1_texture.html#ac01fe13d4379641c296d61c89b419344">hs::graphcis::Texture::GetImage</a></div><div class="ttdeci">Gdiplus::Image * GetImage()</div><div class="ttdef"><b>Definition</b> <a href="#l00033">hsTexture.h:33</a></div></div>
+<div class="ttc" id="aclasshs_1_1graphcis_1_1_texture_html_ad416a52e290688b2ca8931ca82dccc6d"><div class="ttname"><a href="classhs_1_1graphcis_1_1_texture.html#ad416a52e290688b2ca8931ca82dccc6d">hs::graphcis::Texture::GetWidth</a></div><div class="ttdeci">UINT GetWidth() const</div><div class="ttdef"><b>Definition</b> <a href="#l00029">hsTexture.h:29</a></div></div>
+<div class="ttc" id="aclasshs_1_1graphcis_1_1_texture_html_af0aaaacd816e41aa82786e7a63416c50"><div class="ttname"><a href="classhs_1_1graphcis_1_1_texture.html#af0aaaacd816e41aa82786e7a63416c50">hs::graphcis::Texture::GetTextureType</a></div><div class="ttdeci">eTextureType GetTextureType() const</div><div class="ttdef"><b>Definition</b> <a href="#l00032">hsTexture.h:32</a></div></div>
+<div class="ttc" id="ahs_resource_8h_html"><div class="ttname"><a href="hs_resource_8h.html">hsResource.h</a></div></div>
+<div class="ttc" id="anamespacehs_1_1graphcis_html"><div class="ttname"><a href="namespacehs_1_1graphcis.html">hs::graphcis</a></div><div class="ttdef"><b>Definition</b> <a href="hs_texture_8cpp_source.html#l00007">hsTexture.cpp:8</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_62e85da242e0c4920bf70b45bd50516f.html">HSEngine_SOURCE</a></li><li class="navelem"><a class="el" href="hs_texture_8h.html">hsTexture.h</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

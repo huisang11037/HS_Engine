@@ -1,0 +1,56 @@
+\doxysection{hs\+Resources.\+h}
+\hypertarget{hs_resources_8h_source}{}\label{hs_resources_8h_source}\index{HSEngine\_SOURCE/hsResources.h@{HSEngine\_SOURCE/hsResources.h}}
+\mbox{\hyperlink{hs_resources_8h}{이 파일의 문서화 페이지로 가기}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hs_resource_8h}{hsResource.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00004}00004\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacehs}{hs}}}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00005}00005\ \{}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00009}\mbox{\hyperlink{classhs_1_1_resources}{00009}}\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classhs_1_1_resources}{Resources}}}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00010}00010\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00011}00011\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00013}\mbox{\hyperlink{classhs_1_1_resources_a4e3a24d44f111deb8150e92c0cbd7047}{00013}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ T*\ \mbox{\hyperlink{classhs_1_1_resources_a4e3a24d44f111deb8150e92c0cbd7047}{Find}}(\textcolor{keyword}{const}\ std::wstring\&\ key)}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00014}00014\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ iter\ =\ mResources.find(key);}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (iter\ ==\ mResources.end())\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{dynamic\_cast<}T*\textcolor{keyword}{>}(iter-\/>second);}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00019}00019\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00022}\mbox{\hyperlink{classhs_1_1_resources_a466633fc11a62cc3fb9622ce7f080f3c}{00022}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ T*\ \mbox{\hyperlink{classhs_1_1_resources_a466633fc11a62cc3fb9622ce7f080f3c}{Load}}(\textcolor{keyword}{const}\ std::wstring\&\ key,\ \textcolor{keyword}{const}\ std::wstring\&\ path)}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00023}00023\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ T*\ resource\ =\ \mbox{\hyperlink{classhs_1_1_resources_a4e3a24d44f111deb8150e92c0cbd7047}{Resources::Find<T>}}(key);}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (resource\ !=\ \textcolor{keyword}{nullptr})\ assert(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ resource\ =\ \textcolor{keyword}{new}\ T();}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (FAILED(resource-\/>Load(path)))\ assert(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ resource-\/>SetName(key);}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ resource-\/>SetPath(path);}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ mResources.insert(std::make\_pair(key,\ resource));}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ resource;}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00035}00035\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00037}\mbox{\hyperlink{classhs_1_1_resources_a579c7513b8037f6d0c3d63745a3f6d1f}{00037}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhs_1_1_resources_a579c7513b8037f6d0c3d63745a3f6d1f}{Insert}}(\textcolor{keyword}{const}\ std::wstring\&\ key,\ \mbox{\hyperlink{classhs_1_1_resource}{Resource}}*\ resource)}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00038}00038\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ mResources.insert(std::make\_pair(key,\ resource));}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00040}00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00041}\mbox{\hyperlink{classhs_1_1_resources_adf5b60b7c99dadaf3bf36969fd2c4594}{00041}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhs_1_1_resources_adf5b60b7c99dadaf3bf36969fd2c4594}{Release}}()}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00042}00042\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ iter\ :\ mResources)}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ iter.second;}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ iter.second\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00048}00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00050}00050\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::map<std::wstring,\ Resource*>\ mResources;}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00052}00052\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{hs_resources_8h_source_l00053}00053\ \}}
+
+\end{DoxyCode}

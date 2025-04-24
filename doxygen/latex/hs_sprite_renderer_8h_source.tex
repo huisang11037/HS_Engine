@@ -1,0 +1,32 @@
+\doxysection{hs\+Sprite\+Renderer.\+h}
+\hypertarget{hs_sprite_renderer_8h_source}{}\label{hs_sprite_renderer_8h_source}\index{HSEngine\_SOURCE/hsSpriteRenderer.h@{HSEngine\_SOURCE/hsSpriteRenderer.h}}
+\mbox{\hyperlink{hs_sprite_renderer_8h}{이 파일의 문서화 페이지로 가기}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{hs_sprite_renderer_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{hs_sprite_renderer_8h_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hs_entity_8h}{hsEntity.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{hs_sprite_renderer_8h_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hs_component_8h}{hsComponent.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{hs_sprite_renderer_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hs_texture_8h}{hsTexture.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{hs_sprite_renderer_8h_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{hs_sprite_renderer_8h_source_l00006}00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacehs}{hs}}}
+\DoxyCodeLine{\Hypertarget{hs_sprite_renderer_8h_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{hs_sprite_renderer_8h_source_l00011}\mbox{\hyperlink{classhs_1_1_sprite_renderer}{00011}}\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classhs_1_1_sprite_renderer_a59054351d2570c4f416eb3cfebd2cba1}{SpriteRenderer}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classhs_1_1_component_a8950a1cb229cebd9b7e1afd8ee4e0ef8}{Component}}}
+\DoxyCodeLine{\Hypertarget{hs_sprite_renderer_8h_source_l00012}00012\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_sprite_renderer_8h_source_l00013}00013\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{hs_sprite_renderer_8h_source_l00014}00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classhs_1_1_sprite_renderer_a59054351d2570c4f416eb3cfebd2cba1}{SpriteRenderer}}();}
+\DoxyCodeLine{\Hypertarget{hs_sprite_renderer_8h_source_l00015}00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classhs_1_1_sprite_renderer_aece49f3d4b5bb4eefb4a04e2b8849adb}{\string~SpriteRenderer}}();}
+\DoxyCodeLine{\Hypertarget{hs_sprite_renderer_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{hs_sprite_renderer_8h_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhs_1_1_sprite_renderer_a469405317911cc7f68885db24df25a46}{Initialize}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{hs_sprite_renderer_8h_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhs_1_1_sprite_renderer_a3e0be1ce4ec28adb5c6aac99dc00d4fc}{Update}}()\ \ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{hs_sprite_renderer_8h_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhs_1_1_sprite_renderer_abd827580a623b1597342acfc98d2e448}{LateUpdate}}()\ \ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{hs_sprite_renderer_8h_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhs_1_1_sprite_renderer_a8c504c41374734a74a4933872f4dd954}{Render}}(HDC\ hdc)\ \ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{hs_sprite_renderer_8h_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{hs_sprite_renderer_8h_source_l00022}\mbox{\hyperlink{classhs_1_1_sprite_renderer_a065c97fce85679f1106f1cd2f35050a7}{00022}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhs_1_1_sprite_renderer_a065c97fce85679f1106f1cd2f35050a7}{SetTexture}}(\mbox{\hyperlink{classhs_1_1graphcis_1_1_texture}{graphcis::Texture}}*\ texture)\ \{\ mTexture\ =\ texture;\ \}}
+\DoxyCodeLine{\Hypertarget{hs_sprite_renderer_8h_source_l00023}\mbox{\hyperlink{classhs_1_1_sprite_renderer_aff1ae9fa9473c2ce14d90ccb92d7657c}{00023}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhs_1_1_sprite_renderer_aff1ae9fa9473c2ce14d90ccb92d7657c}{SetSize}}(\mbox{\hyperlink{strucths_1_1math_1_1_vector2}{math::Vector2}}\ size)\ \{\ mSize\ =\ size;\ \}}
+\DoxyCodeLine{\Hypertarget{hs_sprite_renderer_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{hs_sprite_renderer_8h_source_l00025}00025\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{hs_sprite_renderer_8h_source_l00026}00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classhs_1_1graphcis_1_1_texture}{graphcis::Texture}}*\ mTexture;}
+\DoxyCodeLine{\Hypertarget{hs_sprite_renderer_8h_source_l00027}00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{strucths_1_1math_1_1_vector2}{math::Vector2}}\ mSize;}
+\DoxyCodeLine{\Hypertarget{hs_sprite_renderer_8h_source_l00028}00028\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{hs_sprite_renderer_8h_source_l00029}00029\ \}}
+
+\end{DoxyCode}

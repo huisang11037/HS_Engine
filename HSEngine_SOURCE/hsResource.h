@@ -3,7 +3,10 @@
 
 namespace hs
 {
-	class Resource abstract : public Entity
+	/**
+	* @brief 추상 클래스로서 모든 리소스의 기본 클래스입니다.
+	*/
+	class Resource : public Entity
 	{
 	public:
 		Resource(enums::eResourceType type);

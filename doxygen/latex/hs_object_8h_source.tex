@@ -1,0 +1,42 @@
+\doxysection{hs\+Object.\+h}
+\hypertarget{hs_object_8h_source}{}\label{hs_object_8h_source}\index{HSEngine\_SOURCE/hsObject.h@{HSEngine\_SOURCE/hsObject.h}}
+\mbox{\hyperlink{hs_object_8h}{이 파일의 문서화 페이지로 가기}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{hs_object_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{hs_object_8h_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hs_component_8h}{hsComponent.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{hs_object_8h_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hs_game_object_8h}{hsGameObject.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{hs_object_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hs_layer_8h}{hsLayer.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{hs_object_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hs_scene_8h}{hsScene.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{hs_object_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hs_scene_manager_8h}{hsSceneManager.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{hs_object_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hs_transform_8h}{hsTransform.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{hs_object_8h_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{hs_object_8h_source_l00012}00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacehs_1_1object}{hs::object}}}
+\DoxyCodeLine{\Hypertarget{hs_object_8h_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{hs_object_8h_source_l00014}00014\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{hs_object_8h_source_l00015}00015\ \ \ \ \ \textcolor{keyword}{static}\ T*\ Instantiate(\mbox{\hyperlink{namespacehs_1_1enums_a299adefb1364e08e45dd50a96e5aff47}{hs::enums::eLayerType}}\ type)}
+\DoxyCodeLine{\Hypertarget{hs_object_8h_source_l00016}00016\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_object_8h_source_l00017}00017\ \ \ \ \ \ \ \ \ T*\ gameObject\ =\ \textcolor{keyword}{new}\ T();}
+\DoxyCodeLine{\Hypertarget{hs_object_8h_source_l00018}00018\ \ \ \ \ \ \ \ \ Scene*\ activeScene\ =\ \mbox{\hyperlink{classhs_1_1_scene_manager_a7f51fee0b60735ed4ea10b331c305b5d}{SceneManager::GetActiveScene}}();}
+\DoxyCodeLine{\Hypertarget{hs_object_8h_source_l00019}00019\ \ \ \ \ \ \ \ \ Layer*\ layer\ =\ activeScene-\/>GetLayer(type);}
+\DoxyCodeLine{\Hypertarget{hs_object_8h_source_l00020}00020\ \ \ \ \ \ \ \ \ layer-\/>AddGameObject(gameObject);}
+\DoxyCodeLine{\Hypertarget{hs_object_8h_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{hs_object_8h_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ gameObject;}
+\DoxyCodeLine{\Hypertarget{hs_object_8h_source_l00023}00023\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_object_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{hs_object_8h_source_l00025}00025\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{hs_object_8h_source_l00026}00026\ \ \ \ \ \textcolor{keyword}{static}\ T*\ Instantiate(\mbox{\hyperlink{namespacehs_1_1enums_a299adefb1364e08e45dd50a96e5aff47}{hs::enums::eLayerType}}\ type,\ math::Vector2\ position)}
+\DoxyCodeLine{\Hypertarget{hs_object_8h_source_l00027}00027\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hs_object_8h_source_l00028}00028\ \ \ \ \ \ \ \ \ T*\ gameObject\ =\ \textcolor{keyword}{new}\ T();}
+\DoxyCodeLine{\Hypertarget{hs_object_8h_source_l00029}00029\ \ \ \ \ \ \ \ \ Scene*\ activeScene\ =\ \mbox{\hyperlink{classhs_1_1_scene_manager_a7f51fee0b60735ed4ea10b331c305b5d}{SceneManager::GetActiveScene}}();}
+\DoxyCodeLine{\Hypertarget{hs_object_8h_source_l00030}00030\ \ \ \ \ \ \ \ \ Layer*\ layer\ =\ activeScene-\/>GetLayer(type);}
+\DoxyCodeLine{\Hypertarget{hs_object_8h_source_l00031}00031\ \ \ \ \ \ \ \ \ layer-\/>AddGameObject(gameObject);}
+\DoxyCodeLine{\Hypertarget{hs_object_8h_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{hs_object_8h_source_l00033}00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacehs_1_1enums_adbc1f9eacd808ec4b80283b6b010b48aa2ff4148554480a37f85efd299df04850}{Transform}}*\ tr\ =\ gameObject-\/>GetComponent<\mbox{\hyperlink{namespacehs_1_1enums_adbc1f9eacd808ec4b80283b6b010b48aa2ff4148554480a37f85efd299df04850}{Transform}}>();}
+\DoxyCodeLine{\Hypertarget{hs_object_8h_source_l00034}00034\ \ \ \ \ \ \ \ \ tr-\/>SetPosition(position);}
+\DoxyCodeLine{\Hypertarget{hs_object_8h_source_l00035}00035\ \ \ \ \ \ \ \ \ tr-\/>SetName(L\textcolor{stringliteral}{"{}TR"{}});}
+\DoxyCodeLine{\Hypertarget{hs_object_8h_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{hs_object_8h_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ gameObject;}
+\DoxyCodeLine{\Hypertarget{hs_object_8h_source_l00038}00038\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hs_object_8h_source_l00039}00039\ \}}
+
+\end{DoxyCode}

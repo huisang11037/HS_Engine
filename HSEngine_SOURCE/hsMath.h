@@ -1,6 +1,9 @@
 #pragma once
 #include <cmath>
 
+/**
+* @brief 엔진에 사용되는 수학 관련 함수와 구조체를 정의합니다.
+*/
 namespace hs::math
 {
 	const float PI = 3.14159265358979323846f;

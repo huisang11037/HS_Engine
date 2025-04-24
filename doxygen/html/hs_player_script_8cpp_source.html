@@ -1,0 +1,351 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>HS Engine: HSEngine_Window/hsPlayerScript.cpp 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">HS Engine<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">own game engine</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="검색" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('hs_player_script_8cpp_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">hsPlayerScript.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="hs_player_script_8cpp.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="hs_player_script_8h.html">hsPlayerScript.h</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="hs_input_8h.html">hsInput.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="hs_transform_8h.html">hsTransform.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="hs_time_8h.html">hsTime.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="hs_game_object_8h.html">hsGameObject.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="hs_animator_8h.html">hsAnimator.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="hs_cat_8h.html">hsCat.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="hs_cat_script_8h.html">hsCatScript.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="hs_object_8h.html">hsObject.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="hs_resources_8h.html">hsResources.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacehs.html">hs</a></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="}">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classhs_1_1_player_script.html#ac5f82c332e7a20a1b78d369997bc3790">   14</a></span>    <a class="code hl_function" href="classhs_1_1_player_script.html#ac5f82c332e7a20a1b78d369997bc3790">PlayerScript::PlayerScript</a>()</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        : mState(<a class="code hl_enumeration" href="classhs_1_1_player_script.html#ad8bd764cebdacc47f19b1fef55a5cbc7">ePlayerState</a>::<a class="code hl_enumvalue" href="classhs_1_1_player_script.html#ad8bd764cebdacc47f19b1fef55a5cbc7ae599161956d626eda4cb0a5ffb85271c">Idle</a>)</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        , mAnimator(nullptr)</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    }</div>
+</div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="}">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classhs_1_1_player_script.html#a6939da7f9482752dc71a304cdd984663">   19</a></span>    <a class="code hl_function" href="classhs_1_1_player_script.html#a6939da7f9482752dc71a304cdd984663">PlayerScript::~PlayerScript</a>()</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    }</div>
+</div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classhs_1_1_player_script.html#a396e247ad02749b60b7741b5d2ff553e">   22</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classhs_1_1_player_script.html#a396e247ad02749b60b7741b5d2ff553e">PlayerScript::Initialize</a>()</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    }</div>
+</div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="}">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classhs_1_1_player_script.html#aa047c79f3ab5028ebd385c906afb046f">   25</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classhs_1_1_player_script.html#aa047c79f3ab5028ebd385c906afb046f">PlayerScript::Update</a>()</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordflow">if</span> (mAnimator == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            mAnimator = <a class="code hl_function" href="classhs_1_1_component.html#ae76ddacdaaa23c4663322dccbb064d6e">GetOwner</a>()-&gt;<a class="code hl_function" href="classhs_1_1_game_object.html#a2196f983d980e181f3f1b5662c2bc3f6">GetComponent</a>&lt;<a class="code hl_class" href="classhs_1_1_animator.html">Animator</a>&gt;();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        }</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordflow">switch</span> (mState)</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classhs_1_1_player_script.html#ad8bd764cebdacc47f19b1fef55a5cbc7ae599161956d626eda4cb0a5ffb85271c">hs::PlayerScript::ePlayerState::Idle</a>:</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            idle();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classhs_1_1_player_script.html#ad8bd764cebdacc47f19b1fef55a5cbc7a7a16a854f32231a8df9326136b09ee62">hs::PlayerScript::ePlayerState::Walk</a>:</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            move();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classhs_1_1_player_script.html#ad8bd764cebdacc47f19b1fef55a5cbc7a243924bfd56a682be235638b53961e09">hs::PlayerScript::ePlayerState::Sleep</a>:</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classhs_1_1_player_script.html#ad8bd764cebdacc47f19b1fef55a5cbc7ae699615b0bd77f490b9320500a4f4283">hs::PlayerScript::ePlayerState::GiveWater</a>:</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            giveWater();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classhs_1_1_player_script.html#ad8bd764cebdacc47f19b1fef55a5cbc7adcfafcb4323b102c7e204555d313ba0a">hs::PlayerScript::ePlayerState::Attack</a>:</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    }</div>
+</div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classhs_1_1_player_script.html#af7c2c86b2f5eeeb2c78350851b0c1953">   50</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classhs_1_1_player_script.html#af7c2c86b2f5eeeb2c78350851b0c1953">PlayerScript::LateUpdate</a>()</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
+</div>
+<div class="foldopen" id="foldopen00053" data-start="{" data-end="}">
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classhs_1_1_player_script.html#a6dcc4f10c010a51509bb48cd6d082ce2">   53</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classhs_1_1_player_script.html#a6dcc4f10c010a51509bb48cd6d082ce2">PlayerScript::Render</a>(HDC hdc)</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
+</div>
+<div class="foldopen" id="foldopen00056" data-start="{" data-end="}">
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classhs_1_1_player_script.html#af8f3f58521b32667e0b1dbacc0b1c05b">   56</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classhs_1_1_player_script.html#af8f3f58521b32667e0b1dbacc0b1c05b">PlayerScript::AttackEffect</a>()</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <a class="code hl_class" href="classhs_1_1_cat.html">Cat</a>* cat = object::Instantiate&lt;Cat&gt;(<a class="code hl_enumvalue" href="namespacehs_1_1enums.html#a299adefb1364e08e45dd50a96e5aff47a161e7ce7bfdc89ab4b9f52c1d4c94212">enums::eLayerType::Animal</a>);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <a class="code hl_class" href="classhs_1_1_cat_script.html">CatScript</a>* catSrc = cat-&gt;<a class="code hl_function" href="classhs_1_1_game_object.html#ac198dad144214ea9e0f7e48685303965">AddComponent</a>&lt;<a class="code hl_class" href="classhs_1_1_cat_script.html">CatScript</a>&gt;();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        catSrc-&gt;<a class="code hl_function" href="classhs_1_1_cat_script.html#a2683b92adf856a78728b0b0ff2cbeb54">SetPlayer</a>(<a class="code hl_function" href="classhs_1_1_component.html#ae76ddacdaaa23c4663322dccbb064d6e">GetOwner</a>());</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <a class="code hl_class" href="classhs_1_1graphcis_1_1_texture.html">graphcis::Texture</a>* catTex = <a class="code hl_function" href="classhs_1_1_resources.html#a4e3a24d44f111deb8150e92c0cbd7047">Resources::Find&lt;graphcis::Texture&gt;</a>(L<span class="stringliteral">&quot;Cat&quot;</span>);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <a class="code hl_class" href="classhs_1_1_animator.html">Animator</a>* catAnimator = cat-&gt;<a class="code hl_function" href="classhs_1_1_game_object.html#ac198dad144214ea9e0f7e48685303965">AddComponent</a>&lt;<a class="code hl_class" href="classhs_1_1_animator.html">Animator</a>&gt;();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        catAnimator-&gt;<a class="code hl_function" href="classhs_1_1_animator.html#a06acb6ab1de14e7a9dee1e8de87bfe90">CreateAnimation</a>(L<span class="stringliteral">&quot;DownWalk&quot;</span>, catTex</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            , <a class="code hl_struct" href="strucths_1_1math_1_1_vector2.html">Vector2</a>(0.0f, 0.0f), <a class="code hl_struct" href="strucths_1_1math_1_1_vector2.html">Vector2</a>(32.0f, 32.0f), <a class="code hl_variable" href="strucths_1_1math_1_1_vector2.html#a6a41c9565455852d6bbf70141fed17f3">Vector2::Zero</a>, 4, 0.1f);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        catAnimator-&gt;<a class="code hl_function" href="classhs_1_1_animator.html#a06acb6ab1de14e7a9dee1e8de87bfe90">CreateAnimation</a>(L<span class="stringliteral">&quot;RightWalk&quot;</span>, catTex</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            , <a class="code hl_struct" href="strucths_1_1math_1_1_vector2.html">Vector2</a>(0.0f, 32.0f), <a class="code hl_struct" href="strucths_1_1math_1_1_vector2.html">Vector2</a>(32.0f, 32.0f), <a class="code hl_variable" href="strucths_1_1math_1_1_vector2.html#a6a41c9565455852d6bbf70141fed17f3">Vector2::Zero</a>, 4, 0.1f);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        catAnimator-&gt;<a class="code hl_function" href="classhs_1_1_animator.html#a06acb6ab1de14e7a9dee1e8de87bfe90">CreateAnimation</a>(L<span class="stringliteral">&quot;UpWalk&quot;</span>, catTex</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            , <a class="code hl_struct" href="strucths_1_1math_1_1_vector2.html">Vector2</a>(0.0f, 64.0f), <a class="code hl_struct" href="strucths_1_1math_1_1_vector2.html">Vector2</a>(32.0f, 32.0f), <a class="code hl_variable" href="strucths_1_1math_1_1_vector2.html#a6a41c9565455852d6bbf70141fed17f3">Vector2::Zero</a>, 4, 0.1f);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        catAnimator-&gt;<a class="code hl_function" href="classhs_1_1_animator.html#a06acb6ab1de14e7a9dee1e8de87bfe90">CreateAnimation</a>(L<span class="stringliteral">&quot;LeftWalk&quot;</span>, catTex</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            , <a class="code hl_struct" href="strucths_1_1math_1_1_vector2.html">Vector2</a>(0.0f, 96.0f), <a class="code hl_struct" href="strucths_1_1math_1_1_vector2.html">Vector2</a>(32.0f, 32.0f), <a class="code hl_variable" href="strucths_1_1math_1_1_vector2.html#a6a41c9565455852d6bbf70141fed17f3">Vector2::Zero</a>, 4, 0.1f);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        catAnimator-&gt;<a class="code hl_function" href="classhs_1_1_animator.html#a06acb6ab1de14e7a9dee1e8de87bfe90">CreateAnimation</a>(L<span class="stringliteral">&quot;SitDown&quot;</span>, catTex</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            , <a class="code hl_struct" href="strucths_1_1math_1_1_vector2.html">Vector2</a>(0.0f, 128.0f), <a class="code hl_struct" href="strucths_1_1math_1_1_vector2.html">Vector2</a>(32.0f, 32.0f), <a class="code hl_variable" href="strucths_1_1math_1_1_vector2.html#a6a41c9565455852d6bbf70141fed17f3">Vector2::Zero</a>, 4, 0.1f);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        catAnimator-&gt;<a class="code hl_function" href="classhs_1_1_animator.html#a06acb6ab1de14e7a9dee1e8de87bfe90">CreateAnimation</a>(L<span class="stringliteral">&quot;Grooming&quot;</span>, catTex</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            , <a class="code hl_struct" href="strucths_1_1math_1_1_vector2.html">Vector2</a>(0.0f, 160.0f), <a class="code hl_struct" href="strucths_1_1math_1_1_vector2.html">Vector2</a>(32.0f, 32.0f), <a class="code hl_variable" href="strucths_1_1math_1_1_vector2.html#a6a41c9565455852d6bbf70141fed17f3">Vector2::Zero</a>, 4, 0.1f);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        catAnimator-&gt;<a class="code hl_function" href="classhs_1_1_animator.html#a06acb6ab1de14e7a9dee1e8de87bfe90">CreateAnimation</a>(L<span class="stringliteral">&quot;LayDown&quot;</span>, catTex</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            , <a class="code hl_struct" href="strucths_1_1math_1_1_vector2.html">Vector2</a>(0.0f, 192.0f), <a class="code hl_struct" href="strucths_1_1math_1_1_vector2.html">Vector2</a>(32.0f, 32.0f), <a class="code hl_variable" href="strucths_1_1math_1_1_vector2.html#a6a41c9565455852d6bbf70141fed17f3">Vector2::Zero</a>, 4, 0.1f);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        catAnimator-&gt;<a class="code hl_function" href="classhs_1_1_animator.html#a9293e95aab4954a35abb432f350add41">PlayAnimation</a>(L<span class="stringliteral">&quot;SitDown&quot;</span>, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <a class="code hl_class" href="classhs_1_1_transform.html">Transform</a>* tr = <a class="code hl_function" href="classhs_1_1_component.html#ae76ddacdaaa23c4663322dccbb064d6e">GetOwner</a>()-&gt;<a class="code hl_function" href="classhs_1_1_game_object.html#a2196f983d980e181f3f1b5662c2bc3f6">GetComponent</a>&lt;<a class="code hl_class" href="classhs_1_1_transform.html">Transform</a>&gt;();</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        cat-&gt;<a class="code hl_function" href="classhs_1_1_game_object.html#a2196f983d980e181f3f1b5662c2bc3f6">GetComponent</a>&lt;<a class="code hl_class" href="classhs_1_1_transform.html">Transform</a>&gt;()-&gt;SetPosition(tr-&gt;<a class="code hl_function" href="classhs_1_1_transform.html#a128d56c00abc67b6b1dcf69b9ae33bbc">GetPosition</a>());</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        cat-&gt;<a class="code hl_function" href="classhs_1_1_game_object.html#a2196f983d980e181f3f1b5662c2bc3f6">GetComponent</a>&lt;<a class="code hl_class" href="classhs_1_1_transform.html">Transform</a>&gt;()-&gt;SetScale(<a class="code hl_struct" href="strucths_1_1math_1_1_vector2.html">Vector2</a>(2.0f, 2.0f));</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <a class="code hl_struct" href="strucths_1_1math_1_1_vector2.html">Vector2</a> mousePos = <a class="code hl_function" href="classhs_1_1_input.html#aab4f49fced6faa94d9b9b043af380fa2">Input::GetMousePosition</a>();</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        catSrc-&gt;<a class="code hl_variable" href="classhs_1_1_cat_script.html#a8547e40ca52268c5f0cb39bb832446ab">mDest</a> = mousePos;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    }</div>
+</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordtype">void</span> PlayerScript::idle()</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    {</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classhs_1_1_input.html#ae645d3f62b4e9b4c0b641ab303cadbf5">Input::GetKey</a>(<a class="code hl_enumvalue" href="namespacehs.html#a5afbe529ca19a9d47ba9524e89357119af8d7b8d6eeabd9468ed42e3f04a912a2">eKeyCode::LButton</a>))</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            <a class="code hl_class" href="classhs_1_1_cat.html">Cat</a>* cat = object::Instantiate&lt;Cat&gt;(<a class="code hl_enumvalue" href="namespacehs_1_1enums.html#a299adefb1364e08e45dd50a96e5aff47a161e7ce7bfdc89ab4b9f52c1d4c94212">enums::eLayerType::Animal</a>);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            <a class="code hl_class" href="classhs_1_1_cat_script.html">CatScript</a>* catSrc = cat-&gt;<a class="code hl_function" href="classhs_1_1_game_object.html#ac198dad144214ea9e0f7e48685303965">AddComponent</a>&lt;<a class="code hl_class" href="classhs_1_1_cat_script.html">CatScript</a>&gt;();</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            catSrc-&gt;<a class="code hl_function" href="classhs_1_1_cat_script.html#a2683b92adf856a78728b0b0ff2cbeb54">SetPlayer</a>(<a class="code hl_function" href="classhs_1_1_component.html#ae76ddacdaaa23c4663322dccbb064d6e">GetOwner</a>());</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            <a class="code hl_class" href="classhs_1_1graphcis_1_1_texture.html">graphcis::Texture</a>* catTex = <a class="code hl_function" href="classhs_1_1_resources.html#a4e3a24d44f111deb8150e92c0cbd7047">Resources::Find&lt;graphcis::Texture&gt;</a>(L<span class="stringliteral">&quot;Cat&quot;</span>);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            <a class="code hl_class" href="classhs_1_1_animator.html">Animator</a>* catAnimator = cat-&gt;<a class="code hl_function" href="classhs_1_1_game_object.html#ac198dad144214ea9e0f7e48685303965">AddComponent</a>&lt;<a class="code hl_class" href="classhs_1_1_animator.html">Animator</a>&gt;();</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            catAnimator-&gt;<a class="code hl_function" href="classhs_1_1_animator.html#a06acb6ab1de14e7a9dee1e8de87bfe90">CreateAnimation</a>(L<span class="stringliteral">&quot;DownWalk&quot;</span>, catTex</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                , <a class="code hl_struct" href="strucths_1_1math_1_1_vector2.html">Vector2</a>(0.0f, 0.0f), <a class="code hl_struct" href="strucths_1_1math_1_1_vector2.html">Vector2</a>(32.0f, 32.0f), <a class="code hl_variable" href="strucths_1_1math_1_1_vector2.html#a6a41c9565455852d6bbf70141fed17f3">Vector2::Zero</a>, 4, 0.1f);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            catAnimator-&gt;<a class="code hl_function" href="classhs_1_1_animator.html#a06acb6ab1de14e7a9dee1e8de87bfe90">CreateAnimation</a>(L<span class="stringliteral">&quot;RightWalk&quot;</span>, catTex</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                , <a class="code hl_struct" href="strucths_1_1math_1_1_vector2.html">Vector2</a>(0.0f, 32.0f), <a class="code hl_struct" href="strucths_1_1math_1_1_vector2.html">Vector2</a>(32.0f, 32.0f), <a class="code hl_variable" href="strucths_1_1math_1_1_vector2.html#a6a41c9565455852d6bbf70141fed17f3">Vector2::Zero</a>, 4, 0.1f);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            catAnimator-&gt;<a class="code hl_function" href="classhs_1_1_animator.html#a06acb6ab1de14e7a9dee1e8de87bfe90">CreateAnimation</a>(L<span class="stringliteral">&quot;UpWalk&quot;</span>, catTex</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                , <a class="code hl_struct" href="strucths_1_1math_1_1_vector2.html">Vector2</a>(0.0f, 64.0f), <a class="code hl_struct" href="strucths_1_1math_1_1_vector2.html">Vector2</a>(32.0f, 32.0f), <a class="code hl_variable" href="strucths_1_1math_1_1_vector2.html#a6a41c9565455852d6bbf70141fed17f3">Vector2::Zero</a>, 4, 0.1f);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            catAnimator-&gt;<a class="code hl_function" href="classhs_1_1_animator.html#a06acb6ab1de14e7a9dee1e8de87bfe90">CreateAnimation</a>(L<span class="stringliteral">&quot;LeftWalk&quot;</span>, catTex</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                , <a class="code hl_struct" href="strucths_1_1math_1_1_vector2.html">Vector2</a>(0.0f, 96.0f), <a class="code hl_struct" href="strucths_1_1math_1_1_vector2.html">Vector2</a>(32.0f, 32.0f), <a class="code hl_variable" href="strucths_1_1math_1_1_vector2.html#a6a41c9565455852d6bbf70141fed17f3">Vector2::Zero</a>, 4, 0.1f);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            catAnimator-&gt;<a class="code hl_function" href="classhs_1_1_animator.html#a06acb6ab1de14e7a9dee1e8de87bfe90">CreateAnimation</a>(L<span class="stringliteral">&quot;SitDown&quot;</span>, catTex</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                , <a class="code hl_struct" href="strucths_1_1math_1_1_vector2.html">Vector2</a>(0.0f, 128.0f), <a class="code hl_struct" href="strucths_1_1math_1_1_vector2.html">Vector2</a>(32.0f, 32.0f), <a class="code hl_variable" href="strucths_1_1math_1_1_vector2.html#a6a41c9565455852d6bbf70141fed17f3">Vector2::Zero</a>, 4, 0.1f);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            catAnimator-&gt;<a class="code hl_function" href="classhs_1_1_animator.html#a06acb6ab1de14e7a9dee1e8de87bfe90">CreateAnimation</a>(L<span class="stringliteral">&quot;Grooming&quot;</span>, catTex</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                , <a class="code hl_struct" href="strucths_1_1math_1_1_vector2.html">Vector2</a>(0.0f, 160.0f), <a class="code hl_struct" href="strucths_1_1math_1_1_vector2.html">Vector2</a>(32.0f, 32.0f), <a class="code hl_variable" href="strucths_1_1math_1_1_vector2.html#a6a41c9565455852d6bbf70141fed17f3">Vector2::Zero</a>, 4, 0.1f);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            catAnimator-&gt;<a class="code hl_function" href="classhs_1_1_animator.html#a06acb6ab1de14e7a9dee1e8de87bfe90">CreateAnimation</a>(L<span class="stringliteral">&quot;LayDown&quot;</span>, catTex</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                , <a class="code hl_struct" href="strucths_1_1math_1_1_vector2.html">Vector2</a>(0.0f, 192.0f), <a class="code hl_struct" href="strucths_1_1math_1_1_vector2.html">Vector2</a>(32.0f, 32.0f), <a class="code hl_variable" href="strucths_1_1math_1_1_vector2.html#a6a41c9565455852d6bbf70141fed17f3">Vector2::Zero</a>, 4, 0.1f);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            catAnimator-&gt;<a class="code hl_function" href="classhs_1_1_animator.html#a9293e95aab4954a35abb432f350add41">PlayAnimation</a>(L<span class="stringliteral">&quot;SitDown&quot;</span>, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            <a class="code hl_class" href="classhs_1_1_transform.html">Transform</a>* tr = <a class="code hl_function" href="classhs_1_1_component.html#ae76ddacdaaa23c4663322dccbb064d6e">GetOwner</a>()-&gt;<a class="code hl_function" href="classhs_1_1_game_object.html#a2196f983d980e181f3f1b5662c2bc3f6">GetComponent</a>&lt;<a class="code hl_class" href="classhs_1_1_transform.html">Transform</a>&gt;();</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            cat-&gt;<a class="code hl_function" href="classhs_1_1_game_object.html#a2196f983d980e181f3f1b5662c2bc3f6">GetComponent</a>&lt;<a class="code hl_class" href="classhs_1_1_transform.html">Transform</a>&gt;()-&gt;SetPosition(tr-&gt;<a class="code hl_function" href="classhs_1_1_transform.html#a128d56c00abc67b6b1dcf69b9ae33bbc">GetPosition</a>() <span class="comment">/*+ Vector2(100.0f, 0.0f)*/</span>);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            cat-&gt;<a class="code hl_function" href="classhs_1_1_game_object.html#a2196f983d980e181f3f1b5662c2bc3f6">GetComponent</a>&lt;<a class="code hl_class" href="classhs_1_1_transform.html">Transform</a>&gt;()-&gt;SetScale(<a class="code hl_struct" href="strucths_1_1math_1_1_vector2.html">Vector2</a>(2.0f, 2.0f));</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            <a class="code hl_struct" href="strucths_1_1math_1_1_vector2.html">Vector2</a> mousePos = <a class="code hl_function" href="classhs_1_1_input.html#aab4f49fced6faa94d9b9b043af380fa2">Input::GetMousePosition</a>();</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            catSrc-&gt;<a class="code hl_variable" href="classhs_1_1_cat_script.html#a8547e40ca52268c5f0cb39bb832446ab">mDest</a> = mousePos;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        }</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    }</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keywordtype">void</span> PlayerScript::move()</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    {</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <a class="code hl_enumvalue" href="namespacehs_1_1enums.html#adbc1f9eacd808ec4b80283b6b010b48aa2ff4148554480a37f85efd299df04850">Transform</a>* tr = <a class="code hl_function" href="classhs_1_1_component.html#ae76ddacdaaa23c4663322dccbb064d6e">GetOwner</a>()-&gt;<a class="code hl_function" href="classhs_1_1_game_object.html#a2196f983d980e181f3f1b5662c2bc3f6">GetComponent</a>&lt;<a class="code hl_enumvalue" href="namespacehs_1_1enums.html#adbc1f9eacd808ec4b80283b6b010b48aa2ff4148554480a37f85efd299df04850">Transform</a>&gt;();</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        Vector2 pos = tr-&gt;GetPosition();</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classhs_1_1_input.html#ae645d3f62b4e9b4c0b641ab303cadbf5">Input::GetKey</a>(<a class="code hl_enumvalue" href="namespacehs.html#a5afbe529ca19a9d47ba9524e89357119a8e25f52bf32130ac4a96fb5447a35e40">eKeyCode::KEY_RIGHT</a>))</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        {</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            pos.x += 100.0f * <a class="code hl_function" href="classhs_1_1_time.html#a63afd5b326d048233e48c6e5fbb446c9">Time::DeltaTime</a>();</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        }</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classhs_1_1_input.html#ae645d3f62b4e9b4c0b641ab303cadbf5">Input::GetKey</a>(<a class="code hl_enumvalue" href="namespacehs.html#a5afbe529ca19a9d47ba9524e89357119a199730aec8ce398d74880833785a8b79">eKeyCode::KEY_LEFT</a>))</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        {</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>            pos.x -= 100.0f * <a class="code hl_function" href="classhs_1_1_time.html#a63afd5b326d048233e48c6e5fbb446c9">Time::DeltaTime</a>();</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        }</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classhs_1_1_input.html#ae645d3f62b4e9b4c0b641ab303cadbf5">Input::GetKey</a>(<a class="code hl_enumvalue" href="namespacehs.html#a5afbe529ca19a9d47ba9524e89357119ac248b44c41333613a8ad29b656f8950e">eKeyCode::KEY_UP</a>))</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        {</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>            pos.y -= 100.0f * <a class="code hl_function" href="classhs_1_1_time.html#a63afd5b326d048233e48c6e5fbb446c9">Time::DeltaTime</a>();</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        }</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classhs_1_1_input.html#ae645d3f62b4e9b4c0b641ab303cadbf5">Input::GetKey</a>(<a class="code hl_enumvalue" href="namespacehs.html#a5afbe529ca19a9d47ba9524e89357119ae27439eebd778013c33fbb14dd19fd04">eKeyCode::KEY_DOWN</a>))</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        {</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>            pos.y += 100.0f * <a class="code hl_function" href="classhs_1_1_time.html#a63afd5b326d048233e48c6e5fbb446c9">Time::DeltaTime</a>();</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        }</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        tr-&gt;SetPosition(pos);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classhs_1_1_input.html#aa5c3531f7336f5a91f533af25dc965fe">Input::GetKeyUp</a>(<a class="code hl_enumvalue" href="namespacehs.html#a5afbe529ca19a9d47ba9524e89357119a8e25f52bf32130ac4a96fb5447a35e40">eKeyCode::KEY_RIGHT</a>) || <a class="code hl_function" href="classhs_1_1_input.html#aa5c3531f7336f5a91f533af25dc965fe">Input::GetKeyUp</a>(<a class="code hl_enumvalue" href="namespacehs.html#a5afbe529ca19a9d47ba9524e89357119a199730aec8ce398d74880833785a8b79">eKeyCode::KEY_LEFT</a>) </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>            || <a class="code hl_function" href="classhs_1_1_input.html#aa5c3531f7336f5a91f533af25dc965fe">Input::GetKeyUp</a>(<a class="code hl_enumvalue" href="namespacehs.html#a5afbe529ca19a9d47ba9524e89357119ac248b44c41333613a8ad29b656f8950e">eKeyCode::KEY_UP</a>) || <a class="code hl_function" href="classhs_1_1_input.html#aa5c3531f7336f5a91f533af25dc965fe">Input::GetKeyUp</a>(<a class="code hl_enumvalue" href="namespacehs.html#a5afbe529ca19a9d47ba9524e89357119ae27439eebd778013c33fbb14dd19fd04">eKeyCode::KEY_DOWN</a>))</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        {</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            mState = <a class="code hl_enumvalue" href="classhs_1_1_player_script.html#ad8bd764cebdacc47f19b1fef55a5cbc7ae599161956d626eda4cb0a5ffb85271c">ePlayerState::Idle</a>;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            mAnimator-&gt;PlayAnimation(L<span class="stringliteral">&quot;SitDown&quot;</span>, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        }</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    }</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <span class="keywordtype">void</span> PlayerScript::giveWater()</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    {</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        <span class="keywordflow">if</span> (mAnimator-&gt;IsComplete())</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        {</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>            mState = <a class="code hl_enumvalue" href="classhs_1_1_player_script.html#ad8bd764cebdacc47f19b1fef55a5cbc7ae599161956d626eda4cb0a5ffb85271c">ePlayerState::Idle</a>;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>            mAnimator-&gt;PlayAnimation(L<span class="stringliteral">&quot;Idle&quot;</span>, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        }</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    }</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>}</div>
+<div class="ttc" id="aclasshs_1_1_animator_html"><div class="ttname"><a href="classhs_1_1_animator.html">hs::Animator</a></div><div class="ttdoc">애니메이션을 관리하는 컴포넌트입니다.</div><div class="ttdef"><b>Definition</b> <a href="hs_animator_8h_source.html#l00011">hsAnimator.h:12</a></div></div>
+<div class="ttc" id="aclasshs_1_1_animator_html_a06acb6ab1de14e7a9dee1e8de87bfe90"><div class="ttname"><a href="classhs_1_1_animator.html#a06acb6ab1de14e7a9dee1e8de87bfe90">hs::Animator::CreateAnimation</a></div><div class="ttdeci">void CreateAnimation(const std::wstring &amp;name, graphcis::Texture *spriteSheet, Vector2 leftTop, Vector2 tileSize, Vector2 offset, UINT spriteLength, float duration)</div><div class="ttdoc">애니메이션을 생성하는 함수입니다.</div><div class="ttdef"><b>Definition</b> <a href="hs_animator_8cpp_source.html#l00059">hsAnimator.cpp:59</a></div></div>
+<div class="ttc" id="aclasshs_1_1_animator_html_a9293e95aab4954a35abb432f350add41"><div class="ttname"><a href="classhs_1_1_animator.html#a9293e95aab4954a35abb432f350add41">hs::Animator::PlayAnimation</a></div><div class="ttdeci">void PlayAnimation(const std::wstring &amp;name, bool isLoop=false)</div><div class="ttdef"><b>Definition</b> <a href="hs_animator_8cpp_source.html#l00128">hsAnimator.cpp:128</a></div></div>
+<div class="ttc" id="aclasshs_1_1_cat_html"><div class="ttname"><a href="classhs_1_1_cat.html">hs::Cat</a></div><div class="ttdef"><b>Definition</b> <a href="hs_cat_8h_source.html#l00007">hsCat.h:8</a></div></div>
+<div class="ttc" id="aclasshs_1_1_cat_script_html"><div class="ttname"><a href="classhs_1_1_cat_script.html">hs::CatScript</a></div><div class="ttdef"><b>Definition</b> <a href="hs_cat_script_8h_source.html#l00007">hsCatScript.h:8</a></div></div>
+<div class="ttc" id="aclasshs_1_1_cat_script_html_a2683b92adf856a78728b0b0ff2cbeb54"><div class="ttname"><a href="classhs_1_1_cat_script.html#a2683b92adf856a78728b0b0ff2cbeb54">hs::CatScript::SetPlayer</a></div><div class="ttdeci">void SetPlayer(GameObject *player)</div><div class="ttdef"><b>Definition</b> <a href="hs_cat_script_8h_source.html#l00036">hsCatScript.h:36</a></div></div>
+<div class="ttc" id="aclasshs_1_1_cat_script_html_a8547e40ca52268c5f0cb39bb832446ab"><div class="ttname"><a href="classhs_1_1_cat_script.html#a8547e40ca52268c5f0cb39bb832446ab">hs::CatScript::mDest</a></div><div class="ttdeci">Vector2 mDest</div><div class="ttdef"><b>Definition</b> <a href="hs_cat_script_8h_source.html#l00037">hsCatScript.h:37</a></div></div>
+<div class="ttc" id="aclasshs_1_1_component_html_ae76ddacdaaa23c4663322dccbb064d6e"><div class="ttname"><a href="classhs_1_1_component.html#ae76ddacdaaa23c4663322dccbb064d6e">hs::Component::GetOwner</a></div><div class="ttdeci">GameObject * GetOwner()</div><div class="ttdef"><b>Definition</b> <a href="hs_component_8h_source.html#l00023">hsComponent.h:23</a></div></div>
+<div class="ttc" id="aclasshs_1_1_game_object_html_a2196f983d980e181f3f1b5662c2bc3f6"><div class="ttname"><a href="classhs_1_1_game_object.html#a2196f983d980e181f3f1b5662c2bc3f6">hs::GameObject::GetComponent</a></div><div class="ttdeci">T * GetComponent()</div><div class="ttdef"><b>Definition</b> <a href="hs_game_object_8h_source.html#l00048">hsGameObject.h:48</a></div></div>
+<div class="ttc" id="aclasshs_1_1_game_object_html_ac198dad144214ea9e0f7e48685303965"><div class="ttname"><a href="classhs_1_1_game_object.html#ac198dad144214ea9e0f7e48685303965">hs::GameObject::AddComponent</a></div><div class="ttdeci">T * AddComponent()</div><div class="ttdef"><b>Definition</b> <a href="hs_game_object_8h_source.html#l00037">hsGameObject.h:37</a></div></div>
+<div class="ttc" id="aclasshs_1_1_input_html_aa5c3531f7336f5a91f533af25dc965fe"><div class="ttname"><a href="classhs_1_1_input.html#aa5c3531f7336f5a91f533af25dc965fe">hs::Input::GetKeyUp</a></div><div class="ttdeci">static __forceinline bool GetKeyUp(eKeyCode key)</div><div class="ttdef"><b>Definition</b> <a href="hs_input_8h_source.html#l00040">hsInput.h:40</a></div></div>
+<div class="ttc" id="aclasshs_1_1_input_html_aab4f49fced6faa94d9b9b043af380fa2"><div class="ttname"><a href="classhs_1_1_input.html#aab4f49fced6faa94d9b9b043af380fa2">hs::Input::GetMousePosition</a></div><div class="ttdeci">static __forceinline math::Vector2 GetMousePosition()</div><div class="ttdef"><b>Definition</b> <a href="hs_input_8h_source.html#l00042">hsInput.h:42</a></div></div>
+<div class="ttc" id="aclasshs_1_1_input_html_ae645d3f62b4e9b4c0b641ab303cadbf5"><div class="ttname"><a href="classhs_1_1_input.html#ae645d3f62b4e9b4c0b641ab303cadbf5">hs::Input::GetKey</a></div><div class="ttdeci">static __forceinline bool GetKey(eKeyCode key)</div><div class="ttdef"><b>Definition</b> <a href="hs_input_8h_source.html#l00041">hsInput.h:41</a></div></div>
+<div class="ttc" id="aclasshs_1_1_player_script_html_a396e247ad02749b60b7741b5d2ff553e"><div class="ttname"><a href="classhs_1_1_player_script.html#a396e247ad02749b60b7741b5d2ff553e">hs::PlayerScript::Initialize</a></div><div class="ttdeci">void Initialize() override</div><div class="ttdef"><b>Definition</b> <a href="#l00022">hsPlayerScript.cpp:22</a></div></div>
+<div class="ttc" id="aclasshs_1_1_player_script_html_a6939da7f9482752dc71a304cdd984663"><div class="ttname"><a href="classhs_1_1_player_script.html#a6939da7f9482752dc71a304cdd984663">hs::PlayerScript::~PlayerScript</a></div><div class="ttdeci">~PlayerScript()</div><div class="ttdef"><b>Definition</b> <a href="#l00019">hsPlayerScript.cpp:19</a></div></div>
+<div class="ttc" id="aclasshs_1_1_player_script_html_a6dcc4f10c010a51509bb48cd6d082ce2"><div class="ttname"><a href="classhs_1_1_player_script.html#a6dcc4f10c010a51509bb48cd6d082ce2">hs::PlayerScript::Render</a></div><div class="ttdeci">void Render(HDC hdc) override</div><div class="ttdef"><b>Definition</b> <a href="#l00053">hsPlayerScript.cpp:53</a></div></div>
+<div class="ttc" id="aclasshs_1_1_player_script_html_aa047c79f3ab5028ebd385c906afb046f"><div class="ttname"><a href="classhs_1_1_player_script.html#aa047c79f3ab5028ebd385c906afb046f">hs::PlayerScript::Update</a></div><div class="ttdeci">void Update() override</div><div class="ttdef"><b>Definition</b> <a href="#l00025">hsPlayerScript.cpp:25</a></div></div>
+<div class="ttc" id="aclasshs_1_1_player_script_html_ac5f82c332e7a20a1b78d369997bc3790"><div class="ttname"><a href="classhs_1_1_player_script.html#ac5f82c332e7a20a1b78d369997bc3790">hs::PlayerScript::PlayerScript</a></div><div class="ttdeci">PlayerScript()</div><div class="ttdef"><b>Definition</b> <a href="#l00014">hsPlayerScript.cpp:14</a></div></div>
+<div class="ttc" id="aclasshs_1_1_player_script_html_ad8bd764cebdacc47f19b1fef55a5cbc7"><div class="ttname"><a href="classhs_1_1_player_script.html#ad8bd764cebdacc47f19b1fef55a5cbc7">hs::PlayerScript::ePlayerState</a></div><div class="ttdeci">ePlayerState</div><div class="ttdef"><b>Definition</b> <a href="hs_player_script_8h_source.html#l00010">hsPlayerScript.h:11</a></div></div>
+<div class="ttc" id="aclasshs_1_1_player_script_html_ad8bd764cebdacc47f19b1fef55a5cbc7a243924bfd56a682be235638b53961e09"><div class="ttname"><a href="classhs_1_1_player_script.html#ad8bd764cebdacc47f19b1fef55a5cbc7a243924bfd56a682be235638b53961e09">hs::PlayerScript::ePlayerState::Sleep</a></div><div class="ttdeci">@ Sleep</div><div class="ttdef"><b>Definition</b> <a href="hs_player_script_8h_source.html#l00014">hsPlayerScript.h:14</a></div></div>
+<div class="ttc" id="aclasshs_1_1_player_script_html_ad8bd764cebdacc47f19b1fef55a5cbc7a7a16a854f32231a8df9326136b09ee62"><div class="ttname"><a href="classhs_1_1_player_script.html#ad8bd764cebdacc47f19b1fef55a5cbc7a7a16a854f32231a8df9326136b09ee62">hs::PlayerScript::ePlayerState::Walk</a></div><div class="ttdeci">@ Walk</div><div class="ttdef"><b>Definition</b> <a href="hs_player_script_8h_source.html#l00013">hsPlayerScript.h:13</a></div></div>
+<div class="ttc" id="aclasshs_1_1_player_script_html_ad8bd764cebdacc47f19b1fef55a5cbc7adcfafcb4323b102c7e204555d313ba0a"><div class="ttname"><a href="classhs_1_1_player_script.html#ad8bd764cebdacc47f19b1fef55a5cbc7adcfafcb4323b102c7e204555d313ba0a">hs::PlayerScript::ePlayerState::Attack</a></div><div class="ttdeci">@ Attack</div><div class="ttdef"><b>Definition</b> <a href="hs_player_script_8h_source.html#l00016">hsPlayerScript.h:16</a></div></div>
+<div class="ttc" id="aclasshs_1_1_player_script_html_ad8bd764cebdacc47f19b1fef55a5cbc7ae599161956d626eda4cb0a5ffb85271c"><div class="ttname"><a href="classhs_1_1_player_script.html#ad8bd764cebdacc47f19b1fef55a5cbc7ae599161956d626eda4cb0a5ffb85271c">hs::PlayerScript::ePlayerState::Idle</a></div><div class="ttdeci">@ Idle</div><div class="ttdef"><b>Definition</b> <a href="hs_player_script_8h_source.html#l00012">hsPlayerScript.h:12</a></div></div>
+<div class="ttc" id="aclasshs_1_1_player_script_html_ad8bd764cebdacc47f19b1fef55a5cbc7ae699615b0bd77f490b9320500a4f4283"><div class="ttname"><a href="classhs_1_1_player_script.html#ad8bd764cebdacc47f19b1fef55a5cbc7ae699615b0bd77f490b9320500a4f4283">hs::PlayerScript::ePlayerState::GiveWater</a></div><div class="ttdeci">@ GiveWater</div><div class="ttdef"><b>Definition</b> <a href="hs_player_script_8h_source.html#l00015">hsPlayerScript.h:15</a></div></div>
+<div class="ttc" id="aclasshs_1_1_player_script_html_af7c2c86b2f5eeeb2c78350851b0c1953"><div class="ttname"><a href="classhs_1_1_player_script.html#af7c2c86b2f5eeeb2c78350851b0c1953">hs::PlayerScript::LateUpdate</a></div><div class="ttdeci">void LateUpdate() override</div><div class="ttdef"><b>Definition</b> <a href="#l00050">hsPlayerScript.cpp:50</a></div></div>
+<div class="ttc" id="aclasshs_1_1_player_script_html_af8f3f58521b32667e0b1dbacc0b1c05b"><div class="ttname"><a href="classhs_1_1_player_script.html#af8f3f58521b32667e0b1dbacc0b1c05b">hs::PlayerScript::AttackEffect</a></div><div class="ttdeci">void AttackEffect()</div><div class="ttdef"><b>Definition</b> <a href="#l00056">hsPlayerScript.cpp:56</a></div></div>
+<div class="ttc" id="aclasshs_1_1_resources_html_a4e3a24d44f111deb8150e92c0cbd7047"><div class="ttname"><a href="classhs_1_1_resources.html#a4e3a24d44f111deb8150e92c0cbd7047">hs::Resources::Find</a></div><div class="ttdeci">static T * Find(const std::wstring &amp;key)</div><div class="ttdef"><b>Definition</b> <a href="hs_resources_8h_source.html#l00013">hsResources.h:13</a></div></div>
+<div class="ttc" id="aclasshs_1_1_time_html_a63afd5b326d048233e48c6e5fbb446c9"><div class="ttname"><a href="classhs_1_1_time.html#a63afd5b326d048233e48c6e5fbb446c9">hs::Time::DeltaTime</a></div><div class="ttdeci">static __forceinline double DeltaTime()</div><div class="ttdef"><b>Definition</b> <a href="hs_time_8h_source.html#l00015">hsTime.h:15</a></div></div>
+<div class="ttc" id="aclasshs_1_1_transform_html"><div class="ttname"><a href="classhs_1_1_transform.html">hs::Transform</a></div><div class="ttdoc">위치를 정의하는 컴포넌트입니다.</div><div class="ttdef"><b>Definition</b> <a href="hs_transform_8h_source.html#l00012">hsTransform.h:13</a></div></div>
+<div class="ttc" id="aclasshs_1_1_transform_html_a128d56c00abc67b6b1dcf69b9ae33bbc"><div class="ttname"><a href="classhs_1_1_transform.html#a128d56c00abc67b6b1dcf69b9ae33bbc">hs::Transform::GetPosition</a></div><div class="ttdeci">Vector2 GetPosition() const</div><div class="ttdef"><b>Definition</b> <a href="hs_transform_8h_source.html#l00026">hsTransform.h:26</a></div></div>
+<div class="ttc" id="aclasshs_1_1graphcis_1_1_texture_html"><div class="ttname"><a href="classhs_1_1graphcis_1_1_texture.html">hs::graphcis::Texture</a></div><div class="ttdoc">텍스처인 리소스입니다.</div><div class="ttdef"><b>Definition</b> <a href="hs_texture_8h_source.html#l00010">hsTexture.h:11</a></div></div>
+<div class="ttc" id="ahs_animator_8h_html"><div class="ttname"><a href="hs_animator_8h.html">hsAnimator.h</a></div></div>
+<div class="ttc" id="ahs_cat_8h_html"><div class="ttname"><a href="hs_cat_8h.html">hsCat.h</a></div></div>
+<div class="ttc" id="ahs_cat_script_8h_html"><div class="ttname"><a href="hs_cat_script_8h.html">hsCatScript.h</a></div></div>
+<div class="ttc" id="ahs_game_object_8h_html"><div class="ttname"><a href="hs_game_object_8h.html">hsGameObject.h</a></div></div>
+<div class="ttc" id="ahs_input_8h_html"><div class="ttname"><a href="hs_input_8h.html">hsInput.h</a></div></div>
+<div class="ttc" id="ahs_object_8h_html"><div class="ttname"><a href="hs_object_8h.html">hsObject.h</a></div></div>
+<div class="ttc" id="ahs_player_script_8h_html"><div class="ttname"><a href="hs_player_script_8h.html">hsPlayerScript.h</a></div></div>
+<div class="ttc" id="ahs_resources_8h_html"><div class="ttname"><a href="hs_resources_8h.html">hsResources.h</a></div></div>
+<div class="ttc" id="ahs_time_8h_html"><div class="ttname"><a href="hs_time_8h.html">hsTime.h</a></div></div>
+<div class="ttc" id="ahs_transform_8h_html"><div class="ttname"><a href="hs_transform_8h.html">hsTransform.h</a></div></div>
+<div class="ttc" id="anamespacehs_1_1enums_html_a299adefb1364e08e45dd50a96e5aff47a161e7ce7bfdc89ab4b9f52c1d4c94212"><div class="ttname"><a href="namespacehs_1_1enums.html#a299adefb1364e08e45dd50a96e5aff47a161e7ce7bfdc89ab4b9f52c1d4c94212">hs::enums::eLayerType::Animal</a></div><div class="ttdeci">@ Animal</div><div class="ttdef"><b>Definition</b> <a href="hs_enums_8h_source.html#l00027">hsEnums.h:27</a></div></div>
+<div class="ttc" id="anamespacehs_1_1enums_html_adbc1f9eacd808ec4b80283b6b010b48aa2ff4148554480a37f85efd299df04850"><div class="ttname"><a href="namespacehs_1_1enums.html#adbc1f9eacd808ec4b80283b6b010b48aa2ff4148554480a37f85efd299df04850">hs::enums::eComponentType::Transform</a></div><div class="ttdeci">@ Transform</div><div class="ttdef"><b>Definition</b> <a href="hs_enums_8h_source.html#l00010">hsEnums.h:10</a></div></div>
+<div class="ttc" id="anamespacehs_html"><div class="ttname"><a href="namespacehs.html">hs</a></div><div class="ttdef"><b>Definition</b> <a href="hs_animation_8cpp_source.html#l00009">hsAnimation.cpp:10</a></div></div>
+<div class="ttc" id="anamespacehs_html_a5afbe529ca19a9d47ba9524e89357119a199730aec8ce398d74880833785a8b79"><div class="ttname"><a href="namespacehs.html#a5afbe529ca19a9d47ba9524e89357119a199730aec8ce398d74880833785a8b79">hs::eKeyCode::KEY_LEFT</a></div><div class="ttdeci">@ KEY_LEFT</div><div class="ttdef"><b>Definition</b> <a href="hs_input_8h_source.html#l00018">hsInput.h:18</a></div></div>
+<div class="ttc" id="anamespacehs_html_a5afbe529ca19a9d47ba9524e89357119a8e25f52bf32130ac4a96fb5447a35e40"><div class="ttname"><a href="namespacehs.html#a5afbe529ca19a9d47ba9524e89357119a8e25f52bf32130ac4a96fb5447a35e40">hs::eKeyCode::KEY_RIGHT</a></div><div class="ttdeci">@ KEY_RIGHT</div><div class="ttdef"><b>Definition</b> <a href="hs_input_8h_source.html#l00018">hsInput.h:18</a></div></div>
+<div class="ttc" id="anamespacehs_html_a5afbe529ca19a9d47ba9524e89357119ac248b44c41333613a8ad29b656f8950e"><div class="ttname"><a href="namespacehs.html#a5afbe529ca19a9d47ba9524e89357119ac248b44c41333613a8ad29b656f8950e">hs::eKeyCode::KEY_UP</a></div><div class="ttdeci">@ KEY_UP</div><div class="ttdef"><b>Definition</b> <a href="hs_input_8h_source.html#l00018">hsInput.h:18</a></div></div>
+<div class="ttc" id="anamespacehs_html_a5afbe529ca19a9d47ba9524e89357119ae27439eebd778013c33fbb14dd19fd04"><div class="ttname"><a href="namespacehs.html#a5afbe529ca19a9d47ba9524e89357119ae27439eebd778013c33fbb14dd19fd04">hs::eKeyCode::KEY_DOWN</a></div><div class="ttdeci">@ KEY_DOWN</div><div class="ttdef"><b>Definition</b> <a href="hs_input_8h_source.html#l00018">hsInput.h:18</a></div></div>
+<div class="ttc" id="anamespacehs_html_a5afbe529ca19a9d47ba9524e89357119af8d7b8d6eeabd9468ed42e3f04a912a2"><div class="ttname"><a href="namespacehs.html#a5afbe529ca19a9d47ba9524e89357119af8d7b8d6eeabd9468ed42e3f04a912a2">hs::eKeyCode::LButton</a></div><div class="ttdeci">@ LButton</div><div class="ttdef"><b>Definition</b> <a href="hs_input_8h_source.html#l00019">hsInput.h:19</a></div></div>
+<div class="ttc" id="astrucths_1_1math_1_1_vector2_html"><div class="ttname"><a href="strucths_1_1math_1_1_vector2.html">hs::math::Vector2</a></div><div class="ttdef"><b>Definition</b> <a href="hs_math_8h_source.html#l00013">hsMath.h:14</a></div></div>
+<div class="ttc" id="astrucths_1_1math_1_1_vector2_html_a6a41c9565455852d6bbf70141fed17f3"><div class="ttname"><a href="strucths_1_1math_1_1_vector2.html#a6a41c9565455852d6bbf70141fed17f3">hs::math::Vector2::Zero</a></div><div class="ttdeci">static Vector2 Zero</div><div class="ttdef"><b>Definition</b> <a href="hs_math_8h_source.html#l00034">hsMath.h:34</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b49be361ca0461116a6151dc0e422535.html">HSEngine_Window</a></li><li class="navelem"><a class="el" href="hs_player_script_8cpp.html">hsPlayerScript.cpp</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -5,6 +5,10 @@
 
 namespace hs
 {
+	/**
+	* @brief 레이어는 씬에 종속되어 게임 오브젝트를 관리합니다.
+	* @details 하위 레이어일수록 상위 레이어에 의해 가려집니다.
+	*/
 	class Layer : public Entity
 	{
 	public:

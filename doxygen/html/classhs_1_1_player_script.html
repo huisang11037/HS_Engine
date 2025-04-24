@@ -1,0 +1,414 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>HS Engine: hs::PlayerScript 클래스 참조</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">HS Engine<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">own game engine</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="검색" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('classhs_1_1_player_script.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 타입</a> &#124;
+<a href="#pub-methods">Public 멤버 함수</a> &#124;
+<a href="classhs_1_1_player_script-members.html">모든 멤버 목록</a>  </div>
+  <div class="headertitle"><div class="title">hs::PlayerScript 클래스 참조</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="hs_player_script_8h_source.html">hsPlayerScript.h</a>&gt;</code></p>
+<div class="dynheader">
+hs::PlayerScript에 대한 상속 다이어그램 : </div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classhs_1_1_player_script.png" usemap="#hs::PlayerScript_map" alt=""/>
+  <map id="hs::PlayerScript_map" name="hs::PlayerScript_map">
+<area href="classhs_1_1_script.html" title="모든 스크립트의 기본 클래스입니다." alt="hs::Script" shape="rect" coords="0,112,101,136"/>
+<area href="classhs_1_1_component.html" title="컴포넌트는 게임 오브젝트에 부착되어 기능을 추가합니다." alt="hs::Component" shape="rect" coords="0,56,101,80"/>
+<area href="classhs_1_1_entity.html" title="모든 이름이 필요한 것들에 대한 기본 클래스입니다." alt="hs::Entity" shape="rect" coords="0,0,101,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 타입</h2></td></tr>
+<tr class="memitem:ad8bd764cebdacc47f19b1fef55a5cbc7" id="r_ad8bd764cebdacc47f19b1fef55a5cbc7"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8bd764cebdacc47f19b1fef55a5cbc7">ePlayerState</a> { <br />
+&#160;&#160;<a class="el" href="#ad8bd764cebdacc47f19b1fef55a5cbc7ae599161956d626eda4cb0a5ffb85271c">Idle</a>
+, <a class="el" href="#ad8bd764cebdacc47f19b1fef55a5cbc7a7a16a854f32231a8df9326136b09ee62">Walk</a>
+, <a class="el" href="#ad8bd764cebdacc47f19b1fef55a5cbc7a243924bfd56a682be235638b53961e09">Sleep</a>
+, <a class="el" href="#ad8bd764cebdacc47f19b1fef55a5cbc7ae699615b0bd77f490b9320500a4f4283">GiveWater</a>
+, <br />
+&#160;&#160;<a class="el" href="#ad8bd764cebdacc47f19b1fef55a5cbc7adcfafcb4323b102c7e204555d313ba0a">Attack</a>
+<br />
+ }</td></tr>
+<tr class="separator:ad8bd764cebdacc47f19b1fef55a5cbc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 멤버 함수</h2></td></tr>
+<tr class="memitem:ac5f82c332e7a20a1b78d369997bc3790" id="r_ac5f82c332e7a20a1b78d369997bc3790"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5f82c332e7a20a1b78d369997bc3790">PlayerScript</a> ()</td></tr>
+<tr class="separator:ac5f82c332e7a20a1b78d369997bc3790"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6939da7f9482752dc71a304cdd984663" id="r_a6939da7f9482752dc71a304cdd984663"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6939da7f9482752dc71a304cdd984663">~PlayerScript</a> ()</td></tr>
+<tr class="separator:a6939da7f9482752dc71a304cdd984663"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a396e247ad02749b60b7741b5d2ff553e" id="r_a396e247ad02749b60b7741b5d2ff553e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a396e247ad02749b60b7741b5d2ff553e">Initialize</a> () override</td></tr>
+<tr class="separator:a396e247ad02749b60b7741b5d2ff553e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa047c79f3ab5028ebd385c906afb046f" id="r_aa047c79f3ab5028ebd385c906afb046f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa047c79f3ab5028ebd385c906afb046f">Update</a> () override</td></tr>
+<tr class="separator:aa047c79f3ab5028ebd385c906afb046f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7c2c86b2f5eeeb2c78350851b0c1953" id="r_af7c2c86b2f5eeeb2c78350851b0c1953"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7c2c86b2f5eeeb2c78350851b0c1953">LateUpdate</a> () override</td></tr>
+<tr class="separator:af7c2c86b2f5eeeb2c78350851b0c1953"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dcc4f10c010a51509bb48cd6d082ce2" id="r_a6dcc4f10c010a51509bb48cd6d082ce2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6dcc4f10c010a51509bb48cd6d082ce2">Render</a> (HDC hdc) override</td></tr>
+<tr class="separator:a6dcc4f10c010a51509bb48cd6d082ce2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8f3f58521b32667e0b1dbacc0b1c05b" id="r_af8f3f58521b32667e0b1dbacc0b1c05b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8f3f58521b32667e0b1dbacc0b1c05b">AttackEffect</a> ()</td></tr>
+<tr class="separator:af8f3f58521b32667e0b1dbacc0b1c05b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classhs_1_1_script"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classhs_1_1_script')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="classhs_1_1_script.html">hs::Script</a>(으)로부터 상속된 Public 멤버 함수</td></tr>
+<tr class="memitem:aa41141a3d0af9d4cbc8883a00f510664 inherit pub_methods_classhs_1_1_script" id="r_aa41141a3d0af9d4cbc8883a00f510664"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhs_1_1_script.html#aa41141a3d0af9d4cbc8883a00f510664">Script</a> ()</td></tr>
+<tr class="separator:aa41141a3d0af9d4cbc8883a00f510664 inherit pub_methods_classhs_1_1_script"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abda496f8485ff23028788bd5f94ea9c7 inherit pub_methods_classhs_1_1_script" id="r_abda496f8485ff23028788bd5f94ea9c7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhs_1_1_script.html#abda496f8485ff23028788bd5f94ea9c7">~Script</a> ()</td></tr>
+<tr class="separator:abda496f8485ff23028788bd5f94ea9c7 inherit pub_methods_classhs_1_1_script"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73910f383a23eb2bb38b4f3225647598 inherit pub_methods_classhs_1_1_script" id="r_a73910f383a23eb2bb38b4f3225647598"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhs_1_1_script.html#a73910f383a23eb2bb38b4f3225647598">Initialize</a> () override</td></tr>
+<tr class="separator:a73910f383a23eb2bb38b4f3225647598 inherit pub_methods_classhs_1_1_script"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bfcead745dabcde68ffe71476bfa872 inherit pub_methods_classhs_1_1_script" id="r_a7bfcead745dabcde68ffe71476bfa872"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhs_1_1_script.html#a7bfcead745dabcde68ffe71476bfa872">Update</a> () override</td></tr>
+<tr class="separator:a7bfcead745dabcde68ffe71476bfa872 inherit pub_methods_classhs_1_1_script"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45a0faffa45da92123c76d7532257cb1 inherit pub_methods_classhs_1_1_script" id="r_a45a0faffa45da92123c76d7532257cb1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhs_1_1_script.html#a45a0faffa45da92123c76d7532257cb1">LateUpdate</a> () override</td></tr>
+<tr class="separator:a45a0faffa45da92123c76d7532257cb1 inherit pub_methods_classhs_1_1_script"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b58acf41f146827d3189bb42fe2b5b3 inherit pub_methods_classhs_1_1_script" id="r_a3b58acf41f146827d3189bb42fe2b5b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhs_1_1_script.html#a3b58acf41f146827d3189bb42fe2b5b3">Render</a> (HDC hdc) override</td></tr>
+<tr class="separator:a3b58acf41f146827d3189bb42fe2b5b3 inherit pub_methods_classhs_1_1_script"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classhs_1_1_component"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classhs_1_1_component')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="classhs_1_1_component.html">hs::Component</a>(으)로부터 상속된 Public 멤버 함수</td></tr>
+<tr class="memitem:a8950a1cb229cebd9b7e1afd8ee4e0ef8 inherit pub_methods_classhs_1_1_component" id="r_a8950a1cb229cebd9b7e1afd8ee4e0ef8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhs_1_1_component.html#a8950a1cb229cebd9b7e1afd8ee4e0ef8">Component</a> (<a class="el" href="namespacehs_1_1enums.html#adbc1f9eacd808ec4b80283b6b010b48a">enums::eComponentType</a> type)</td></tr>
+<tr class="separator:a8950a1cb229cebd9b7e1afd8ee4e0ef8 inherit pub_methods_classhs_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7eaeef8121ef796bcf6319cc035f0885 inherit pub_methods_classhs_1_1_component" id="r_a7eaeef8121ef796bcf6319cc035f0885"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhs_1_1_component.html#a7eaeef8121ef796bcf6319cc035f0885">~Component</a> ()</td></tr>
+<tr class="separator:a7eaeef8121ef796bcf6319cc035f0885 inherit pub_methods_classhs_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae56200efea9461695c401871cdb0183a inherit pub_methods_classhs_1_1_component" id="r_ae56200efea9461695c401871cdb0183a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhs_1_1_component.html#ae56200efea9461695c401871cdb0183a">SetOwner</a> (<a class="el" href="classhs_1_1_game_object.html">GameObject</a> *owner)</td></tr>
+<tr class="separator:ae56200efea9461695c401871cdb0183a inherit pub_methods_classhs_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae76ddacdaaa23c4663322dccbb064d6e inherit pub_methods_classhs_1_1_component" id="r_ae76ddacdaaa23c4663322dccbb064d6e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhs_1_1_game_object.html">GameObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhs_1_1_component.html#ae76ddacdaaa23c4663322dccbb064d6e">GetOwner</a> ()</td></tr>
+<tr class="separator:ae76ddacdaaa23c4663322dccbb064d6e inherit pub_methods_classhs_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9877301ae21c20aa291415c36f7eb78 inherit pub_methods_classhs_1_1_component" id="r_ac9877301ae21c20aa291415c36f7eb78"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacehs_1_1enums.html#adbc1f9eacd808ec4b80283b6b010b48a">enums::eComponentType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhs_1_1_component.html#ac9877301ae21c20aa291415c36f7eb78">GetType</a> () const</td></tr>
+<tr class="separator:ac9877301ae21c20aa291415c36f7eb78 inherit pub_methods_classhs_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classhs_1_1_entity"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classhs_1_1_entity')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="classhs_1_1_entity.html">hs::Entity</a>(으)로부터 상속된 Public 멤버 함수</td></tr>
+<tr class="memitem:af3cef436d0ffd259d99e505a987428f4 inherit pub_methods_classhs_1_1_entity" id="r_af3cef436d0ffd259d99e505a987428f4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhs_1_1_entity.html#af3cef436d0ffd259d99e505a987428f4">Entity</a> ()</td></tr>
+<tr class="separator:af3cef436d0ffd259d99e505a987428f4 inherit pub_methods_classhs_1_1_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad30b89f98b0edf4f969370b949b42adf inherit pub_methods_classhs_1_1_entity" id="r_ad30b89f98b0edf4f969370b949b42adf"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhs_1_1_entity.html#ad30b89f98b0edf4f969370b949b42adf">~Entity</a> ()</td></tr>
+<tr class="separator:ad30b89f98b0edf4f969370b949b42adf inherit pub_methods_classhs_1_1_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a477f58255303b66fb51c0f36f9caf534 inherit pub_methods_classhs_1_1_entity" id="r_a477f58255303b66fb51c0f36f9caf534"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhs_1_1_entity.html#a477f58255303b66fb51c0f36f9caf534">SetName</a> (const std::wstring &amp;name)</td></tr>
+<tr class="separator:a477f58255303b66fb51c0f36f9caf534 inherit pub_methods_classhs_1_1_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50626d2175dc190d0a16ebdcb6962b0d inherit pub_methods_classhs_1_1_entity" id="r_a50626d2175dc190d0a16ebdcb6962b0d"><td class="memItemLeft" align="right" valign="top">const std::wstring &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhs_1_1_entity.html#a50626d2175dc190d0a16ebdcb6962b0d">GetName</a> () const</td></tr>
+<tr class="separator:a50626d2175dc190d0a16ebdcb6962b0d inherit pub_methods_classhs_1_1_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="hs_player_script_8h_source.html">hsPlayerScript.h</a> 파일의 <a class="el" href="hs_player_script_8h_source.html#l00007">7</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 열거형 문서화</h2>
+<a id="ad8bd764cebdacc47f19b1fef55a5cbc7" name="ad8bd764cebdacc47f19b1fef55a5cbc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8bd764cebdacc47f19b1fef55a5cbc7">&#9670;&#160;</a></span>ePlayerState</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ad8bd764cebdacc47f19b1fef55a5cbc7">hs::PlayerScript::ePlayerState</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">열거형 멤버</th></tr><tr><td class="fieldname"><a id="ad8bd764cebdacc47f19b1fef55a5cbc7ae599161956d626eda4cb0a5ffb85271c" name="ad8bd764cebdacc47f19b1fef55a5cbc7ae599161956d626eda4cb0a5ffb85271c"></a>Idle&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad8bd764cebdacc47f19b1fef55a5cbc7a7a16a854f32231a8df9326136b09ee62" name="ad8bd764cebdacc47f19b1fef55a5cbc7a7a16a854f32231a8df9326136b09ee62"></a>Walk&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad8bd764cebdacc47f19b1fef55a5cbc7a243924bfd56a682be235638b53961e09" name="ad8bd764cebdacc47f19b1fef55a5cbc7a243924bfd56a682be235638b53961e09"></a>Sleep&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad8bd764cebdacc47f19b1fef55a5cbc7ae699615b0bd77f490b9320500a4f4283" name="ad8bd764cebdacc47f19b1fef55a5cbc7ae699615b0bd77f490b9320500a4f4283"></a>GiveWater&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad8bd764cebdacc47f19b1fef55a5cbc7adcfafcb4323b102c7e204555d313ba0a" name="ad8bd764cebdacc47f19b1fef55a5cbc7adcfafcb4323b102c7e204555d313ba0a"></a>Attack&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"><a class="el" href="hs_player_script_8h_source.html">hsPlayerScript.h</a> 파일의 <a class="el" href="hs_player_script_8h_source.html#l00010">10</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="ac5f82c332e7a20a1b78d369997bc3790" name="ac5f82c332e7a20a1b78d369997bc3790"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5f82c332e7a20a1b78d369997bc3790">&#9670;&#160;</a></span>PlayerScript()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">hs::PlayerScript::PlayerScript </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hs_player_script_8cpp_source.html">hsPlayerScript.cpp</a> 파일의 <a class="el" href="hs_player_script_8cpp_source.html#l00014">14</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a6939da7f9482752dc71a304cdd984663" name="a6939da7f9482752dc71a304cdd984663"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6939da7f9482752dc71a304cdd984663">&#9670;&#160;</a></span>~PlayerScript()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">hs::PlayerScript::~PlayerScript </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hs_player_script_8cpp_source.html">hsPlayerScript.cpp</a> 파일의 <a class="el" href="hs_player_script_8cpp_source.html#l00019">19</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="af8f3f58521b32667e0b1dbacc0b1c05b" name="af8f3f58521b32667e0b1dbacc0b1c05b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8f3f58521b32667e0b1dbacc0b1c05b">&#9670;&#160;</a></span>AttackEffect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void hs::PlayerScript::AttackEffect </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hs_player_script_8cpp_source.html">hsPlayerScript.cpp</a> 파일의 <a class="el" href="hs_player_script_8cpp_source.html#l00056">56</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a396e247ad02749b60b7741b5d2ff553e" name="a396e247ad02749b60b7741b5d2ff553e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a396e247ad02749b60b7741b5d2ff553e">&#9670;&#160;</a></span>Initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void hs::PlayerScript::Initialize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classhs_1_1_component.html#a445ae3dc09f2ef2bdbf21ce02294faa5">hs::Component</a>(으)로부터 재구현되었습니다.</p>
+
+<p class="definition"><a class="el" href="hs_player_script_8cpp_source.html">hsPlayerScript.cpp</a> 파일의 <a class="el" href="hs_player_script_8cpp_source.html#l00022">22</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="af7c2c86b2f5eeeb2c78350851b0c1953" name="af7c2c86b2f5eeeb2c78350851b0c1953"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7c2c86b2f5eeeb2c78350851b0c1953">&#9670;&#160;</a></span>LateUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void hs::PlayerScript::LateUpdate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classhs_1_1_component.html#a0dd22f37a1f4e03f7b825b075c78142f">hs::Component</a>(으)로부터 재구현되었습니다.</p>
+
+<p class="definition"><a class="el" href="hs_player_script_8cpp_source.html">hsPlayerScript.cpp</a> 파일의 <a class="el" href="hs_player_script_8cpp_source.html#l00050">50</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a6dcc4f10c010a51509bb48cd6d082ce2" name="a6dcc4f10c010a51509bb48cd6d082ce2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dcc4f10c010a51509bb48cd6d082ce2">&#9670;&#160;</a></span>Render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void hs::PlayerScript::Render </td>
+          <td>(</td>
+          <td class="paramtype">HDC</td>          <td class="paramname"><span class="paramname"><em>hdc</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classhs_1_1_component.html#a9d3e32dd591a979638794bfc2d79119a">hs::Component</a>(으)로부터 재구현되었습니다.</p>
+
+<p class="definition"><a class="el" href="hs_player_script_8cpp_source.html">hsPlayerScript.cpp</a> 파일의 <a class="el" href="hs_player_script_8cpp_source.html#l00053">53</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="aa047c79f3ab5028ebd385c906afb046f" name="aa047c79f3ab5028ebd385c906afb046f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa047c79f3ab5028ebd385c906afb046f">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void hs::PlayerScript::Update </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classhs_1_1_component.html#a5bdd392ab636da076462956268e67e29">hs::Component</a>(으)로부터 재구현되었습니다.</p>
+
+<p class="definition"><a class="el" href="hs_player_script_8cpp_source.html">hsPlayerScript.cpp</a> 파일의 <a class="el" href="hs_player_script_8cpp_source.html#l00025">25</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<hr/>이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.:<ul>
+<li>HSEngine_Window/<a class="el" href="hs_player_script_8h_source.html">hsPlayerScript.h</a></li>
+<li>HSEngine_Window/<a class="el" href="hs_player_script_8cpp_source.html">hsPlayerScript.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacehs.html">hs</a></li><li class="navelem"><a class="el" href="classhs_1_1_player_script.html">PlayerScript</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

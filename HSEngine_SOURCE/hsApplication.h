@@ -3,6 +3,11 @@
 #include "hsGameObject.h"
 
 namespace hs {
+	/**
+	* @brief main에서 호출되는 가장 상위의 클래스입니다.
+	* @details 윈도우 핸들, 크기, 백 버퍼를 관리합니다.
+	* @details 다른 오브젝트들을 업데이트하고 렌더링합니다.
+	*/
 	class Application
 	{
 	public:

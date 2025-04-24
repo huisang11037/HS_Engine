@@ -4,6 +4,9 @@
 
 namespace hs
 {
+	/**
+	* @brief 모든 스크립트의 기본 클래스입니다.
+	*/
 	class Script : public Component
 	{
 	public:

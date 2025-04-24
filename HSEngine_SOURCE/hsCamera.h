@@ -4,10 +4,12 @@
 namespace hs
 {
 	using namespace hs::math;
+	/**
+	* @brief 카메라를 기준으로 게임 오브젝트의 위치를 계산하는 컴포넌트입니다.
+	*/
 	class Camera : public Component
 	{
 	public:
-		// 카메라의 위치를 기준으로 상대 위치를 계산한다
 		Vector2 CaluatePosition(Vector2 pos) const { return pos - mDistance; };
 
 		Camera();
@@ -21,7 +23,6 @@ namespace hs
 		void SetTarget(GameObject* target) { mTarget = target; };
 
 	private:
-		//std::vector<GameObject*> mGameObjects;
 		class GameObject* mTarget;
 		Vector2 mDistance;
 		Vector2 mResolution;

@@ -1,0 +1,457 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>HS Engine: hs::Application 클래스 참조</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">HS Engine<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">own game engine</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="검색" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('classhs_1_1_application.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 멤버 함수</a> &#124;
+<a href="classhs_1_1_application-members.html">모든 멤버 목록</a>  </div>
+  <div class="headertitle"><div class="title">hs::Application 클래스 참조</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>main에서 호출되는 가장 상위의 클래스입니다.  
+ <a href="#details">더 자세히 ...</a></p>
+
+<p><code>#include &lt;<a class="el" href="hs_application_8h_source.html">hsApplication.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 멤버 함수</h2></td></tr>
+<tr class="memitem:a79ec42b6f09a0d4724b75fd493ea0be3" id="r_a79ec42b6f09a0d4724b75fd493ea0be3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79ec42b6f09a0d4724b75fd493ea0be3">Application</a> ()</td></tr>
+<tr class="separator:a79ec42b6f09a0d4724b75fd493ea0be3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a2a839cb965fc435be956a1cc778323" id="r_a1a2a839cb965fc435be956a1cc778323"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a2a839cb965fc435be956a1cc778323">~Application</a> ()</td></tr>
+<tr class="separator:a1a2a839cb965fc435be956a1cc778323"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa40053c552d93588fecf494586b73da" id="r_aaa40053c552d93588fecf494586b73da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa40053c552d93588fecf494586b73da">Initialize</a> (HWND hwnd, UINT width, UINT height)</td></tr>
+<tr class="separator:aaa40053c552d93588fecf494586b73da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9324178dc4b30a186234c496f60c9166" id="r_a9324178dc4b30a186234c496f60c9166"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9324178dc4b30a186234c496f60c9166">Run</a> ()</td></tr>
+<tr class="separator:a9324178dc4b30a186234c496f60c9166"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97b5ac72fb598a81bccad2d045a3ce1d" id="r_a97b5ac72fb598a81bccad2d045a3ce1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97b5ac72fb598a81bccad2d045a3ce1d">Update</a> ()</td></tr>
+<tr class="separator:a97b5ac72fb598a81bccad2d045a3ce1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90a63d3a3b58b9bf701ac4b91321a8ba" id="r_a90a63d3a3b58b9bf701ac4b91321a8ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90a63d3a3b58b9bf701ac4b91321a8ba">LateUpdate</a> ()</td></tr>
+<tr class="separator:a90a63d3a3b58b9bf701ac4b91321a8ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10acdcff0c204e15e99427c9402b0f2a" id="r_a10acdcff0c204e15e99427c9402b0f2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10acdcff0c204e15e99427c9402b0f2a">Render</a> ()</td></tr>
+<tr class="separator:a10acdcff0c204e15e99427c9402b0f2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a124f40ad2666bc7df0f252d3713c9b8e" id="r_a124f40ad2666bc7df0f252d3713c9b8e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a124f40ad2666bc7df0f252d3713c9b8e">Destroy</a> ()</td></tr>
+<tr class="separator:a124f40ad2666bc7df0f252d3713c9b8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93e7596634c21b14c8737cb783599f20" id="r_a93e7596634c21b14c8737cb783599f20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93e7596634c21b14c8737cb783599f20">Release</a> ()</td></tr>
+<tr class="separator:a93e7596634c21b14c8737cb783599f20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26da00013706be0efe167e79fb5ac317" id="r_a26da00013706be0efe167e79fb5ac317"><td class="memItemLeft" align="right" valign="top">HWND&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26da00013706be0efe167e79fb5ac317">GetHwnd</a> () const</td></tr>
+<tr class="separator:a26da00013706be0efe167e79fb5ac317"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39d50aec7018d8ab908e86e8a4397072" id="r_a39d50aec7018d8ab908e86e8a4397072"><td class="memItemLeft" align="right" valign="top">HDC&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39d50aec7018d8ab908e86e8a4397072">GetHdc</a> () const</td></tr>
+<tr class="separator:a39d50aec7018d8ab908e86e8a4397072"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a203da39af0dc46c0a8a844b19f671953" id="r_a203da39af0dc46c0a8a844b19f671953"><td class="memItemLeft" align="right" valign="top">UINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a203da39af0dc46c0a8a844b19f671953">GetWidth</a> () const</td></tr>
+<tr class="separator:a203da39af0dc46c0a8a844b19f671953"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f99463e335adf2babeedc450dcb4247" id="r_a8f99463e335adf2babeedc450dcb4247"><td class="memItemLeft" align="right" valign="top">UINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f99463e335adf2babeedc450dcb4247">GetHeight</a> () const</td></tr>
+<tr class="separator:a8f99463e335adf2babeedc450dcb4247"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock"><p>main에서 호출되는 가장 상위의 클래스입니다. </p>
+<p>윈도우 핸들, 크기, 백 버퍼를 관리합니다.</p>
+<p>다른 오브젝트들을 업데이트하고 렌더링합니다. </p>
+
+<p class="definition"><a class="el" href="hs_application_8h_source.html">hsApplication.h</a> 파일의 <a class="el" href="hs_application_8h_source.html#l00011">11</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="a79ec42b6f09a0d4724b75fd493ea0be3" name="a79ec42b6f09a0d4724b75fd493ea0be3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79ec42b6f09a0d4724b75fd493ea0be3">&#9670;&#160;</a></span>Application()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">hs::Application::Application </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hs_application_8cpp_source.html">hsApplication.cpp</a> 파일의 <a class="el" href="hs_application_8cpp_source.html#l00008">8</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a1a2a839cb965fc435be956a1cc778323" name="a1a2a839cb965fc435be956a1cc778323"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a2a839cb965fc435be956a1cc778323">&#9670;&#160;</a></span>~Application()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">hs::Application::~Application </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hs_application_8cpp_source.html">hsApplication.cpp</a> 파일의 <a class="el" href="hs_application_8cpp_source.html#l00017">17</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="a124f40ad2666bc7df0f252d3713c9b8e" name="a124f40ad2666bc7df0f252d3713c9b8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a124f40ad2666bc7df0f252d3713c9b8e">&#9670;&#160;</a></span>Destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void hs::Application::Destroy </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hs_application_8cpp_source.html">hsApplication.cpp</a> 파일의 <a class="el" href="hs_application_8cpp_source.html#l00057">57</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a39d50aec7018d8ab908e86e8a4397072" name="a39d50aec7018d8ab908e86e8a4397072"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39d50aec7018d8ab908e86e8a4397072">&#9670;&#160;</a></span>GetHdc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HDC hs::Application::GetHdc </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hs_application_8h_source.html">hsApplication.h</a> 파일의 <a class="el" href="hs_application_8h_source.html#l00027">27</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a8f99463e335adf2babeedc450dcb4247" name="a8f99463e335adf2babeedc450dcb4247"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f99463e335adf2babeedc450dcb4247">&#9670;&#160;</a></span>GetHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UINT hs::Application::GetHeight </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hs_application_8h_source.html">hsApplication.h</a> 파일의 <a class="el" href="hs_application_8h_source.html#l00029">29</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a26da00013706be0efe167e79fb5ac317" name="a26da00013706be0efe167e79fb5ac317"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26da00013706be0efe167e79fb5ac317">&#9670;&#160;</a></span>GetHwnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HWND hs::Application::GetHwnd </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hs_application_8h_source.html">hsApplication.h</a> 파일의 <a class="el" href="hs_application_8h_source.html#l00026">26</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a203da39af0dc46c0a8a844b19f671953" name="a203da39af0dc46c0a8a844b19f671953"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a203da39af0dc46c0a8a844b19f671953">&#9670;&#160;</a></span>GetWidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UINT hs::Application::GetWidth </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hs_application_8h_source.html">hsApplication.h</a> 파일의 <a class="el" href="hs_application_8h_source.html#l00028">28</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="aaa40053c552d93588fecf494586b73da" name="aaa40053c552d93588fecf494586b73da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa40053c552d93588fecf494586b73da">&#9670;&#160;</a></span>Initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void hs::Application::Initialize </td>
+          <td>(</td>
+          <td class="paramtype">HWND</td>          <td class="paramname"><span class="paramname"><em>hwnd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT</td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT</td>          <td class="paramname"><span class="paramname"><em>height</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hs_application_8cpp_source.html">hsApplication.cpp</a> 파일의 <a class="el" href="hs_application_8cpp_source.html#l00020">20</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a90a63d3a3b58b9bf701ac4b91321a8ba" name="a90a63d3a3b58b9bf701ac4b91321a8ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90a63d3a3b58b9bf701ac4b91321a8ba">&#9670;&#160;</a></span>LateUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void hs::Application::LateUpdate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hs_application_8cpp_source.html">hsApplication.cpp</a> 파일의 <a class="el" href="hs_application_8cpp_source.html#l00043">43</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a93e7596634c21b14c8737cb783599f20" name="a93e7596634c21b14c8737cb783599f20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93e7596634c21b14c8737cb783599f20">&#9670;&#160;</a></span>Release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void hs::Application::Release </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hs_application_8cpp_source.html">hsApplication.cpp</a> 파일의 <a class="el" href="hs_application_8cpp_source.html#l00061">61</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a10acdcff0c204e15e99427c9402b0f2a" name="a10acdcff0c204e15e99427c9402b0f2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10acdcff0c204e15e99427c9402b0f2a">&#9670;&#160;</a></span>Render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void hs::Application::Render </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hs_application_8cpp_source.html">hsApplication.cpp</a> 파일의 <a class="el" href="hs_application_8cpp_source.html#l00047">47</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a9324178dc4b30a186234c496f60c9166" name="a9324178dc4b30a186234c496f60c9166"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9324178dc4b30a186234c496f60c9166">&#9670;&#160;</a></span>Run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void hs::Application::Run </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hs_application_8cpp_source.html">hsApplication.cpp</a> 파일의 <a class="el" href="hs_application_8cpp_source.html#l00029">29</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a97b5ac72fb598a81bccad2d045a3ce1d" name="a97b5ac72fb598a81bccad2d045a3ce1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97b5ac72fb598a81bccad2d045a3ce1d">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void hs::Application::Update </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="hs_application_8cpp_source.html">hsApplication.cpp</a> 파일의 <a class="el" href="hs_application_8cpp_source.html#l00037">37</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<hr/>이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.:<ul>
+<li>HSEngine_SOURCE/<a class="el" href="hs_application_8h_source.html">hsApplication.h</a></li>
+<li>HSEngine_SOURCE/<a class="el" href="hs_application_8cpp_source.html">hsApplication.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacehs.html">hs</a></li><li class="navelem"><a class="el" href="classhs_1_1_application.html">Application</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

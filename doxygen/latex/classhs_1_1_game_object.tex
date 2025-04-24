@@ -1,0 +1,255 @@
+\doxysection{hs\+::Game\+Object 클래스 참조}
+\hypertarget{classhs_1_1_game_object}{}\label{classhs_1_1_game_object}\index{hs::GameObject@{hs::GameObject}}
+
+
+게임 오브젝트는 씬에 존재하는 모든 오브젝트를 정의합니다.  
+
+
+
+
+{\ttfamily \#include $<$hs\+Game\+Object.\+h$>$}
+
+hs\+::Game\+Object에 대한 상속 다이어그램 \+: \begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classhs_1_1_game_object}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 타입}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{classhs_1_1_game_object_aee636306259058436342242ff90806d1}{e\+State}} \{ \mbox{\hyperlink{classhs_1_1_game_object_aee636306259058436342242ff90806d1a4d3d769b812b6faa6b76e1a8abaece2d}{Active}}
+, \mbox{\hyperlink{classhs_1_1_game_object_aee636306259058436342242ff90806d1ae99180abf47a8b3a856e0bcb2656990a}{Paused}}
+, \mbox{\hyperlink{classhs_1_1_game_object_aee636306259058436342242ff90806d1a183b62c7f067711f9c5a54913c054617}{Dead}}
+, \mbox{\hyperlink{classhs_1_1_game_object_aee636306259058436342242ff90806d1a87557f11575c0ad78e4e28abedc13b6e}{End}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhs_1_1_game_object_a692bb3508e8a5d2e1461bffd8370e502}{Game\+Object}} ()
+\item 
+\mbox{\hyperlink{classhs_1_1_game_object_a5d7abf783db58326d3a11f6bb9e0d3d0}{\texorpdfstring{$\sim$}{\string~}\+Game\+Object}} ()
+\item 
+virtual void \mbox{\hyperlink{classhs_1_1_game_object_a8ba11912bf71edd4e3a6d3ab7b1f9a12}{Initialize}} ()
+\item 
+virtual void \mbox{\hyperlink{classhs_1_1_game_object_a0f02645a9823e51547b616c9f0dcab06}{Update}} ()
+\item 
+virtual void \mbox{\hyperlink{classhs_1_1_game_object_ae0204a9411dcfa86997cf51de178ff0d}{Late\+Update}} ()
+\item 
+virtual void \mbox{\hyperlink{classhs_1_1_game_object_a9970405296e8ae46d7ff4505ee6c627c}{Render}} (HDC hdc)
+\item 
+{\footnotesize template$<$typename T$>$ }\\T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classhs_1_1_game_object_ac198dad144214ea9e0f7e48685303965}{Add\+Component}} ()
+\item 
+{\footnotesize template$<$typename T$>$ }\\T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classhs_1_1_game_object_a2196f983d980e181f3f1b5662c2bc3f6}{Get\+Component}} ()
+\item 
+\mbox{\hyperlink{classhs_1_1_game_object_aee636306259058436342242ff90806d1}{e\+State}} \mbox{\hyperlink{classhs_1_1_game_object_a70efe58db217087adb9cb4bd1d7b61a9}{Get\+State}} () const
+\item 
+void \mbox{\hyperlink{classhs_1_1_game_object_a11a55094e5fcf143e800736cd5770851}{Set\+Active}} (bool power)
+\item 
+bool \mbox{\hyperlink{classhs_1_1_game_object_a40e1c313fe3b5e88a1eb536263dc826f}{Is\+Active}} () const
+\item 
+bool \mbox{\hyperlink{classhs_1_1_game_object_a875e55ac6383eb452c05386c698b8599}{Is\+Dead}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classhs_1_1_game_object_ac1d5340fbf61717ef213b7780ff2b1d7}{object\+::\+Destory}} (\mbox{\hyperlink{classhs_1_1_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}obj)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+게임 오브젝트는 씬에 존재하는 모든 오브젝트를 정의합니다. 
+
+\mbox{\hyperlink{hs_game_object_8h_source}{hs\+Game\+Object.\+h}} 파일의 \mbox{\hyperlink{hs_game_object_8h_source_l00015}{15}} 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 열거형 문서화}
+\Hypertarget{classhs_1_1_game_object_aee636306259058436342242ff90806d1}\index{hs::GameObject@{hs::GameObject}!eState@{eState}}
+\index{eState@{eState}!hs::GameObject@{hs::GameObject}}
+\doxysubsubsection{\texorpdfstring{eState}{eState}}
+{\footnotesize\ttfamily \label{classhs_1_1_game_object_aee636306259058436342242ff90806d1} 
+enum class \mbox{\hyperlink{classhs_1_1_game_object_aee636306259058436342242ff90806d1}{hs\+::\+Game\+Object\+::e\+State}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}[2]{열거형 멤버}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Active@{Active}!hs::GameObject@{hs::GameObject}}\index{hs::GameObject@{hs::GameObject}!Active@{Active}}}\Hypertarget{classhs_1_1_game_object_aee636306259058436342242ff90806d1a4d3d769b812b6faa6b76e1a8abaece2d}\label{classhs_1_1_game_object_aee636306259058436342242ff90806d1a4d3d769b812b6faa6b76e1a8abaece2d} 
+Active&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Paused@{Paused}!hs::GameObject@{hs::GameObject}}\index{hs::GameObject@{hs::GameObject}!Paused@{Paused}}}\Hypertarget{classhs_1_1_game_object_aee636306259058436342242ff90806d1ae99180abf47a8b3a856e0bcb2656990a}\label{classhs_1_1_game_object_aee636306259058436342242ff90806d1ae99180abf47a8b3a856e0bcb2656990a} 
+Paused&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Dead@{Dead}!hs::GameObject@{hs::GameObject}}\index{hs::GameObject@{hs::GameObject}!Dead@{Dead}}}\Hypertarget{classhs_1_1_game_object_aee636306259058436342242ff90806d1a183b62c7f067711f9c5a54913c054617}\label{classhs_1_1_game_object_aee636306259058436342242ff90806d1a183b62c7f067711f9c5a54913c054617} 
+Dead&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{End@{End}!hs::GameObject@{hs::GameObject}}\index{hs::GameObject@{hs::GameObject}!End@{End}}}\Hypertarget{classhs_1_1_game_object_aee636306259058436342242ff90806d1a87557f11575c0ad78e4e28abedc13b6e}\label{classhs_1_1_game_object_aee636306259058436342242ff90806d1a87557f11575c0ad78e4e28abedc13b6e} 
+End&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\mbox{\hyperlink{hs_game_object_8h_source}{hs\+Game\+Object.\+h}} 파일의 \mbox{\hyperlink{hs_game_object_8h_source_l00020}{20}} 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\Hypertarget{classhs_1_1_game_object_a692bb3508e8a5d2e1461bffd8370e502}\index{hs::GameObject@{hs::GameObject}!GameObject@{GameObject}}
+\index{GameObject@{GameObject}!hs::GameObject@{hs::GameObject}}
+\doxysubsubsection{\texorpdfstring{GameObject()}{GameObject()}}
+{\footnotesize\ttfamily \label{classhs_1_1_game_object_a692bb3508e8a5d2e1461bffd8370e502} 
+hs\+::\+Game\+Object\+::\+Game\+Object (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{hs_game_object_8cpp_source}{hs\+Game\+Object.\+cpp}} 파일의 \mbox{\hyperlink{hs_game_object_8cpp_source_l00017}{17}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1_game_object_a5d7abf783db58326d3a11f6bb9e0d3d0}\index{hs::GameObject@{hs::GameObject}!````~GameObject@{\texorpdfstring{$\sim$}{\string~}GameObject}}
+\index{````~GameObject@{\texorpdfstring{$\sim$}{\string~}GameObject}!hs::GameObject@{hs::GameObject}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}GameObject()}{\string~GameObject()}}
+{\footnotesize\ttfamily \label{classhs_1_1_game_object_a5d7abf783db58326d3a11f6bb9e0d3d0} 
+hs\+::\+Game\+Object\+::\texorpdfstring{$\sim$}{\string~}\+Game\+Object (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{hs_game_object_8cpp_source}{hs\+Game\+Object.\+cpp}} 파일의 \mbox{\hyperlink{hs_game_object_8cpp_source_l00024}{24}} 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\Hypertarget{classhs_1_1_game_object_ac198dad144214ea9e0f7e48685303965}\index{hs::GameObject@{hs::GameObject}!AddComponent@{AddComponent}}
+\index{AddComponent@{AddComponent}!hs::GameObject@{hs::GameObject}}
+\doxysubsubsection{\texorpdfstring{AddComponent()}{AddComponent()}}
+{\footnotesize\ttfamily \label{classhs_1_1_game_object_ac198dad144214ea9e0f7e48685303965} 
+template$<$typename T$>$ \\
+T \texorpdfstring{$\ast$}{*} hs\+::\+Game\+Object\+::\+Add\+Component (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{hs_game_object_8h_source}{hs\+Game\+Object.\+h}} 파일의 \mbox{\hyperlink{hs_game_object_8h_source_l00037}{37}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1_game_object_a2196f983d980e181f3f1b5662c2bc3f6}\index{hs::GameObject@{hs::GameObject}!GetComponent@{GetComponent}}
+\index{GetComponent@{GetComponent}!hs::GameObject@{hs::GameObject}}
+\doxysubsubsection{\texorpdfstring{GetComponent()}{GetComponent()}}
+{\footnotesize\ttfamily \label{classhs_1_1_game_object_a2196f983d980e181f3f1b5662c2bc3f6} 
+template$<$typename T$>$ \\
+T \texorpdfstring{$\ast$}{*} hs\+::\+Game\+Object\+::\+Get\+Component (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{hs_game_object_8h_source}{hs\+Game\+Object.\+h}} 파일의 \mbox{\hyperlink{hs_game_object_8h_source_l00048}{48}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1_game_object_a70efe58db217087adb9cb4bd1d7b61a9}\index{hs::GameObject@{hs::GameObject}!GetState@{GetState}}
+\index{GetState@{GetState}!hs::GameObject@{hs::GameObject}}
+\doxysubsubsection{\texorpdfstring{GetState()}{GetState()}}
+{\footnotesize\ttfamily \label{classhs_1_1_game_object_a70efe58db217087adb9cb4bd1d7b61a9} 
+\mbox{\hyperlink{classhs_1_1_game_object_aee636306259058436342242ff90806d1}{e\+State}} hs\+::\+Game\+Object\+::\+Get\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{hs_game_object_8h_source}{hs\+Game\+Object.\+h}} 파일의 \mbox{\hyperlink{hs_game_object_8h_source_l00061}{61}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1_game_object_a8ba11912bf71edd4e3a6d3ab7b1f9a12}\index{hs::GameObject@{hs::GameObject}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!hs::GameObject@{hs::GameObject}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily \label{classhs_1_1_game_object_a8ba11912bf71edd4e3a6d3ab7b1f9a12} 
+void hs\+::\+Game\+Object\+::\+Initialize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{classhs_1_1_cat_a71c6bf668a54b6e96fe4bc8e7d3a26ca}{hs\+::\+Cat}}, \mbox{\hyperlink{classhs_1_1_player_a398ca47ff2bfd06f11e608015350710d}{hs\+::\+Player}}에서 재구현되었습니다.
+
+
+
+\mbox{\hyperlink{hs_game_object_8cpp_source}{hs\+Game\+Object.\+cpp}} 파일의 \mbox{\hyperlink{hs_game_object_8cpp_source_l00033}{33}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1_game_object_a40e1c313fe3b5e88a1eb536263dc826f}\index{hs::GameObject@{hs::GameObject}!IsActive@{IsActive}}
+\index{IsActive@{IsActive}!hs::GameObject@{hs::GameObject}}
+\doxysubsubsection{\texorpdfstring{IsActive()}{IsActive()}}
+{\footnotesize\ttfamily \label{classhs_1_1_game_object_a40e1c313fe3b5e88a1eb536263dc826f} 
+bool hs\+::\+Game\+Object\+::\+Is\+Active (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{hs_game_object_8h_source}{hs\+Game\+Object.\+h}} 파일의 \mbox{\hyperlink{hs_game_object_8h_source_l00067}{67}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1_game_object_a875e55ac6383eb452c05386c698b8599}\index{hs::GameObject@{hs::GameObject}!IsDead@{IsDead}}
+\index{IsDead@{IsDead}!hs::GameObject@{hs::GameObject}}
+\doxysubsubsection{\texorpdfstring{IsDead()}{IsDead()}}
+{\footnotesize\ttfamily \label{classhs_1_1_game_object_a875e55ac6383eb452c05386c698b8599} 
+bool hs\+::\+Game\+Object\+::\+Is\+Dead (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{hs_game_object_8h_source}{hs\+Game\+Object.\+h}} 파일의 \mbox{\hyperlink{hs_game_object_8h_source_l00068}{68}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1_game_object_ae0204a9411dcfa86997cf51de178ff0d}\index{hs::GameObject@{hs::GameObject}!LateUpdate@{LateUpdate}}
+\index{LateUpdate@{LateUpdate}!hs::GameObject@{hs::GameObject}}
+\doxysubsubsection{\texorpdfstring{LateUpdate()}{LateUpdate()}}
+{\footnotesize\ttfamily \label{classhs_1_1_game_object_ae0204a9411dcfa86997cf51de178ff0d} 
+void hs\+::\+Game\+Object\+::\+Late\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{classhs_1_1_cat_aa1de092cff2fe2c05feb87fe0009e92d}{hs\+::\+Cat}}, \mbox{\hyperlink{classhs_1_1_player_a5ce58da3139e17c2b1ad02a17025f1d8}{hs\+::\+Player}}에서 재구현되었습니다.
+
+
+
+\mbox{\hyperlink{hs_game_object_8cpp_source}{hs\+Game\+Object.\+cpp}} 파일의 \mbox{\hyperlink{hs_game_object_8cpp_source_l00049}{49}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1_game_object_a9970405296e8ae46d7ff4505ee6c627c}\index{hs::GameObject@{hs::GameObject}!Render@{Render}}
+\index{Render@{Render}!hs::GameObject@{hs::GameObject}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily \label{classhs_1_1_game_object_a9970405296e8ae46d7ff4505ee6c627c} 
+void hs\+::\+Game\+Object\+::\+Render (\begin{DoxyParamCaption}\item[{HDC}]{hdc}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{classhs_1_1_cat_adaaaef02cbe6ac752d77742a765b8492}{hs\+::\+Cat}}, \mbox{\hyperlink{classhs_1_1_player_ad9266943b653c905897e8cef5bde257f}{hs\+::\+Player}}에서 재구현되었습니다.
+
+
+
+\mbox{\hyperlink{hs_game_object_8cpp_source}{hs\+Game\+Object.\+cpp}} 파일의 \mbox{\hyperlink{hs_game_object_8cpp_source_l00057}{57}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1_game_object_a11a55094e5fcf143e800736cd5770851}\index{hs::GameObject@{hs::GameObject}!SetActive@{SetActive}}
+\index{SetActive@{SetActive}!hs::GameObject@{hs::GameObject}}
+\doxysubsubsection{\texorpdfstring{SetActive()}{SetActive()}}
+{\footnotesize\ttfamily \label{classhs_1_1_game_object_a11a55094e5fcf143e800736cd5770851} 
+void hs\+::\+Game\+Object\+::\+Set\+Active (\begin{DoxyParamCaption}\item[{bool}]{power}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{hs_game_object_8h_source}{hs\+Game\+Object.\+h}} 파일의 \mbox{\hyperlink{hs_game_object_8h_source_l00062}{62}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1_game_object_a0f02645a9823e51547b616c9f0dcab06}\index{hs::GameObject@{hs::GameObject}!Update@{Update}}
+\index{Update@{Update}!hs::GameObject@{hs::GameObject}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{classhs_1_1_game_object_a0f02645a9823e51547b616c9f0dcab06} 
+void hs\+::\+Game\+Object\+::\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{classhs_1_1_cat_ad27c3665e43da6fb25b027d733d57d64}{hs\+::\+Cat}}, \mbox{\hyperlink{classhs_1_1_player_ac93a963e98271ea56d079c92ccdd4f1d}{hs\+::\+Player}}에서 재구현되었습니다.
+
+
+
+\mbox{\hyperlink{hs_game_object_8cpp_source}{hs\+Game\+Object.\+cpp}} 파일의 \mbox{\hyperlink{hs_game_object_8cpp_source_l00041}{41}} 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{Friend, 그리고 관련된 함수 문서화}
+\Hypertarget{classhs_1_1_game_object_ac1d5340fbf61717ef213b7780ff2b1d7}\index{hs::GameObject@{hs::GameObject}!object::Destory@{object::Destory}}
+\index{object::Destory@{object::Destory}!hs::GameObject@{hs::GameObject}}
+\doxysubsubsection{\texorpdfstring{object::Destory}{object::Destory}}
+{\footnotesize\ttfamily \label{classhs_1_1_game_object_ac1d5340fbf61717ef213b7780ff2b1d7} 
+void \mbox{\hyperlink{namespacehs_1_1object_a08beac466a4776be5febf67992be2ae8}{object\+::\+Destory}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhs_1_1_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}}]{obj}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+HSEngine\+\_\+\+SOURCE/\mbox{\hyperlink{hs_game_object_8h}{hs\+Game\+Object.\+h}}\item 
+HSEngine\+\_\+\+SOURCE/\mbox{\hyperlink{hs_game_object_8cpp}{hs\+Game\+Object.\+cpp}}\end{DoxyCompactItemize}

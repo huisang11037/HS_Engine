@@ -6,7 +6,9 @@
 #include "hsSceneManager.h"
 #include "hsTransform.h"
 
-
+/**
+* @brief 게임 오브젝트를 생성하는 템플릿 함수입니다.
+*/
 namespace hs::object
 {
 	template <typename T>

@@ -9,6 +9,9 @@ namespace hs::object
 
 namespace hs
 {
+	/**
+	* @brief 게임 오브젝트는 씬에 존재하는 모든 오브젝트를 정의합니다.
+	*/
 	class GameObject
 	{
 	public:

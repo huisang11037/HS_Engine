@@ -6,6 +6,9 @@
 namespace hs
 {
 	using namespace math;
+	/**
+	* @brief 위치를 정의하는 컴포넌트입니다.
+	*/
 	class Transform : public Component
 	{
 	public:

@@ -1,0 +1,176 @@
+\doxysection{hs\+::Component 클래스 참조}
+\hypertarget{classhs_1_1_component}{}\label{classhs_1_1_component}\index{hs::Component@{hs::Component}}
+
+
+컴포넌트는 게임 오브젝트에 부착되어 기능을 추가합니다.  
+
+
+
+
+{\ttfamily \#include $<$hs\+Component.\+h$>$}
+
+hs\+::Component에 대한 상속 다이어그램 \+: \begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.584000cm]{classhs_1_1_component}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhs_1_1_component_a8950a1cb229cebd9b7e1afd8ee4e0ef8}{Component}} (\mbox{\hyperlink{namespacehs_1_1enums_adbc1f9eacd808ec4b80283b6b010b48a}{enums\+::e\+Component\+Type}} type)
+\item 
+\mbox{\hyperlink{classhs_1_1_component_a7eaeef8121ef796bcf6319cc035f0885}{\texorpdfstring{$\sim$}{\string~}\+Component}} ()
+\item 
+virtual void \mbox{\hyperlink{classhs_1_1_component_a445ae3dc09f2ef2bdbf21ce02294faa5}{Initialize}} ()
+\item 
+virtual void \mbox{\hyperlink{classhs_1_1_component_a5bdd392ab636da076462956268e67e29}{Update}} ()
+\item 
+virtual void \mbox{\hyperlink{classhs_1_1_component_a0dd22f37a1f4e03f7b825b075c78142f}{Late\+Update}} ()
+\item 
+virtual void \mbox{\hyperlink{classhs_1_1_component_a9d3e32dd591a979638794bfc2d79119a}{Render}} (HDC hdc)
+\item 
+void \mbox{\hyperlink{classhs_1_1_component_ae56200efea9461695c401871cdb0183a}{Set\+Owner}} (\mbox{\hyperlink{classhs_1_1_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}owner)
+\item 
+\mbox{\hyperlink{classhs_1_1_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classhs_1_1_component_ae76ddacdaaa23c4663322dccbb064d6e}{Get\+Owner}} ()
+\item 
+\mbox{\hyperlink{namespacehs_1_1enums_adbc1f9eacd808ec4b80283b6b010b48a}{enums\+::e\+Component\+Type}} \mbox{\hyperlink{classhs_1_1_component_ac9877301ae21c20aa291415c36f7eb78}{Get\+Type}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{\mbox{\hyperlink{classhs_1_1_entity}{hs\+::\+Entity}}(으)로부터 상속된 Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhs_1_1_entity_af3cef436d0ffd259d99e505a987428f4}{Entity}} ()
+\item 
+virtual \mbox{\hyperlink{classhs_1_1_entity_ad30b89f98b0edf4f969370b949b42adf}{\texorpdfstring{$\sim$}{\string~}\+Entity}} ()
+\item 
+void \mbox{\hyperlink{classhs_1_1_entity_a477f58255303b66fb51c0f36f9caf534}{Set\+Name}} (const std\+::wstring \&name)
+\item 
+const std\+::wstring \& \mbox{\hyperlink{classhs_1_1_entity_a50626d2175dc190d0a16ebdcb6962b0d}{Get\+Name}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+컴포넌트는 게임 오브젝트에 부착되어 기능을 추가합니다. 
+
+유니티의 그 컴포넌트입니다. 
+
+\mbox{\hyperlink{hs_component_8h_source}{hs\+Component.\+h}} 파일의 \mbox{\hyperlink{hs_component_8h_source_l00011}{11}} 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\Hypertarget{classhs_1_1_component_a8950a1cb229cebd9b7e1afd8ee4e0ef8}\index{hs::Component@{hs::Component}!Component@{Component}}
+\index{Component@{Component}!hs::Component@{hs::Component}}
+\doxysubsubsection{\texorpdfstring{Component()}{Component()}}
+{\footnotesize\ttfamily \label{classhs_1_1_component_a8950a1cb229cebd9b7e1afd8ee4e0ef8} 
+hs\+::\+Component\+::\+Component (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacehs_1_1enums_adbc1f9eacd808ec4b80283b6b010b48a}{enums\+::e\+Component\+Type}}}]{type}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{hs_component_8cpp_source}{hs\+Component.\+cpp}} 파일의 \mbox{\hyperlink{hs_component_8cpp_source_l00006}{6}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1_component_a7eaeef8121ef796bcf6319cc035f0885}\index{hs::Component@{hs::Component}!````~Component@{\texorpdfstring{$\sim$}{\string~}Component}}
+\index{````~Component@{\texorpdfstring{$\sim$}{\string~}Component}!hs::Component@{hs::Component}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Component()}{\string~Component()}}
+{\footnotesize\ttfamily \label{classhs_1_1_component_a7eaeef8121ef796bcf6319cc035f0885} 
+hs\+::\+Component\+::\texorpdfstring{$\sim$}{\string~}\+Component (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{hs_component_8cpp_source}{hs\+Component.\+cpp}} 파일의 \mbox{\hyperlink{hs_component_8cpp_source_l00010}{10}} 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\Hypertarget{classhs_1_1_component_ae76ddacdaaa23c4663322dccbb064d6e}\index{hs::Component@{hs::Component}!GetOwner@{GetOwner}}
+\index{GetOwner@{GetOwner}!hs::Component@{hs::Component}}
+\doxysubsubsection{\texorpdfstring{GetOwner()}{GetOwner()}}
+{\footnotesize\ttfamily \label{classhs_1_1_component_ae76ddacdaaa23c4663322dccbb064d6e} 
+\mbox{\hyperlink{classhs_1_1_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} hs\+::\+Component\+::\+Get\+Owner (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{hs_component_8h_source}{hs\+Component.\+h}} 파일의 \mbox{\hyperlink{hs_component_8h_source_l00023}{23}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1_component_ac9877301ae21c20aa291415c36f7eb78}\index{hs::Component@{hs::Component}!GetType@{GetType}}
+\index{GetType@{GetType}!hs::Component@{hs::Component}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily \label{classhs_1_1_component_ac9877301ae21c20aa291415c36f7eb78} 
+\mbox{\hyperlink{namespacehs_1_1enums_adbc1f9eacd808ec4b80283b6b010b48a}{enums\+::e\+Component\+Type}} hs\+::\+Component\+::\+Get\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{hs_component_8h_source}{hs\+Component.\+h}} 파일의 \mbox{\hyperlink{hs_component_8h_source_l00024}{24}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1_component_a445ae3dc09f2ef2bdbf21ce02294faa5}\index{hs::Component@{hs::Component}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!hs::Component@{hs::Component}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily \label{classhs_1_1_component_a445ae3dc09f2ef2bdbf21ce02294faa5} 
+void hs\+::\+Component\+::\+Initialize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{classhs_1_1_animator_a5011c887de8550763f80e2f8f9f7d678}{hs\+::\+Animator}}, \mbox{\hyperlink{classhs_1_1_camera_a1d6c4ea3423bb95882fd8b672f778dc4}{hs\+::\+Camera}}, \mbox{\hyperlink{classhs_1_1_cat_script_a087fa16a0c8e9bf100acbee912db1ce4}{hs\+::\+Cat\+Script}}, \mbox{\hyperlink{classhs_1_1_player_script_a396e247ad02749b60b7741b5d2ff553e}{hs\+::\+Player\+Script}}, \mbox{\hyperlink{classhs_1_1_script_a73910f383a23eb2bb38b4f3225647598}{hs\+::\+Script}}, \mbox{\hyperlink{classhs_1_1_sprite_renderer_a469405317911cc7f68885db24df25a46}{hs\+::\+Sprite\+Renderer}}, \mbox{\hyperlink{classhs_1_1_transform_a4caea01bb0d6556037c830c24a138222}{hs\+::\+Transform}}에서 재구현되었습니다.
+
+
+
+\mbox{\hyperlink{hs_component_8cpp_source}{hs\+Component.\+cpp}} 파일의 \mbox{\hyperlink{hs_component_8cpp_source_l00014}{14}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1_component_a0dd22f37a1f4e03f7b825b075c78142f}\index{hs::Component@{hs::Component}!LateUpdate@{LateUpdate}}
+\index{LateUpdate@{LateUpdate}!hs::Component@{hs::Component}}
+\doxysubsubsection{\texorpdfstring{LateUpdate()}{LateUpdate()}}
+{\footnotesize\ttfamily \label{classhs_1_1_component_a0dd22f37a1f4e03f7b825b075c78142f} 
+void hs\+::\+Component\+::\+Late\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{classhs_1_1_animator_a22021320da0f864ae0281b72acadbbbb}{hs\+::\+Animator}}, \mbox{\hyperlink{classhs_1_1_camera_a5b06cbd84a68c3d8e9f6d75b26819e59}{hs\+::\+Camera}}, \mbox{\hyperlink{classhs_1_1_cat_script_ab72579f4919c3b381383c819c4368c92}{hs\+::\+Cat\+Script}}, \mbox{\hyperlink{classhs_1_1_player_script_af7c2c86b2f5eeeb2c78350851b0c1953}{hs\+::\+Player\+Script}}, \mbox{\hyperlink{classhs_1_1_script_a45a0faffa45da92123c76d7532257cb1}{hs\+::\+Script}}, \mbox{\hyperlink{classhs_1_1_sprite_renderer_abd827580a623b1597342acfc98d2e448}{hs\+::\+Sprite\+Renderer}}, \mbox{\hyperlink{classhs_1_1_transform_a0311a734a1ad3e3af7a1d3e3d2b9727b}{hs\+::\+Transform}}에서 재구현되었습니다.
+
+
+
+\mbox{\hyperlink{hs_component_8cpp_source}{hs\+Component.\+cpp}} 파일의 \mbox{\hyperlink{hs_component_8cpp_source_l00024}{24}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1_component_a9d3e32dd591a979638794bfc2d79119a}\index{hs::Component@{hs::Component}!Render@{Render}}
+\index{Render@{Render}!hs::Component@{hs::Component}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily \label{classhs_1_1_component_a9d3e32dd591a979638794bfc2d79119a} 
+void hs\+::\+Component\+::\+Render (\begin{DoxyParamCaption}\item[{HDC}]{hdc}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{classhs_1_1_animator_a350dee80bde2bbddd895bf13eb0377f1}{hs\+::\+Animator}}, \mbox{\hyperlink{classhs_1_1_camera_adb5a8251c119162a2e7880d50461f28c}{hs\+::\+Camera}}, \mbox{\hyperlink{classhs_1_1_cat_script_a728b71c7aa9edec98049297bdfacb1ca}{hs\+::\+Cat\+Script}}, \mbox{\hyperlink{classhs_1_1_player_script_a6dcc4f10c010a51509bb48cd6d082ce2}{hs\+::\+Player\+Script}}, \mbox{\hyperlink{classhs_1_1_script_a3b58acf41f146827d3189bb42fe2b5b3}{hs\+::\+Script}}, \mbox{\hyperlink{classhs_1_1_sprite_renderer_a8c504c41374734a74a4933872f4dd954}{hs\+::\+Sprite\+Renderer}}, \mbox{\hyperlink{classhs_1_1_transform_ac4d50564e6e6dac70b7a442124070d57}{hs\+::\+Transform}}에서 재구현되었습니다.
+
+
+
+\mbox{\hyperlink{hs_component_8cpp_source}{hs\+Component.\+cpp}} 파일의 \mbox{\hyperlink{hs_component_8cpp_source_l00029}{29}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1_component_ae56200efea9461695c401871cdb0183a}\index{hs::Component@{hs::Component}!SetOwner@{SetOwner}}
+\index{SetOwner@{SetOwner}!hs::Component@{hs::Component}}
+\doxysubsubsection{\texorpdfstring{SetOwner()}{SetOwner()}}
+{\footnotesize\ttfamily \label{classhs_1_1_component_ae56200efea9461695c401871cdb0183a} 
+void hs\+::\+Component\+::\+Set\+Owner (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhs_1_1_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}}]{owner}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{hs_component_8h_source}{hs\+Component.\+h}} 파일의 \mbox{\hyperlink{hs_component_8h_source_l00022}{22}} 번째 라인에서 정의되었습니다.
+
+\Hypertarget{classhs_1_1_component_a5bdd392ab636da076462956268e67e29}\index{hs::Component@{hs::Component}!Update@{Update}}
+\index{Update@{Update}!hs::Component@{hs::Component}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{classhs_1_1_component_a5bdd392ab636da076462956268e67e29} 
+void hs\+::\+Component\+::\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{classhs_1_1_animator_a4f011f2e8618875e976f397d0be004b6}{hs\+::\+Animator}}, \mbox{\hyperlink{classhs_1_1_camera_a0ebbf9fa70bbb0ca6d28dc7c2b8c75da}{hs\+::\+Camera}}, \mbox{\hyperlink{classhs_1_1_cat_script_ae73b539dbb87ae4b78d32720920d8bf9}{hs\+::\+Cat\+Script}}, \mbox{\hyperlink{classhs_1_1_player_script_aa047c79f3ab5028ebd385c906afb046f}{hs\+::\+Player\+Script}}, \mbox{\hyperlink{classhs_1_1_script_a7bfcead745dabcde68ffe71476bfa872}{hs\+::\+Script}}, \mbox{\hyperlink{classhs_1_1_sprite_renderer_a3e0be1ce4ec28adb5c6aac99dc00d4fc}{hs\+::\+Sprite\+Renderer}}, \mbox{\hyperlink{classhs_1_1_transform_a4277c639606e1def828a89f8229bfced}{hs\+::\+Transform}}에서 재구현되었습니다.
+
+
+
+\mbox{\hyperlink{hs_component_8cpp_source}{hs\+Component.\+cpp}} 파일의 \mbox{\hyperlink{hs_component_8cpp_source_l00019}{19}} 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+HSEngine\+\_\+\+SOURCE/\mbox{\hyperlink{hs_component_8h}{hs\+Component.\+h}}\item 
+HSEngine\+\_\+\+SOURCE/\mbox{\hyperlink{hs_component_8cpp}{hs\+Component.\+cpp}}\end{DoxyCompactItemize}

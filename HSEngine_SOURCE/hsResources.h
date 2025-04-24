@@ -3,6 +3,9 @@
 
 namespace hs
 {
+	/**
+	* @brief 리소스를 불러오거나 찾는 함수를 정의합니다.
+	*/
 	class Resources
 	{
 	public:
