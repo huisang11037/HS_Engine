@@ -28,10 +28,10 @@ namespace hs::graphcis
 		HDC GetHdc() const  { return mHdc; }
 		eTextureType GetTextureType() const { return mType; }
 		Gdiplus::Image* GetImage() { return mImage; }
-		bool IsAlpha() const { return mIsAlpha; }
+		bool IsAlpha() const { return mbAlpha; }
 
 	private:
-		bool mIsAlpha;
+		bool mbAlpha;
 		eTextureType mType;
 		Gdiplus::Image* mImage;
 		HBITMAP mBitmap;

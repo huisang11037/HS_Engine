@@ -30,7 +30,7 @@ namespace hs {
 		{
 			keys[i].keyCode = static_cast<eKeyCode>(i);
 			keys[i].state = eKeyState::KEY_NONE;
-			keys[i].isPressed = false;
+			keys[i].bPressed = false;
 		}
 	}
 	void Input::updateKeys()
@@ -64,21 +64,21 @@ namespace hs {
 
 	void Input::updateKeyDown(Input::Key& key)
 	{
-		if (key.isPressed == true)
+		if (key.bPressed == true)
 			key.state = eKeyState::KEY_PRESSED;
 		else
 			key.state = eKeyState::KEY_DOWN;
 
-		key.isPressed = true;
+		key.bPressed = true;
 	}
 	void Input::updateKeyUp(Input::Key& key)
 	{
-		if (key.isPressed == true)
+		if (key.bPressed == true)
 			key.state = eKeyState::KEY_UP;
 		else
 			key.state = eKeyState::KEY_NONE;
 
-		key.isPressed = false;
+		key.bPressed = false;
 	}
 	void Input::getMousePositionByWindow()
 	{
@@ -98,7 +98,7 @@ namespace hs {
 			else if (key.state == eKeyState::KEY_UP)
 				key.state = eKeyState::KEY_NONE;
 
-			key.isPressed = false;
+			key.bPressed = false;
 		}
 	}
 }

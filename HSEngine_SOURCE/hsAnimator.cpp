@@ -7,7 +7,7 @@ namespace hs {
 		: Component(enums::eComponentType::Animator)
 		, mAnimations{}
 		, mActiveAnimation(nullptr)
-		, mIsLoop(false)
+		, mbLoop(false)
 	{
 	}
 	Animator::~Animator()
@@ -41,7 +41,7 @@ namespace hs {
 				if (events)
 					events->completeEvent();
 
-				if (mIsLoop == true)
+				if (mbLoop == true)
 					mActiveAnimation->Reset();
 			}
 		}
@@ -125,7 +125,7 @@ namespace hs {
 		
 		return iter->second;
 	}
-	void Animator::PlayAnimation(const std::wstring& name, bool isLoop)
+	void Animator::PlayAnimation(const std::wstring& name, bool bLoop)
 	{
 		Animation* animation = FindAnimation(name);
 		if (animation == nullptr) assert(false);
@@ -149,7 +149,7 @@ namespace hs {
 
 		mActiveAnimation = animation;
 		mActiveAnimation->Reset();
-		mIsLoop = isLoop;
+		mbLoop = bLoop;
 	}
 	Animator::Events* Animator::FindEvents(const std::wstring& name)
 	{

@@ -77,7 +77,7 @@ namespace hs
 			, Vector2 offset, float duration);
 
 		Animation* FindAnimation(const std::wstring& name);
-		void PlayAnimation(const std::wstring& name, bool isLoop = false);
+		void PlayAnimation(const std::wstring& name, bool bLoop = false);
 
 		Events* FindEvents(const std::wstring& name);
 		std::function<void()>& GetStartEvent(const std::wstring& name);
@@ -89,7 +89,7 @@ namespace hs
 	private:
 		std::map<std::wstring, Animation*> mAnimations;
 		Animation* mActiveAnimation;
-		bool mIsLoop;
+		bool mbLoop;
 
 		std::map<std::wstring, Events*> mEvents;
 	};

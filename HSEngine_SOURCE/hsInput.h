@@ -27,7 +27,7 @@ namespace hs {
 		{
 			eKeyCode keyCode;
 			eKeyState state;
-			bool isPressed;
+			bool bPressed;
 		};
 
 		static void Initialize();

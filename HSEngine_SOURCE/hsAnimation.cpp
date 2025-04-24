@@ -15,7 +15,7 @@ namespace hs
 		, mAnimationSheet{}
 		, mIndex(-1)
 		, mTime(0.0f)
-		, mIsComplete(false)
+		, mbComplete(false)
     {
     }
     Animation::~Animation()
@@ -27,7 +27,7 @@ namespace hs
     }
     void Animation::Update()
     {
-        if (mIsComplete) return;
+        if (mbComplete) return;
 
 		mTime += Time::DeltaTime();
 
@@ -40,7 +40,7 @@ namespace hs
             }
             else
             {
-				mIsComplete = true;
+				mbComplete = true;
             }
         }
     }
@@ -150,6 +150,6 @@ namespace hs
     {
 		mTime = 0.0f;
 		mIndex = 0;
-		mIsComplete = false;
+		mbComplete = false;
     }
 }

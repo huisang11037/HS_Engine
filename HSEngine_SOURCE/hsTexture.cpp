@@ -31,7 +31,7 @@ namespace hs::graphcis
 	}
 	Texture::Texture()
 		: Resource(enums::eResourceType::Texture)
-		, mIsAlpha(false)
+		, mbAlpha(false)
 		, mType(eTextureType::None)
 		, mImage(nullptr)
 		, mBitmap(nullptr)
@@ -66,9 +66,9 @@ namespace hs::graphcis
 			mHeight = info.bmHeight;
 
 			if (info.bmBitsPixel == 32)
-				mIsAlpha = true;
+				mbAlpha = true;
 			else if (info.bmBitsPixel == 24)
-				mIsAlpha = false;
+				mbAlpha = false;
 
 			HDC mainDC = application.GetHdc();
 			mHdc = CreateCompatibleDC(mainDC);

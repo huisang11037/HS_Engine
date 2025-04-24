@@ -41,7 +41,7 @@ namespace hs
 
 		void Reset();
 
-		bool IsComplete() const { return mIsComplete; }
+		bool IsComplete() const { return mbComplete; }
 		void SetAnimator(class Animator* animator) { mAnimator = animator; }
 
 	private:
@@ -51,6 +51,6 @@ namespace hs
 		std::vector<Sprite> mAnimationSheet;
 		int mIndex;
 		float mTime;
-		bool mIsComplete;
+		bool mbComplete;
 	};
 }
