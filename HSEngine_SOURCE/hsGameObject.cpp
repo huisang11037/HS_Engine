@@ -2,6 +2,7 @@
 #include "hsInput.h"
 #include "hsTime.h"
 #include "hsTransform.h"
+#include "hsCollider.h"
 
 namespace hs::object
 {

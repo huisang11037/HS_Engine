@@ -5,7 +5,8 @@
 #include <vector>  
 #include <algorithm>  
 #include <string>  
-#include <map>  
+#include <map>
+#include <bitset>
 #include <functional>
 #include <filesystem>
 

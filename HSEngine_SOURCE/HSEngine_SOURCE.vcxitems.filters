@@ -67,7 +67,10 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)hsCircleCollider2D.cpp">
       <Filter>Component\Collider</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)hsBoxCollider2D.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsBoxCollider2D.cpp">
+      <Filter>Component\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsCollisionManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)hsCamera.h">
@@ -145,7 +148,10 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)hsCircleCollider2D.h">
       <Filter>Component\Collider</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)hsBoxCollider2D.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsBoxCollider2D.h">
+      <Filter>Component\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsCollisionManager.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Component">

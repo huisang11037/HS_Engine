@@ -3,6 +3,7 @@
 #include "hsTime.h"
 #include "hsSceneManager.h"
 #include "hsResources.h"
+#include "hsCollisionManager.h"
 
 namespace hs {
 	Application::Application()
@@ -22,9 +23,10 @@ namespace hs {
 		adjustWindowRect(hwnd, width, height);
 		createBackBuffer(width, height);
 
-		SceneManager::Initialize();
-
 		initializeETC();
+
+		CollisionManager::Initialize();
+		SceneManager::Initialize();
 	}
 	void Application::Run()
 	{
@@ -38,10 +40,12 @@ namespace hs {
 	{
 		Input::Update();
 		Time::Update();
+		CollisionManager::Update();
 		SceneManager::Update();
 	}
 	void Application::LateUpdate()
 	{
+		CollisionManager::LateUpdate();
 		SceneManager::LateUpdate();
 	}
 	void Application::Render()
@@ -49,6 +53,7 @@ namespace hs {
 		clearRenderTarget();
 
 		Time::Render(mBackHDC);
+		CollisionManager::Render(mBackHDC);
 		SceneManager::Render(mBackHDC);
 
 		// 백버퍼를 화면에 그린다

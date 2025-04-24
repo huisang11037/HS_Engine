@@ -1,7 +1,6 @@
 #pragma once
 #include "..\\HSEngine_SOURCE\\hsScript.h"
 
-
 namespace hs
 {
 	class PlayerScript : public Script
@@ -25,6 +24,10 @@ namespace hs
 		void Render(HDC hdc) override;
 
 		void AttackEffect();
+
+		void OnCollisionEnter(Collider* other) override;
+		void OnCollisionStay(Collider* other) override;
+		void OnCollisionExit(Collider* other) override;
 
 	private:
 		void idle();

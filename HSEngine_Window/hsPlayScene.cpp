@@ -16,6 +16,7 @@
 #include "hsCat.h"
 #include "hsCatScript.h"
 #include "hsBoxCollider2D.h"
+#include "hsCollisionManager.h"
 
 namespace hs
 {
@@ -28,6 +29,8 @@ namespace hs
 	}
 	void PlayScene::Initialize()
 	{
+		CollisionManager::CollisionLayerCheck(eLayerType::Player, eLayerType::Animal, true);
+
 		// main camera
 		GameObject* camera = object::Instantiate<GameObject>(enums::eLayerType::None, Vector2(650.0f, 380.0f));
 		Camera* cameraComp = camera->AddComponent<Camera>();
@@ -35,23 +38,23 @@ namespace hs
 		// main camera end
 
 		// Player
-		//mPlayer = object::Instantiate<Player>(enums::eLayerType::Player);
-		//PlayerScript* plScript = mPlayer->AddComponent<PlayerScript>();
-		//BoxCollider2D* collider = mPlayer->AddComponent<BoxCollider2D>();
-		//collider->SetOffset(Vector2(-50.0f, -50.0));
+		mPlayer = object::Instantiate<Player>(enums::eLayerType::Player);
+		PlayerScript* plScript = mPlayer->AddComponent<PlayerScript>();
+		BoxCollider2D* collider = mPlayer->AddComponent<BoxCollider2D>();
+		collider->SetOffset(Vector2(-50.0f, -50.0));
 
-		//graphcis::Texture* playerTex = Resources::Find<graphcis::Texture>(L"Player");
-		//Animator* playerAnimator = mPlayer->AddComponent<Animator>();
-		//playerAnimator->CreateAnimation(L"Idle", playerTex
-		//	, Vector2(2000.0f, 250.0f), Vector2(250.0f, 250.0f), Vector2::Zero, 1, 0.1f);
-		//playerAnimator->CreateAnimation(L"FrontGiveWater", playerTex
-		//	, Vector2(0.0f, 2000.0f), Vector2(250.0f, 250.0f), Vector2::Zero, 12, 0.1f);
-		//playerAnimator->PlayAnimation(L"Idle", false);
+		graphcis::Texture* playerTex = Resources::Find<graphcis::Texture>(L"Player");
+		Animator* playerAnimator = mPlayer->AddComponent<Animator>();
+		playerAnimator->CreateAnimation(L"Idle", playerTex
+			, Vector2(2000.0f, 250.0f), Vector2(250.0f, 250.0f), Vector2::Zero, 1, 0.1f);
+		playerAnimator->CreateAnimation(L"FrontGiveWater", playerTex
+			, Vector2(0.0f, 2000.0f), Vector2(250.0f, 250.0f), Vector2::Zero, 12, 0.1f);
+		playerAnimator->PlayAnimation(L"Idle", false);
 
-		//playerAnimator->GetCompleteEvent(L"FrontGiveWater") = std::bind(&PlayerScript::AttackEffect, plScript);
+		playerAnimator->GetCompleteEvent(L"FrontGiveWater") = std::bind(&PlayerScript::AttackEffect, plScript);
 
 
-		//mPlayer->GetComponent<Transform>()->SetPosition(Vector2(300.0f, 250.0f));
+		mPlayer->GetComponent<Transform>()->SetPosition(Vector2(350.0f, 300.0f));
 		// Player END
 
 		///CAT

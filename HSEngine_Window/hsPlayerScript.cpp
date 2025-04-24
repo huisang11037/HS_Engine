@@ -8,6 +8,7 @@
 #include "hsCatScript.h"
 #include "hsObject.h"
 #include "hsResources.h"
+#include "hsCollider.h"
 
 namespace hs
 {
@@ -99,5 +100,16 @@ namespace hs
 			mState = ePlayerState::Idle;
 			mAnimator->PlayAnimation(L"Idle", false);
 		}
+	}
+	void PlayerScript::OnCollisionEnter(Collider* other)
+	{
+		other->GetOwner()->GetComponent<Transform>()->SetPosition(Vector2(400.0f, 500.0f));
+	}
+	void PlayerScript::OnCollisionStay(Collider* other)
+	{
+	}
+	void PlayerScript::OnCollisionExit(Collider* other)
+	{
+		other->GetOwner()->GetComponent<Transform>()->SetPosition(Vector2(200.0f, 300.0f));
 	}
 }
