@@ -4,9 +4,6 @@
 
 namespace hs
 {
-	/**
-	* @brief 2d 애니메이션인 리소스입니다.
-	*/
 	class Animation : public Resource
 	{
 	public:

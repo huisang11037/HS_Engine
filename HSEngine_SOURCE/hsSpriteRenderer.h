@@ -5,9 +5,6 @@
 
 namespace hs
 {
-	/**
-	* @brief 스프라이트를 그리는 컴포넌트입니다.
-	*/
 	class SpriteRenderer : public Component
 	{
 	public:

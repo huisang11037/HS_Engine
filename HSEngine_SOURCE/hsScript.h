@@ -5,7 +5,7 @@
 namespace hs
 {
 	/**
-	* @brief 모든 스크립트의 기본 클래스입니다.
+	* @brief 모든 스크립트의 기본 클래스인 컴포넌트입니다.
 	*/
 	class Script : public Component
 	{
