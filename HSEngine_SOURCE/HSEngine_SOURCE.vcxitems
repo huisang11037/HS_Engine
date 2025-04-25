@@ -36,6 +36,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)hsRenderer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsResource.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsResources.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsRigidbody.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsScene.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsSceneManager.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsScript.h" />
@@ -64,6 +65,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)hsRenderer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsResource.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsResources.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsRigidbody.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsScene.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsSceneManager.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsScript.cpp" />

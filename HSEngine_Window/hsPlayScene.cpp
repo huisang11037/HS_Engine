@@ -20,6 +20,7 @@
 #include "hsCollisionManager.h"
 #include "hsTile.h"
 #include "hsTilemapRenderer.h"
+#include "hsRigidbody.h"
 
 namespace hs
 {
@@ -42,6 +43,7 @@ namespace hs
 		mPlayer = object::Instantiate<Player>(enums::eLayerType::Player);
 		object::DontDestroyOnLoad(mPlayer);
 
+		mPlayer->AddComponent<Rigidbody>();
 		PlayerScript* plScript = mPlayer->AddComponent<PlayerScript>();
 		BoxCollider2D* collider = mPlayer->AddComponent<BoxCollider2D>();
 		//CircleCollider2D* collider = mPlayer->AddComponent<CircleCollider2D>();

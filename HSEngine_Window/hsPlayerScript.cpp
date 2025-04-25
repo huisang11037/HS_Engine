@@ -9,6 +9,7 @@
 #include "hsObject.h"
 #include "hsResources.h"
 #include "hsCollider.h"
+#include "hsRigidbody.h"
 
 namespace hs
 {
@@ -67,25 +68,30 @@ namespace hs
 	void PlayerScript::move()
 	{
 		Transform* tr = GetOwner()->GetComponent<Transform>();
+		Rigidbody* rb = GetOwner()->GetComponent<Rigidbody>();
 		Vector2 pos = tr->GetPosition();
 
 		if (Input::GetKey(eKeyCode::KEY_RIGHT))
 		{
-			pos.x += 100.0f * Time::DeltaTime();
+			//pos.x += 100.0f * Time::DeltaTime();
+			rb->AddForce(Vector2(200.0f, 0.0f));
 		}
 		if (Input::GetKey(eKeyCode::KEY_LEFT))
 		{
-			pos.x -= 100.0f * Time::DeltaTime();
+			//pos.x -= 100.0f * Time::DeltaTime();
+			rb->AddForce(Vector2(-200.0f, 0.0f));
 		}
 		if (Input::GetKey(eKeyCode::KEY_UP))
 		{
-			pos.y -= 100.0f * Time::DeltaTime();
+			//pos.y -= 100.0f * Time::DeltaTime();
+			rb->AddForce(Vector2(0.0f, -200.0f));
 		}
 		if (Input::GetKey(eKeyCode::KEY_DOWN))
 		{
-			pos.y += 100.0f * Time::DeltaTime();
+			//pos.y += 100.0f * Time::DeltaTime();
+			rb->AddForce(Vector2(0.0f, 200.0f));
 		}
-		tr->SetPosition(pos);
+		//tr->SetPosition(pos);
 
 		if (Input::GetKeyUp(eKeyCode::KEY_RIGHT) || Input::GetKeyUp(eKeyCode::KEY_LEFT) 
 			|| Input::GetKeyUp(eKeyCode::KEY_UP) || Input::GetKeyUp(eKeyCode::KEY_DOWN))

@@ -9,6 +9,7 @@ namespace hs::enums
 	{
 		Transform,
 		Colider,
+		Rigidbody,
 		Script,
 		SpriteRenderer,
 		Animator,
