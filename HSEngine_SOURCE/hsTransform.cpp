@@ -23,5 +23,13 @@ namespace hs
 	}
 	void Transform::Render(HDC hdc)
 	{
+		// 빨간 사각형 그리기
+		HPEN redPen = CreatePen(PS_SOLID, 2, RGB(255, 0, 0));
+		HPEN oldPen = (HPEN)SelectObject(hdc, redPen);
+
+		Rectangle(hdc, mPosition.x - 5, mPosition.y - 5, mPosition.x + 5, mPosition.y + 5);
+
+		SelectObject(hdc, oldPen);
+		DeleteObject(redPen);
 	}
 }

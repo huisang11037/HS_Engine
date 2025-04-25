@@ -38,14 +38,14 @@ namespace hs
 		HPEN greenPen = CreatePen(PS_SOLID, 2, RGB(0, 255, 0));
 		HPEN oldPen = (HPEN)SelectObject(hdc, greenPen);
 
-		Vector2 rightBottom;
-		rightBottom.x = pos.x + offset.x + 100 * GetSize().x;
-		rightBottom.y = pos.y + offset.y + 100 * GetSize().y;
+		Vector2 center = pos + offset;
+		float radius = GetSize().x / 2.0f;
 
-		Ellipse(hdc, pos.x + offset.x
-			, pos.y + offset.y
-			, rightBottom.x
-			, rightBottom.y);
+		Ellipse(hdc,
+			center.x - radius,
+			center.y - radius,
+			center.x + radius,
+			center.y + radius);
 
 		SelectObject(hdc, oldBrush);
 		SelectObject(hdc, oldPen);

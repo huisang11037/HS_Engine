@@ -3,6 +3,9 @@
 
 namespace hs
 {
+	/**
+	* @brief Collider는 물체의 충돌을 생성하는 컴포넌트입니다. 트랜스폼을 중심으로 충돌 범위가 그려집니다.
+	*/
 	class Collider : public Component
 	{
 	public:

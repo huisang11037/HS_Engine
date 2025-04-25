@@ -15,6 +15,5 @@ namespace hs
 		virtual void Render(HDC hdc);
 
 	private:
-		float mRadius;
 	};
 }

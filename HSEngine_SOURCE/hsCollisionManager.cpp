@@ -4,6 +4,8 @@
 #include "hsGameObject.h"
 #include "hsCollider.h"
 #include "hsTransform.h"
+#include "hsCamera.h"
+#include "hsRenderer.h"
 
 namespace hs
 {
@@ -37,7 +39,10 @@ namespace hs
 	void CollisionManager::Clear()
 	{
 		mCollisionMap.clear();
-		mCollisionLayerMatrix->reset();
+		for (int i = 0; i < (UINT)eLayerType::Max; ++i)
+		{
+			mCollisionLayerMatrix[i].reset();
+		}
 	}
 	void CollisionManager::CollisionLayerCheck(eLayerType left, eLayerType right, bool enable)
 	{
@@ -130,8 +135,8 @@ namespace hs
 		Vector2 leftPos = leftTr->GetPosition() + left->GetOffset();
 		Vector2 rightPos = rightTr->GetPosition() + right->GetOffset();
 
-		Vector2 leftSize = left->GetSize() * 100.0f;
-		Vector2 rightSize = right->GetSize() * 100.0f;
+		Vector2 leftSize = left->GetSize();
+		Vector2 rightSize = right->GetSize();
 
 		enums::eColliderType leftType = left->GetColliderType();
 		enums::eColliderType rightType = right->GetColliderType();
@@ -145,7 +150,6 @@ namespace hs
 				return true;
 			}
 		}
-
 
 		if (leftType == enums::eColliderType::Circle2D
 			&& rightType == enums::eColliderType::Circle2D)
@@ -167,24 +171,26 @@ namespace hs
 
 		return false;
 	}
-	bool CollisionManager::isCircleRectCollision(enums::eColliderType leftType
-		, Vector2* leftPos, Vector2* leftSize, Vector2* rightPos, Vector2* rightSize)
+	bool CollisionManager::isCircleRectCollision(enums::eColliderType leftType,
+		Vector2* leftPos, Vector2* leftSize, Vector2* rightPos, Vector2* rightSize)
 	{
-		Vector2 *circlePos, *rectPos;
-		Vector2 *circleSize, *rectSize;
+		Vector2* circleCenter;
+		Vector2* rectCenter;
+		Vector2* circleSize;
+		Vector2* rectSize;
 
 		if (leftType == enums::eColliderType::Circle2D)
 		{
-			circlePos = leftPos;
+			circleCenter = leftPos;
 			circleSize = leftSize;
-			rectPos = rightPos;
+			rectCenter = rightPos;
 			rectSize = rightSize;
 		}
 		else
 		{
-			circlePos = rightPos;
+			circleCenter = rightPos;
 			circleSize = rightSize;
-			rectPos = leftPos;
+			rectCenter = leftPos;
 			rectSize = leftSize;
 		}
 
@@ -193,8 +199,8 @@ namespace hs
 		float rectHalfW = rectSize->x * 0.5f;
 		float rectHalfH = rectSize->y * 0.5f;
 
-		float dx = std::abs(circlePos->x - rectPos->x);
-		float dy = std::abs(circlePos->y - rectPos->y);
+		float dx = std::abs(circleCenter->x - rectCenter->x);
+		float dy = std::abs(circleCenter->y - rectCenter->y);
 
 		if (dx > (rectHalfW + radius)) return false;
 		if (dy > (rectHalfH + radius)) return false;
@@ -205,10 +211,6 @@ namespace hs
 		float cornerDistSq = (dx - rectHalfW) * (dx - rectHalfW) +
 			(dy - rectHalfH) * (dy - rectHalfH);
 
-		if (cornerDistSq <= radius * radius)
-		{
-			return true;
-		}
-		return false;
+		return (cornerDistSq <= radius * radius);
 	}
 }

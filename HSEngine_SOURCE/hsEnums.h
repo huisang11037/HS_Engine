@@ -29,6 +29,7 @@ namespace hs::enums
 		//character
 		Animal,
 		Player,
+		Floor,
 		Particle,
 		Max = 16,
 	};

@@ -43,6 +43,12 @@
     <ClInclude Include="hsCameraScript.h">
       <Filter>Scripts</Filter>
     </ClInclude>
+    <ClInclude Include="hsFloor.h">
+      <Filter>Contents</Filter>
+    </ClInclude>
+    <ClInclude Include="hsFloorScript.h">
+      <Filter>Scripts</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="hsPlayScene.cpp">
@@ -70,6 +76,12 @@
       <Filter>Contents</Filter>
     </ClCompile>
     <ClCompile Include="hsCameraScript.cpp">
+      <Filter>Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="hsFloor.cpp">
+      <Filter>Contents</Filter>
+    </ClCompile>
+    <ClCompile Include="hsFloorScript.cpp">
       <Filter>Scripts</Filter>
     </ClCompile>
   </ItemGroup>

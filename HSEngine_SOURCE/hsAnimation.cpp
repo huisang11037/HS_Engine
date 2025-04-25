@@ -127,7 +127,6 @@ namespace hs
 					, RGB(255, 0, 255));
 			}
 		}
-		Rectangle(hdc, position.x, position.y, position.x + 10, position.y + 10);
     }
     void Animation::CreateAnimation(const std::wstring& name
         , graphics::Texture* spriteSheet

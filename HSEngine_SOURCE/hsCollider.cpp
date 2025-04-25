@@ -11,6 +11,7 @@ namespace hs
 		, mType(type)
 		, mID(CollisionID++)
 		, mSize(Vector2::One)
+		, mOffset(Vector2::Zero)
 	{
 
 	}
