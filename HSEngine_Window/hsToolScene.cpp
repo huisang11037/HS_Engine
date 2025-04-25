@@ -36,26 +36,7 @@ namespace hs
 
 		if (Input::GetKeyDown(eKeyCode::LButton))
 		{
-			Vector2 pos = Input::GetMousePosition();
-			pos = renderer::mainCamera->CaluateTilePosition(pos);
-
-			if (pos.x >= 0.0f && pos.y >= 0.0f)
-			{
-				int idxX = pos.x / TilemapRenderer::TileSize.x;
-				int idxY = pos.y / TilemapRenderer::TileSize.y;
-
-				Tile* tile = object::Instantiate<Tile>(eLayerType::Tile);
-				TilemapRenderer* tmr = tile->AddComponent<TilemapRenderer>();
-				tmr->SetTexture(Resources::Find<graphics::Texture>(L"SpringFloor"));
-				tmr->SetIndex(TilemapRenderer::SelectedIndex);
-
-				tile->SetIndexPosition(idxX, idxY);
-				mTiles.push_back(tile);
-			}
-			else
-			{
-				//
-			}
+			createTileObject();
 		}
 
 		if (Input::GetKeyDown(eKeyCode::KEY_S))
@@ -71,27 +52,7 @@ namespace hs
 	{
 		Scene::Render(hdc);
 
-		for (size_t i = 0; i < 50; i++)
-		{
-			Vector2 pos = renderer::mainCamera->CaluatePosition
-			(
-				Vector2(TilemapRenderer::TileSize.x * i, 0.0f)
-			);
-
-			MoveToEx(hdc, pos.x, 0, NULL);
-			LineTo(hdc, pos.x, 3000);
-		}
-
-		for (size_t i = 0; i < 50; i++)
-		{
-			Vector2 pos = renderer::mainCamera->CaluatePosition
-			(
-				Vector2(0.0f, TilemapRenderer::TileSize.y * i)
-			);
-
-			MoveToEx(hdc, 0, pos.y, NULL);
-			LineTo(hdc, 3000, pos.y);
-		}
+		renderGreed(hdc);
 	}
 	void ToolScene::OnEnter()
 	{
@@ -201,6 +162,52 @@ namespace hs
 		}
 
 		fclose(pFile);
+	}
+	void ToolScene::renderGreed(HDC hdc)
+	{
+		for (size_t i = 0; i < 50; i++)
+		{
+			Vector2 pos = renderer::mainCamera->CaluatePosition
+			(
+				Vector2(TilemapRenderer::TileSize.x * i, 0.0f)
+			);
+
+			MoveToEx(hdc, pos.x, 0, NULL);
+			LineTo(hdc, pos.x, 3000);
+		}
+		for (size_t i = 0; i < 50; i++)
+		{
+			Vector2 pos = renderer::mainCamera->CaluatePosition
+			(
+				Vector2(0.0f, TilemapRenderer::TileSize.y * i)
+			);
+
+			MoveToEx(hdc, 0, pos.y, NULL);
+			LineTo(hdc, 3000, pos.y);
+		}
+	}
+	void ToolScene::createTileObject()
+	{
+		Vector2 pos = Input::GetMousePosition();
+		pos = renderer::mainCamera->CaluateTilePosition(pos);
+
+		if (pos.x >= 0.0f && pos.y >= 0.0f)
+		{
+			int idxX = pos.x / TilemapRenderer::TileSize.x;
+			int idxY = pos.y / TilemapRenderer::TileSize.y;
+
+			Tile* tile = object::Instantiate<Tile>(eLayerType::Tile);
+			TilemapRenderer* tmr = tile->AddComponent<TilemapRenderer>();
+			tmr->SetTexture(Resources::Find<graphics::Texture>(L"SpringFloor"));
+			tmr->SetIndex(TilemapRenderer::SelectedIndex);
+
+			tile->SetIndexPosition(idxX, idxY);
+			mTiles.push_back(tile);
+		}
+		else
+		{
+			//
+		}
 	}
 }
 

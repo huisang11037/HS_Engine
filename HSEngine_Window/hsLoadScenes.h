@@ -13,7 +13,6 @@ namespace hs
 	{
 		SceneManager::CreateScene<TitleScene>(L"TitleScene");
 		SceneManager::CreateScene<PlayScene>(L"PlayScene");
-
 		SceneManager::LoadScene(L"TitleScene");
 
 		//SceneManager::CreateScene<ToolScene>(L"ToolScene");
