@@ -18,6 +18,7 @@ namespace hs
 
 		void SetTexture(graphics::Texture* texture) { mTexture = texture; }
 		void SetSize(math::Vector2 size) { mSize = size; }
+		Vector2 GetIndex() const { return mIndex; }
 		void SetIndex(Vector2 index) { mIndex = index; }
 
 	public:

@@ -11,6 +11,7 @@ namespace hs
 	{
 	public:
 		Vector2 CaluatePosition(Vector2 pos) const { return pos - mDistance; };
+		Vector2 CaluateTilePosition(Vector2 pos) const { return pos + mDistance; };
 
 		Camera();
 		~Camera();

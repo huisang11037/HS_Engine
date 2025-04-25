@@ -1,5 +1,6 @@
 #pragma once
 #include "..\\HSEngine_SOURCE\\hsScene.h"
+#include "hsTile.h"
 
 namespace hs
 {
@@ -16,6 +17,12 @@ namespace hs
 
 		void OnEnter() override;
 		void OnExit()  override;
+
+		void Save();
+		void Load();
+
+	private:
+		std::vector<Tile*> mTiles;
 	};
 }
 

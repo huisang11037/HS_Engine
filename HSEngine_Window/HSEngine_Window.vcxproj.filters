@@ -40,6 +40,9 @@
     <ClInclude Include="hsTile.h">
       <Filter>Contents</Filter>
     </ClInclude>
+    <ClInclude Include="hsCameraScript.h">
+      <Filter>Scripts</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="hsPlayScene.cpp">
@@ -65,6 +68,9 @@
     </ClCompile>
     <ClCompile Include="hsTile.cpp">
       <Filter>Contents</Filter>
+    </ClCompile>
+    <ClCompile Include="hsCameraScript.cpp">
+      <Filter>Scripts</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

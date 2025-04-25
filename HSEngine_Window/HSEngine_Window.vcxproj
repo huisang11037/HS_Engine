@@ -132,6 +132,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="hsCameraScript.h" />
     <ClInclude Include="hsCat.h" />
     <ClInclude Include="hsCatScript.h" />
     <ClInclude Include="hsLoadResources.h" />
@@ -144,6 +145,7 @@
     <ClInclude Include="hsToolScene.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="hsCameraScript.cpp" />
     <ClCompile Include="hsCat.cpp" />
     <ClCompile Include="hsCatScript.cpp" />
     <ClCompile Include="hsPlayer.cpp" />

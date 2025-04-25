@@ -1,17 +1,19 @@
 #pragma once
-#include "..\\HSEngine_SOURCE\\hsGameObject.h"
+#include "..\\HSEngine_SOURCE\\hsScript.h"
+#include "..\\HSEngine_SOURCE\\hsTransform.h"
 
 namespace hs
 {
-	class Tile : public GameObject
+	class CameraScript : public Script
 	{
 	public:
+		CameraScript();
+		~CameraScript();
+
 		void Initialize() override;
 		void Update() override;
 		void LateUpdate() override;
 		void Render(HDC hdc) override;
-
-		void SetIndexPosition(int x, int y);
 
 	private:
 
