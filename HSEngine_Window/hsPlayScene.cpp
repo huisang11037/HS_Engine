@@ -32,8 +32,6 @@ namespace hs
 	}
 	void PlayScene::Initialize()
 	{
-		CollisionManager::CollisionLayerCheck(eLayerType::Player, eLayerType::Animal, true);
-
 		// main camera
 		GameObject* camera = object::Instantiate<GameObject>(enums::eLayerType::None, Vector2(650.0f, 380.0f));
 		Camera* cameraComp = camera->AddComponent<Camera>();
@@ -42,6 +40,7 @@ namespace hs
 
 		// Player
 		mPlayer = object::Instantiate<Player>(enums::eLayerType::Player);
+		object::DontDestroyOnLoad(mPlayer);
 
 		PlayerScript* plScript = mPlayer->AddComponent<PlayerScript>();
 		BoxCollider2D* collider = mPlayer->AddComponent<BoxCollider2D>();
@@ -106,6 +105,7 @@ namespace hs
 	}
 	void PlayScene::OnEnter()
 	{
+		CollisionManager::CollisionLayerCheck(eLayerType::Player, eLayerType::Animal, true);
 	}
 	void PlayScene::OnExit()
 	{

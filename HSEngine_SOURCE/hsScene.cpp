@@ -1,4 +1,5 @@
 #include "hsScene.h"
+#include "hsCollisionManager.h"
 
 namespace hs
 {
@@ -83,6 +84,6 @@ namespace hs
 	}
 	void Scene::OnExit()
 	{
-
+		CollisionManager::Clear();
 	}
 }
