@@ -18,6 +18,7 @@ namespace hs
 	GameObject::GameObject()
 		: mState(eState::Active)
 		, mComponents{}
+		, mLayerType(eLayerType::None)
 	{
 		mComponents.resize((UINT)enums::eComponentType::End);
 		initializeTransform();

@@ -24,6 +24,7 @@ namespace hs
 		virtual void OnExit();
 
 		void AddGameObject(GameObject* gameObject, const enums::eLayerType type);
+		void EraseGameObject(GameObject* gameObj);
 		Layer* GetLayer(const enums::eLayerType type) { return mLayers[(UINT)type]; }
 
 	private:

@@ -64,6 +64,10 @@ namespace hs
 			if (power == true) mState = eState::Active;
 			if (power == false) mState = eState::Paused;
 		}
+		eLayerType GetLayerType() const { return mLayerType; }
+		void SetLayerType(eLayerType layerType) { mLayerType = layerType; }
+		
+
 		bool IsActive() const { return mState == eState::Active; }
 		bool IsDead() const { return mState == eState::Dead; }
 
@@ -74,6 +78,7 @@ namespace hs
 	private:
 		eState mState;
 		std::vector<Component*> mComponents;
+		eLayerType mLayerType;
 	};
 }
 

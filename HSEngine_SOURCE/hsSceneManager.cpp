@@ -1,28 +1,35 @@
 #include "hsSceneManager.h"
+#include "hsDontDestroyOnLoad.h"
 
 namespace hs
 {
 	std::map<std::wstring, Scene*> SceneManager::mScenes = {};
 	Scene* SceneManager::mCurrentScene = nullptr;
+	Scene* SceneManager::mDontDestroyOnLoad = nullptr;
 
 	void SceneManager::Initialize()
 	{
+		mDontDestroyOnLoad = CreateScene<DontDestroyOnLoad>(L"DontDestroyOnLoad");
 	}
 	void SceneManager::Update()
 	{
 		mCurrentScene->Update();
+		mDontDestroyOnLoad->Update();
 	}
 	void SceneManager::LateUpdate()
 	{
 		mCurrentScene->LateUpdate();
+		mDontDestroyOnLoad->LateUpdate();
 	}
 	void SceneManager::Render(HDC hdc)
 	{
 		mCurrentScene->Render(hdc);
+		mDontDestroyOnLoad->Render(hdc);
 	}
 	void SceneManager::Destroy()
 	{
 		mCurrentScene->Destroy();
+		mDontDestroyOnLoad->Destroy();
 	}
 	void SceneManager::Release()
 	{

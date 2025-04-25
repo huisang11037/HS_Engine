@@ -25,6 +25,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)hsCollider.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsCollisionManager.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsComponent.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsDontDestroyOnLoad.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsEntity.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsEnums.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsGameObject.h" />
@@ -53,6 +54,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)hsCollider.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsCollisionManager.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsComponent.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsDontDestroyOnLoad.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsEntity.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsGameObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsInput.cpp" />

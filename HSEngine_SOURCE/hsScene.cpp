@@ -64,25 +64,23 @@ namespace hs
 	{
 		mLayers[(UINT)type]->AddGameObject(gameObject);
 	}
-
+	void Scene::EraseGameObject(GameObject* gameObj)
+	{
+		eLayerType layerType = gameObj->GetLayerType();
+		mLayers[(UINT)layerType]->EraseGameObject(gameObj);
+	}
 	void Scene::createLayers()
 	{
-		// 레이어를 최대 16개까지 생성한다.
-		// 레이어 타입은 eLayerType 열거형을 사용한다.
-		// 각 레이어는 Layer 클래스의 인스턴스이다.
-		// 레이어는 std::vector<Layer*> mLayers에 저장된다.
 		mLayers.resize((UINT)enums::eLayerType::Max);
 		for (size_t i = 0; i < (UINT)enums::eLayerType::Max; i++)
 		{
 			mLayers[i] = new Layer();
 		}
 	}
-
 	void Scene::OnEnter()
 	{
 
 	}
-
 	void Scene::OnExit()
 	{
 
