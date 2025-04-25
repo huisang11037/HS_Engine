@@ -16,7 +16,7 @@ namespace hs
 
 		void OnEnter() override;
 		void OnExit()  override;
-
-
 	};
 }
+
+LRESULT CALLBACK WndTileProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
