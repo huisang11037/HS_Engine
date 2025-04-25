@@ -40,7 +40,7 @@ namespace hs
 
 		position = renderer::mainCamera->CaluatePosition(position);
 
-		if (mTexture->GetTextureType() == graphcis::Texture::eTextureType::Bmp)
+		if (mTexture->GetTextureType() == graphics::Texture::eTextureType::Bmp)
 		{
 			if (mTexture->IsAlpha())
 			{
@@ -75,7 +75,7 @@ namespace hs
 					, RGB(255, 0, 255));
 			}
 		}
-		else if (mTexture->GetTextureType() == graphcis::Texture::eTextureType::Png)
+		else if (mTexture->GetTextureType() == graphics::Texture::eTextureType::Png)
 		{
 			// 투명화할 색상 지정, 쓰고싶으면 밑에 grapics.DrawImage에 마지막 nullptr 대신 넣으면 된다
 			Gdiplus::ImageAttributes imgAttr = {};

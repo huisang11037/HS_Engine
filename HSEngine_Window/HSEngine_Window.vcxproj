@@ -139,7 +139,9 @@
     <ClInclude Include="hsPlayer.h" />
     <ClInclude Include="hsPlayerScript.h" />
     <ClInclude Include="hsPlayScene.h" />
+    <ClInclude Include="hsTile.h" />
     <ClInclude Include="hsTitleScene.h" />
+    <ClInclude Include="hsToolScene.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="hsCat.cpp" />
@@ -147,7 +149,9 @@
     <ClCompile Include="hsPlayer.cpp" />
     <ClCompile Include="hsPlayerScript.cpp" />
     <ClCompile Include="hsPlayScene.cpp" />
+    <ClCompile Include="hsTile.cpp" />
     <ClCompile Include="hsTitleScene.cpp" />
+    <ClCompile Include="hsToolScene.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -59,7 +59,7 @@ namespace hs
 		* @param duration 애니메이션의 지속 시간입니다.
 		*/
 		void CreateAnimation(const std::wstring& name
-			, graphcis::Texture* spriteSheet
+			, graphics::Texture* spriteSheet
 			, Vector2 leftTop
 			, Vector2 tileSize
 			, Vector2 offset

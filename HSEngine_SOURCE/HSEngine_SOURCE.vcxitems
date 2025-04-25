@@ -41,6 +41,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)hsScript.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsSpriteRenderer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsTexture.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsTilemapRenderer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsTime.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsTransform.h" />
   </ItemGroup>
@@ -68,6 +69,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)hsScript.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsSpriteRenderer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsTexture.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsTilemapRenderer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsTime.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsTransform.cpp" />
   </ItemGroup>

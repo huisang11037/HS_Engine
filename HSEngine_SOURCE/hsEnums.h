@@ -23,10 +23,12 @@ namespace hs::enums
 	{
 		None,
 		BackGround,
-		//Tree 
+		//Tree
+		Tile,
 		//character
 		Animal,
 		Player,
+		Particle,
 		Max = 16,
 	};
 	/**

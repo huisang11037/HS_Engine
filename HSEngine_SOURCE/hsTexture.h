@@ -2,7 +2,7 @@
 #include "hsResource.h"
 
 
-namespace hs::graphcis
+namespace hs::graphics
 {
 	class Texture : public Resource
 	{

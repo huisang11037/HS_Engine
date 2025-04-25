@@ -18,6 +18,8 @@
 #include "hsCircleCollider2D.h"
 #include "hsBoxCollider2D.h"
 #include "hsCollisionManager.h"
+#include "hsTile.h"
+#include "hsTilemapRenderer.h"
 
 namespace hs
 {
@@ -40,14 +42,13 @@ namespace hs
 
 		// Player
 		mPlayer = object::Instantiate<Player>(enums::eLayerType::Player);
-		object::DontDestroyOnLoad(mPlayer);
 
 		PlayerScript* plScript = mPlayer->AddComponent<PlayerScript>();
 		BoxCollider2D* collider = mPlayer->AddComponent<BoxCollider2D>();
 		//CircleCollider2D* collider = mPlayer->AddComponent<CircleCollider2D>();
 		collider->SetOffset(Vector2(-50.0f, -50.0));
 
-		graphcis::Texture* playerTex = Resources::Find<graphcis::Texture>(L"Player");
+		graphics::Texture* playerTex = Resources::Find<graphics::Texture>(L"Player");
 		Animator* playerAnimator = mPlayer->AddComponent<Animator>();
 		playerAnimator->CreateAnimation(L"Idle", playerTex
 			, Vector2(2000.0f, 250.0f), Vector2(250.0f, 250.0f), Vector2::Zero, 1, 0.1f);
@@ -75,6 +76,13 @@ namespace hs
 		cat->GetComponent<Transform>()->SetPosition(Vector2(200.0f, 200.0f));
 		cat->GetComponent<Transform>()->SetScale(Vector2(1.0f, 1.0f));
 		// CAT END
+
+		// Tile
+		Tile* tile = object::Instantiate<Tile>(eLayerType::Tile);
+		TilemapRenderer* tmr = tile->AddComponent<TilemapRenderer>();
+
+		tmr->SetTexture(Resources::Find<graphics::Texture>(L"SpringFloor"));
+		// Tile END
 
 		// 게임 오브젝트 생성후에 레이어와 게임오브젝트들의 init함수를 호출
 		Scene::Initialize();

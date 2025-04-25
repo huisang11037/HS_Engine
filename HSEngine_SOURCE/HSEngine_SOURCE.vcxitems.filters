@@ -74,6 +74,9 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)hsDontDestroyOnLoad.cpp">
       <Filter>Scene</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsTilemapRenderer.cpp">
+      <Filter>Component\TilemapRenderer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)hsCamera.h">
@@ -158,6 +161,9 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)hsDontDestroyOnLoad.h">
       <Filter>Scene</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsTilemapRenderer.h">
+      <Filter>Component\TilemapRenderer</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Component">
@@ -210,6 +216,9 @@
     </Filter>
     <Filter Include="Component\Collider">
       <UniqueIdentifier>{4c524971-e409-4896-a401-39a965878bd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\TilemapRenderer">
+      <UniqueIdentifier>{60006824-a643-406f-9d19-fe411753ee7d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

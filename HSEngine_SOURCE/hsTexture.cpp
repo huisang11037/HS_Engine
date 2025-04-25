@@ -4,7 +4,7 @@
 
 extern hs::Application application;
 
-namespace hs::graphcis
+namespace hs::graphics
 {
 	Texture* Texture::Create(const std::wstring& name, eTextureType type, UINT width, UINT height)
 	{
