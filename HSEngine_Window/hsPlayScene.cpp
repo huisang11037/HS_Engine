@@ -1,6 +1,7 @@
 #include "hsPlayScene.h"
 #include "hsGameObject.h"
 #include "hsPlayer.h"
+#include "hsUIManager.h"
 #include "hsTransform.h"
 #include "hsSpriteRenderer.h"
 #include "hsInput.h"
@@ -94,8 +95,11 @@ namespace hs
 	{
 		CollisionManager::CollisionLayerCheck(eLayerType::Player, eLayerType::Animal, true);
 		CollisionManager::CollisionLayerCheck(eLayerType::Player, eLayerType::Floor, true);
+
+		UIManager::Push(eUIType::Button);
 	}
 	void PlayScene::OnExit()
 	{
+		UIManager::Pop(eUIType::Button);
 	}
 }

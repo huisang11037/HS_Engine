@@ -10,6 +10,7 @@
 #include "hsResources.h"
 #include "hsCollider.h"
 #include "hsRigidbody.h"
+#include "hsUIManager.h"
 
 namespace hs
 {
@@ -47,6 +48,14 @@ namespace hs
 			break;
 		default:
 			break;
+		}
+		if (Input::GetKeyDown(eKeyCode::KEY_I))
+		{
+			UIManager::Push(eUIType::HpBar);
+		}
+		if (Input::GetKeyDown(eKeyCode::KEY_O))
+		{
+			UIManager::Pop(eUIType::HpBar);
 		}
 	}
 	void PlayerScript::LateUpdate()

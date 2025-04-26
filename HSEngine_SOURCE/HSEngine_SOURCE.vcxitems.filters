@@ -80,6 +80,14 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)hsRigidbody.cpp">
       <Filter>Component\Rigidbody</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsUIBase.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsUIManager.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsUIHUD.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsUIButton.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)hsCamera.h">
@@ -170,6 +178,14 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)hsRigidbody.h">
       <Filter>Component\Rigidbody</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsUIBase.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsUIManager.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsUIHUD.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsUIButton.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Component">
@@ -228,6 +244,9 @@
     </Filter>
     <Filter Include="Component\Rigidbody">
       <UniqueIdentifier>{c2b0b71a-846d-4498-9767-03335960ae3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{2e720ec8-7b46-4764-a139-be6e517a9cf0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

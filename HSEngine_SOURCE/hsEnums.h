@@ -53,4 +53,13 @@ namespace hs::enums
 		Rect2D,
 		End,
 	};
+	/**
+	* @brief UI의 종류를 정의합니다. 새 UI를 만들 때 수정해야 합니다.
+	*/
+	enum class eUIType
+	{
+		HpBar,
+		Button,
+		End,
+	};
 }

@@ -4,6 +4,7 @@
 #include "hsSceneManager.h"
 #include "hsResources.h"
 #include "hsCollisionManager.h"
+#include "hsUIManager.h"
 
 namespace hs {
 	Application::Application()
@@ -26,6 +27,7 @@ namespace hs {
 		initializeETC();
 
 		CollisionManager::Initialize();
+		UIManager::Initialize();
 		SceneManager::Initialize();
 	}
 	void Application::Run()
@@ -41,11 +43,13 @@ namespace hs {
 		Input::Update();
 		Time::Update();
 		CollisionManager::Update();
+		UIManager::Update();
 		SceneManager::Update();
 	}
 	void Application::LateUpdate()
 	{
 		CollisionManager::LateUpdate();
+		UIManager::LateUpdate();
 		SceneManager::LateUpdate();
 	}
 	void Application::Render()
@@ -55,6 +59,7 @@ namespace hs {
 		Time::Render(mBackHDC);
 		CollisionManager::Render(mBackHDC);
 		SceneManager::Render(mBackHDC);
+		UIManager::Render(mBackHDC);
 
 		// 백버퍼를 화면에 그린다
 		BitBlt(mHdc, 0, 0, mWidth, mHeight, mBackHDC, 0, 0, SRCCOPY);
@@ -66,6 +71,7 @@ namespace hs {
 	void Application::Release()
 	{
 		SceneManager::Release();
+		UIManager::Release();
 		Resources::Release();
 	}
 	void Application::clearRenderTarget() const
@@ -95,10 +101,8 @@ namespace hs {
 	}
 	void Application::createBackBuffer(UINT width, UINT height)
 	{
-		// 윈도우 해상도에 맞는 백버퍼	 생성
 		mBackBitmap = CreateCompatibleBitmap(mHdc, width, height);
 
-		// 백버퍼에 대한 DC 생성
 		mBackHDC = CreateCompatibleDC(mHdc);
 
 		HBITMAP oldBitmap = (HBITMAP)SelectObject(mBackHDC, mBackBitmap);

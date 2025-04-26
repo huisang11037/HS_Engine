@@ -45,6 +45,10 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)hsTilemapRenderer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsTime.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsTransform.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsUIBase.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsUIButton.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsUIHUD.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsUIManager.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)hsAnimation.cpp" />
@@ -74,5 +78,9 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)hsTilemapRenderer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsTime.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsTransform.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsUIBase.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsUIButton.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsUIHUD.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsUIManager.cpp" />
   </ItemGroup>
 </Project>

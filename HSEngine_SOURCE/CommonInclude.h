@@ -4,7 +4,10 @@
 
 #include <vector>  
 #include <algorithm>  
-#include <string>  
+#include <string>
+#include <stack>
+#include <queue>
+#include <deque>
 #include <map>
 #include <bitset>
 #include <functional>
