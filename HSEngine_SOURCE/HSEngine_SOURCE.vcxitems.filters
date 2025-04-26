@@ -70,7 +70,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)hsBoxCollider2D.cpp">
       <Filter>Component\Collider</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)hsCollisionManager.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsDontDestroyOnLoad.cpp">
       <Filter>Scene</Filter>
     </ClCompile>
@@ -86,8 +85,27 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)hsUIManager.cpp">
       <Filter>UI</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)hsUIHUD.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)hsUIButton.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsUIButton.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsUIHUD.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsFmod.cpp">
+      <Filter>Fmod</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsAudioListener.cpp">
+      <Filter>Component\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsAudioSource.cpp">
+      <Filter>Component\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsCollisionManager.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsAudioClip.cpp">
+      <Filter>Resource\AudioClip</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)hsCamera.h">
@@ -168,7 +186,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)hsBoxCollider2D.h">
       <Filter>Component\Collider</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)hsCollisionManager.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsDontDestroyOnLoad.h">
       <Filter>Scene</Filter>
     </ClInclude>
@@ -184,8 +201,27 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)hsUIManager.h">
       <Filter>UI</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)hsUIHUD.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)hsUIButton.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsUIButton.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsUIHUD.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsFmod.h">
+      <Filter>Fmod</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsAudioListener.h">
+      <Filter>Component\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsAudioSource.h">
+      <Filter>Component\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsCollisionManager.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsAudioClip.h">
+      <Filter>Resource\AudioClip</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Component">
@@ -247,6 +283,15 @@
     </Filter>
     <Filter Include="UI">
       <UniqueIdentifier>{2e720ec8-7b46-4764-a139-be6e517a9cf0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fmod">
+      <UniqueIdentifier>{2953425a-dc96-4c68-9fc6-7c698804f2bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Audio">
+      <UniqueIdentifier>{df1924c1-bfcd-41be-b2b9-1df19a12de62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\AudioClip">
+      <UniqueIdentifier>{903021a8-2d91-4001-bfa7-021148f988af}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

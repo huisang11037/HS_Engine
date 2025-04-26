@@ -5,6 +5,7 @@
 #include "hsResources.h"
 #include "hsCollisionManager.h"
 #include "hsUIManager.h"
+#include "hsFmod.h"
 
 namespace hs {
 	Application::Application()
@@ -26,6 +27,7 @@ namespace hs {
 
 		initializeETC();
 
+		Fmod::Initialize();
 		CollisionManager::Initialize();
 		UIManager::Initialize();
 		SceneManager::Initialize();

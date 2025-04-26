@@ -24,6 +24,9 @@
 #include "hsRigidbody.h"
 #include "hsFloor.h"
 #include "hsFloorScript.h"
+#include "hsAudioListener.h"
+#include "hsAudioSource.h"
+#include "hsAudioClip.h"
 
 namespace hs
 {
@@ -44,8 +47,7 @@ namespace hs
 
 		// Player
 		mPlayer = object::Instantiate<Player>(enums::eLayerType::Player);
-		//object::DontDestroyOnLoad(mPlayer);
-
+		mPlayer->AddComponent<AudioListener>();
 		mPlayer->AddComponent<Rigidbody>();
 		PlayerScript* plScript = mPlayer->AddComponent<PlayerScript>();
 		//BoxCollider2D* collider = mPlayer->AddComponent<BoxCollider2D>();
@@ -71,6 +73,9 @@ namespace hs
 		BoxCollider2D* floorCol = floor->AddComponent<BoxCollider2D>();
 		floorCol->SetSize(Vector2(300.0f, 50.0f));
 		floor->AddComponent<FloorScript>();
+		AudioSource* as = floor->AddComponent<AudioSource>();
+		AudioClip* ac = Resources::Load<AudioClip>(L"BGSound", L"..\\Resources\\Sound\\smw_bonus_game_end.wav");
+		as->SetClip(ac);
 
 		Scene::Initialize();
 	}

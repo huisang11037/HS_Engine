@@ -14,6 +14,8 @@ namespace hs::enums
 		SpriteRenderer,
 		Animator,
 		Camera,
+		AudioListener,
+		AudioSource,
 		End,
 	};
 	/**

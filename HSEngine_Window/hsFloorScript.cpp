@@ -8,6 +8,7 @@
 #include "hsObject.h"
 #include "hsRigidbody.h"
 #include "hsCollider.h"
+#include "hsAudioSource.h"
 
 namespace hs
 {
@@ -42,6 +43,10 @@ namespace hs
 		playerPos.y = floorTopY - playerCol->GetSize().y * 0.5f;
 
 		playerTr->SetPosition(playerPos);
+
+		AudioSource* as = GetOwner()->GetComponent<AudioSource>();
+		as->Play();
+
 		playerRb->SetGround(true);
 	}
 	void FloorScript::OnCollisionStay(Collider* other)

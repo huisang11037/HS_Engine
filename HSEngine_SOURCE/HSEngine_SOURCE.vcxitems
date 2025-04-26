@@ -19,6 +19,9 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)hsAnimation.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsAnimator.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsApplication.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsAudioClip.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsAudioListener.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsAudioSource.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsBoxCollider2D.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsCamera.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsCircleCollider2D.h" />
@@ -28,6 +31,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)hsDontDestroyOnLoad.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsEntity.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsEnums.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)hsFmod.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsGameObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsInput.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)hsLayer.h" />
@@ -54,6 +58,9 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)hsAnimation.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsAnimator.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsApplication.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsAudioClip.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsAudioListener.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsAudioSource.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsBoxCollider2D.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsCamera.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsCircleCollider2D.cpp" />
@@ -62,6 +69,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)hsComponent.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsDontDestroyOnLoad.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsEntity.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)hsFmod.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsGameObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsInput.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)hsLayer.cpp" />
